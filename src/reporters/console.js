@@ -1,6 +1,7 @@
 import { calculateRate } from '../utils/helpers.js';
+import { config } from '../config.js';
 
-export function displayMetrics(metrics) {
+export function displayMetrics(metrics, repo = null) {
   const {
     totalUpvotes,
     totalComments,
@@ -15,8 +16,9 @@ export function displayMetrics(metrics) {
   const prMergeRate = calculateRate(totalMergedCommunityPRs, totalCommunityPRs);
   const issueResolutionRate = calculateRate(closedCommunityIssues, totalCommunityIssues);
 
-  console.log("\n📊 Podman Desktop Metrics");
-  console.log("==========================");
+  const repoName = repo ? `${repo.owner}/${repo.name}` : 'Repository';
+  console.log(`\n📊 ${repoName} Metrics`);
+  console.log("=".repeat(repoName.length + 13));
   console.log(`👍 Total Upvotes: ${totalUpvotes}`);
   console.log(`💬 Total Comments: ${totalComments}`);
 

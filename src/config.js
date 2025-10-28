@@ -14,12 +14,49 @@ if (!GH_TOKEN) {
   process.exit(1);
 }
 
+// Default repositories for podman-desktop ecosystem
+const DEFAULT_REPOS = [
+  'podman-desktop/podman-desktop',
+  'podman-desktop/extension-bootc',
+  'podman-desktop/extension-kubernetes-dashboard',
+  'podman-desktop/extension-postgresql',
+  'podman-desktop/extension-minikube',
+  'podman-desktop/extension-github',
+  'podman-desktop/extension-podman-quadlet',
+  'podman-desktop/extension-apple-container',
+  'podman-desktop/extension-kreate',
+  'podman-desktop/extension-layers-explorer',
+  'podman-desktop/podman-desktop-catalog',
+  'podman-desktop/extension-template-minimal',
+  'podman-desktop/extension-template-full',
+  'podman-desktop/extension-template-webview',
+  'podman-desktop/community',
+  'containers/podman-desktop-extension-ai-lab',
+];
+
+// Parse repositories from REPOS environment variable
+// Format: "owner1/repo1,owner2/repo2" or single "owner/repo"
+function parseRepos() {
+  const reposEnv = process.env.REPOS;
+
+  if (reposEnv) {
+    // Multiple repos format: "owner1/repo1,owner2/repo2"
+    return reposEnv.split(',').map(repo => {
+      const [owner, name] = repo.trim().split('/');
+      return { owner, name };
+    });
+  } else {
+    // Use default repositories
+    return DEFAULT_REPOS.map(repo => {
+      const [owner, name] = repo.split('/');
+      return { owner, name };
+    });
+  }
+}
+
 export const config = {
   ghToken: GH_TOKEN,
-  repo: {
-    owner: process.env.REPO_OWNER || 'podman-desktop',
-    name: process.env.REPO_NAME || 'podman-desktop',
-  },
+  repos: parseRepos(),
   maintainersFile: process.env.MAINTAINERS_FILE || join(__dirname, '../data/maintainers.json'),
   lookbackMonths: parseInt(process.env.LOOKBACK_MONTHS) || 1,
 };
