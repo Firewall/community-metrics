@@ -1,0 +1,24 @@
+{
+  "timestamp": "2025-10-28T16:47:28.188Z",
+  "date": "2025-10-28",
+  "repoLabel": "podman-desktop/extension-template-minimal",
+  "metrics": {
+    "discussions": {
+      "totalUpvotes": 0,
+      "totalComments": 0
+    },
+    "pullRequests": {
+      "open": 0,
+      "total": 0,
+      "merged": 0,
+      "mergeRate": 0
+    },
+    "issues": {
+      "open": 0,
+      "closed": 0,
+      "total": 0,
+      "closeRate": 0
+    }
+  },
+  "topActiveUsers": []
+}

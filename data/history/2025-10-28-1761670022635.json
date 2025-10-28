@@ -1,0 +1,24 @@
+{
+  "timestamp": "2025-10-28T16:47:02.635Z",
+  "date": "2025-10-28",
+  "repoLabel": "podman-desktop/extension-podman-quadlet",
+  "metrics": {
+    "discussions": {
+      "totalUpvotes": 0,
+      "totalComments": 0
+    },
+    "pullRequests": {
+      "open": 0,
+      "total": 12,
+      "merged": 9,
+      "mergeRate": "75.0"
+    },
+    "issues": {
+      "open": 3,
+      "closed": 7,
+      "total": 10,
+      "closeRate": "70.0"
+    }
+  },
+  "topActiveUsers": []
+}

@@ -1,0 +1,24 @@
+{
+  "timestamp": "2025-10-28T17:02:51.574Z",
+  "date": "2025-10-28",
+  "repoLabel": "podman-desktop/extension-kreate",
+  "metrics": {
+    "discussions": {
+      "totalUpvotes": 0,
+      "totalComments": 0
+    },
+    "pullRequests": {
+      "open": 0,
+      "total": 0,
+      "merged": 0,
+      "mergeRate": 0
+    },
+    "issues": {
+      "open": 2,
+      "closed": 0,
+      "total": 2,
+      "closeRate": "0.0"
+    }
+  },
+  "topActiveUsers": []
+}

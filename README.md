@@ -10,6 +10,8 @@ A GitHub community metrics analyzer for tracking repository engagement and contr
 - **Pull Request Analysis**: Monitor open community PRs and calculate merge rates
 - **Issue Tracking**: Analyze community-submitted issues and resolution rates
 - **Activity Scoring**: Identify top community contributors based on recent activity
+- **Historical Tracking**: Automatic snapshots saved to track metrics over time
+- **Interactive Dashboard**: Beautiful charts visualizing trends and patterns
 - **GitHub Actions Integration**: Generate automated reports in CI/CD pipelines
 - **Configurable**: Works with any GitHub repository
 
@@ -42,10 +44,17 @@ Generate a token at: https://github.com/settings/tokens
 
 ### Basic Usage
 
-Run with default configuration (Podman Desktop repository):
+Run metrics collection (saves historical snapshot):
 ```bash
 npm start
 ```
+
+Generate visualization dashboard:
+```bash
+npm run dashboard
+```
+
+Then open `dashboard.html` in your browser to view the interactive charts.
 
 ### Analyzing Different Repositories
 
@@ -101,6 +110,24 @@ The tool provides comprehensive metrics:
 - **Issues**: Open/closed community issues, resolution rate
 - **Top Contributors**: Top 5 most active community members in the last month
 
+### Historical Data
+
+Each time you run `npm start`, a snapshot is automatically saved to `data/history/` with:
+- Timestamp and date
+- All metrics (discussions, PRs, issues, rates)
+- Top active users
+
+Snapshots are stored as JSON files and committed to git for version-controlled history.
+
+### Visualization Dashboard
+
+The dashboard provides interactive charts showing:
+- Pull requests over time
+- Issues over time
+- Discussion engagement trends
+- PR merge rate and issue close rate trends
+- Current statistics summary
+
 ### Scoring System
 
 Activity scoring for top contributors:
@@ -114,7 +141,23 @@ The tool automatically detects when running in GitHub Actions and generates:
 - Workflow outputs for all metrics
 - Job summary with formatted metrics
 
-Example GitHub Actions workflow:
+### Automated Dashboard Updates
+
+The included workflow (`.github/workflows/metrics-dashboard.yml`) automatically:
+1. Runs daily to collect metrics
+2. Saves snapshots to `data/history/`
+3. Generates updated dashboard
+4. Commits changes to git
+5. Deploys dashboard to GitHub Pages
+
+To enable:
+1. Push this branch to GitHub
+2. Enable GitHub Pages in repository settings (deploy from `gh-pages` branch)
+3. The workflow runs automatically daily, or trigger manually from Actions tab
+
+Your dashboard will be available at: `https://yourusername.github.io/community-metrics/dashboard.html`
+
+Example custom workflow:
 
 ```yaml
 name: Community Metrics
@@ -140,6 +183,9 @@ jobs:
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: npm start
+
+      - name: Generate Dashboard
+        run: npm run dashboard
 ```
 
 ## Project Structure
@@ -148,6 +194,7 @@ jobs:
 community-metrics/
 ├── src/
 │   ├── index.js              # Main entry point
+│   ├── generate-dashboard.js # Dashboard generator script
 │   ├── config.js             # Configuration management
 │   ├── queries/
 │   │   └── github-queries.js # GraphQL queries
@@ -158,14 +205,21 @@ community-metrics/
 │   │   └── activity.js       # Activity tracking
 │   ├── reporters/
 │   │   ├── console.js        # Console output
-│   │   └── github-actions.js # GitHub Actions integration
+│   │   ├── github-actions.js # GitHub Actions integration
+│   │   └── dashboard.js      # HTML dashboard generator
 │   └── utils/
 │       ├── graphql-client.js # GraphQL API client
 │       ├── helpers.js        # Helper functions
-│       └── maintainers.js    # Maintainers data loader
+│       ├── maintainers.js    # Maintainers data loader
+│       └── history.js        # Historical data management
 ├── data/
-│   └── maintainers.json      # Maintainers list
+│   ├── maintainers.json      # Maintainers list
+│   └── history/              # Historical snapshots (JSON)
+├── .github/
+│   └── workflows/
+│       └── metrics-dashboard.yml # Automated updates workflow
 ├── .env.example              # Environment template
+├── dashboard.html            # Generated visualization (gitignored)
 ├── package.json
 └── README.md
 ```

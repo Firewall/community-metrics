@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Community Metrics Dashboard</title>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Inter', sans-serif;
+      background: #0a0e27;
+      min-height: 100vh;
+      padding: 2rem;
+      color: #e2e8f0;
+    }
+    .container {
+      max-width: 1400px;
+      margin: 0 auto;
+    }
+    h1 {
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 50%, #f093fb 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      text-align: center;
+      margin-bottom: 0.5rem;
+      font-size: 3rem;
+      font-weight: 800;
+      letter-spacing: -0.02em;
+    }
+    .last-updated {
+      text-align: center;
+      color: #64748b;
+      margin-bottom: 2.5rem;
+      font-size: 0.95rem;
+      font-weight: 500;
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+      gap: 1.5rem;
+      margin-bottom: 2rem;
+    }
+    .chart-card {
+      background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
+      border-radius: 16px;
+      padding: 1.75rem;
+      box-shadow: 0 20px 60px rgba(0,0,0,0.4);
+      border: 1px solid rgba(100, 116, 139, 0.2);
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+    .chart-card:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 25px 70px rgba(0,0,0,0.5);
+    }
+    .chart-card h2 {
+      color: #f1f5f9;
+      margin-bottom: 1.25rem;
+      font-size: 1.25rem;
+      font-weight: 600;
+      letter-spacing: -0.01em;
+    }
+    .stats-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 1.25rem;
+      margin-bottom: 2.5rem;
+    }
+    .stat-card {
+      background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
+      border-radius: 16px;
+      padding: 2rem;
+      box-shadow: 0 20px 60px rgba(0,0,0,0.4);
+      border: 1px solid rgba(100, 116, 139, 0.2);
+      text-align: center;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+      position: relative;
+      overflow: hidden;
+    }
+    .stat-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 25px 70px rgba(0,0,0,0.5);
+    }
+    .stat-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 3px;
+      background: linear-gradient(90deg, #667eea 0%, #764ba2 50%, #f093fb 100%);
+    }
+    .stat-value {
+      font-size: 3rem;
+      font-weight: 800;
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 50%, #f093fb 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      line-height: 1.2;
+    }
+    .stat-label {
+      color: #94a3b8;
+      margin-top: 0.75rem;
+      font-size: 0.9rem;
+      font-weight: 500;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+    .footer {
+      text-align: center;
+      color: #64748b;
+      margin-top: 3rem;
+      font-size: 0.9rem;
+      font-weight: 500;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>📊 Community Metrics Dashboard</h1>
+    <div class="last-updated">Last updated: 10/28/2025, 6:03:29 PM</div>
+
+    <div class="stats-grid">
+      <div class="stat-card">
+        <div class="stat-value">0</div>
+        <div class="stat-label">Open PRs</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-value">0</div>
+        <div class="stat-label">Open Issues</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-value">0%</div>
+        <div class="stat-label">PR Merge Rate</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-value">0%</div>
+        <div class="stat-label">Issue Close Rate</div>
+      </div>
+    </div>
+
+    <div class="grid">
+      <div class="chart-card">
+        <h2>Pull Requests Over Time</h2>
+        <canvas id="prChart"></canvas>
+      </div>
+
+      <div class="chart-card">
+        <h2>Issues Over Time</h2>
+        <canvas id="issuesChart"></canvas>
+      </div>
+
+      <div class="chart-card">
+        <h2>Discussion Engagement</h2>
+        <canvas id="discussionsChart"></canvas>
+      </div>
+
+      <div class="chart-card">
+        <h2>Success Rates</h2>
+        <canvas id="ratesChart"></canvas>
+      </div>
+    </div>
+
+    <div class="footer">
+      Generated with Community Metrics Analyzer
+    </div>
+  </div>
+
+  <script>
+    const chartConfig = {
+      responsive: true,
+      maintainAspectRatio: true,
+      plugins: {
+        legend: {
+          display: true,
+          position: 'top',
+          labels: {
+            color: '#e2e8f0',
+            font: {
+              size: 12,
+              weight: 500
+            },
+            padding: 15,
+            usePointStyle: true,
+            pointStyle: 'circle'
+          }
+        },
+        tooltip: {
+          backgroundColor: 'rgba(15, 23, 42, 0.95)',
+          titleColor: '#f1f5f9',
+          bodyColor: '#cbd5e1',
+          borderColor: 'rgba(100, 116, 139, 0.3)',
+          borderWidth: 1,
+          padding: 12,
+          cornerRadius: 8,
+          displayColors: true
+        }
+      },
+      scales: {
+        x: {
+          grid: {
+            display: true,
+            color: 'rgba(100, 116, 139, 0.1)',
+            drawBorder: false
+          },
+          ticks: {
+            color: '#94a3b8',
+            font: {
+              size: 11,
+              weight: 500
+            }
+          }
+        },
+        y: {
+          beginAtZero: true,
+          grid: {
+            color: 'rgba(100, 116, 139, 0.1)',
+            drawBorder: false
+          },
+          ticks: {
+            color: '#94a3b8',
+            font: {
+              size: 11,
+              weight: 500
+            }
+          }
+        }
+      }
+    };
+
+    new Chart(document.getElementById('prChart'), {
+      type: 'line',
+      data: {
+        labels: ["2025-10-28"],
+        datasets: [{
+          label: 'Open PRs',
+          data: [0],
+          borderColor: '#667eea',
+          backgroundColor: 'rgba(102, 126, 234, 0.15)',
+          fill: true,
+          tension: 0.4,
+          borderWidth: 3,
+          pointRadius: 4,
+          pointBackgroundColor: '#667eea',
+          pointBorderColor: '#0f172a',
+          pointBorderWidth: 2,
+          pointHoverRadius: 6
+        }]
+      },
+      options: chartConfig
+    });
+
+    new Chart(document.getElementById('issuesChart'), {
+      type: 'line',
+      data: {
+        labels: ["2025-10-28"],
+        datasets: [{
+          label: 'Open Issues',
+          data: [0],
+          borderColor: '#f093fb',
+          backgroundColor: 'rgba(240, 147, 251, 0.15)',
+          fill: true,
+          tension: 0.4,
+          borderWidth: 3,
+          pointRadius: 4,
+          pointBackgroundColor: '#f093fb',
+          pointBorderColor: '#0f172a',
+          pointBorderWidth: 2,
+          pointHoverRadius: 6
+        }]
+      },
+      options: chartConfig
+    });
+
+    new Chart(document.getElementById('discussionsChart'), {
+      type: 'line',
+      data: {
+        labels: ["2025-10-28"],
+        datasets: [
+          {
+            label: 'Total Upvotes',
+            data: [0],
+            borderColor: '#4facfe',
+            backgroundColor: 'rgba(79, 172, 254, 0.15)',
+            fill: true,
+            tension: 0.4,
+            borderWidth: 3,
+            pointRadius: 4,
+            pointBackgroundColor: '#4facfe',
+            pointBorderColor: '#0f172a',
+            pointBorderWidth: 2,
+            pointHoverRadius: 6
+          },
+          {
+            label: 'Total Comments',
+            data: [0],
+            borderColor: '#00f2fe',
+            backgroundColor: 'rgba(0, 242, 254, 0.15)',
+            fill: true,
+            tension: 0.4,
+            borderWidth: 3,
+            pointRadius: 4,
+            pointBackgroundColor: '#00f2fe',
+            pointBorderColor: '#0f172a',
+            pointBorderWidth: 2,
+            pointHoverRadius: 6
+          }
+        ]
+      },
+      options: chartConfig
+    });
+
+    new Chart(document.getElementById('ratesChart'), {
+      type: 'line',
+      data: {
+        labels: ["2025-10-28"],
+        datasets: [
+          {
+            label: 'PR Merge Rate (%)',
+            data: [0],
+            borderColor: '#43e97b',
+            backgroundColor: 'rgba(67, 233, 123, 0.15)',
+            fill: true,
+            tension: 0.4,
+            borderWidth: 3,
+            pointRadius: 4,
+            pointBackgroundColor: '#43e97b',
+            pointBorderColor: '#0f172a',
+            pointBorderWidth: 2,
+            pointHoverRadius: 6
+          },
+          {
+            label: 'Issue Close Rate (%)',
+            data: [0],
+            borderColor: '#38f9d7',
+            backgroundColor: 'rgba(56, 249, 215, 0.15)',
+            fill: true,
+            tension: 0.4,
+            borderWidth: 3,
+            pointRadius: 4,
+            pointBackgroundColor: '#38f9d7',
+            pointBorderColor: '#0f172a',
+            pointBorderWidth: 2,
+            pointHoverRadius: 6
+          }
+        ]
+      },
+      options: {
+        ...chartConfig,
+        scales: {
+          ...chartConfig.scales,
+          y: {
+            beginAtZero: true,
+            max: 100,
+            grid: {
+              color: 'rgba(100, 116, 139, 0.1)',
+              drawBorder: false
+            },
+            ticks: {
+              color: '#94a3b8',
+              font: {
+                size: 11,
+                weight: 500
+              }
+            }
+          }
+        }
+      }
+    });
+  </script>
+</body>
+</html>

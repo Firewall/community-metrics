@@ -1,0 +1,60 @@
+{
+  "timestamp": "2025-10-28T16:46:12.423Z",
+  "date": "2025-10-28",
+  "repoLabel": "podman-desktop/podman-desktop",
+  "metrics": {
+    "discussions": {
+      "totalUpvotes": 100,
+      "totalComments": 248
+    },
+    "pullRequests": {
+      "open": 10,
+      "total": 247,
+      "merged": 191,
+      "mergeRate": "77.3"
+    },
+    "issues": {
+      "open": 124,
+      "closed": 757,
+      "total": 881,
+      "closeRate": "85.9"
+    }
+  },
+  "topActiveUsers": [
+    {
+      "username": "afbjorklund",
+      "prs": 1,
+      "issues": 1,
+      "comments": 7,
+      "total": 12
+    },
+    {
+      "username": "statickidz",
+      "prs": 2,
+      "issues": 0,
+      "comments": 4,
+      "total": 10
+    },
+    {
+      "username": "Zak-Ghani",
+      "prs": 0,
+      "issues": 2,
+      "comments": 6,
+      "total": 10
+    },
+    {
+      "username": "sAchin-680",
+      "prs": 2,
+      "issues": 0,
+      "comments": 2,
+      "total": 8
+    },
+    {
+      "username": "Aayushyamaan-Shah",
+      "prs": 2,
+      "issues": 0,
+      "comments": 2,
+      "total": 8
+    }
+  ]
+}

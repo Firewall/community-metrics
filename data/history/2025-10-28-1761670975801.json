@@ -1,0 +1,24 @@
+{
+  "timestamp": "2025-10-28T17:02:55.801Z",
+  "date": "2025-10-28",
+  "repoLabel": "podman-desktop/extension-layers-explorer",
+  "metrics": {
+    "discussions": {
+      "totalUpvotes": 0,
+      "totalComments": 0
+    },
+    "pullRequests": {
+      "open": 0,
+      "total": 4,
+      "merged": 3,
+      "mergeRate": "75.0"
+    },
+    "issues": {
+      "open": 1,
+      "closed": 0,
+      "total": 1,
+      "closeRate": "0.0"
+    }
+  },
+  "topActiveUsers": []
+}

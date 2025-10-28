@@ -14,6 +14,7 @@ import { displayMetrics, displayTopActiveUsers, displayOpenPRs } from './reporte
 import { outputGitHubActions } from './reporters/github-actions.js';
 import { setCurrentRepo } from './utils/graphql-client.js';
 import { config } from './config.js';
+import { saveSnapshot } from './utils/history.js';
 
 async function fetchRepoMetrics(repo) {
   setCurrentRepo(repo);
@@ -119,6 +120,10 @@ async function main() {
       displayTopActiveUsers(result.topActiveUsers);
       displayOpenPRs(result.metrics.openCommunityPRs);
 
+      // Save snapshot to history
+      const repoLabel = `${result.repo.owner}/${result.repo.name}`;
+      await saveSnapshot(result.metrics, result.topActiveUsers, rates, repoLabel);
+
       // Output GitHub Actions for individual repo if only one repo
       if (config.repos.length === 1) {
         outputGitHubActions(result.metrics, rates, result.topActiveUsers);
@@ -136,6 +141,10 @@ async function main() {
       const rates = displayMetrics(aggregate);
       displayTopActiveUsers(topActiveUsers);
       displayOpenPRs(aggregate.openCommunityPRs);
+
+      // Save aggregate snapshot
+      await saveSnapshot(aggregate, topActiveUsers, rates, 'aggregate');
+
       outputGitHubActions(aggregate, rates, topActiveUsers);
     }
 

@@ -10,7 +10,8 @@
   "scripts": {
     "start": "node src/index.js",
     "dev": "node --watch src/index.js",
-    "test-gh-output": "GITHUB_ACTIONS=true GITHUB_STEP_SUMMARY=./gh-summary.md node src/index.js"
+    "test-gh-output": "GITHUB_ACTIONS=true GITHUB_STEP_SUMMARY=./gh-summary.md node src/index.js",
+    "dashboard": "node src/generate-dashboard.js"
   },
   "keywords": [
     "github",

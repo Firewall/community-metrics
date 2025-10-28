@@ -36,7 +36,7 @@ export function displayMetrics(metrics, repo = null) {
   console.log(`   Community PR Merge Rate: ${prMergeRate}%`);
   console.log(`   Community Issue Resolution Rate: ${issueResolutionRate}%`);
 
-  return { prMergeRate, issueResolutionRate };
+  return { prMergeRate, issueCloseRate: issueResolutionRate };
 }
 
 export function displayTopActiveUsers(topUsers) {
