@@ -1,0 +1,26 @@
+{
+  "name": "community-metrics",
+  "version": "2.0.0",
+  "description": "GitHub community metrics analyzer for tracking repository engagement and contributions",
+  "type": "module",
+  "main": "src/index.js",
+  "bin": {
+    "community-metrics": "./src/index.js"
+  },
+  "scripts": {
+    "start": "node src/index.js",
+    "dev": "node --watch src/index.js",
+    "test-gh-output": "GITHUB_ACTIONS=true GITHUB_STEP_SUMMARY=./gh-summary.md node src/index.js"
+  },
+  "keywords": [
+    "github",
+    "metrics",
+    "community",
+    "analytics"
+  ],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "dotenv": "^16.4.5"
+  }
+}
