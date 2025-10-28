@@ -1,7 +1,7 @@
 {
-  "timestamp": "2025-10-28T17:02:55.801Z",
+  "timestamp": "2025-10-28T17:46:42.194Z",
   "date": "2025-10-28",
-  "repoLabel": "podman-desktop/extension-layers-explorer",
+  "repoLabel": "podman-desktop/community",
   "metrics": {
     "discussions": {
       "totalUpvotes": 0,
@@ -9,15 +9,16 @@
     },
     "pullRequests": {
       "open": 0,
-      "total": 4,
-      "merged": 3,
-      "mergeRate": "75.0"
+      "total": 0,
+      "merged": 0,
+      "mergeRate": 0,
+      "openPRs": []
     },
     "issues": {
-      "open": 1,
+      "open": 0,
       "closed": 0,
-      "total": 1,
-      "closeRate": "0.0"
+      "total": 0,
+      "closeRate": 0
     }
   },
   "topActiveUsers": []

@@ -1,5 +1,5 @@
 {
-  "timestamp": "2025-10-28T16:46:41.417Z",
+  "timestamp": "2025-10-28T17:45:51.306Z",
   "date": "2025-10-28",
   "repoLabel": "podman-desktop/extension-postgresql",
   "metrics": {
@@ -11,7 +11,8 @@
       "open": 0,
       "total": 6,
       "merged": 4,
-      "mergeRate": "66.7"
+      "mergeRate": "66.7",
+      "openPRs": []
     },
     "issues": {
       "open": 0,

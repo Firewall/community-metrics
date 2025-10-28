@@ -1,5 +1,5 @@
 {
-  "timestamp": "2025-10-28T16:46:50.126Z",
+  "timestamp": "2025-10-28T17:46:00.448Z",
   "date": "2025-10-28",
   "repoLabel": "podman-desktop/extension-minikube",
   "metrics": {
@@ -11,7 +11,8 @@
       "open": 0,
       "total": 16,
       "merged": 13,
-      "mergeRate": "81.3"
+      "mergeRate": "81.3",
+      "openPRs": []
     },
     "issues": {
       "open": 2,

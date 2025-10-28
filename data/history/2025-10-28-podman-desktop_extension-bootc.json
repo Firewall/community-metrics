@@ -1,5 +1,5 @@
 {
-  "timestamp": "2025-10-28T16:46:28.204Z",
+  "timestamp": "2025-10-28T17:45:37.391Z",
   "date": "2025-10-28",
   "repoLabel": "podman-desktop/extension-bootc",
   "metrics": {
@@ -11,7 +11,8 @@
       "open": 0,
       "total": 25,
       "merged": 22,
-      "mergeRate": "88.0"
+      "mergeRate": "88.0",
+      "openPRs": []
     },
     "issues": {
       "open": 3,

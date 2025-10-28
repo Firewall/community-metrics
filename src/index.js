@@ -14,10 +14,41 @@ import { displayMetrics, displayTopActiveUsers, displayOpenPRs } from './reporte
 import { outputGitHubActions } from './reporters/github-actions.js';
 import { setCurrentRepo } from './utils/graphql-client.js';
 import { config } from './config.js';
-import { saveSnapshot } from './utils/history.js';
+import { saveSnapshot, hasSnapshotForToday } from './utils/history.js';
 
 async function fetchRepoMetrics(repo) {
   setCurrentRepo(repo);
+
+  const repoLabel = `${repo.owner}/${repo.name}`;
+  const cached = await hasSnapshotForToday(repoLabel);
+
+  if (cached.exists) {
+    console.log(`\n📦 Using cached snapshot for ${repoLabel} (${cached.filename})`);
+
+    const openPRs = (cached.snapshot.metrics.pullRequests.openPRs || []).map(pr => ({
+      number: pr.number,
+      title: pr.title,
+      author: { login: pr.author },
+      url: pr.url,
+      createdAt: pr.createdAt,
+    }));
+
+    return {
+      repo,
+      metrics: {
+        totalUpvotes: cached.snapshot.metrics.discussions.totalUpvotes,
+        totalComments: cached.snapshot.metrics.discussions.totalComments,
+        openCommunityPRs: openPRs,
+        totalCommunityPRs: cached.snapshot.metrics.pullRequests.total,
+        totalMergedCommunityPRs: cached.snapshot.metrics.pullRequests.merged,
+        openCommunityIssues: cached.snapshot.metrics.issues.open,
+        closedCommunityIssues: cached.snapshot.metrics.issues.closed,
+        totalCommunityIssues: cached.snapshot.metrics.issues.total,
+      },
+      topActiveUsers: cached.snapshot.topActiveUsers,
+      cached: true,
+    };
+  }
 
   console.log(`\n🔍 Fetching ${repo.owner}/${repo.name} data...`);
 
@@ -52,6 +83,7 @@ async function fetchRepoMetrics(repo) {
       totalCommunityIssues,
     },
     topActiveUsers,
+    cached: false,
   };
 }
 
@@ -120,9 +152,11 @@ async function main() {
       displayTopActiveUsers(result.topActiveUsers);
       displayOpenPRs(result.metrics.openCommunityPRs);
 
-      // Save snapshot to history
-      const repoLabel = `${result.repo.owner}/${result.repo.name}`;
-      await saveSnapshot(result.metrics, result.topActiveUsers, rates, repoLabel);
+      // Save snapshot to history only if not cached
+      if (!result.cached) {
+        const repoLabel = `${result.repo.owner}/${result.repo.name}`;
+        await saveSnapshot(result.metrics, result.topActiveUsers, rates, repoLabel);
+      }
 
       // Output GitHub Actions for individual repo if only one repo
       if (config.repos.length === 1) {
@@ -142,8 +176,13 @@ async function main() {
       displayTopActiveUsers(topActiveUsers);
       displayOpenPRs(aggregate.openCommunityPRs);
 
-      // Save aggregate snapshot
-      await saveSnapshot(aggregate, topActiveUsers, rates, 'aggregate');
+      // Save aggregate snapshot only if any repo fetched new data
+      const hasNewData = repoResults.some(r => !r.cached);
+      if (hasNewData) {
+        await saveSnapshot(aggregate, topActiveUsers, rates, 'aggregate');
+      } else {
+        console.log('\n📦 Using cached aggregate data (no new snapshots needed today)');
+      }
 
       outputGitHubActions(aggregate, rates, topActiveUsers);
     }

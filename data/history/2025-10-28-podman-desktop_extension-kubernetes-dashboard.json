@@ -1,5 +1,5 @@
 {
-  "timestamp": "2025-10-28T16:46:35.965Z",
+  "timestamp": "2025-10-28T17:45:45.419Z",
   "date": "2025-10-28",
   "repoLabel": "podman-desktop/extension-kubernetes-dashboard",
   "metrics": {
@@ -11,7 +11,8 @@
       "open": 0,
       "total": 3,
       "merged": 3,
-      "mergeRate": "100.0"
+      "mergeRate": "100.0",
+      "openPRs": []
     },
     "issues": {
       "open": 0,

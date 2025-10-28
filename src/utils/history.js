@@ -16,6 +16,39 @@ async function ensureHistoryDir() {
   }
 }
 
+export async function hasSnapshotForToday(repoLabel = null) {
+  await ensureHistoryDir();
+
+  const today = new Date().toISOString().split('T')[0];
+
+  try {
+    const files = await fs.readdir(HISTORY_DIR);
+    const todayFiles = files.filter(f => f.startsWith(today) && f.endsWith('.json'));
+
+    if (repoLabel) {
+      for (const file of todayFiles) {
+        const content = await fs.readFile(path.join(HISTORY_DIR, file), 'utf-8');
+        const snapshot = JSON.parse(content);
+        if (snapshot.repoLabel === repoLabel) {
+          return { exists: true, snapshot, filename: file };
+        }
+      }
+      return { exists: false };
+    }
+
+    if (todayFiles.length > 0) {
+      const content = await fs.readFile(path.join(HISTORY_DIR, todayFiles[0]), 'utf-8');
+      const snapshot = JSON.parse(content);
+      return { exists: true, snapshot, filename: todayFiles[0] };
+    }
+
+    return { exists: false };
+  } catch (error) {
+    console.error('Failed to check for existing snapshot:', error);
+    return { exists: false };
+  }
+}
+
 export async function saveSnapshot(metrics, topActiveUsers, rates, repoLabel = null) {
   await ensureHistoryDir();
 
@@ -36,6 +69,13 @@ export async function saveSnapshot(metrics, topActiveUsers, rates, repoLabel = n
         total: metrics.totalCommunityPRs,
         merged: metrics.totalMergedCommunityPRs,
         mergeRate: rates.prMergeRate,
+        openPRs: (metrics.openCommunityPRs || []).map(pr => ({
+          number: pr.number,
+          title: pr.title,
+          author: pr.author?.login || 'unknown',
+          url: pr.url,
+          createdAt: pr.createdAt,
+        })),
       },
       issues: {
         open: metrics.openCommunityIssues,
@@ -53,7 +93,8 @@ export async function saveSnapshot(metrics, topActiveUsers, rates, repoLabel = n
     })),
   };
 
-  const filename = `${date}-${Date.now()}.json`;
+  const saferepoLabel = (repoLabel || 'unknown').replace(/\//g, '_');
+  const filename = `${date}-${saferepoLabel}.json`;
   const filepath = path.join(HISTORY_DIR, filename);
 
   await fs.writeFile(filepath, JSON.stringify(snapshot, null, 2));
@@ -91,9 +132,10 @@ export async function getDailySnapshots() {
   const dailyMap = new Map();
 
   history.forEach(snapshot => {
-    const existing = dailyMap.get(snapshot.date);
+    const key = `${snapshot.date}-${snapshot.repoLabel || 'unknown'}`;
+    const existing = dailyMap.get(key);
     if (!existing || new Date(snapshot.timestamp) > new Date(existing.timestamp)) {
-      dailyMap.set(snapshot.date, snapshot);
+      dailyMap.set(key, snapshot);
     }
   });
 
