@@ -1,11 +1,15 @@
 import { fileURLToPath } from 'url';
 import { dirname, join } from 'path';
+import { existsSync } from 'fs';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
 
-// Load environment variables
-process.loadEnvFile();
+// Load environment variables from .env if it exists
+const envPath = join(__dirname, '../.env');
+if (existsSync(envPath)) {
+  process.loadEnvFile();
+}
 
 const GH_TOKEN = process.env.GH_TOKEN;
 
