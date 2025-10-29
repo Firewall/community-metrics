@@ -1,0 +1,29 @@
+import { paginatedFetch, getNodes } from '../utils/graphql-client.js';
+import { isCommunityContributor } from '../utils/helpers.js';
+
+export async function fetchAllTimeCommunityIssues() {
+  let totalCommunityIssues = 0;
+  let openCommunityIssues = 0;
+  let closedCommunityIssues = 0;
+
+  await paginatedFetch('allIssues', (data) => {
+    const issues = getNodes(data, 'allIssues');
+    let count = 0;
+
+    issues.forEach((issue) => {
+      if (isCommunityContributor(issue.author)) {
+        totalCommunityIssues++;
+        count++;
+        if (issue.state === "OPEN") {
+          openCommunityIssues++;
+        } else if (issue.state === "CLOSED") {
+          closedCommunityIssues++;
+        }
+      }
+    });
+
+    return { count };
+  }, "Counting all-time community issues");
+
+  return { totalCommunityIssues, openCommunityIssues, closedCommunityIssues };
+}

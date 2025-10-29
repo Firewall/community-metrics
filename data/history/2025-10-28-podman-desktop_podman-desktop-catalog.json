@@ -1,0 +1,25 @@
+{
+  "timestamp": "2025-10-28T17:46:33.251Z",
+  "date": "2025-10-28",
+  "repoLabel": "podman-desktop/podman-desktop-catalog",
+  "metrics": {
+    "discussions": {
+      "totalUpvotes": 0,
+      "totalComments": 0
+    },
+    "pullRequests": {
+      "open": 0,
+      "total": 2,
+      "merged": 2,
+      "mergeRate": "100.0",
+      "openPRs": []
+    },
+    "issues": {
+      "open": 0,
+      "closed": 0,
+      "total": 0,
+      "closeRate": 0
+    }
+  },
+  "topActiveUsers": []
+}

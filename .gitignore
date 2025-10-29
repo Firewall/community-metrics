@@ -1,0 +1,23 @@
+# Environment variables
+.env
+
+# Dependencies
+node_modules/
+
+# Old temporary directory
+/tmp/
+
+# Output files
+output/
+*.json
+!data/maintainers.json
+!data/history/*.json
+!package.json
+gh-summary.md
+
+# Logs
+*.log
+npm-debug.log*
+
+# OS
+.DS_Store
