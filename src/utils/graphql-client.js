@@ -66,8 +66,8 @@ export async function paginatedFetch(queryName, processor, progressMessage = nul
       console.log(`   Processed ${processedCount} items so far...`);
     }
 
-    // Add small delay to be respectful to API
-    await new Promise((resolve) => setTimeout(resolve, 100));
+    // Add small delay to be respectful to API (reduced for better performance)
+    await new Promise((resolve) => setTimeout(resolve, 50));
   }
 }
 

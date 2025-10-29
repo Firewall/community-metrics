@@ -162,13 +162,15 @@ function aggregateMetrics(repoResults) {
 
 async function main() {
   try {
-    const repoResults = [];
+    console.log(`\n🚀 Fetching metrics for ${config.repos.length} repositories in parallel...`);
 
-    // Fetch metrics for each repository
-    for (const repo of config.repos) {
-      const result = await fetchRepoMetrics(repo);
-      repoResults.push(result);
+    // Fetch all repositories in parallel for maximum performance
+    const repoResults = await Promise.all(
+      config.repos.map(repo => fetchRepoMetrics(repo))
+    );
 
+    // Display and save results for each repository
+    for (const result of repoResults) {
       // Display individual repo results
       const rates = displayMetrics(result.metrics, result.repo);
       displayTopActiveUsers(result.topActiveUsers);

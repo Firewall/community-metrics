@@ -93,29 +93,41 @@ export async function fetchMastodonFollowers(instance, username) {
 }
 
 /**
- * Fetches all configured social media metrics
+ * Fetches all configured social media metrics in parallel
  * @param {Object} socialConfig - Social media configuration with handles
  * @returns {Promise<Object>} Social media metrics
  */
 export async function fetchSocialMetrics(socialConfig) {
-  const metrics = {};
+  const promises = [];
 
   if (socialConfig?.bluesky) {
-    metrics.blueskyFollowers = await fetchBlueskyFollowers(socialConfig.bluesky);
+    promises.push(
+      fetchBlueskyFollowers(socialConfig.bluesky).then(count => ['blueskyFollowers', count])
+    );
   }
 
   if (socialConfig?.linkedin) {
-    metrics.linkedinFollowers = await fetchLinkedInFollowers(socialConfig.linkedin);
+    promises.push(
+      fetchLinkedInFollowers(socialConfig.linkedin).then(count => ['linkedinFollowers', count])
+    );
   }
 
   if (socialConfig?.twitter) {
-    metrics.twitterFollowers = await fetchTwitterFollowers(socialConfig.twitter);
+    promises.push(
+      fetchTwitterFollowers(socialConfig.twitter).then(count => ['twitterFollowers', count])
+    );
   }
 
   if (socialConfig?.mastodon) {
     const { instance, username } = socialConfig.mastodon;
-    metrics.mastodonFollowers = await fetchMastodonFollowers(instance, username);
+    promises.push(
+      fetchMastodonFollowers(instance, username).then(count => ['mastodonFollowers', count])
+    );
   }
+
+  // Fetch all social metrics in parallel
+  const results = await Promise.all(promises);
+  const metrics = Object.fromEntries(results);
 
   // Return null if no metrics were collected
   return Object.keys(metrics).length > 0 ? metrics : null;
