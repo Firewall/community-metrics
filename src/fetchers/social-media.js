@@ -28,17 +28,36 @@ export async function fetchBlueskyFollowers(handle) {
 
 /**
  * Fetches LinkedIn follower count for a company page
- * Note: LinkedIn's API requires authentication and has restrictions.
- * This is a placeholder for when proper API access is configured.
- * @param {string} companyUrl - LinkedIn company URL
+ * Parses the public LinkedIn page HTML to extract follower count from meta tags
+ * @param {string} companyUrl - LinkedIn company URL (e.g., 'https://www.linkedin.com/company/podman-desktop')
  * @returns {Promise<number>} Follower count
  */
 export async function fetchLinkedInFollowers(companyUrl) {
   try {
-    // LinkedIn requires OAuth authentication and approved API access
-    // For now, we'll return 0 and log that manual tracking is needed
-    console.warn(`LinkedIn tracking for ${companyUrl} requires manual configuration`);
-    console.warn('LinkedIn API requires OAuth authentication and approved API access');
+    // Fetch the LinkedIn page with a user agent to avoid being blocked
+    const response = await fetch(companyUrl, {
+      headers: {
+        'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36'
+      }
+    });
+
+    if (!response.ok) {
+      throw new Error(`LinkedIn page error: ${response.status} ${response.statusText}`);
+    }
+
+    const html = await response.text();
+
+    // Extract follower count from meta description tag
+    // Format: "Company Name | XXX followers on LinkedIn. ..."
+    const metaMatch = html.match(/<meta\s+name="description"\s+content="[^"]*\|\s*([0-9,]+)\s+followers?\s+on\s+LinkedIn/i);
+
+    if (metaMatch && metaMatch[1]) {
+      // Remove commas and parse as integer
+      const followerCount = parseInt(metaMatch[1].replace(/,/g, ''), 10);
+      return followerCount || 0;
+    }
+
+    console.warn(`Could not parse LinkedIn follower count from ${companyUrl}`);
     return 0;
   } catch (error) {
     console.error(`Failed to fetch LinkedIn followers for ${companyUrl}:`, error.message);
@@ -47,18 +66,49 @@ export async function fetchLinkedInFollowers(companyUrl) {
 }
 
 /**
- * Fetches X/Twitter follower count
- * Note: Twitter/X API v2 requires authentication
- * This is a placeholder for when proper API access is configured.
+ * Fetches X/Twitter follower count using API v2
+ * Requires TWITTER_BEARER_TOKEN environment variable
  * @param {string} handle - Twitter/X handle (e.g., 'podmandesktop')
+ * @param {string} bearerToken - Optional bearer token (uses env var if not provided)
  * @returns {Promise<number>} Follower count
  */
-export async function fetchTwitterFollowers(handle) {
+export async function fetchTwitterFollowers(handle, bearerToken = null) {
   try {
-    // Twitter/X API v2 requires authentication
-    // For now, we'll return 0 and log that manual tracking is needed
-    console.warn(`Twitter/X tracking for @${handle} requires manual configuration`);
-    console.warn('Twitter/X API requires authentication and API access');
+    const token = bearerToken || process.env.TWITTER_BEARER_TOKEN;
+
+    if (!token) {
+      console.warn(`Twitter/X tracking requires TWITTER_BEARER_TOKEN environment variable`);
+      console.warn(`Get your bearer token from: https://developer.x.com/en/portal/dashboard`);
+      return 0;
+    }
+
+    // X API v2 endpoint to get user by username
+    const response = await fetch(
+      `https://api.x.com/2/users/by/username/${handle}?user.fields=public_metrics`,
+      {
+        headers: {
+          'Authorization': `Bearer ${token}`,
+          'User-Agent': 'community-metrics/2.0'
+        }
+      }
+    );
+
+    if (!response.ok) {
+      if (response.status === 401) {
+        throw new Error('Invalid Twitter bearer token');
+      } else if (response.status === 429) {
+        throw new Error('Twitter API rate limit exceeded');
+      }
+      throw new Error(`Twitter API error: ${response.status} ${response.statusText}`);
+    }
+
+    const data = await response.json();
+
+    if (data.data?.public_metrics?.followers_count !== undefined) {
+      return data.data.public_metrics.followers_count;
+    }
+
+    console.warn(`Could not parse Twitter follower count for @${handle}`);
     return 0;
   } catch (error) {
     console.error(`Failed to fetch Twitter followers for @${handle}:`, error.message);
