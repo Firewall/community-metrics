@@ -66,54 +66,14 @@ export async function fetchLinkedInFollowers(companyUrl) {
 }
 
 /**
- * Fetches X/Twitter follower count using API v2
- * Requires TWITTER_BEARER_TOKEN environment variable
+ * Twitter/X follower tracking via manual configuration
+ * Uses TWITTER_FOLLOWERS environment variable for manual tracking
  * @param {string} handle - Twitter/X handle (e.g., 'podmandesktop')
- * @param {string} bearerToken - Optional bearer token (uses env var if not provided)
  * @returns {Promise<number>} Follower count
  */
-export async function fetchTwitterFollowers(handle, bearerToken = null) {
-  try {
-    const token = bearerToken || process.env.TWITTER_BEARER_TOKEN;
-
-    if (!token) {
-      console.warn(`Twitter/X tracking requires TWITTER_BEARER_TOKEN environment variable`);
-      console.warn(`Get your bearer token from: https://developer.x.com/en/portal/dashboard`);
-      return 0;
-    }
-
-    // X API v2 endpoint to get user by username
-    const response = await fetch(
-      `https://api.x.com/2/users/by/username/${handle}?user.fields=public_metrics`,
-      {
-        headers: {
-          'Authorization': `Bearer ${token}`,
-          'User-Agent': 'community-metrics/2.0'
-        }
-      }
-    );
-
-    if (!response.ok) {
-      if (response.status === 401) {
-        throw new Error('Invalid Twitter bearer token');
-      } else if (response.status === 429) {
-        throw new Error('Twitter API rate limit exceeded');
-      }
-      throw new Error(`Twitter API error: ${response.status} ${response.statusText}`);
-    }
-
-    const data = await response.json();
-
-    if (data.data?.public_metrics?.followers_count !== undefined) {
-      return data.data.public_metrics.followers_count;
-    }
-
-    console.warn(`Could not parse Twitter follower count for @${handle}`);
-    return 0;
-  } catch (error) {
-    console.error(`Failed to fetch Twitter followers for @${handle}:`, error.message);
-    return 0;
-  }
+export async function fetchTwitterFollowers(handle) {
+  const manualCount = process.env.TWITTER_FOLLOWERS;
+  return manualCount ? parseInt(manualCount, 10) : 0;
 }
 
 /**
@@ -145,7 +105,7 @@ export async function fetchMastodonFollowers(instance, username) {
 /**
  * Fetches all configured social media metrics in parallel
  * @param {Object} socialConfig - Social media configuration with handles
- * @returns {Promise<Object>} Social media metrics
+ * @returns {Promise<Object>} Social media metrics (excludes zero values)
  */
 export async function fetchSocialMetrics(socialConfig) {
   const promises = [];
@@ -162,12 +122,6 @@ export async function fetchSocialMetrics(socialConfig) {
     );
   }
 
-  if (socialConfig?.twitter) {
-    promises.push(
-      fetchTwitterFollowers(socialConfig.twitter).then(count => ['twitterFollowers', count])
-    );
-  }
-
   if (socialConfig?.mastodon) {
     const { instance, username } = socialConfig.mastodon;
     promises.push(
@@ -175,9 +129,19 @@ export async function fetchSocialMetrics(socialConfig) {
     );
   }
 
+  if (socialConfig?.twitter) {
+    promises.push(
+      fetchTwitterFollowers(socialConfig.twitter).then(count => ['twitterFollowers', count])
+    );
+  }
+
   // Fetch all social metrics in parallel
   const results = await Promise.all(promises);
-  const metrics = Object.fromEntries(results);
+
+  // Filter out zero values to avoid cluttering charts
+  const metrics = Object.fromEntries(
+    results.filter(([key, value]) => value > 0)
+  );
 
   // Return null if no metrics were collected
   return Object.keys(metrics).length > 0 ? metrics : null;

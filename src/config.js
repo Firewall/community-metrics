@@ -72,8 +72,8 @@ export const config = {
     // Example: export LINKEDIN_COMPANY=https://www.linkedin.com/company/podman-desktop
     linkedin: process.env.LINKEDIN_COMPANY || 'https://www.linkedin.com/company/podman-desktop',
 
-    // Twitter/X handle (without @)
-    // Example: export TWITTER_HANDLE=podmandesktop
+    // Twitter/X handle (manual tracking via TWITTER_FOLLOWERS env var)
+    // Example: export TWITTER_HANDLE=podmandesktop TWITTER_FOLLOWERS=1234
     twitter: process.env.TWITTER_HANDLE || 'podmandesktop',
 
     // Mastodon account (instance and username)

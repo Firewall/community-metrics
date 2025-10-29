@@ -1,6 +1,6 @@
 import { paginatedFetch, getNodes } from '../utils/graphql-client.js';
 
-export async function fetchDiscussions() {
+export async function fetchDiscussions(repo) {
   let totalUpvotes = 0;
   let totalComments = 0;
   const positiveReactions = ["THUMBS_UP", "HEART", "HOORAY", "ROCKET"];
@@ -17,7 +17,7 @@ export async function fetchDiscussions() {
         }
       });
     });
-  });
+  }, repo);
 
   return { totalUpvotes, totalComments };
 }

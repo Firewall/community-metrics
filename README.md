@@ -46,9 +46,14 @@ Generate a token at: https://github.com/settings/tokens
 
 ### Basic Usage
 
-Run metrics collection (saves historical snapshot):
+Run metrics collection (uses cached data from today if available):
 ```bash
 npm start
+```
+
+Fetch fresh data (ignores cache):
+```bash
+npm run start:fresh
 ```
 
 Generate visualization dashboard:
@@ -81,8 +86,10 @@ Track social media follower growth alongside your GitHub metrics:
 # Set your social media handles in .env
 BLUESKY_HANDLE=yourhandle.bsky.social
 LINKEDIN_COMPANY=https://www.linkedin.com/company/your-company
+
+# Twitter/X (manual tracking - update the follower count periodically)
 TWITTER_HANDLE=yourhandle
-TWITTER_BEARER_TOKEN=your_twitter_bearer_token
+TWITTER_FOLLOWERS=1234
 
 # Mastodon
 MASTODON_INSTANCE=fosstodon.org
@@ -90,23 +97,12 @@ MASTODON_USERNAME=yourusername
 ```
 
 The dashboard will automatically display:
-- ☁️ Bluesky follower count (no auth required)
-- 💼 LinkedIn company follower count (no auth required)
-- 🐘 Mastodon follower count (no auth required)
-- 🐦 Twitter/X follower count (requires bearer token)
+- ☁️ Bluesky follower count (automated, no auth required)
+- 💼 LinkedIn company follower count (automated, no auth required)
+- 🐦 Twitter/X follower count (manual tracking via `TWITTER_FOLLOWERS` env var)
+- 🐘 Mastodon follower count (automated, no auth required)
 
-#### Getting Twitter/X Bearer Token
-
-To track Twitter/X followers, you need a bearer token from the X Developer Portal:
-
-1. Go to https://developer.x.com/en/portal/dashboard
-2. Sign in with your Twitter/X account
-3. Create a new project and app (if you don't have one)
-4. Navigate to your app's "Keys and Tokens" tab
-5. Generate a "Bearer Token"
-6. Add it to your `.env` file as `TWITTER_BEARER_TOKEN`
-
-**Note**: Twitter/X API has rate limits. The free tier allows 500k tweets read per month.
+**Note**: Twitter/X doesn't allow scraping and their API requires paid access. To track Twitter followers, manually check https://x.com/yourhandle and update the `TWITTER_FOLLOWERS` value in your `.env` file periodically.
 
 ### Custom Maintainers List
 
@@ -139,7 +135,7 @@ All configuration can be done via environment variables:
 | `BLUESKY_HANDLE` | Bluesky handle for follower tracking (optional) | `podman-desktop.io` |
 | `LINKEDIN_COMPANY` | LinkedIn company page URL (optional) | `https://www.linkedin.com/company/podman-desktop` |
 | `TWITTER_HANDLE` | Twitter/X handle without @ (optional) | `podmandesktop` |
-| `TWITTER_BEARER_TOKEN` | Twitter/X API bearer token (optional) | - |
+| `TWITTER_FOLLOWERS` | Manual Twitter/X follower count (optional) | - |
 | `MASTODON_INSTANCE` | Mastodon instance domain (optional) | `fosstodon.org` |
 | `MASTODON_USERNAME` | Mastodon username (optional) | `podmandesktop` |
 

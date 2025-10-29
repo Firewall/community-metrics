@@ -1,5 +1,5 @@
 {
-  "timestamp": "2025-10-29T13:17:06.840Z",
+  "timestamp": "2025-10-29T15:58:23.033Z",
   "date": "2025-10-29",
   "repoLabel": "containers/podman-desktop-extension-ai-lab",
   "metrics": {
@@ -38,8 +38,8 @@
     "social": {
       "blueskyFollowers": 138,
       "linkedinFollowers": 982,
-      "twitterFollowers": 0,
-      "mastodonFollowers": 69
+      "mastodonFollowers": 69,
+      "twitterFollowers": 18
     },
     "repository": {
       "stars": 261,

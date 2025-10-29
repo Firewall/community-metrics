@@ -1,13 +1,6 @@
 import { QUERIES } from '../queries/github-queries.js';
 import { config } from '../config.js';
 
-// Current repository context for multi-repo support
-let currentRepo = config.repos[0];
-
-export function setCurrentRepo(repo) {
-  currentRepo = repo;
-}
-
 export async function makeGraphQLRequest(query, variables) {
   const response = await fetch("https://api.github.com/graphql", {
     method: "POST",
@@ -27,7 +20,7 @@ export async function makeGraphQLRequest(query, variables) {
   return data;
 }
 
-export async function paginatedFetch(queryName, processor, progressMessage = null, extraVariables = {}, repo = null) {
+export async function paginatedFetch(queryName, processor, repo, progressMessage = null, extraVariables = {}) {
   let hasNextPage = true;
   let cursor = null;
   let processedCount = 0;
@@ -38,8 +31,8 @@ export async function paginatedFetch(queryName, processor, progressMessage = nul
 
   while (hasNextPage) {
     const variables = {
-      owner: currentRepo.owner,
-      name: currentRepo.name,
+      owner: repo.owner,
+      name: repo.name,
       after: cursor,
       ...extraVariables,
     };

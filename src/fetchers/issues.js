@@ -1,7 +1,7 @@
 import { paginatedFetch, getNodes } from '../utils/graphql-client.js';
 import { isCommunityContributor } from '../utils/helpers.js';
 
-export async function fetchAllTimeCommunityIssues() {
+export async function fetchAllTimeCommunityIssues(repo) {
   let totalCommunityIssues = 0;
   let openCommunityIssues = 0;
   let closedCommunityIssues = 0;
@@ -23,7 +23,7 @@ export async function fetchAllTimeCommunityIssues() {
     });
 
     return { count };
-  }, "Counting all-time community issues");
+  }, repo, "Counting all-time community issues");
 
   return { totalCommunityIssues, openCommunityIssues, closedCommunityIssues };
 }

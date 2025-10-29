@@ -1,5 +1,5 @@
 {
-  "timestamp": "2025-10-29T13:17:06.831Z",
+  "timestamp": "2025-10-29T15:58:23.031Z",
   "date": "2025-10-29",
   "repoLabel": "podman-desktop/extension-kreate",
   "metrics": {
@@ -8,38 +8,23 @@
       "totalComments": 0
     },
     "pullRequests": {
-      "open": 2,
-      "total": 42,
-      "merged": 35,
-      "mergeRate": "83.3",
-      "openPRs": [
-        {
-          "number": 3065,
-          "title": "feat(playground): mcp servers listed",
-          "author": "manusa",
-          "url": "https://github.com/containers/podman-desktop-extension-ai-lab/pull/3065",
-          "createdAt": "2025-05-22T10:10:03Z"
-        },
-        {
-          "number": 2518,
-          "title": "feat(state-management): add error handling and service resolution to …",
-          "author": "sparesparrow",
-          "url": "https://github.com/containers/podman-desktop-extension-ai-lab/pull/2518",
-          "createdAt": "2025-02-12T16:56:23Z"
-        }
-      ]
+      "open": 0,
+      "total": 0,
+      "merged": 0,
+      "mergeRate": 0,
+      "openPRs": []
     },
     "issues": {
-      "open": 19,
-      "closed": 52,
-      "total": 71,
-      "closeRate": "73.2"
+      "open": 2,
+      "closed": 0,
+      "total": 2,
+      "closeRate": "0.0"
     },
     "social": {
       "blueskyFollowers": 138,
       "linkedinFollowers": 982,
-      "twitterFollowers": 0,
-      "mastodonFollowers": 69
+      "mastodonFollowers": 69,
+      "twitterFollowers": 18
     },
     "repository": {
       "stars": 3,
@@ -47,13 +32,5 @@
       "watchers": 10
     }
   },
-  "topActiveUsers": [
-    {
-      "username": "github-actions",
-      "prs": 1,
-      "issues": 0,
-      "comments": 0,
-      "total": 3
-    }
-  ]
+  "topActiveUsers": []
 }

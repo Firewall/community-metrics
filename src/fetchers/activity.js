@@ -1,7 +1,7 @@
 import { paginatedFetch, getNodes } from '../utils/graphql-client.js';
 import { isCommunityContributor, isWithinLastMonth } from '../utils/helpers.js';
 
-export async function fetchRecentActivity() {
+export async function fetchRecentActivity(repo) {
   const userActivity = new Map();
 
   // Track activity: PRs created = 3 points, Issues created = 2 points, Comments = 1 point
@@ -51,7 +51,7 @@ export async function fetchRecentActivity() {
     });
 
     return { count: recentCount, shouldStop };
-  }, "Fetching recent PR activity");
+  }, repo, "Fetching recent PR activity");
 
   // Fetch recent issues and their comments
   await paginatedFetch('recentIssues', (data) => {
@@ -81,7 +81,7 @@ export async function fetchRecentActivity() {
     });
 
     return { count: recentCount, shouldStop };
-  }, "Fetching recent issue activity");
+  }, repo, "Fetching recent issue activity");
 
   // Fetch recent discussions and their comments
   await paginatedFetch('recentDiscussions', (data) => {
@@ -106,7 +106,7 @@ export async function fetchRecentActivity() {
     });
 
     return { count: recentCount, shouldStop };
-  }, "Fetching recent discussion activity");
+  }, repo, "Fetching recent discussion activity");
 
   // Get top 5 most active users
   const topUsers = Array.from(userActivity.values())

@@ -14,18 +14,19 @@ import { fetchSocialMetrics } from './fetchers/social-media.js';
 import { fetchRepositoryMetadata } from './fetchers/repository.js';
 import { displayMetrics, displayTopActiveUsers, displayOpenPRs } from './reporters/console.js';
 import { outputGitHubActions } from './reporters/github-actions.js';
-import { setCurrentRepo } from './utils/graphql-client.js';
 import { config } from './config.js';
 import { saveSnapshot, hasSnapshotForToday } from './utils/history.js';
 
-async function fetchRepoMetrics(repo) {
-  setCurrentRepo(repo);
+// Parse command line arguments
+const args = process.argv.slice(2);
+const ignoreCache = args.includes('--no-cache') || args.includes('--ignore-cache');
 
+async function fetchRepoMetrics(repo, socialMetrics = null) {
   const repoLabel = `${repo.owner}/${repo.name}`;
-  const cached = await hasSnapshotForToday(repoLabel);
+  const cached = !ignoreCache && await hasSnapshotForToday(repoLabel);
 
-  if (cached.exists) {
-    console.log(`\n📦 Using cached snapshot for ${repoLabel} (${cached.filename})`);
+  if (cached && cached.exists) {
+    console.log(`\n📦 [${repoLabel}] Using cached snapshot (${cached.filename})`);
 
     const openPRs = (cached.snapshot.metrics.pullRequests.openPRs || []).map(pr => ({
       number: pr.number,
@@ -48,18 +49,19 @@ async function fetchRepoMetrics(repo) {
         totalCommunityIssues: cached.snapshot.metrics.issues.total,
       },
       topActiveUsers: cached.snapshot.topActiveUsers,
+      socialMetrics: socialMetrics || cached.snapshot.metrics.social,
+      repoMetadata: cached.snapshot.metrics.repository,
       cached: true,
     };
   }
 
-  console.log(`\n🔍 Fetching ${repo.owner}/${repo.name} data...`);
+  console.log(`\n🔍 [${repoLabel}] Fetching data...`);
 
-  // Fetch discussions, open community PRs, recent activity, social media, and repo metadata in parallel
-  const [discussionsData, openCommunityPRs, topActiveUsers, socialMetrics, repoMetadata] = await Promise.all([
-    fetchDiscussions(),
-    fetchOpenCommunityPRs(),
-    fetchRecentActivity(),
-    fetchSocialMetrics(config.social),
+  // Fetch discussions, open community PRs, recent activity, and repo metadata in parallel
+  const [discussionsData, openCommunityPRs, topActiveUsers, repoMetadata] = await Promise.all([
+    fetchDiscussions(repo),
+    fetchOpenCommunityPRs(repo),
+    fetchRecentActivity(repo),
     fetchRepositoryMetadata(repo),
   ]);
 
@@ -68,8 +70,8 @@ async function fetchRepoMetrics(repo) {
     { totalCommunityPRs, totalMergedCommunityPRs },
     { totalCommunityIssues, openCommunityIssues, closedCommunityIssues },
   ] = await Promise.all([
-    fetchAllTimeCommunityPRs(),
-    fetchAllTimeCommunityIssues(),
+    fetchAllTimeCommunityPRs(repo),
+    fetchAllTimeCommunityIssues(repo),
   ]);
 
   const { totalUpvotes, totalComments } = discussionsData;
@@ -162,11 +164,18 @@ function aggregateMetrics(repoResults) {
 
 async function main() {
   try {
+    if (ignoreCache) {
+      console.log('\n⚠️  Cache disabled - fetching fresh data for all repositories');
+    }
     console.log(`\n🚀 Fetching metrics for ${config.repos.length} repositories in parallel...`);
+
+    // Fetch social media metrics once (shared across all repos)
+    console.log('\n📱 Fetching social media metrics...');
+    const socialMetrics = await fetchSocialMetrics(config.social);
 
     // Fetch all repositories in parallel for maximum performance
     const repoResults = await Promise.all(
-      config.repos.map(repo => fetchRepoMetrics(repo))
+      config.repos.map(repo => fetchRepoMetrics(repo, socialMetrics))
     );
 
     // Display and save results for each repository

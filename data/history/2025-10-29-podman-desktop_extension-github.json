@@ -1,5 +1,5 @@
 {
-  "timestamp": "2025-10-29T13:15:58.480Z",
+  "timestamp": "2025-10-29T15:58:23.030Z",
   "date": "2025-10-29",
   "repoLabel": "podman-desktop/extension-github",
   "metrics": {
@@ -23,8 +23,8 @@
     "social": {
       "blueskyFollowers": 138,
       "linkedinFollowers": 982,
-      "twitterFollowers": 0,
-      "mastodonFollowers": 69
+      "mastodonFollowers": 69,
+      "twitterFollowers": 18
     },
     "repository": {
       "stars": 0,
