@@ -1,5 +1,5 @@
 {
-  "timestamp": "2025-10-29T12:30:53.457Z",
+  "timestamp": "2025-10-29T12:53:17.302Z",
   "date": "2025-10-29",
   "repoLabel": "podman-desktop/extension-layers-explorer",
   "metrics": {
@@ -21,7 +21,15 @@
       "closeRate": "0.0"
     },
     "social": {
-      "blueskyFollowers": 138
+      "blueskyFollowers": 138,
+      "linkedinFollowers": 0,
+      "twitterFollowers": 0,
+      "mastodonFollowers": 69
+    },
+    "repository": {
+      "stars": 5,
+      "forks": 5,
+      "watchers": 14
     }
   },
   "topActiveUsers": []

@@ -1,5 +1,5 @@
 {
-  "timestamp": "2025-10-29T12:30:18.952Z",
+  "timestamp": "2025-10-29T12:52:43.755Z",
   "date": "2025-10-29",
   "repoLabel": "podman-desktop/extension-postgresql",
   "metrics": {
@@ -21,7 +21,15 @@
       "closeRate": 0
     },
     "social": {
-      "blueskyFollowers": 138
+      "blueskyFollowers": 138,
+      "linkedinFollowers": 0,
+      "twitterFollowers": 0,
+      "mastodonFollowers": 69
+    },
+    "repository": {
+      "stars": 1,
+      "forks": 1,
+      "watchers": 1
     }
   },
   "topActiveUsers": [

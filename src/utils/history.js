@@ -49,7 +49,7 @@ export async function hasSnapshotForToday(repoLabel = null) {
   }
 }
 
-export async function saveSnapshot(metrics, topActiveUsers, rates, repoLabel = null, socialMetrics = null) {
+export async function saveSnapshot(metrics, topActiveUsers, rates, repoLabel = null, socialMetrics = null, repoMetadata = null) {
   await ensureHistoryDir();
 
   const timestamp = new Date().toISOString();
@@ -96,6 +96,11 @@ export async function saveSnapshot(metrics, topActiveUsers, rates, repoLabel = n
   // Add social media metrics if available
   if (socialMetrics) {
     snapshot.metrics.social = socialMetrics;
+  }
+
+  // Add repository metadata if available
+  if (repoMetadata) {
+    snapshot.metrics.repository = repoMetadata;
   }
 
   const saferepoLabel = (repoLabel || 'unknown').replace(/\//g, '_');

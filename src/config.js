@@ -67,5 +67,20 @@ export const config = {
     // Set BLUESKY_HANDLE environment variable to track Bluesky followers
     // Example: export BLUESKY_HANDLE=yourhandle.bsky.social
     bluesky: process.env.BLUESKY_HANDLE || 'podman-desktop.io',
+
+    // LinkedIn company page
+    // Example: export LINKEDIN_COMPANY=https://www.linkedin.com/company/podman-desktop
+    linkedin: process.env.LINKEDIN_COMPANY || 'https://www.linkedin.com/company/podman-desktop',
+
+    // Twitter/X handle (without @)
+    // Example: export TWITTER_HANDLE=podmandesktop
+    twitter: process.env.TWITTER_HANDLE || 'podmandesktop',
+
+    // Mastodon account (instance and username)
+    // Example: export MASTODON_INSTANCE=fosstodon.org MASTODON_USERNAME=podmandesktop
+    mastodon: {
+      instance: process.env.MASTODON_INSTANCE || 'fosstodon.org',
+      username: process.env.MASTODON_USERNAME || 'podmandesktop',
+    },
   },
 };

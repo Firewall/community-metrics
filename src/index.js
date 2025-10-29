@@ -11,6 +11,7 @@ import { fetchOpenCommunityPRs, fetchAllTimeCommunityPRs } from './fetchers/pull
 import { fetchAllTimeCommunityIssues } from './fetchers/issues.js';
 import { fetchRecentActivity } from './fetchers/activity.js';
 import { fetchSocialMetrics } from './fetchers/social-media.js';
+import { fetchRepositoryMetadata } from './fetchers/repository.js';
 import { displayMetrics, displayTopActiveUsers, displayOpenPRs } from './reporters/console.js';
 import { outputGitHubActions } from './reporters/github-actions.js';
 import { setCurrentRepo } from './utils/graphql-client.js';
@@ -53,12 +54,13 @@ async function fetchRepoMetrics(repo) {
 
   console.log(`\n🔍 Fetching ${repo.owner}/${repo.name} data...`);
 
-  // Fetch discussions, open community PRs, recent activity, and social media in parallel
-  const [discussionsData, openCommunityPRs, topActiveUsers, socialMetrics] = await Promise.all([
+  // Fetch discussions, open community PRs, recent activity, social media, and repo metadata in parallel
+  const [discussionsData, openCommunityPRs, topActiveUsers, socialMetrics, repoMetadata] = await Promise.all([
     fetchDiscussions(),
     fetchOpenCommunityPRs(),
     fetchRecentActivity(),
     fetchSocialMetrics(config.social),
+    fetchRepositoryMetadata(repo),
   ]);
 
   // Fetch all-time community data in parallel
@@ -86,6 +88,7 @@ async function fetchRepoMetrics(repo) {
     },
     topActiveUsers,
     socialMetrics,
+    repoMetadata,
     cached: false,
   };
 }
@@ -103,8 +106,11 @@ function aggregateMetrics(repoResults) {
   };
 
   const allActiveUsers = new Map();
+  let totalStars = 0;
+  let totalForks = 0;
+  let totalWatchers = 0;
 
-  repoResults.forEach(({ metrics, topActiveUsers }) => {
+  repoResults.forEach(({ metrics, topActiveUsers, repoMetadata }) => {
     aggregate.totalUpvotes += metrics.totalUpvotes;
     aggregate.totalComments += metrics.totalComments;
     aggregate.openCommunityPRs.push(...metrics.openCommunityPRs);
@@ -113,6 +119,13 @@ function aggregateMetrics(repoResults) {
     aggregate.openCommunityIssues += metrics.openCommunityIssues;
     aggregate.closedCommunityIssues += metrics.closedCommunityIssues;
     aggregate.totalCommunityIssues += metrics.totalCommunityIssues;
+
+    // Aggregate repository metadata
+    if (repoMetadata) {
+      totalStars += repoMetadata.stars;
+      totalForks += repoMetadata.forks;
+      totalWatchers += repoMetadata.watchers;
+    }
 
     // Merge active users
     topActiveUsers.forEach(user => {
@@ -138,7 +151,13 @@ function aggregateMetrics(repoResults) {
     .sort((a, b) => b.total - a.total)
     .slice(0, 5);
 
-  return { aggregate, topActiveUsers };
+  const aggregateRepoMetadata = {
+    stars: totalStars,
+    forks: totalForks,
+    watchers: totalWatchers,
+  };
+
+  return { aggregate, topActiveUsers, aggregateRepoMetadata };
 }
 
 async function main() {
@@ -158,7 +177,7 @@ async function main() {
       // Save snapshot to history only if not cached
       if (!result.cached) {
         const repoLabel = `${result.repo.owner}/${result.repo.name}`;
-        await saveSnapshot(result.metrics, result.topActiveUsers, rates, repoLabel, result.socialMetrics);
+        await saveSnapshot(result.metrics, result.topActiveUsers, rates, repoLabel, result.socialMetrics, result.repoMetadata);
       }
 
       // Output GitHub Actions for individual repo if only one repo
@@ -174,7 +193,7 @@ async function main() {
       console.log('📊 AGGREGATE METRICS (All Repositories)');
       console.log('═'.repeat(60));
 
-      const { aggregate, topActiveUsers } = aggregateMetrics(repoResults);
+      const { aggregate, topActiveUsers, aggregateRepoMetadata } = aggregateMetrics(repoResults);
       const rates = displayMetrics(aggregate);
       displayTopActiveUsers(topActiveUsers);
       displayOpenPRs(aggregate.openCommunityPRs);
@@ -184,7 +203,7 @@ async function main() {
       if (hasNewData) {
         // Use social metrics from first repo (they're the same across all repos)
         const socialMetrics = repoResults[0]?.socialMetrics;
-        await saveSnapshot(aggregate, topActiveUsers, rates, 'aggregate', socialMetrics);
+        await saveSnapshot(aggregate, topActiveUsers, rates, 'aggregate', socialMetrics, aggregateRepoMetadata);
       } else {
         console.log('\n📦 Using cached aggregate data (no new snapshots needed today)');
       }

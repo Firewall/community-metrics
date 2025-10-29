@@ -1,5 +1,5 @@
 {
-  "timestamp": "2025-10-29T12:31:12.836Z",
+  "timestamp": "2025-10-29T12:53:34.169Z",
   "date": "2025-10-29",
   "repoLabel": "podman-desktop/community",
   "metrics": {
@@ -21,7 +21,15 @@
       "closeRate": 0
     },
     "social": {
-      "blueskyFollowers": 138
+      "blueskyFollowers": 138,
+      "linkedinFollowers": 0,
+      "twitterFollowers": 0,
+      "mastodonFollowers": 69
+    },
+    "repository": {
+      "stars": 2,
+      "forks": 2,
+      "watchers": 10
     }
   },
   "topActiveUsers": []

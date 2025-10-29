@@ -1,5 +1,5 @@
 {
-  "timestamp": "2025-10-29T12:30:42.314Z",
+  "timestamp": "2025-10-29T12:53:07.677Z",
   "date": "2025-10-29",
   "repoLabel": "podman-desktop/extension-apple-container",
   "metrics": {
@@ -21,7 +21,15 @@
       "closeRate": 0
     },
     "social": {
-      "blueskyFollowers": 138
+      "blueskyFollowers": 138,
+      "linkedinFollowers": 0,
+      "twitterFollowers": 0,
+      "mastodonFollowers": 69
+    },
+    "repository": {
+      "stars": 15,
+      "forks": 0,
+      "watchers": 0
     }
   },
   "topActiveUsers": []
