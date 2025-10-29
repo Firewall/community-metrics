@@ -12,7 +12,9 @@ A GitHub community metrics analyzer for tracking repository engagement and contr
 - **Activity Scoring**: Identify top community contributors based on recent activity
 - **Historical Tracking**: Automatic snapshots saved to track metrics over time
 - **Interactive Dashboard**: Beautiful charts visualizing trends and patterns
+- **Social Media Integration**: Optional Bluesky follower tracking
 - **GitHub Actions Integration**: Generate automated reports in CI/CD pipelines
+- **Multi-Repository Support**: Analyze multiple repositories and view aggregate metrics
 - **Configurable**: Works with any GitHub repository
 
 ## Installation
@@ -71,6 +73,21 @@ REPO_OWNER=kubernetes
 REPO_NAME=kubernetes
 ```
 
+### Social Media Tracking (Optional)
+
+Track Bluesky follower growth alongside your GitHub metrics:
+
+```bash
+# Set your Bluesky handle in .env
+BLUESKY_HANDLE=yourhandle.bsky.social
+```
+
+The dashboard will automatically display:
+- ☁️ Current Bluesky follower count
+- Follower growth chart over time
+
+**Note**: Podman Desktop doesn't currently have a Bluesky account. If you have one, set the handle in your `.env` file.
+
 ### Custom Maintainers List
 
 By default, the tool uses `data/maintainers.json` to identify maintainers. To use a custom list:
@@ -96,10 +113,10 @@ All configuration can be done via environment variables:
 | Variable | Description | Default |
 |----------|-------------|---------|
 | `GH_TOKEN` | GitHub Personal Access Token (required) | - |
-| `REPO_OWNER` | Repository owner/organization | `podman-desktop` |
-| `REPO_NAME` | Repository name | `podman-desktop` |
+| `REPOS` | Comma-separated list of repos (`owner/repo,owner2/repo2`) | Default podman-desktop repos |
 | `MAINTAINERS_FILE` | Path to maintainers JSON file | `data/maintainers.json` |
 | `LOOKBACK_MONTHS` | Months to look back for recent activity | `1` |
+| `BLUESKY_HANDLE` | Bluesky handle for follower tracking (optional) | - |
 
 ## Output
 

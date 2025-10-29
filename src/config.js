@@ -63,4 +63,9 @@ export const config = {
   repos: parseRepos(),
   maintainersFile: process.env.MAINTAINERS_FILE || join(__dirname, '../data/maintainers.json'),
   lookbackMonths: parseInt(process.env.LOOKBACK_MONTHS) || 1,
+  social: {
+    // Set BLUESKY_HANDLE environment variable to track Bluesky followers
+    // Example: export BLUESKY_HANDLE=yourhandle.bsky.social
+    bluesky: process.env.BLUESKY_HANDLE || 'podman-desktop.io',
+  },
 };

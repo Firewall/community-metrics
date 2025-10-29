@@ -10,6 +10,7 @@ import { fetchDiscussions } from './fetchers/discussions.js';
 import { fetchOpenCommunityPRs, fetchAllTimeCommunityPRs } from './fetchers/pull-requests.js';
 import { fetchAllTimeCommunityIssues } from './fetchers/issues.js';
 import { fetchRecentActivity } from './fetchers/activity.js';
+import { fetchSocialMetrics } from './fetchers/social-media.js';
 import { displayMetrics, displayTopActiveUsers, displayOpenPRs } from './reporters/console.js';
 import { outputGitHubActions } from './reporters/github-actions.js';
 import { setCurrentRepo } from './utils/graphql-client.js';
@@ -52,11 +53,12 @@ async function fetchRepoMetrics(repo) {
 
   console.log(`\n🔍 Fetching ${repo.owner}/${repo.name} data...`);
 
-  // Fetch discussions, open community PRs, and recent activity in parallel
-  const [discussionsData, openCommunityPRs, topActiveUsers] = await Promise.all([
+  // Fetch discussions, open community PRs, recent activity, and social media in parallel
+  const [discussionsData, openCommunityPRs, topActiveUsers, socialMetrics] = await Promise.all([
     fetchDiscussions(),
     fetchOpenCommunityPRs(),
     fetchRecentActivity(),
+    fetchSocialMetrics(config.social),
   ]);
 
   // Fetch all-time community data in parallel
@@ -83,6 +85,7 @@ async function fetchRepoMetrics(repo) {
       totalCommunityIssues,
     },
     topActiveUsers,
+    socialMetrics,
     cached: false,
   };
 }
@@ -155,7 +158,7 @@ async function main() {
       // Save snapshot to history only if not cached
       if (!result.cached) {
         const repoLabel = `${result.repo.owner}/${result.repo.name}`;
-        await saveSnapshot(result.metrics, result.topActiveUsers, rates, repoLabel);
+        await saveSnapshot(result.metrics, result.topActiveUsers, rates, repoLabel, result.socialMetrics);
       }
 
       // Output GitHub Actions for individual repo if only one repo
@@ -179,7 +182,9 @@ async function main() {
       // Save aggregate snapshot only if any repo fetched new data
       const hasNewData = repoResults.some(r => !r.cached);
       if (hasNewData) {
-        await saveSnapshot(aggregate, topActiveUsers, rates, 'aggregate');
+        // Use social metrics from first repo (they're the same across all repos)
+        const socialMetrics = repoResults[0]?.socialMetrics;
+        await saveSnapshot(aggregate, topActiveUsers, rates, 'aggregate', socialMetrics);
       } else {
         console.log('\n📦 Using cached aggregate data (no new snapshots needed today)');
       }

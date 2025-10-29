@@ -1,5 +1,5 @@
 {
-  "timestamp": "2025-10-29T10:40:54.024Z",
+  "timestamp": "2025-10-29T12:30:29.758Z",
   "date": "2025-10-29",
   "repoLabel": "podman-desktop/extension-github",
   "metrics": {
@@ -19,6 +19,9 @@
       "closed": 0,
       "total": 0,
       "closeRate": 0
+    },
+    "social": {
+      "blueskyFollowers": 138
     }
   },
   "topActiveUsers": []

@@ -1,5 +1,5 @@
 {
-  "timestamp": "2025-10-29T10:41:42.753Z",
+  "timestamp": "2025-10-29T12:31:37.796Z",
   "date": "2025-10-29",
   "repoLabel": "aggregate",
   "metrics": {
@@ -97,6 +97,9 @@
       "closed": 849,
       "total": 999,
       "closeRate": "85.0"
+    },
+    "social": {
+      "blueskyFollowers": 138
     }
   },
   "topActiveUsers": [

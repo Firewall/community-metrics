@@ -1,5 +1,5 @@
 {
-  "timestamp": "2025-10-29T10:41:01.152Z",
+  "timestamp": "2025-10-29T12:30:38.761Z",
   "date": "2025-10-29",
   "repoLabel": "podman-desktop/extension-podman-quadlet",
   "metrics": {
@@ -19,6 +19,9 @@
       "closed": 7,
       "total": 10,
       "closeRate": "70.0"
+    },
+    "social": {
+      "blueskyFollowers": 138
     }
   },
   "topActiveUsers": []

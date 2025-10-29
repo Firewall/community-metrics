@@ -1,5 +1,5 @@
 {
-  "timestamp": "2025-10-29T10:40:25.122Z",
+  "timestamp": "2025-10-29T12:29:50.953Z",
   "date": "2025-10-29",
   "repoLabel": "podman-desktop/podman-desktop",
   "metrics": {
@@ -83,6 +83,9 @@
       "closed": 761,
       "total": 881,
       "closeRate": "86.4"
+    },
+    "social": {
+      "blueskyFollowers": 138
     }
   },
   "topActiveUsers": [

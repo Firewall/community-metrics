@@ -1,5 +1,5 @@
 {
-  "timestamp": "2025-10-29T10:41:09.469Z",
+  "timestamp": "2025-10-29T12:30:48.373Z",
   "date": "2025-10-29",
   "repoLabel": "podman-desktop/extension-kreate",
   "metrics": {
@@ -19,6 +19,9 @@
       "closed": 0,
       "total": 2,
       "closeRate": "0.0"
+    },
+    "social": {
+      "blueskyFollowers": 138
     }
   },
   "topActiveUsers": []

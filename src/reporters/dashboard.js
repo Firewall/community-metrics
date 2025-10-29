@@ -34,8 +34,10 @@ export async function generateDashboardHTML() {
   const commentsData = initialSnapshots.map(s => s.metrics.discussions.totalComments);
   const prMergeRates = initialSnapshots.map(s => s.metrics.pullRequests.mergeRate);
   const issueCloseRates = initialSnapshots.map(s => s.metrics.issues.closeRate);
+  const blueskyFollowers = initialSnapshots.map(s => s.metrics.social?.blueskyFollowers || 0);
 
   const latestSnapshot = initialSnapshots[initialSnapshots.length - 1];
+  const hasSocialMetrics = latestSnapshot.metrics.social?.blueskyFollowers > 0;
 
   return `<!DOCTYPE html>
 <html lang="en">
@@ -371,6 +373,12 @@ export async function generateDashboardHTML() {
         <div class="stat-value" id="stat-issue-rate">${latestSnapshot.metrics.issues.closeRate}%</div>
         <div class="stat-label">Issue Close Rate</div>
       </div>
+      ${hasSocialMetrics ? `
+      <div class="stat-card">
+        <div class="stat-value" id="stat-bluesky">${latestSnapshot.metrics.social.blueskyFollowers.toLocaleString()}</div>
+        <div class="stat-label">☁️ Bluesky Followers</div>
+      </div>
+      ` : ''}
     </div>
 
     <div class="modal" id="prs-modal">
@@ -403,6 +411,13 @@ export async function generateDashboardHTML() {
         <h2>Success Rates</h2>
         <canvas id="ratesChart"></canvas>
       </div>
+
+      ${hasSocialMetrics ? `
+      <div class="chart-card">
+        <h2>☁️ Bluesky Followers</h2>
+        <canvas id="socialChart"></canvas>
+      </div>
+      ` : ''}
     </div>
 
     <div class="footer">
@@ -413,6 +428,7 @@ export async function generateDashboardHTML() {
   <script>
     const snapshotsByRepo = ${JSON.stringify(snapshotsByRepo)};
     const repoKeys = ${JSON.stringify(repoKeys)};
+    const hasSocialMetrics = ${hasSocialMetrics};
 
     const chartConfig = {
       responsive: true,
@@ -615,6 +631,31 @@ export async function generateDashboardHTML() {
       }
     });
 
+    let socialChart = null;
+    if (hasSocialMetrics) {
+      socialChart = new Chart(document.getElementById('socialChart'), {
+        type: 'line',
+        data: {
+          labels: ${JSON.stringify(dates)},
+          datasets: [{
+            label: 'Bluesky Followers',
+            data: ${JSON.stringify(blueskyFollowers)},
+            borderColor: '#0085ff',
+            backgroundColor: 'rgba(0, 133, 255, 0.15)',
+            fill: true,
+            tension: 0.4,
+            borderWidth: 3,
+            pointRadius: 4,
+            pointBackgroundColor: '#0085ff',
+            pointBorderColor: '#0f172a',
+            pointBorderWidth: 2,
+            pointHoverRadius: 6
+          }]
+        },
+        options: chartConfig
+      });
+    }
+
     document.getElementById('repoSelect').addEventListener('change', (e) => {
       updateDashboard(e.target.value);
     });
@@ -685,11 +726,16 @@ export async function generateDashboardHTML() {
       const commentsData = snapshots.map(s => s.metrics.discussions.totalComments);
       const prMergeRates = snapshots.map(s => s.metrics.pullRequests.mergeRate);
       const issueCloseRates = snapshots.map(s => s.metrics.issues.closeRate);
+      const blueskyFollowers = snapshots.map(s => s.metrics.social?.blueskyFollowers || 0);
 
       document.getElementById('stat-prs').textContent = latestSnapshot.metrics.pullRequests.open;
       document.getElementById('stat-issues').textContent = latestSnapshot.metrics.issues.open;
       document.getElementById('stat-pr-rate').textContent = latestSnapshot.metrics.pullRequests.mergeRate + '%';
       document.getElementById('stat-issue-rate').textContent = latestSnapshot.metrics.issues.closeRate + '%';
+
+      if (hasSocialMetrics && latestSnapshot.metrics.social?.blueskyFollowers) {
+        document.getElementById('stat-bluesky').textContent = latestSnapshot.metrics.social.blueskyFollowers.toLocaleString();
+      }
 
       prChart.data.labels = dates;
       prChart.data.datasets[0].data = prData;
@@ -708,6 +754,12 @@ export async function generateDashboardHTML() {
       ratesChart.data.datasets[0].data = prMergeRates;
       ratesChart.data.datasets[1].data = issueCloseRates;
       ratesChart.update();
+
+      if (hasSocialMetrics && socialChart) {
+        socialChart.data.labels = dates;
+        socialChart.data.datasets[0].data = blueskyFollowers;
+        socialChart.update();
+      }
     }
   </script>
 </body>
