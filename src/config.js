@@ -63,4 +63,24 @@ export const config = {
   repos: parseRepos(),
   maintainersFile: process.env.MAINTAINERS_FILE || join(__dirname, '../data/maintainers.json'),
   lookbackMonths: parseInt(process.env.LOOKBACK_MONTHS) || 1,
+  social: {
+    // Set BLUESKY_HANDLE environment variable to track Bluesky followers
+    // Example: export BLUESKY_HANDLE=yourhandle.bsky.social
+    bluesky: process.env.BLUESKY_HANDLE || 'podman-desktop.io',
+
+    // LinkedIn company page
+    // Example: export LINKEDIN_COMPANY=https://www.linkedin.com/company/podman-desktop
+    linkedin: process.env.LINKEDIN_COMPANY || 'https://www.linkedin.com/company/podman-desktop',
+
+    // Twitter/X handle (manual tracking via TWITTER_FOLLOWERS env var)
+    // Example: export TWITTER_HANDLE=podmandesktop TWITTER_FOLLOWERS=1234
+    twitter: process.env.TWITTER_HANDLE || 'podmandesktop',
+
+    // Mastodon account (instance and username)
+    // Example: export MASTODON_INSTANCE=fosstodon.org MASTODON_USERNAME=podmandesktop
+    mastodon: {
+      instance: process.env.MASTODON_INSTANCE || 'fosstodon.org',
+      username: process.env.MASTODON_USERNAME || 'podmandesktop',
+    },
+  },
 };

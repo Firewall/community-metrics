@@ -1,5 +1,5 @@
 {
-  "timestamp": "2025-10-29T10:40:52.446Z",
+  "timestamp": "2025-10-29T15:58:23.030Z",
   "date": "2025-10-29",
   "repoLabel": "podman-desktop/extension-minikube",
   "metrics": {
@@ -19,6 +19,17 @@
       "closed": 8,
       "total": 10,
       "closeRate": "80.0"
+    },
+    "social": {
+      "blueskyFollowers": 138,
+      "linkedinFollowers": 982,
+      "mastodonFollowers": 69,
+      "twitterFollowers": 18
+    },
+    "repository": {
+      "stars": 3,
+      "forks": 17,
+      "watchers": 14
     }
   },
   "topActiveUsers": [

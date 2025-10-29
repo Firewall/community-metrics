@@ -12,7 +12,9 @@ A GitHub community metrics analyzer for tracking repository engagement and contr
 - **Activity Scoring**: Identify top community contributors based on recent activity
 - **Historical Tracking**: Automatic snapshots saved to track metrics over time
 - **Interactive Dashboard**: Beautiful charts visualizing trends and patterns
+- **Social Media Integration**: Optional Bluesky follower tracking
 - **GitHub Actions Integration**: Generate automated reports in CI/CD pipelines
+- **Multi-Repository Support**: Analyze multiple repositories and view aggregate metrics
 - **Configurable**: Works with any GitHub repository
 
 ## Installation
@@ -44,9 +46,14 @@ Generate a token at: https://github.com/settings/tokens
 
 ### Basic Usage
 
-Run metrics collection (saves historical snapshot):
+Run metrics collection (uses cached data from today if available):
 ```bash
 npm start
+```
+
+Fetch fresh data (ignores cache):
+```bash
+npm run start:fresh
 ```
 
 Generate visualization dashboard:
@@ -70,6 +77,32 @@ Or update your `.env` file:
 REPO_OWNER=kubernetes
 REPO_NAME=kubernetes
 ```
+
+### Social Media Tracking (Optional)
+
+Track social media follower growth alongside your GitHub metrics:
+
+```bash
+# Set your social media handles in .env
+BLUESKY_HANDLE=yourhandle.bsky.social
+LINKEDIN_COMPANY=https://www.linkedin.com/company/your-company
+
+# Twitter/X (manual tracking - update the follower count periodically)
+TWITTER_HANDLE=yourhandle
+TWITTER_FOLLOWERS=1234
+
+# Mastodon
+MASTODON_INSTANCE=fosstodon.org
+MASTODON_USERNAME=yourusername
+```
+
+The dashboard will automatically display:
+- ☁️ Bluesky follower count (automated, no auth required)
+- 💼 LinkedIn company follower count (automated, no auth required)
+- 🐦 Twitter/X follower count (manual tracking via `TWITTER_FOLLOWERS` env var)
+- 🐘 Mastodon follower count (automated, no auth required)
+
+**Note**: Twitter/X doesn't allow scraping and their API requires paid access. To track Twitter followers, manually check https://x.com/yourhandle and update the `TWITTER_FOLLOWERS` value in your `.env` file periodically.
 
 ### Custom Maintainers List
 
@@ -96,10 +129,15 @@ All configuration can be done via environment variables:
 | Variable | Description | Default |
 |----------|-------------|---------|
 | `GH_TOKEN` | GitHub Personal Access Token (required) | - |
-| `REPO_OWNER` | Repository owner/organization | `podman-desktop` |
-| `REPO_NAME` | Repository name | `podman-desktop` |
+| `REPOS` | Comma-separated list of repos (`owner/repo,owner2/repo2`) | Default podman-desktop repos |
 | `MAINTAINERS_FILE` | Path to maintainers JSON file | `data/maintainers.json` |
 | `LOOKBACK_MONTHS` | Months to look back for recent activity | `1` |
+| `BLUESKY_HANDLE` | Bluesky handle for follower tracking (optional) | `podman-desktop.io` |
+| `LINKEDIN_COMPANY` | LinkedIn company page URL (optional) | `https://www.linkedin.com/company/podman-desktop` |
+| `TWITTER_HANDLE` | Twitter/X handle without @ (optional) | `podmandesktop` |
+| `TWITTER_FOLLOWERS` | Manual Twitter/X follower count (optional) | - |
+| `MASTODON_INSTANCE` | Mastodon instance domain (optional) | `fosstodon.org` |
+| `MASTODON_USERNAME` | Mastodon username (optional) | `podmandesktop` |
 
 ## Output
 

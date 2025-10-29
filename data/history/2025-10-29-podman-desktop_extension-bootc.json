@@ -1,5 +1,5 @@
 {
-  "timestamp": "2025-10-29T10:40:36.047Z",
+  "timestamp": "2025-10-29T15:58:23.028Z",
   "date": "2025-10-29",
   "repoLabel": "podman-desktop/extension-bootc",
   "metrics": {
@@ -19,6 +19,17 @@
       "closed": 21,
       "total": 24,
       "closeRate": "87.5"
+    },
+    "social": {
+      "blueskyFollowers": 138,
+      "linkedinFollowers": 982,
+      "mastodonFollowers": 69,
+      "twitterFollowers": 18
+    },
+    "repository": {
+      "stars": 463,
+      "forks": 29,
+      "watchers": 15
     }
   },
   "topActiveUsers": [

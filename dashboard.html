@@ -40,6 +40,19 @@
       font-size: 0.95rem;
       font-weight: 500;
     }
+    .section-title {
+      color: #f1f5f9;
+      font-size: 1.5rem;
+      font-weight: 700;
+      margin-top: 2.5rem;
+      margin-bottom: 1.5rem;
+      padding-bottom: 0.75rem;
+      border-bottom: 2px solid rgba(102, 126, 234, 0.2);
+      letter-spacing: -0.01em;
+    }
+    .section-title:first-of-type {
+      margin-top: 0;
+    }
     .grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
@@ -304,7 +317,7 @@
 <body>
   <div class="container">
     <h1>📊 Community Metrics Dashboard</h1>
-    <div class="last-updated">Last updated: 10/29/2025, 10:41:42 AM</div>
+    <div class="last-updated">Last updated: 10/29/2025, 5:44:23 PM</div>
 
     <div class="repo-selector">
       <label for="repoSelect">Repository:</label>
@@ -313,6 +326,7 @@
       </select>
     </div>
 
+    <h2 class="section-title">📊 Repository Metrics</h2>
     <div class="stats-grid">
       <div class="stat-card clickable" id="open-prs-card">
         <div class="stat-value" id="stat-prs">11</div>
@@ -330,16 +344,12 @@
         <div class="stat-value" id="stat-issue-rate">85.0%</div>
         <div class="stat-label">Issue Close Rate</div>
       </div>
-    </div>
-
-    <div class="modal" id="prs-modal">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h2 id="modal-title">Open Pull Requests</h2>
-          <button class="modal-close" onclick="document.getElementById('prs-modal').classList.remove('active')">Close</button>
-        </div>
-        <div id="prs-list"></div>
+      
+      <div class="stat-card">
+        <div class="stat-value" id="stat-stars">7,638</div>
+        <div class="stat-label">⭐ GitHub Stars</div>
       </div>
+      
     </div>
 
     <div class="grid">
@@ -362,6 +372,60 @@
         <h2>Success Rates</h2>
         <canvas id="ratesChart"></canvas>
       </div>
+
+      
+      <div class="chart-card">
+        <h2>⭐ GitHub Stars</h2>
+        <canvas id="starsChart"></canvas>
+      </div>
+      
+    </div>
+
+    
+    <h2 class="section-title">📱 Social Media</h2>
+    <div class="stats-grid">
+      
+      <div class="stat-card">
+        <div class="stat-value" id="stat-bluesky">138</div>
+        <div class="stat-label">☁️ Bluesky</div>
+      </div>
+      
+      
+      <div class="stat-card">
+        <div class="stat-value" id="stat-mastodon">69</div>
+        <div class="stat-label">🐘 Mastodon</div>
+      </div>
+      
+      
+      <div class="stat-card">
+        <div class="stat-value" id="stat-linkedin">982</div>
+        <div class="stat-label">💼 LinkedIn</div>
+      </div>
+      
+      
+      <div class="stat-card">
+        <div class="stat-value" id="stat-twitter">18</div>
+        <div class="stat-label">𝕏 Twitter</div>
+      </div>
+      
+    </div>
+
+    <div class="grid">
+      <div class="chart-card">
+        <h2>📱 Social Media Followers</h2>
+        <canvas id="socialChart"></canvas>
+      </div>
+    </div>
+    
+
+    <div class="modal" id="prs-modal">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h2 id="modal-title">Open Pull Requests</h2>
+          <button class="modal-close" onclick="document.getElementById('prs-modal').classList.remove('active')">Close</button>
+        </div>
+        <div id="prs-list"></div>
+      </div>
     </div>
 
     <div class="footer">
@@ -370,8 +434,10 @@
   </div>
 
   <script>
-    const snapshotsByRepo = {"podman-desktop/podman-desktop":[{"timestamp":"2025-10-28T17:45:22.693Z","date":"2025-10-28","repoLabel":"podman-desktop/podman-desktop","metrics":{"discussions":{"totalUpvotes":100,"totalComments":248},"pullRequests":{"open":10,"total":247,"merged":191,"mergeRate":"77.3","openPRs":[{"number":14455,"title":"fix documented uninstall steps for windows using powershell","author":"aferre","url":"https://github.com/podman-desktop/podman-desktop/pull/14455","createdAt":"2025-10-17T10:51:09Z"},{"number":14410,"title":"chore(provider-registry): wip tests failing for docker container type","author":"sAchin-680","url":"https://github.com/podman-desktop/podman-desktop/pull/14410","createdAt":"2025-10-14T18:40:35Z"},{"number":14335,"title":"fix: clarify extension search scope","author":"afadesigns","url":"https://github.com/podman-desktop/podman-desktop/pull/14335","createdAt":"2025-10-08T20:36:27Z"},{"number":14334,"title":"fix: reduce extension wording duplication on installed page","author":"afadesigns","url":"https://github.com/podman-desktop/podman-desktop/pull/14334","createdAt":"2025-10-08T18:34:51Z"},{"number":14274,"title":"fix: Log lines in podman desktop start with a � character","author":"gagandeepp","url":"https://github.com/podman-desktop/podman-desktop/pull/14274","createdAt":"2025-10-06T10:55:32Z"},{"number":14259,"title":"feat: add autostop all podman machines on exit (#12944)","author":"turesayer","url":"https://github.com/podman-desktop/podman-desktop/pull/14259","createdAt":"2025-10-04T17:44:29Z"},{"number":14253,"title":"feat: add podman version update workflow","author":"vimode","url":"https://github.com/podman-desktop/podman-desktop/pull/14253","createdAt":"2025-10-03T19:01:21Z"},{"number":14251,"title":"docs: add page about build and test with lima","author":"afbjorklund","url":"https://github.com/podman-desktop/podman-desktop/pull/14251","createdAt":"2025-10-03T18:17:39Z"},{"number":13775,"title":"chore(extensions/kind): apply review suggestions in ingress-downloader","author":"Blaimi","url":"https://github.com/podman-desktop/podman-desktop/pull/13775","createdAt":"2025-09-02T15:24:53Z"},{"number":12765,"title":"fix(extension: kubernetes): ensure currentContext and MenuItem label are string to avoid type errors","author":"am6737","url":"https://github.com/podman-desktop/podman-desktop/pull/12765","createdAt":"2025-06-07T16:54:07Z"}]},"issues":{"open":124,"closed":757,"total":881,"closeRate":"85.9"}},"topActiveUsers":[{"username":"afbjorklund","prs":1,"issues":1,"comments":7,"total":12},{"username":"statickidz","prs":2,"issues":0,"comments":4,"total":10},{"username":"Zak-Ghani","prs":0,"issues":2,"comments":6,"total":10},{"username":"sAchin-680","prs":2,"issues":0,"comments":2,"total":8},{"username":"Aayushyamaan-Shah","prs":2,"issues":0,"comments":2,"total":8}]},{"timestamp":"2025-10-29T10:40:25.122Z","date":"2025-10-29","repoLabel":"podman-desktop/podman-desktop","metrics":{"discussions":{"totalUpvotes":100,"totalComments":248},"pullRequests":{"open":9,"total":247,"merged":192,"mergeRate":"77.7","openPRs":[{"number":14455,"title":"fix documented uninstall steps for windows using powershell","author":"aferre","url":"https://github.com/podman-desktop/podman-desktop/pull/14455","createdAt":"2025-10-17T10:51:09Z"},{"number":14410,"title":"chore(provider-registry): wip tests failing for docker container type","author":"sAchin-680","url":"https://github.com/podman-desktop/podman-desktop/pull/14410","createdAt":"2025-10-14T18:40:35Z"},{"number":14335,"title":"fix: clarify extension search scope","author":"afadesigns","url":"https://github.com/podman-desktop/podman-desktop/pull/14335","createdAt":"2025-10-08T20:36:27Z"},{"number":14334,"title":"fix: reduce extension wording duplication on installed page","author":"afadesigns","url":"https://github.com/podman-desktop/podman-desktop/pull/14334","createdAt":"2025-10-08T18:34:51Z"},{"number":14274,"title":"fix: Log lines in podman desktop start with a � character","author":"gagandeepp","url":"https://github.com/podman-desktop/podman-desktop/pull/14274","createdAt":"2025-10-06T10:55:32Z"},{"number":14259,"title":"feat: add autostop all podman machines on exit (#12944)","author":"turesayer","url":"https://github.com/podman-desktop/podman-desktop/pull/14259","createdAt":"2025-10-04T17:44:29Z"},{"number":14253,"title":"feat: add podman version update workflow","author":"vimode","url":"https://github.com/podman-desktop/podman-desktop/pull/14253","createdAt":"2025-10-03T19:01:21Z"},{"number":13775,"title":"chore(extensions/kind): apply review suggestions in ingress-downloader","author":"Blaimi","url":"https://github.com/podman-desktop/podman-desktop/pull/13775","createdAt":"2025-09-02T15:24:53Z"},{"number":12765,"title":"fix(extension: kubernetes): ensure currentContext and MenuItem label are string to avoid type errors","author":"am6737","url":"https://github.com/podman-desktop/podman-desktop/pull/12765","createdAt":"2025-06-07T16:54:07Z"}]},"issues":{"open":120,"closed":761,"total":881,"closeRate":"86.4"}},"topActiveUsers":[{"username":"afbjorklund","prs":1,"issues":1,"comments":7,"total":12},{"username":"statickidz","prs":2,"issues":0,"comments":4,"total":10},{"username":"Zak-Ghani","prs":0,"issues":2,"comments":6,"total":10},{"username":"sAchin-680","prs":2,"issues":0,"comments":2,"total":8},{"username":"Aayushyamaan-Shah","prs":2,"issues":0,"comments":2,"total":8}]}],"podman-desktop/extension-bootc":[{"timestamp":"2025-10-28T17:45:37.391Z","date":"2025-10-28","repoLabel":"podman-desktop/extension-bootc","metrics":{"discussions":{"totalUpvotes":0,"totalComments":0},"pullRequests":{"open":0,"total":25,"merged":22,"mergeRate":"88.0","openPRs":[]},"issues":{"open":3,"closed":21,"total":24,"closeRate":"87.5"}},"topActiveUsers":[{"username":"github-actions","prs":1,"issues":0,"comments":0,"total":3}]},{"timestamp":"2025-10-29T10:40:36.047Z","date":"2025-10-29","repoLabel":"podman-desktop/extension-bootc","metrics":{"discussions":{"totalUpvotes":0,"totalComments":0},"pullRequests":{"open":0,"total":25,"merged":22,"mergeRate":"88.0","openPRs":[]},"issues":{"open":3,"closed":21,"total":24,"closeRate":"87.5"}},"topActiveUsers":[{"username":"github-actions","prs":1,"issues":0,"comments":0,"total":3}]}],"podman-desktop/extension-kubernetes-dashboard":[{"timestamp":"2025-10-28T17:45:45.419Z","date":"2025-10-28","repoLabel":"podman-desktop/extension-kubernetes-dashboard","metrics":{"discussions":{"totalUpvotes":0,"totalComments":0},"pullRequests":{"open":0,"total":3,"merged":3,"mergeRate":"100.0","openPRs":[]},"issues":{"open":0,"closed":0,"total":0,"closeRate":0}},"topActiveUsers":[{"username":"afadesigns","prs":2,"issues":0,"comments":0,"total":6},{"username":"tharun634","prs":1,"issues":0,"comments":0,"total":3},{"username":"Asymtode712","prs":0,"issues":0,"comments":1,"total":1}]},{"timestamp":"2025-10-29T10:40:42.140Z","date":"2025-10-29","repoLabel":"podman-desktop/extension-kubernetes-dashboard","metrics":{"discussions":{"totalUpvotes":0,"totalComments":0},"pullRequests":{"open":0,"total":3,"merged":3,"mergeRate":"100.0","openPRs":[]},"issues":{"open":0,"closed":0,"total":0,"closeRate":0}},"topActiveUsers":[{"username":"afadesigns","prs":2,"issues":0,"comments":0,"total":6},{"username":"tharun634","prs":1,"issues":0,"comments":0,"total":3},{"username":"Asymtode712","prs":0,"issues":0,"comments":1,"total":1}]}],"podman-desktop/extension-postgresql":[{"timestamp":"2025-10-28T17:45:51.306Z","date":"2025-10-28","repoLabel":"podman-desktop/extension-postgresql","metrics":{"discussions":{"totalUpvotes":0,"totalComments":0},"pullRequests":{"open":0,"total":6,"merged":4,"mergeRate":"66.7","openPRs":[]},"issues":{"open":0,"closed":0,"total":0,"closeRate":0}},"topActiveUsers":[{"username":"github-actions","prs":4,"issues":0,"comments":0,"total":12}]},{"timestamp":"2025-10-29T10:40:46.259Z","date":"2025-10-29","repoLabel":"podman-desktop/extension-postgresql","metrics":{"discussions":{"totalUpvotes":0,"totalComments":0},"pullRequests":{"open":0,"total":6,"merged":4,"mergeRate":"66.7","openPRs":[]},"issues":{"open":0,"closed":0,"total":0,"closeRate":0}},"topActiveUsers":[{"username":"github-actions","prs":4,"issues":0,"comments":0,"total":12}]}],"podman-desktop/extension-minikube":[{"timestamp":"2025-10-28T17:46:00.448Z","date":"2025-10-28","repoLabel":"podman-desktop/extension-minikube","metrics":{"discussions":{"totalUpvotes":0,"totalComments":0},"pullRequests":{"open":0,"total":16,"merged":13,"mergeRate":"81.3","openPRs":[]},"issues":{"open":2,"closed":8,"total":10,"closeRate":"80.0"}},"topActiveUsers":[{"username":"arrowd","prs":1,"issues":0,"comments":1,"total":4}]},{"timestamp":"2025-10-29T10:40:52.446Z","date":"2025-10-29","repoLabel":"podman-desktop/extension-minikube","metrics":{"discussions":{"totalUpvotes":0,"totalComments":0},"pullRequests":{"open":0,"total":16,"merged":13,"mergeRate":"81.3","openPRs":[]},"issues":{"open":2,"closed":8,"total":10,"closeRate":"80.0"}},"topActiveUsers":[{"username":"arrowd","prs":1,"issues":0,"comments":1,"total":4}]}],"podman-desktop/extension-github":[{"timestamp":"2025-10-28T17:46:02.932Z","date":"2025-10-28","repoLabel":"podman-desktop/extension-github","metrics":{"discussions":{"totalUpvotes":0,"totalComments":0},"pullRequests":{"open":0,"total":0,"merged":0,"mergeRate":0,"openPRs":[]},"issues":{"open":0,"closed":0,"total":0,"closeRate":0}},"topActiveUsers":[]},{"timestamp":"2025-10-29T10:40:54.024Z","date":"2025-10-29","repoLabel":"podman-desktop/extension-github","metrics":{"discussions":{"totalUpvotes":0,"totalComments":0},"pullRequests":{"open":0,"total":0,"merged":0,"mergeRate":0,"openPRs":[]},"issues":{"open":0,"closed":0,"total":0,"closeRate":0}},"topActiveUsers":[]}],"podman-desktop/extension-podman-quadlet":[{"timestamp":"2025-10-28T17:46:12.631Z","date":"2025-10-28","repoLabel":"podman-desktop/extension-podman-quadlet","metrics":{"discussions":{"totalUpvotes":0,"totalComments":0},"pullRequests":{"open":0,"total":12,"merged":9,"mergeRate":"75.0","openPRs":[]},"issues":{"open":3,"closed":7,"total":10,"closeRate":"70.0"}},"topActiveUsers":[]},{"timestamp":"2025-10-29T10:41:01.152Z","date":"2025-10-29","repoLabel":"podman-desktop/extension-podman-quadlet","metrics":{"discussions":{"totalUpvotes":0,"totalComments":0},"pullRequests":{"open":0,"total":12,"merged":9,"mergeRate":"75.0","openPRs":[]},"issues":{"open":3,"closed":7,"total":10,"closeRate":"70.0"}},"topActiveUsers":[]}],"podman-desktop/extension-apple-container":[{"timestamp":"2025-10-28T17:46:15.619Z","date":"2025-10-28","repoLabel":"podman-desktop/extension-apple-container","metrics":{"discussions":{"totalUpvotes":0,"totalComments":0},"pullRequests":{"open":0,"total":0,"merged":0,"mergeRate":0,"openPRs":[]},"issues":{"open":0,"closed":0,"total":0,"closeRate":0}},"topActiveUsers":[]},{"timestamp":"2025-10-29T10:41:03.866Z","date":"2025-10-29","repoLabel":"podman-desktop/extension-apple-container","metrics":{"discussions":{"totalUpvotes":0,"totalComments":0},"pullRequests":{"open":0,"total":0,"merged":0,"mergeRate":0,"openPRs":[]},"issues":{"open":0,"closed":0,"total":0,"closeRate":0}},"topActiveUsers":[]}],"podman-desktop/extension-kreate":[{"timestamp":"2025-10-28T17:46:21.398Z","date":"2025-10-28","repoLabel":"podman-desktop/extension-kreate","metrics":{"discussions":{"totalUpvotes":0,"totalComments":0},"pullRequests":{"open":0,"total":0,"merged":0,"mergeRate":0,"openPRs":[]},"issues":{"open":2,"closed":0,"total":2,"closeRate":"0.0"}},"topActiveUsers":[]},{"timestamp":"2025-10-29T10:41:09.469Z","date":"2025-10-29","repoLabel":"podman-desktop/extension-kreate","metrics":{"discussions":{"totalUpvotes":0,"totalComments":0},"pullRequests":{"open":0,"total":0,"merged":0,"mergeRate":0,"openPRs":[]},"issues":{"open":2,"closed":0,"total":2,"closeRate":"0.0"}},"topActiveUsers":[]}],"podman-desktop/extension-layers-explorer":[{"timestamp":"2025-10-28T17:46:25.528Z","date":"2025-10-28","repoLabel":"podman-desktop/extension-layers-explorer","metrics":{"discussions":{"totalUpvotes":0,"totalComments":0},"pullRequests":{"open":0,"total":4,"merged":3,"mergeRate":"75.0","openPRs":[]},"issues":{"open":1,"closed":0,"total":1,"closeRate":"0.0"}},"topActiveUsers":[]},{"timestamp":"2025-10-29T10:41:12.899Z","date":"2025-10-29","repoLabel":"podman-desktop/extension-layers-explorer","metrics":{"discussions":{"totalUpvotes":0,"totalComments":0},"pullRequests":{"open":0,"total":4,"merged":3,"mergeRate":"75.0","openPRs":[]},"issues":{"open":1,"closed":0,"total":1,"closeRate":"0.0"}},"topActiveUsers":[]}],"podman-desktop/podman-desktop-catalog":[{"timestamp":"2025-10-28T17:46:33.251Z","date":"2025-10-28","repoLabel":"podman-desktop/podman-desktop-catalog","metrics":{"discussions":{"totalUpvotes":0,"totalComments":0},"pullRequests":{"open":0,"total":2,"merged":2,"mergeRate":"100.0","openPRs":[]},"issues":{"open":0,"closed":0,"total":0,"closeRate":0}},"topActiveUsers":[]},{"timestamp":"2025-10-29T10:41:19.174Z","date":"2025-10-29","repoLabel":"podman-desktop/podman-desktop-catalog","metrics":{"discussions":{"totalUpvotes":0,"totalComments":0},"pullRequests":{"open":0,"total":2,"merged":2,"mergeRate":"100.0","openPRs":[]},"issues":{"open":0,"closed":0,"total":0,"closeRate":0}},"topActiveUsers":[]}],"podman-desktop/extension-template-minimal":[{"timestamp":"2025-10-28T17:46:36.179Z","date":"2025-10-28","repoLabel":"podman-desktop/extension-template-minimal","metrics":{"discussions":{"totalUpvotes":0,"totalComments":0},"pullRequests":{"open":0,"total":0,"merged":0,"mergeRate":0,"openPRs":[]},"issues":{"open":0,"closed":0,"total":0,"closeRate":0}},"topActiveUsers":[]},{"timestamp":"2025-10-29T10:41:21.446Z","date":"2025-10-29","repoLabel":"podman-desktop/extension-template-minimal","metrics":{"discussions":{"totalUpvotes":0,"totalComments":0},"pullRequests":{"open":0,"total":0,"merged":0,"mergeRate":0,"openPRs":[]},"issues":{"open":0,"closed":0,"total":0,"closeRate":0}},"topActiveUsers":[]}],"podman-desktop/extension-template-full":[{"timestamp":"2025-10-28T17:46:38.222Z","date":"2025-10-28","repoLabel":"podman-desktop/extension-template-full","metrics":{"discussions":{"totalUpvotes":0,"totalComments":0},"pullRequests":{"open":0,"total":0,"merged":0,"mergeRate":0,"openPRs":[]},"issues":{"open":0,"closed":0,"total":0,"closeRate":0}},"topActiveUsers":[]},{"timestamp":"2025-10-29T10:41:22.847Z","date":"2025-10-29","repoLabel":"podman-desktop/extension-template-full","metrics":{"discussions":{"totalUpvotes":0,"totalComments":0},"pullRequests":{"open":0,"total":0,"merged":0,"mergeRate":0,"openPRs":[]},"issues":{"open":0,"closed":0,"total":0,"closeRate":0}},"topActiveUsers":[]}],"podman-desktop/extension-template-webview":[{"timestamp":"2025-10-28T17:46:39.810Z","date":"2025-10-28","repoLabel":"podman-desktop/extension-template-webview","metrics":{"discussions":{"totalUpvotes":0,"totalComments":0},"pullRequests":{"open":0,"total":0,"merged":0,"mergeRate":0,"openPRs":[]},"issues":{"open":0,"closed":0,"total":0,"closeRate":0}},"topActiveUsers":[]},{"timestamp":"2025-10-29T10:41:23.953Z","date":"2025-10-29","repoLabel":"podman-desktop/extension-template-webview","metrics":{"discussions":{"totalUpvotes":0,"totalComments":0},"pullRequests":{"open":0,"total":0,"merged":0,"mergeRate":0,"openPRs":[]},"issues":{"open":0,"closed":0,"total":0,"closeRate":0}},"topActiveUsers":[]}],"podman-desktop/community":[{"timestamp":"2025-10-28T17:46:42.194Z","date":"2025-10-28","repoLabel":"podman-desktop/community","metrics":{"discussions":{"totalUpvotes":0,"totalComments":0},"pullRequests":{"open":0,"total":0,"merged":0,"mergeRate":0,"openPRs":[]},"issues":{"open":0,"closed":0,"total":0,"closeRate":0}},"topActiveUsers":[]},{"timestamp":"2025-10-29T10:41:25.328Z","date":"2025-10-29","repoLabel":"podman-desktop/community","metrics":{"discussions":{"totalUpvotes":0,"totalComments":0},"pullRequests":{"open":0,"total":0,"merged":0,"mergeRate":0,"openPRs":[]},"issues":{"open":0,"closed":0,"total":0,"closeRate":0}},"topActiveUsers":[]}],"containers/podman-desktop-extension-ai-lab":[{"timestamp":"2025-10-28T17:47:05.042Z","date":"2025-10-28","repoLabel":"containers/podman-desktop-extension-ai-lab","metrics":{"discussions":{"totalUpvotes":0,"totalComments":0},"pullRequests":{"open":2,"total":42,"merged":35,"mergeRate":"83.3","openPRs":[{"number":3065,"title":"feat(playground): mcp servers listed","author":"manusa","url":"https://github.com/containers/podman-desktop-extension-ai-lab/pull/3065","createdAt":"2025-05-22T10:10:03Z"},{"number":2518,"title":"feat(state-management): add error handling and service resolution to …","author":"sparesparrow","url":"https://github.com/containers/podman-desktop-extension-ai-lab/pull/2518","createdAt":"2025-02-12T16:56:23Z"}]},"issues":{"open":19,"closed":52,"total":71,"closeRate":"73.2"}},"topActiveUsers":[{"username":"github-actions","prs":1,"issues":0,"comments":0,"total":3}]},{"timestamp":"2025-10-29T10:41:42.749Z","date":"2025-10-29","repoLabel":"containers/podman-desktop-extension-ai-lab","metrics":{"discussions":{"totalUpvotes":0,"totalComments":0},"pullRequests":{"open":2,"total":42,"merged":35,"mergeRate":"83.3","openPRs":[{"number":3065,"title":"feat(playground): mcp servers listed","author":"manusa","url":"https://github.com/containers/podman-desktop-extension-ai-lab/pull/3065","createdAt":"2025-05-22T10:10:03Z"},{"number":2518,"title":"feat(state-management): add error handling and service resolution to …","author":"sparesparrow","url":"https://github.com/containers/podman-desktop-extension-ai-lab/pull/2518","createdAt":"2025-02-12T16:56:23Z"}]},"issues":{"open":19,"closed":52,"total":71,"closeRate":"73.2"}},"topActiveUsers":[{"username":"github-actions","prs":1,"issues":0,"comments":0,"total":3}]}],"All Repositories":[{"timestamp":"2025-10-28T17:47:05.047Z","date":"2025-10-28","repoLabel":"aggregate","metrics":{"discussions":{"totalUpvotes":100,"totalComments":248},"pullRequests":{"open":12,"total":357,"merged":282,"mergeRate":"79.0","openPRs":[{"number":14455,"title":"fix documented uninstall steps for windows using powershell","author":"aferre","url":"https://github.com/podman-desktop/podman-desktop/pull/14455","createdAt":"2025-10-17T10:51:09Z"},{"number":14410,"title":"chore(provider-registry): wip tests failing for docker container type","author":"sAchin-680","url":"https://github.com/podman-desktop/podman-desktop/pull/14410","createdAt":"2025-10-14T18:40:35Z"},{"number":14335,"title":"fix: clarify extension search scope","author":"afadesigns","url":"https://github.com/podman-desktop/podman-desktop/pull/14335","createdAt":"2025-10-08T20:36:27Z"},{"number":14334,"title":"fix: reduce extension wording duplication on installed page","author":"afadesigns","url":"https://github.com/podman-desktop/podman-desktop/pull/14334","createdAt":"2025-10-08T18:34:51Z"},{"number":14274,"title":"fix: Log lines in podman desktop start with a � character","author":"gagandeepp","url":"https://github.com/podman-desktop/podman-desktop/pull/14274","createdAt":"2025-10-06T10:55:32Z"},{"number":14259,"title":"feat: add autostop all podman machines on exit (#12944)","author":"turesayer","url":"https://github.com/podman-desktop/podman-desktop/pull/14259","createdAt":"2025-10-04T17:44:29Z"},{"number":14253,"title":"feat: add podman version update workflow","author":"vimode","url":"https://github.com/podman-desktop/podman-desktop/pull/14253","createdAt":"2025-10-03T19:01:21Z"},{"number":14251,"title":"docs: add page about build and test with lima","author":"afbjorklund","url":"https://github.com/podman-desktop/podman-desktop/pull/14251","createdAt":"2025-10-03T18:17:39Z"},{"number":13775,"title":"chore(extensions/kind): apply review suggestions in ingress-downloader","author":"Blaimi","url":"https://github.com/podman-desktop/podman-desktop/pull/13775","createdAt":"2025-09-02T15:24:53Z"},{"number":12765,"title":"fix(extension: kubernetes): ensure currentContext and MenuItem label are string to avoid type errors","author":"am6737","url":"https://github.com/podman-desktop/podman-desktop/pull/12765","createdAt":"2025-06-07T16:54:07Z"},{"number":3065,"title":"feat(playground): mcp servers listed","author":"manusa","url":"https://github.com/containers/podman-desktop-extension-ai-lab/pull/3065","createdAt":"2025-05-22T10:10:03Z"},{"number":2518,"title":"feat(state-management): add error handling and service resolution to …","author":"sparesparrow","url":"https://github.com/containers/podman-desktop-extension-ai-lab/pull/2518","createdAt":"2025-02-12T16:56:23Z"}]},"issues":{"open":154,"closed":845,"total":999,"closeRate":"84.6"}},"topActiveUsers":[{"username":"github-actions","prs":6,"issues":0,"comments":0,"total":18},{"username":"afbjorklund","prs":1,"issues":1,"comments":7,"total":12},{"username":"statickidz","prs":2,"issues":0,"comments":4,"total":10},{"username":"Zak-Ghani","prs":0,"issues":2,"comments":6,"total":10},{"username":"sAchin-680","prs":2,"issues":0,"comments":2,"total":8}]},{"timestamp":"2025-10-29T10:41:42.753Z","date":"2025-10-29","repoLabel":"aggregate","metrics":{"discussions":{"totalUpvotes":100,"totalComments":248},"pullRequests":{"open":11,"total":357,"merged":283,"mergeRate":"79.3","openPRs":[{"number":14455,"title":"fix documented uninstall steps for windows using powershell","author":"aferre","url":"https://github.com/podman-desktop/podman-desktop/pull/14455","createdAt":"2025-10-17T10:51:09Z"},{"number":14410,"title":"chore(provider-registry): wip tests failing for docker container type","author":"sAchin-680","url":"https://github.com/podman-desktop/podman-desktop/pull/14410","createdAt":"2025-10-14T18:40:35Z"},{"number":14335,"title":"fix: clarify extension search scope","author":"afadesigns","url":"https://github.com/podman-desktop/podman-desktop/pull/14335","createdAt":"2025-10-08T20:36:27Z"},{"number":14334,"title":"fix: reduce extension wording duplication on installed page","author":"afadesigns","url":"https://github.com/podman-desktop/podman-desktop/pull/14334","createdAt":"2025-10-08T18:34:51Z"},{"number":14274,"title":"fix: Log lines in podman desktop start with a � character","author":"gagandeepp","url":"https://github.com/podman-desktop/podman-desktop/pull/14274","createdAt":"2025-10-06T10:55:32Z"},{"number":14259,"title":"feat: add autostop all podman machines on exit (#12944)","author":"turesayer","url":"https://github.com/podman-desktop/podman-desktop/pull/14259","createdAt":"2025-10-04T17:44:29Z"},{"number":14253,"title":"feat: add podman version update workflow","author":"vimode","url":"https://github.com/podman-desktop/podman-desktop/pull/14253","createdAt":"2025-10-03T19:01:21Z"},{"number":13775,"title":"chore(extensions/kind): apply review suggestions in ingress-downloader","author":"Blaimi","url":"https://github.com/podman-desktop/podman-desktop/pull/13775","createdAt":"2025-09-02T15:24:53Z"},{"number":12765,"title":"fix(extension: kubernetes): ensure currentContext and MenuItem label are string to avoid type errors","author":"am6737","url":"https://github.com/podman-desktop/podman-desktop/pull/12765","createdAt":"2025-06-07T16:54:07Z"},{"number":3065,"title":"feat(playground): mcp servers listed","author":"manusa","url":"https://github.com/containers/podman-desktop-extension-ai-lab/pull/3065","createdAt":"2025-05-22T10:10:03Z"},{"number":2518,"title":"feat(state-management): add error handling and service resolution to …","author":"sparesparrow","url":"https://github.com/containers/podman-desktop-extension-ai-lab/pull/2518","createdAt":"2025-02-12T16:56:23Z"}]},"issues":{"open":150,"closed":849,"total":999,"closeRate":"85.0"}},"topActiveUsers":[{"username":"github-actions","prs":6,"issues":0,"comments":0,"total":18},{"username":"afbjorklund","prs":1,"issues":1,"comments":7,"total":12},{"username":"statickidz","prs":2,"issues":0,"comments":4,"total":10},{"username":"Zak-Ghani","prs":0,"issues":2,"comments":6,"total":10},{"username":"sAchin-680","prs":2,"issues":0,"comments":2,"total":8}]}]};
+    const snapshotsByRepo = {"podman-desktop/podman-desktop":[{"timestamp":"2025-10-28T17:45:22.693Z","date":"2025-10-28","repoLabel":"podman-desktop/podman-desktop","metrics":{"discussions":{"totalUpvotes":100,"totalComments":248},"pullRequests":{"open":10,"total":247,"merged":191,"mergeRate":"77.3","openPRs":[{"number":14455,"title":"fix documented uninstall steps for windows using powershell","author":"aferre","url":"https://github.com/podman-desktop/podman-desktop/pull/14455","createdAt":"2025-10-17T10:51:09Z"},{"number":14410,"title":"chore(provider-registry): wip tests failing for docker container type","author":"sAchin-680","url":"https://github.com/podman-desktop/podman-desktop/pull/14410","createdAt":"2025-10-14T18:40:35Z"},{"number":14335,"title":"fix: clarify extension search scope","author":"afadesigns","url":"https://github.com/podman-desktop/podman-desktop/pull/14335","createdAt":"2025-10-08T20:36:27Z"},{"number":14334,"title":"fix: reduce extension wording duplication on installed page","author":"afadesigns","url":"https://github.com/podman-desktop/podman-desktop/pull/14334","createdAt":"2025-10-08T18:34:51Z"},{"number":14274,"title":"fix: Log lines in podman desktop start with a � character","author":"gagandeepp","url":"https://github.com/podman-desktop/podman-desktop/pull/14274","createdAt":"2025-10-06T10:55:32Z"},{"number":14259,"title":"feat: add autostop all podman machines on exit (#12944)","author":"turesayer","url":"https://github.com/podman-desktop/podman-desktop/pull/14259","createdAt":"2025-10-04T17:44:29Z"},{"number":14253,"title":"feat: add podman version update workflow","author":"vimode","url":"https://github.com/podman-desktop/podman-desktop/pull/14253","createdAt":"2025-10-03T19:01:21Z"},{"number":14251,"title":"docs: add page about build and test with lima","author":"afbjorklund","url":"https://github.com/podman-desktop/podman-desktop/pull/14251","createdAt":"2025-10-03T18:17:39Z"},{"number":13775,"title":"chore(extensions/kind): apply review suggestions in ingress-downloader","author":"Blaimi","url":"https://github.com/podman-desktop/podman-desktop/pull/13775","createdAt":"2025-09-02T15:24:53Z"},{"number":12765,"title":"fix(extension: kubernetes): ensure currentContext and MenuItem label are string to avoid type errors","author":"am6737","url":"https://github.com/podman-desktop/podman-desktop/pull/12765","createdAt":"2025-06-07T16:54:07Z"}]},"issues":{"open":124,"closed":757,"total":881,"closeRate":"85.9"}},"topActiveUsers":[{"username":"afbjorklund","prs":1,"issues":1,"comments":7,"total":12},{"username":"statickidz","prs":2,"issues":0,"comments":4,"total":10},{"username":"Zak-Ghani","prs":0,"issues":2,"comments":6,"total":10},{"username":"sAchin-680","prs":2,"issues":0,"comments":2,"total":8},{"username":"Aayushyamaan-Shah","prs":2,"issues":0,"comments":2,"total":8}]},{"timestamp":"2025-10-29T15:58:23.025Z","date":"2025-10-29","repoLabel":"podman-desktop/podman-desktop","metrics":{"discussions":{"totalUpvotes":100,"totalComments":248},"pullRequests":{"open":9,"total":247,"merged":192,"mergeRate":"77.7","openPRs":[{"number":14455,"title":"fix documented uninstall steps for windows using powershell","author":"aferre","url":"https://github.com/podman-desktop/podman-desktop/pull/14455","createdAt":"2025-10-17T10:51:09Z"},{"number":14410,"title":"chore(provider-registry): wip tests failing for docker container type","author":"sAchin-680","url":"https://github.com/podman-desktop/podman-desktop/pull/14410","createdAt":"2025-10-14T18:40:35Z"},{"number":14335,"title":"fix: clarify extension search scope","author":"afadesigns","url":"https://github.com/podman-desktop/podman-desktop/pull/14335","createdAt":"2025-10-08T20:36:27Z"},{"number":14334,"title":"fix: reduce extension wording duplication on installed page","author":"afadesigns","url":"https://github.com/podman-desktop/podman-desktop/pull/14334","createdAt":"2025-10-08T18:34:51Z"},{"number":14274,"title":"fix: Log lines in podman desktop start with a � character","author":"gagandeepp","url":"https://github.com/podman-desktop/podman-desktop/pull/14274","createdAt":"2025-10-06T10:55:32Z"},{"number":14259,"title":"feat: add autostop all podman machines on exit (#12944)","author":"turesayer","url":"https://github.com/podman-desktop/podman-desktop/pull/14259","createdAt":"2025-10-04T17:44:29Z"},{"number":14253,"title":"feat: add podman version update workflow","author":"vimode","url":"https://github.com/podman-desktop/podman-desktop/pull/14253","createdAt":"2025-10-03T19:01:21Z"},{"number":13775,"title":"chore(extensions/kind): apply review suggestions in ingress-downloader","author":"Blaimi","url":"https://github.com/podman-desktop/podman-desktop/pull/13775","createdAt":"2025-09-02T15:24:53Z"},{"number":12765,"title":"fix(extension: kubernetes): ensure currentContext and MenuItem label are string to avoid type errors","author":"am6737","url":"https://github.com/podman-desktop/podman-desktop/pull/12765","createdAt":"2025-06-07T16:54:07Z"}]},"issues":{"open":120,"closed":761,"total":881,"closeRate":"86.4"},"social":{"blueskyFollowers":138,"linkedinFollowers":982,"mastodonFollowers":69,"twitterFollowers":18},"repository":{"stars":6863,"forks":460,"watchers":50}},"topActiveUsers":[{"username":"afbjorklund","prs":1,"issues":1,"comments":7,"total":12},{"username":"statickidz","prs":2,"issues":0,"comments":4,"total":10},{"username":"Zak-Ghani","prs":0,"issues":2,"comments":6,"total":10},{"username":"sAchin-680","prs":2,"issues":0,"comments":2,"total":8},{"username":"Aayushyamaan-Shah","prs":2,"issues":0,"comments":2,"total":8}]}],"podman-desktop/extension-bootc":[{"timestamp":"2025-10-28T17:45:37.391Z","date":"2025-10-28","repoLabel":"podman-desktop/extension-bootc","metrics":{"discussions":{"totalUpvotes":0,"totalComments":0},"pullRequests":{"open":0,"total":25,"merged":22,"mergeRate":"88.0","openPRs":[]},"issues":{"open":3,"closed":21,"total":24,"closeRate":"87.5"}},"topActiveUsers":[{"username":"github-actions","prs":1,"issues":0,"comments":0,"total":3}]},{"timestamp":"2025-10-29T15:58:23.028Z","date":"2025-10-29","repoLabel":"podman-desktop/extension-bootc","metrics":{"discussions":{"totalUpvotes":0,"totalComments":0},"pullRequests":{"open":0,"total":25,"merged":22,"mergeRate":"88.0","openPRs":[]},"issues":{"open":3,"closed":21,"total":24,"closeRate":"87.5"},"social":{"blueskyFollowers":138,"linkedinFollowers":982,"mastodonFollowers":69,"twitterFollowers":18},"repository":{"stars":463,"forks":29,"watchers":15}},"topActiveUsers":[{"username":"github-actions","prs":1,"issues":0,"comments":0,"total":3}]}],"podman-desktop/extension-kubernetes-dashboard":[{"timestamp":"2025-10-28T17:45:45.419Z","date":"2025-10-28","repoLabel":"podman-desktop/extension-kubernetes-dashboard","metrics":{"discussions":{"totalUpvotes":0,"totalComments":0},"pullRequests":{"open":0,"total":3,"merged":3,"mergeRate":"100.0","openPRs":[]},"issues":{"open":0,"closed":0,"total":0,"closeRate":0}},"topActiveUsers":[{"username":"afadesigns","prs":2,"issues":0,"comments":0,"total":6},{"username":"tharun634","prs":1,"issues":0,"comments":0,"total":3},{"username":"Asymtode712","prs":0,"issues":0,"comments":1,"total":1}]},{"timestamp":"2025-10-29T15:58:23.029Z","date":"2025-10-29","repoLabel":"podman-desktop/extension-kubernetes-dashboard","metrics":{"discussions":{"totalUpvotes":0,"totalComments":0},"pullRequests":{"open":0,"total":3,"merged":3,"mergeRate":"100.0","openPRs":[]},"issues":{"open":0,"closed":0,"total":0,"closeRate":0},"social":{"blueskyFollowers":138,"linkedinFollowers":982,"mastodonFollowers":69,"twitterFollowers":18},"repository":{"stars":3,"forks":9,"watchers":1}},"topActiveUsers":[{"username":"afadesigns","prs":2,"issues":0,"comments":0,"total":6},{"username":"tharun634","prs":1,"issues":0,"comments":0,"total":3},{"username":"Asymtode712","prs":0,"issues":0,"comments":1,"total":1}]}],"podman-desktop/extension-postgresql":[{"timestamp":"2025-10-28T17:45:51.306Z","date":"2025-10-28","repoLabel":"podman-desktop/extension-postgresql","metrics":{"discussions":{"totalUpvotes":0,"totalComments":0},"pullRequests":{"open":0,"total":6,"merged":4,"mergeRate":"66.7","openPRs":[]},"issues":{"open":0,"closed":0,"total":0,"closeRate":0}},"topActiveUsers":[{"username":"github-actions","prs":4,"issues":0,"comments":0,"total":12}]},{"timestamp":"2025-10-29T15:58:23.029Z","date":"2025-10-29","repoLabel":"podman-desktop/extension-postgresql","metrics":{"discussions":{"totalUpvotes":0,"totalComments":0},"pullRequests":{"open":0,"total":6,"merged":4,"mergeRate":"66.7","openPRs":[]},"issues":{"open":0,"closed":0,"total":0,"closeRate":0},"social":{"blueskyFollowers":138,"linkedinFollowers":982,"mastodonFollowers":69,"twitterFollowers":18},"repository":{"stars":1,"forks":1,"watchers":1}},"topActiveUsers":[{"username":"github-actions","prs":4,"issues":0,"comments":0,"total":12}]}],"podman-desktop/extension-minikube":[{"timestamp":"2025-10-28T17:46:00.448Z","date":"2025-10-28","repoLabel":"podman-desktop/extension-minikube","metrics":{"discussions":{"totalUpvotes":0,"totalComments":0},"pullRequests":{"open":0,"total":16,"merged":13,"mergeRate":"81.3","openPRs":[]},"issues":{"open":2,"closed":8,"total":10,"closeRate":"80.0"}},"topActiveUsers":[{"username":"arrowd","prs":1,"issues":0,"comments":1,"total":4}]},{"timestamp":"2025-10-29T15:58:23.030Z","date":"2025-10-29","repoLabel":"podman-desktop/extension-minikube","metrics":{"discussions":{"totalUpvotes":0,"totalComments":0},"pullRequests":{"open":0,"total":16,"merged":13,"mergeRate":"81.3","openPRs":[]},"issues":{"open":2,"closed":8,"total":10,"closeRate":"80.0"},"social":{"blueskyFollowers":138,"linkedinFollowers":982,"mastodonFollowers":69,"twitterFollowers":18},"repository":{"stars":3,"forks":17,"watchers":14}},"topActiveUsers":[{"username":"arrowd","prs":1,"issues":0,"comments":1,"total":4}]}],"podman-desktop/extension-github":[{"timestamp":"2025-10-28T17:46:02.932Z","date":"2025-10-28","repoLabel":"podman-desktop/extension-github","metrics":{"discussions":{"totalUpvotes":0,"totalComments":0},"pullRequests":{"open":0,"total":0,"merged":0,"mergeRate":0,"openPRs":[]},"issues":{"open":0,"closed":0,"total":0,"closeRate":0}},"topActiveUsers":[]},{"timestamp":"2025-10-29T15:58:23.030Z","date":"2025-10-29","repoLabel":"podman-desktop/extension-github","metrics":{"discussions":{"totalUpvotes":0,"totalComments":0},"pullRequests":{"open":0,"total":0,"merged":0,"mergeRate":0,"openPRs":[]},"issues":{"open":0,"closed":0,"total":0,"closeRate":0},"social":{"blueskyFollowers":138,"linkedinFollowers":982,"mastodonFollowers":69,"twitterFollowers":18},"repository":{"stars":0,"forks":1,"watchers":1}},"topActiveUsers":[]}],"podman-desktop/extension-podman-quadlet":[{"timestamp":"2025-10-28T17:46:12.631Z","date":"2025-10-28","repoLabel":"podman-desktop/extension-podman-quadlet","metrics":{"discussions":{"totalUpvotes":0,"totalComments":0},"pullRequests":{"open":0,"total":12,"merged":9,"mergeRate":"75.0","openPRs":[]},"issues":{"open":3,"closed":7,"total":10,"closeRate":"70.0"}},"topActiveUsers":[]},{"timestamp":"2025-10-29T15:58:23.031Z","date":"2025-10-29","repoLabel":"podman-desktop/extension-podman-quadlet","metrics":{"discussions":{"totalUpvotes":0,"totalComments":0},"pullRequests":{"open":0,"total":12,"merged":9,"mergeRate":"75.0","openPRs":[]},"issues":{"open":3,"closed":7,"total":10,"closeRate":"70.0"},"social":{"blueskyFollowers":138,"linkedinFollowers":982,"mastodonFollowers":69,"twitterFollowers":18},"repository":{"stars":8,"forks":8,"watchers":9}},"topActiveUsers":[]}],"podman-desktop/extension-apple-container":[{"timestamp":"2025-10-28T17:46:15.619Z","date":"2025-10-28","repoLabel":"podman-desktop/extension-apple-container","metrics":{"discussions":{"totalUpvotes":0,"totalComments":0},"pullRequests":{"open":0,"total":0,"merged":0,"mergeRate":0,"openPRs":[]},"issues":{"open":0,"closed":0,"total":0,"closeRate":0}},"topActiveUsers":[]},{"timestamp":"2025-10-29T15:58:23.031Z","date":"2025-10-29","repoLabel":"podman-desktop/extension-apple-container","metrics":{"discussions":{"totalUpvotes":0,"totalComments":0},"pullRequests":{"open":0,"total":0,"merged":0,"mergeRate":0,"openPRs":[]},"issues":{"open":0,"closed":0,"total":0,"closeRate":0},"social":{"blueskyFollowers":138,"linkedinFollowers":982,"mastodonFollowers":69,"twitterFollowers":18},"repository":{"stars":15,"forks":0,"watchers":0}},"topActiveUsers":[]}],"podman-desktop/extension-kreate":[{"timestamp":"2025-10-28T17:46:21.398Z","date":"2025-10-28","repoLabel":"podman-desktop/extension-kreate","metrics":{"discussions":{"totalUpvotes":0,"totalComments":0},"pullRequests":{"open":0,"total":0,"merged":0,"mergeRate":0,"openPRs":[]},"issues":{"open":2,"closed":0,"total":2,"closeRate":"0.0"}},"topActiveUsers":[]},{"timestamp":"2025-10-29T15:58:23.031Z","date":"2025-10-29","repoLabel":"podman-desktop/extension-kreate","metrics":{"discussions":{"totalUpvotes":0,"totalComments":0},"pullRequests":{"open":0,"total":0,"merged":0,"mergeRate":0,"openPRs":[]},"issues":{"open":2,"closed":0,"total":2,"closeRate":"0.0"},"social":{"blueskyFollowers":138,"linkedinFollowers":982,"mastodonFollowers":69,"twitterFollowers":18},"repository":{"stars":3,"forks":5,"watchers":10}},"topActiveUsers":[]}],"podman-desktop/extension-layers-explorer":[{"timestamp":"2025-10-28T17:46:25.528Z","date":"2025-10-28","repoLabel":"podman-desktop/extension-layers-explorer","metrics":{"discussions":{"totalUpvotes":0,"totalComments":0},"pullRequests":{"open":0,"total":4,"merged":3,"mergeRate":"75.0","openPRs":[]},"issues":{"open":1,"closed":0,"total":1,"closeRate":"0.0"}},"topActiveUsers":[]},{"timestamp":"2025-10-29T15:58:23.032Z","date":"2025-10-29","repoLabel":"podman-desktop/extension-layers-explorer","metrics":{"discussions":{"totalUpvotes":0,"totalComments":0},"pullRequests":{"open":0,"total":4,"merged":3,"mergeRate":"75.0","openPRs":[]},"issues":{"open":1,"closed":0,"total":1,"closeRate":"0.0"},"social":{"blueskyFollowers":138,"linkedinFollowers":982,"mastodonFollowers":69,"twitterFollowers":18},"repository":{"stars":5,"forks":5,"watchers":14}},"topActiveUsers":[]}],"podman-desktop/podman-desktop-catalog":[{"timestamp":"2025-10-28T17:46:33.251Z","date":"2025-10-28","repoLabel":"podman-desktop/podman-desktop-catalog","metrics":{"discussions":{"totalUpvotes":0,"totalComments":0},"pullRequests":{"open":0,"total":2,"merged":2,"mergeRate":"100.0","openPRs":[]},"issues":{"open":0,"closed":0,"total":0,"closeRate":0}},"topActiveUsers":[]},{"timestamp":"2025-10-29T15:58:23.032Z","date":"2025-10-29","repoLabel":"podman-desktop/podman-desktop-catalog","metrics":{"discussions":{"totalUpvotes":0,"totalComments":0},"pullRequests":{"open":0,"total":2,"merged":2,"mergeRate":"100.0","openPRs":[]},"issues":{"open":0,"closed":0,"total":0,"closeRate":0},"social":{"blueskyFollowers":138,"linkedinFollowers":982,"mastodonFollowers":69,"twitterFollowers":18},"repository":{"stars":9,"forks":17,"watchers":16}},"topActiveUsers":[]}],"podman-desktop/extension-template-minimal":[{"timestamp":"2025-10-28T17:46:36.179Z","date":"2025-10-28","repoLabel":"podman-desktop/extension-template-minimal","metrics":{"discussions":{"totalUpvotes":0,"totalComments":0},"pullRequests":{"open":0,"total":0,"merged":0,"mergeRate":0,"openPRs":[]},"issues":{"open":0,"closed":0,"total":0,"closeRate":0}},"topActiveUsers":[]},{"timestamp":"2025-10-29T15:58:23.032Z","date":"2025-10-29","repoLabel":"podman-desktop/extension-template-minimal","metrics":{"discussions":{"totalUpvotes":0,"totalComments":0},"pullRequests":{"open":0,"total":0,"merged":0,"mergeRate":0,"openPRs":[]},"issues":{"open":0,"closed":0,"total":0,"closeRate":0},"social":{"blueskyFollowers":138,"linkedinFollowers":982,"mastodonFollowers":69,"twitterFollowers":18},"repository":{"stars":1,"forks":3,"watchers":17}},"topActiveUsers":[]}],"podman-desktop/extension-template-full":[{"timestamp":"2025-10-28T17:46:38.222Z","date":"2025-10-28","repoLabel":"podman-desktop/extension-template-full","metrics":{"discussions":{"totalUpvotes":0,"totalComments":0},"pullRequests":{"open":0,"total":0,"merged":0,"mergeRate":0,"openPRs":[]},"issues":{"open":0,"closed":0,"total":0,"closeRate":0}},"topActiveUsers":[]},{"timestamp":"2025-10-29T15:58:23.033Z","date":"2025-10-29","repoLabel":"podman-desktop/extension-template-full","metrics":{"discussions":{"totalUpvotes":0,"totalComments":0},"pullRequests":{"open":0,"total":0,"merged":0,"mergeRate":0,"openPRs":[]},"issues":{"open":0,"closed":0,"total":0,"closeRate":0},"social":{"blueskyFollowers":138,"linkedinFollowers":982,"mastodonFollowers":69,"twitterFollowers":18},"repository":{"stars":1,"forks":4,"watchers":18}},"topActiveUsers":[]}],"podman-desktop/extension-template-webview":[{"timestamp":"2025-10-28T17:46:39.810Z","date":"2025-10-28","repoLabel":"podman-desktop/extension-template-webview","metrics":{"discussions":{"totalUpvotes":0,"totalComments":0},"pullRequests":{"open":0,"total":0,"merged":0,"mergeRate":0,"openPRs":[]},"issues":{"open":0,"closed":0,"total":0,"closeRate":0}},"topActiveUsers":[]},{"timestamp":"2025-10-29T15:58:23.033Z","date":"2025-10-29","repoLabel":"podman-desktop/extension-template-webview","metrics":{"discussions":{"totalUpvotes":0,"totalComments":0},"pullRequests":{"open":0,"total":0,"merged":0,"mergeRate":0,"openPRs":[]},"issues":{"open":0,"closed":0,"total":0,"closeRate":0},"social":{"blueskyFollowers":138,"linkedinFollowers":982,"mastodonFollowers":69,"twitterFollowers":18},"repository":{"stars":0,"forks":4,"watchers":22}},"topActiveUsers":[]}],"podman-desktop/community":[{"timestamp":"2025-10-28T17:46:42.194Z","date":"2025-10-28","repoLabel":"podman-desktop/community","metrics":{"discussions":{"totalUpvotes":0,"totalComments":0},"pullRequests":{"open":0,"total":0,"merged":0,"mergeRate":0,"openPRs":[]},"issues":{"open":0,"closed":0,"total":0,"closeRate":0}},"topActiveUsers":[]},{"timestamp":"2025-10-29T15:58:23.033Z","date":"2025-10-29","repoLabel":"podman-desktop/community","metrics":{"discussions":{"totalUpvotes":0,"totalComments":0},"pullRequests":{"open":0,"total":0,"merged":0,"mergeRate":0,"openPRs":[]},"issues":{"open":0,"closed":0,"total":0,"closeRate":0},"social":{"blueskyFollowers":138,"linkedinFollowers":982,"mastodonFollowers":69,"twitterFollowers":18},"repository":{"stars":2,"forks":2,"watchers":10}},"topActiveUsers":[]}],"containers/podman-desktop-extension-ai-lab":[{"timestamp":"2025-10-28T17:47:05.042Z","date":"2025-10-28","repoLabel":"containers/podman-desktop-extension-ai-lab","metrics":{"discussions":{"totalUpvotes":0,"totalComments":0},"pullRequests":{"open":2,"total":42,"merged":35,"mergeRate":"83.3","openPRs":[{"number":3065,"title":"feat(playground): mcp servers listed","author":"manusa","url":"https://github.com/containers/podman-desktop-extension-ai-lab/pull/3065","createdAt":"2025-05-22T10:10:03Z"},{"number":2518,"title":"feat(state-management): add error handling and service resolution to …","author":"sparesparrow","url":"https://github.com/containers/podman-desktop-extension-ai-lab/pull/2518","createdAt":"2025-02-12T16:56:23Z"}]},"issues":{"open":19,"closed":52,"total":71,"closeRate":"73.2"}},"topActiveUsers":[{"username":"github-actions","prs":1,"issues":0,"comments":0,"total":3}]},{"timestamp":"2025-10-29T15:58:23.033Z","date":"2025-10-29","repoLabel":"containers/podman-desktop-extension-ai-lab","metrics":{"discussions":{"totalUpvotes":0,"totalComments":0},"pullRequests":{"open":2,"total":42,"merged":35,"mergeRate":"83.3","openPRs":[{"number":3065,"title":"feat(playground): mcp servers listed","author":"manusa","url":"https://github.com/containers/podman-desktop-extension-ai-lab/pull/3065","createdAt":"2025-05-22T10:10:03Z"},{"number":2518,"title":"feat(state-management): add error handling and service resolution to …","author":"sparesparrow","url":"https://github.com/containers/podman-desktop-extension-ai-lab/pull/2518","createdAt":"2025-02-12T16:56:23Z"}]},"issues":{"open":19,"closed":52,"total":71,"closeRate":"73.2"},"social":{"blueskyFollowers":138,"linkedinFollowers":982,"mastodonFollowers":69,"twitterFollowers":18},"repository":{"stars":261,"forks":66,"watchers":17}},"topActiveUsers":[{"username":"github-actions","prs":1,"issues":0,"comments":0,"total":3}]}],"All Repositories":[{"timestamp":"2025-10-28T17:47:05.047Z","date":"2025-10-28","repoLabel":"aggregate","metrics":{"discussions":{"totalUpvotes":100,"totalComments":248},"pullRequests":{"open":12,"total":357,"merged":282,"mergeRate":"79.0","openPRs":[{"number":14455,"title":"fix documented uninstall steps for windows using powershell","author":"aferre","url":"https://github.com/podman-desktop/podman-desktop/pull/14455","createdAt":"2025-10-17T10:51:09Z"},{"number":14410,"title":"chore(provider-registry): wip tests failing for docker container type","author":"sAchin-680","url":"https://github.com/podman-desktop/podman-desktop/pull/14410","createdAt":"2025-10-14T18:40:35Z"},{"number":14335,"title":"fix: clarify extension search scope","author":"afadesigns","url":"https://github.com/podman-desktop/podman-desktop/pull/14335","createdAt":"2025-10-08T20:36:27Z"},{"number":14334,"title":"fix: reduce extension wording duplication on installed page","author":"afadesigns","url":"https://github.com/podman-desktop/podman-desktop/pull/14334","createdAt":"2025-10-08T18:34:51Z"},{"number":14274,"title":"fix: Log lines in podman desktop start with a � character","author":"gagandeepp","url":"https://github.com/podman-desktop/podman-desktop/pull/14274","createdAt":"2025-10-06T10:55:32Z"},{"number":14259,"title":"feat: add autostop all podman machines on exit (#12944)","author":"turesayer","url":"https://github.com/podman-desktop/podman-desktop/pull/14259","createdAt":"2025-10-04T17:44:29Z"},{"number":14253,"title":"feat: add podman version update workflow","author":"vimode","url":"https://github.com/podman-desktop/podman-desktop/pull/14253","createdAt":"2025-10-03T19:01:21Z"},{"number":14251,"title":"docs: add page about build and test with lima","author":"afbjorklund","url":"https://github.com/podman-desktop/podman-desktop/pull/14251","createdAt":"2025-10-03T18:17:39Z"},{"number":13775,"title":"chore(extensions/kind): apply review suggestions in ingress-downloader","author":"Blaimi","url":"https://github.com/podman-desktop/podman-desktop/pull/13775","createdAt":"2025-09-02T15:24:53Z"},{"number":12765,"title":"fix(extension: kubernetes): ensure currentContext and MenuItem label are string to avoid type errors","author":"am6737","url":"https://github.com/podman-desktop/podman-desktop/pull/12765","createdAt":"2025-06-07T16:54:07Z"},{"number":3065,"title":"feat(playground): mcp servers listed","author":"manusa","url":"https://github.com/containers/podman-desktop-extension-ai-lab/pull/3065","createdAt":"2025-05-22T10:10:03Z"},{"number":2518,"title":"feat(state-management): add error handling and service resolution to …","author":"sparesparrow","url":"https://github.com/containers/podman-desktop-extension-ai-lab/pull/2518","createdAt":"2025-02-12T16:56:23Z"}]},"issues":{"open":154,"closed":845,"total":999,"closeRate":"84.6"}},"topActiveUsers":[{"username":"github-actions","prs":6,"issues":0,"comments":0,"total":18},{"username":"afbjorklund","prs":1,"issues":1,"comments":7,"total":12},{"username":"statickidz","prs":2,"issues":0,"comments":4,"total":10},{"username":"Zak-Ghani","prs":0,"issues":2,"comments":6,"total":10},{"username":"sAchin-680","prs":2,"issues":0,"comments":2,"total":8}]},{"timestamp":"2025-10-29T15:58:23.034Z","date":"2025-10-29","repoLabel":"aggregate","metrics":{"discussions":{"totalUpvotes":100,"totalComments":248},"pullRequests":{"open":11,"total":357,"merged":283,"mergeRate":"79.3","openPRs":[{"number":14455,"title":"fix documented uninstall steps for windows using powershell","author":"aferre","url":"https://github.com/podman-desktop/podman-desktop/pull/14455","createdAt":"2025-10-17T10:51:09Z"},{"number":14410,"title":"chore(provider-registry): wip tests failing for docker container type","author":"sAchin-680","url":"https://github.com/podman-desktop/podman-desktop/pull/14410","createdAt":"2025-10-14T18:40:35Z"},{"number":14335,"title":"fix: clarify extension search scope","author":"afadesigns","url":"https://github.com/podman-desktop/podman-desktop/pull/14335","createdAt":"2025-10-08T20:36:27Z"},{"number":14334,"title":"fix: reduce extension wording duplication on installed page","author":"afadesigns","url":"https://github.com/podman-desktop/podman-desktop/pull/14334","createdAt":"2025-10-08T18:34:51Z"},{"number":14274,"title":"fix: Log lines in podman desktop start with a � character","author":"gagandeepp","url":"https://github.com/podman-desktop/podman-desktop/pull/14274","createdAt":"2025-10-06T10:55:32Z"},{"number":14259,"title":"feat: add autostop all podman machines on exit (#12944)","author":"turesayer","url":"https://github.com/podman-desktop/podman-desktop/pull/14259","createdAt":"2025-10-04T17:44:29Z"},{"number":14253,"title":"feat: add podman version update workflow","author":"vimode","url":"https://github.com/podman-desktop/podman-desktop/pull/14253","createdAt":"2025-10-03T19:01:21Z"},{"number":13775,"title":"chore(extensions/kind): apply review suggestions in ingress-downloader","author":"Blaimi","url":"https://github.com/podman-desktop/podman-desktop/pull/13775","createdAt":"2025-09-02T15:24:53Z"},{"number":12765,"title":"fix(extension: kubernetes): ensure currentContext and MenuItem label are string to avoid type errors","author":"am6737","url":"https://github.com/podman-desktop/podman-desktop/pull/12765","createdAt":"2025-06-07T16:54:07Z"},{"number":3065,"title":"feat(playground): mcp servers listed","author":"manusa","url":"https://github.com/containers/podman-desktop-extension-ai-lab/pull/3065","createdAt":"2025-05-22T10:10:03Z"},{"number":2518,"title":"feat(state-management): add error handling and service resolution to …","author":"sparesparrow","url":"https://github.com/containers/podman-desktop-extension-ai-lab/pull/2518","createdAt":"2025-02-12T16:56:23Z"}]},"issues":{"open":150,"closed":849,"total":999,"closeRate":"85.0"},"social":{"blueskyFollowers":138,"linkedinFollowers":982,"mastodonFollowers":69,"twitterFollowers":18},"repository":{"stars":7638,"forks":631,"watchers":215}},"topActiveUsers":[{"username":"github-actions","prs":6,"issues":0,"comments":0,"total":18},{"username":"afbjorklund","prs":1,"issues":1,"comments":7,"total":12},{"username":"statickidz","prs":2,"issues":0,"comments":4,"total":10},{"username":"Zak-Ghani","prs":0,"issues":2,"comments":6,"total":10},{"username":"sAchin-680","prs":2,"issues":0,"comments":2,"total":8}]}]};
     const repoKeys = ["All Repositories","containers/podman-desktop-extension-ai-lab","podman-desktop/community","podman-desktop/extension-apple-container","podman-desktop/extension-bootc","podman-desktop/extension-github","podman-desktop/extension-kreate","podman-desktop/extension-kubernetes-dashboard","podman-desktop/extension-layers-explorer","podman-desktop/extension-minikube","podman-desktop/extension-podman-quadlet","podman-desktop/extension-postgresql","podman-desktop/extension-template-full","podman-desktop/extension-template-minimal","podman-desktop/extension-template-webview","podman-desktop/podman-desktop","podman-desktop/podman-desktop-catalog"];
+    const hasSocialMetrics = true;
+    const hasRepoMetrics = true;
 
     const chartConfig = {
       responsive: true,
@@ -574,6 +640,118 @@
       }
     });
 
+    let starsChart = null;
+    if (hasRepoMetrics) {
+      starsChart = new Chart(document.getElementById('starsChart'), {
+        type: 'line',
+        data: {
+          labels: ["2025-10-28","2025-10-29"],
+          datasets: [{
+            label: 'GitHub Stars',
+            data: [null,7638],
+            borderColor: '#fbbf24',
+            backgroundColor: 'rgba(251, 191, 36, 0.15)',
+            fill: true,
+            tension: 0.4,
+            borderWidth: 3,
+            pointRadius: 4,
+            pointBackgroundColor: '#fbbf24',
+            pointBorderColor: '#0f172a',
+            pointBorderWidth: 2,
+            pointHoverRadius: 6,
+            spanGaps: true
+          }]
+        },
+        options: chartConfig
+      });
+    }
+
+    let socialChart = null;
+    if (hasSocialMetrics) {
+      const socialDatasets = [];
+
+      
+      socialDatasets.push({
+        label: 'Bluesky',
+        data: [null,138],
+        borderColor: '#0085ff',
+        backgroundColor: 'rgba(0, 133, 255, 0.15)',
+        fill: false,
+        tension: 0.4,
+        borderWidth: 3,
+        pointRadius: 4,
+        pointBackgroundColor: '#0085ff',
+        pointBorderColor: '#0f172a',
+        pointBorderWidth: 2,
+        pointHoverRadius: 6,
+        spanGaps: true
+      });
+      
+
+      
+      socialDatasets.push({
+        label: 'Mastodon',
+        data: [null,69],
+        borderColor: '#6364ff',
+        backgroundColor: 'rgba(99, 100, 255, 0.15)',
+        fill: false,
+        tension: 0.4,
+        borderWidth: 3,
+        pointRadius: 4,
+        pointBackgroundColor: '#6364ff',
+        pointBorderColor: '#0f172a',
+        pointBorderWidth: 2,
+        pointHoverRadius: 6,
+        spanGaps: true
+      });
+      
+
+      
+      socialDatasets.push({
+        label: 'LinkedIn',
+        data: [null,982],
+        borderColor: '#0077b5',
+        backgroundColor: 'rgba(0, 119, 181, 0.15)',
+        fill: false,
+        tension: 0.4,
+        borderWidth: 3,
+        pointRadius: 4,
+        pointBackgroundColor: '#0077b5',
+        pointBorderColor: '#0f172a',
+        pointBorderWidth: 2,
+        pointHoverRadius: 6,
+        spanGaps: true
+      });
+      
+
+      
+      socialDatasets.push({
+        label: 'Twitter/X',
+        data: [null,18],
+        borderColor: '#1da1f2',
+        backgroundColor: 'rgba(29, 161, 242, 0.15)',
+        fill: false,
+        tension: 0.4,
+        borderWidth: 3,
+        pointRadius: 4,
+        pointBackgroundColor: '#1da1f2',
+        pointBorderColor: '#0f172a',
+        pointBorderWidth: 2,
+        pointHoverRadius: 6,
+        spanGaps: true
+      });
+      
+
+      socialChart = new Chart(document.getElementById('socialChart'), {
+        type: 'line',
+        data: {
+          labels: ["2025-10-28","2025-10-29"],
+          datasets: socialDatasets
+        },
+        options: chartConfig
+      });
+    }
+
     document.getElementById('repoSelect').addEventListener('change', (e) => {
       updateDashboard(e.target.value);
     });
@@ -644,11 +822,40 @@
       const commentsData = snapshots.map(s => s.metrics.discussions.totalComments);
       const prMergeRates = snapshots.map(s => s.metrics.pullRequests.mergeRate);
       const issueCloseRates = snapshots.map(s => s.metrics.issues.closeRate);
+      const blueskyFollowers = snapshots.map(s => s.metrics.social?.blueskyFollowers || null);
+      const mastodonFollowers = snapshots.map(s => s.metrics.social?.mastodonFollowers || null);
+      const linkedinFollowers = snapshots.map(s => s.metrics.social?.linkedinFollowers || null);
+      const twitterFollowers = snapshots.map(s => s.metrics.social?.twitterFollowers || null);
+      const starsData = snapshots.map(s => s.metrics.repository?.stars || null);
 
       document.getElementById('stat-prs').textContent = latestSnapshot.metrics.pullRequests.open;
       document.getElementById('stat-issues').textContent = latestSnapshot.metrics.issues.open;
       document.getElementById('stat-pr-rate').textContent = latestSnapshot.metrics.pullRequests.mergeRate + '%';
       document.getElementById('stat-issue-rate').textContent = latestSnapshot.metrics.issues.closeRate + '%';
+
+      if (hasRepoMetrics && latestSnapshot.metrics.repository?.stars) {
+        const el = document.getElementById('stat-stars');
+        if (el) el.textContent = latestSnapshot.metrics.repository.stars.toLocaleString();
+      }
+
+      if (hasSocialMetrics) {
+        if (latestSnapshot.metrics.social?.blueskyFollowers) {
+          const el = document.getElementById('stat-bluesky');
+          if (el) el.textContent = latestSnapshot.metrics.social.blueskyFollowers.toLocaleString();
+        }
+        if (latestSnapshot.metrics.social?.mastodonFollowers) {
+          const el = document.getElementById('stat-mastodon');
+          if (el) el.textContent = latestSnapshot.metrics.social.mastodonFollowers.toLocaleString();
+        }
+        if (latestSnapshot.metrics.social?.linkedinFollowers) {
+          const el = document.getElementById('stat-linkedin');
+          if (el) el.textContent = latestSnapshot.metrics.social.linkedinFollowers.toLocaleString();
+        }
+        if (latestSnapshot.metrics.social?.twitterFollowers) {
+          const el = document.getElementById('stat-twitter');
+          if (el) el.textContent = latestSnapshot.metrics.social.twitterFollowers.toLocaleString();
+        }
+      }
 
       prChart.data.labels = dates;
       prChart.data.datasets[0].data = prData;
@@ -667,6 +874,93 @@
       ratesChart.data.datasets[0].data = prMergeRates;
       ratesChart.data.datasets[1].data = issueCloseRates;
       ratesChart.update();
+
+      if (hasRepoMetrics && starsChart) {
+        starsChart.data.labels = dates;
+        starsChart.data.datasets[0].data = starsData;
+        starsChart.update();
+      }
+
+      if (hasSocialMetrics && socialChart) {
+        // Rebuild datasets for the selected repo
+        const newSocialDatasets = [];
+
+        if (blueskyFollowers.some(v => v !== null && v > 0)) {
+          newSocialDatasets.push({
+            label: 'Bluesky',
+            data: blueskyFollowers,
+            borderColor: '#0085ff',
+            backgroundColor: 'rgba(0, 133, 255, 0.15)',
+            fill: false,
+            tension: 0.4,
+            borderWidth: 3,
+            pointRadius: 4,
+            pointBackgroundColor: '#0085ff',
+            pointBorderColor: '#0f172a',
+            pointBorderWidth: 2,
+            pointHoverRadius: 6,
+            spanGaps: true
+          });
+        }
+
+        if (mastodonFollowers.some(v => v !== null && v > 0)) {
+          newSocialDatasets.push({
+            label: 'Mastodon',
+            data: mastodonFollowers,
+            borderColor: '#6364ff',
+            backgroundColor: 'rgba(99, 100, 255, 0.15)',
+            fill: false,
+            tension: 0.4,
+            borderWidth: 3,
+            pointRadius: 4,
+            pointBackgroundColor: '#6364ff',
+            pointBorderColor: '#0f172a',
+            pointBorderWidth: 2,
+            pointHoverRadius: 6,
+            spanGaps: true
+          });
+        }
+
+        if (linkedinFollowers.some(v => v !== null && v > 0)) {
+          newSocialDatasets.push({
+            label: 'LinkedIn',
+            data: linkedinFollowers,
+            borderColor: '#0077b5',
+            backgroundColor: 'rgba(0, 119, 181, 0.15)',
+            fill: false,
+            tension: 0.4,
+            borderWidth: 3,
+            pointRadius: 4,
+            pointBackgroundColor: '#0077b5',
+            pointBorderColor: '#0f172a',
+            pointBorderWidth: 2,
+            pointHoverRadius: 6,
+            spanGaps: true
+          });
+        }
+
+        if (twitterFollowers.some(v => v !== null && v > 0)) {
+          newSocialDatasets.push({
+            label: 'Twitter/X',
+            data: twitterFollowers,
+            borderColor: '#1da1f2',
+            backgroundColor: 'rgba(29, 161, 242, 0.15)',
+            fill: false,
+            tension: 0.4,
+            borderWidth: 3,
+            pointRadius: 4,
+            pointBackgroundColor: '#1da1f2',
+            pointBorderColor: '#0f172a',
+            pointBorderWidth: 2,
+            pointHoverRadius: 6,
+            spanGaps: true
+          });
+        }
+
+        socialChart.data.labels = dates;
+        socialChart.data.datasets = newSocialDatasets;
+        socialChart.update();
+      }
     }
   </script>
 </body>

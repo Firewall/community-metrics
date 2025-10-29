@@ -17,24 +17,26 @@ export function displayMetrics(metrics, repo = null) {
   const issueResolutionRate = calculateRate(closedCommunityIssues, totalCommunityIssues);
 
   const repoName = repo ? `${repo.owner}/${repo.name}` : 'Repository';
+  const prefix = repo ? `[${repoName}] ` : '';
+
   console.log(`\n📊 ${repoName} Metrics`);
   console.log("=".repeat(repoName.length + 13));
-  console.log(`👍 Total Upvotes: ${totalUpvotes}`);
-  console.log(`💬 Total Comments: ${totalComments}`);
+  console.log(`${prefix}👍 Total Upvotes: ${totalUpvotes}`);
+  console.log(`${prefix}💬 Total Comments: ${totalComments}`);
 
-  console.log("\n🔄 Pull Requests:");
-  console.log(`   Open Community PRs: ${openCommunityPRs.length}`);
-  console.log(`   All-time Community PRs: ${totalCommunityPRs}`);
-  console.log(`   Merged Community PRs: ${totalMergedCommunityPRs}`);
+  console.log(`\n${prefix}🔄 Pull Requests:`);
+  console.log(`${prefix}   Open Community PRs: ${openCommunityPRs.length}`);
+  console.log(`${prefix}   All-time Community PRs: ${totalCommunityPRs}`);
+  console.log(`${prefix}   Merged Community PRs: ${totalMergedCommunityPRs}`);
 
-  console.log("\n🎯 Issues:");
-  console.log(`   Open Community Issues: ${openCommunityIssues}`);
-  console.log(`   Closed Community Issues: ${closedCommunityIssues}`);
-  console.log(`   All-time Community Issues: ${totalCommunityIssues}`);
+  console.log(`\n${prefix}🎯 Issues:`);
+  console.log(`${prefix}   Open Community Issues: ${openCommunityIssues}`);
+  console.log(`${prefix}   Closed Community Issues: ${closedCommunityIssues}`);
+  console.log(`${prefix}   All-time Community Issues: ${totalCommunityIssues}`);
 
-  console.log("\n📈 Rates:");
-  console.log(`   Community PR Merge Rate: ${prMergeRate}%`);
-  console.log(`   Community Issue Resolution Rate: ${issueResolutionRate}%`);
+  console.log(`\n${prefix}📈 Rates:`);
+  console.log(`${prefix}   Community PR Merge Rate: ${prMergeRate}%`);
+  console.log(`${prefix}   Community Issue Resolution Rate: ${issueResolutionRate}%`);
 
   return { prMergeRate, issueCloseRate: issueResolutionRate };
 }

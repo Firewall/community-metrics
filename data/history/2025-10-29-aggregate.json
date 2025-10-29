@@ -1,5 +1,5 @@
 {
-  "timestamp": "2025-10-29T10:41:42.753Z",
+  "timestamp": "2025-10-29T15:58:23.034Z",
   "date": "2025-10-29",
   "repoLabel": "aggregate",
   "metrics": {
@@ -97,6 +97,17 @@
       "closed": 849,
       "total": 999,
       "closeRate": "85.0"
+    },
+    "social": {
+      "blueskyFollowers": 138,
+      "linkedinFollowers": 982,
+      "mastodonFollowers": 69,
+      "twitterFollowers": 18
+    },
+    "repository": {
+      "stars": 7638,
+      "forks": 631,
+      "watchers": 215
     }
   },
   "topActiveUsers": [
