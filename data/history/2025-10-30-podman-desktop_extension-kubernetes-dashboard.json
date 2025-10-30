@@ -1,0 +1,57 @@
+{
+  "timestamp": "2025-10-30T00:53:28.240Z",
+  "date": "2025-10-30",
+  "repoLabel": "podman-desktop/extension-kubernetes-dashboard",
+  "metrics": {
+    "discussions": {
+      "totalUpvotes": 0,
+      "totalComments": 0
+    },
+    "pullRequests": {
+      "open": 0,
+      "total": 3,
+      "merged": 3,
+      "mergeRate": "100.0",
+      "openPRs": []
+    },
+    "issues": {
+      "open": 0,
+      "closed": 0,
+      "total": 0,
+      "closeRate": 0
+    },
+    "social": {
+      "blueskyFollowers": 138,
+      "linkedinFollowers": 984,
+      "mastodonFollowers": 69
+    },
+    "repository": {
+      "stars": 3,
+      "forks": 9,
+      "watchers": 1
+    }
+  },
+  "topActiveUsers": [
+    {
+      "username": "afadesigns",
+      "prs": 2,
+      "issues": 0,
+      "comments": 0,
+      "total": 6
+    },
+    {
+      "username": "tharun634",
+      "prs": 1,
+      "issues": 0,
+      "comments": 0,
+      "total": 3
+    },
+    {
+      "username": "Asymtode712",
+      "prs": 0,
+      "issues": 0,
+      "comments": 1,
+      "total": 1
+    }
+  ]
+}
