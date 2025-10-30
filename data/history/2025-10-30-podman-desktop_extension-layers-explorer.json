@@ -1,0 +1,35 @@
+{
+  "timestamp": "2025-10-30T00:53:28.244Z",
+  "date": "2025-10-30",
+  "repoLabel": "podman-desktop/extension-layers-explorer",
+  "metrics": {
+    "discussions": {
+      "totalUpvotes": 0,
+      "totalComments": 0
+    },
+    "pullRequests": {
+      "open": 0,
+      "total": 4,
+      "merged": 3,
+      "mergeRate": "75.0",
+      "openPRs": []
+    },
+    "issues": {
+      "open": 1,
+      "closed": 0,
+      "total": 1,
+      "closeRate": "0.0"
+    },
+    "social": {
+      "blueskyFollowers": 138,
+      "linkedinFollowers": 984,
+      "mastodonFollowers": 69
+    },
+    "repository": {
+      "stars": 5,
+      "forks": 5,
+      "watchers": 14
+    }
+  },
+  "topActiveUsers": []
+}
