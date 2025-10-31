@@ -1,0 +1,43 @@
+{
+  "timestamp": "2025-10-31T00:51:24.455Z",
+  "date": "2025-10-31",
+  "repoLabel": "podman-desktop/extension-minikube",
+  "metrics": {
+    "discussions": {
+      "totalUpvotes": 0,
+      "totalComments": 0
+    },
+    "pullRequests": {
+      "open": 0,
+      "total": 16,
+      "merged": 13,
+      "mergeRate": "81.3",
+      "openPRs": []
+    },
+    "issues": {
+      "open": 2,
+      "closed": 8,
+      "total": 10,
+      "closeRate": "80.0"
+    },
+    "social": {
+      "blueskyFollowers": 139,
+      "linkedinFollowers": 983,
+      "mastodonFollowers": 69
+    },
+    "repository": {
+      "stars": 3,
+      "forks": 17,
+      "watchers": 14
+    }
+  },
+  "topActiveUsers": [
+    {
+      "username": "arrowd",
+      "prs": 1,
+      "issues": 0,
+      "comments": 1,
+      "total": 4
+    }
+  ]
+}

@@ -1,0 +1,43 @@
+{
+  "timestamp": "2025-10-31T00:51:24.453Z",
+  "date": "2025-10-31",
+  "repoLabel": "podman-desktop/extension-bootc",
+  "metrics": {
+    "discussions": {
+      "totalUpvotes": 0,
+      "totalComments": 0
+    },
+    "pullRequests": {
+      "open": 0,
+      "total": 25,
+      "merged": 22,
+      "mergeRate": "88.0",
+      "openPRs": []
+    },
+    "issues": {
+      "open": 3,
+      "closed": 21,
+      "total": 24,
+      "closeRate": "87.5"
+    },
+    "social": {
+      "blueskyFollowers": 139,
+      "linkedinFollowers": 983,
+      "mastodonFollowers": 69
+    },
+    "repository": {
+      "stars": 463,
+      "forks": 29,
+      "watchers": 15
+    }
+  },
+  "topActiveUsers": [
+    {
+      "username": "github-actions",
+      "prs": 1,
+      "issues": 0,
+      "comments": 0,
+      "total": 3
+    }
+  ]
+}
