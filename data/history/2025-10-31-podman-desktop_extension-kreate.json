@@ -1,0 +1,35 @@
+{
+  "timestamp": "2025-10-31T00:51:24.458Z",
+  "date": "2025-10-31",
+  "repoLabel": "podman-desktop/extension-kreate",
+  "metrics": {
+    "discussions": {
+      "totalUpvotes": 0,
+      "totalComments": 0
+    },
+    "pullRequests": {
+      "open": 0,
+      "total": 0,
+      "merged": 0,
+      "mergeRate": 0,
+      "openPRs": []
+    },
+    "issues": {
+      "open": 2,
+      "closed": 0,
+      "total": 2,
+      "closeRate": "0.0"
+    },
+    "social": {
+      "blueskyFollowers": 139,
+      "linkedinFollowers": 983,
+      "mastodonFollowers": 69
+    },
+    "repository": {
+      "stars": 3,
+      "forks": 5,
+      "watchers": 10
+    }
+  },
+  "topActiveUsers": []
+}
