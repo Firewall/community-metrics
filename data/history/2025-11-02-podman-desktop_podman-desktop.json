@@ -1,0 +1,149 @@
+{
+  "timestamp": "2025-11-02T00:55:32.815Z",
+  "date": "2025-11-02",
+  "repoLabel": "podman-desktop/podman-desktop",
+  "metrics": {
+    "discussions": {
+      "totalUpvotes": 100,
+      "totalComments": 249
+    },
+    "pullRequests": {
+      "open": 11,
+      "total": 249,
+      "merged": 192,
+      "mergeRate": "77.1",
+      "openPRs": [
+        {
+          "number": 14707,
+          "title": "chore: upgrade flatpak runtime to 25.08",
+          "author": "renner0e",
+          "url": "https://github.com/podman-desktop/podman-desktop/pull/14707",
+          "createdAt": "2025-11-01T22:14:59Z"
+        },
+        {
+          "number": 14703,
+          "title": "feat: add scrollback configuration option for terminal instances",
+          "author": "ThanosTsiamis",
+          "url": "https://github.com/podman-desktop/podman-desktop/pull/14703",
+          "createdAt": "2025-10-31T15:03:27Z"
+        },
+        {
+          "number": 14455,
+          "title": "fix documented uninstall steps for windows using powershell",
+          "author": "aferre",
+          "url": "https://github.com/podman-desktop/podman-desktop/pull/14455",
+          "createdAt": "2025-10-17T10:51:09Z"
+        },
+        {
+          "number": 14410,
+          "title": "chore(provider-registry): wip tests failing for docker container type",
+          "author": "sAchin-680",
+          "url": "https://github.com/podman-desktop/podman-desktop/pull/14410",
+          "createdAt": "2025-10-14T18:40:35Z"
+        },
+        {
+          "number": 14335,
+          "title": "fix: clarify extension search scope",
+          "author": "afadesigns",
+          "url": "https://github.com/podman-desktop/podman-desktop/pull/14335",
+          "createdAt": "2025-10-08T20:36:27Z"
+        },
+        {
+          "number": 14334,
+          "title": "fix: reduce extension wording duplication on installed page",
+          "author": "afadesigns",
+          "url": "https://github.com/podman-desktop/podman-desktop/pull/14334",
+          "createdAt": "2025-10-08T18:34:51Z"
+        },
+        {
+          "number": 14274,
+          "title": "fix: Log lines in podman desktop start with a � character",
+          "author": "gagandeepp",
+          "url": "https://github.com/podman-desktop/podman-desktop/pull/14274",
+          "createdAt": "2025-10-06T10:55:32Z"
+        },
+        {
+          "number": 14259,
+          "title": "feat: add autostop all podman machines on exit (#12944)",
+          "author": "turesayer",
+          "url": "https://github.com/podman-desktop/podman-desktop/pull/14259",
+          "createdAt": "2025-10-04T17:44:29Z"
+        },
+        {
+          "number": 14253,
+          "title": "feat: add podman version update workflow",
+          "author": "vimode",
+          "url": "https://github.com/podman-desktop/podman-desktop/pull/14253",
+          "createdAt": "2025-10-03T19:01:21Z"
+        },
+        {
+          "number": 13775,
+          "title": "chore(extensions/kind): apply review suggestions in ingress-downloader",
+          "author": "Blaimi",
+          "url": "https://github.com/podman-desktop/podman-desktop/pull/13775",
+          "createdAt": "2025-09-02T15:24:53Z"
+        },
+        {
+          "number": 12765,
+          "title": "fix(extension: kubernetes): ensure currentContext and MenuItem label are string to avoid type errors",
+          "author": "am6737",
+          "url": "https://github.com/podman-desktop/podman-desktop/pull/12765",
+          "createdAt": "2025-06-07T16:54:07Z"
+        }
+      ]
+    },
+    "issues": {
+      "open": 120,
+      "closed": 765,
+      "total": 885,
+      "closeRate": "86.4"
+    },
+    "social": {
+      "blueskyFollowers": 140,
+      "linkedinFollowers": 984,
+      "mastodonFollowers": 69
+    },
+    "repository": {
+      "stars": 6885,
+      "forks": 461,
+      "watchers": 50
+    }
+  },
+  "topActiveUsers": [
+    {
+      "username": "afbjorklund",
+      "prs": 1,
+      "issues": 0,
+      "comments": 7,
+      "total": 10
+    },
+    {
+      "username": "Zak-Ghani",
+      "prs": 0,
+      "issues": 2,
+      "comments": 6,
+      "total": 10
+    },
+    {
+      "username": "Aayushyamaan-Shah",
+      "prs": 2,
+      "issues": 0,
+      "comments": 2,
+      "total": 8
+    },
+    {
+      "username": "afadesigns",
+      "prs": 2,
+      "issues": 0,
+      "comments": 2,
+      "total": 8
+    },
+    {
+      "username": "vimode",
+      "prs": 1,
+      "issues": 0,
+      "comments": 5,
+      "total": 8
+    }
+  ]
+}

@@ -1,0 +1,170 @@
+{
+  "timestamp": "2025-11-02T00:55:32.828Z",
+  "date": "2025-11-02",
+  "repoLabel": "aggregate",
+  "metrics": {
+    "discussions": {
+      "totalUpvotes": 100,
+      "totalComments": 249
+    },
+    "pullRequests": {
+      "open": 14,
+      "total": 361,
+      "merged": 283,
+      "mergeRate": "78.4",
+      "openPRs": [
+        {
+          "number": 14707,
+          "title": "chore: upgrade flatpak runtime to 25.08",
+          "author": "renner0e",
+          "url": "https://github.com/podman-desktop/podman-desktop/pull/14707",
+          "createdAt": "2025-11-01T22:14:59Z"
+        },
+        {
+          "number": 14703,
+          "title": "feat: add scrollback configuration option for terminal instances",
+          "author": "ThanosTsiamis",
+          "url": "https://github.com/podman-desktop/podman-desktop/pull/14703",
+          "createdAt": "2025-10-31T15:03:27Z"
+        },
+        {
+          "number": 417,
+          "title": "feat: enhance log window to allow configuring options for viewing log…",
+          "author": "adameska",
+          "url": "https://github.com/podman-desktop/extension-kubernetes-dashboard/pull/417",
+          "createdAt": "2025-10-30T18:50:58Z"
+        },
+        {
+          "number": 14455,
+          "title": "fix documented uninstall steps for windows using powershell",
+          "author": "aferre",
+          "url": "https://github.com/podman-desktop/podman-desktop/pull/14455",
+          "createdAt": "2025-10-17T10:51:09Z"
+        },
+        {
+          "number": 14410,
+          "title": "chore(provider-registry): wip tests failing for docker container type",
+          "author": "sAchin-680",
+          "url": "https://github.com/podman-desktop/podman-desktop/pull/14410",
+          "createdAt": "2025-10-14T18:40:35Z"
+        },
+        {
+          "number": 14335,
+          "title": "fix: clarify extension search scope",
+          "author": "afadesigns",
+          "url": "https://github.com/podman-desktop/podman-desktop/pull/14335",
+          "createdAt": "2025-10-08T20:36:27Z"
+        },
+        {
+          "number": 14334,
+          "title": "fix: reduce extension wording duplication on installed page",
+          "author": "afadesigns",
+          "url": "https://github.com/podman-desktop/podman-desktop/pull/14334",
+          "createdAt": "2025-10-08T18:34:51Z"
+        },
+        {
+          "number": 14274,
+          "title": "fix: Log lines in podman desktop start with a � character",
+          "author": "gagandeepp",
+          "url": "https://github.com/podman-desktop/podman-desktop/pull/14274",
+          "createdAt": "2025-10-06T10:55:32Z"
+        },
+        {
+          "number": 14259,
+          "title": "feat: add autostop all podman machines on exit (#12944)",
+          "author": "turesayer",
+          "url": "https://github.com/podman-desktop/podman-desktop/pull/14259",
+          "createdAt": "2025-10-04T17:44:29Z"
+        },
+        {
+          "number": 14253,
+          "title": "feat: add podman version update workflow",
+          "author": "vimode",
+          "url": "https://github.com/podman-desktop/podman-desktop/pull/14253",
+          "createdAt": "2025-10-03T19:01:21Z"
+        },
+        {
+          "number": 13775,
+          "title": "chore(extensions/kind): apply review suggestions in ingress-downloader",
+          "author": "Blaimi",
+          "url": "https://github.com/podman-desktop/podman-desktop/pull/13775",
+          "createdAt": "2025-09-02T15:24:53Z"
+        },
+        {
+          "number": 12765,
+          "title": "fix(extension: kubernetes): ensure currentContext and MenuItem label are string to avoid type errors",
+          "author": "am6737",
+          "url": "https://github.com/podman-desktop/podman-desktop/pull/12765",
+          "createdAt": "2025-06-07T16:54:07Z"
+        },
+        {
+          "number": 3065,
+          "title": "feat(playground): mcp servers listed",
+          "author": "manusa",
+          "url": "https://github.com/containers/podman-desktop-extension-ai-lab/pull/3065",
+          "createdAt": "2025-05-22T10:10:03Z"
+        },
+        {
+          "number": 2518,
+          "title": "feat(state-management): add error handling and service resolution to …",
+          "author": "sparesparrow",
+          "url": "https://github.com/containers/podman-desktop-extension-ai-lab/pull/2518",
+          "createdAt": "2025-02-12T16:56:23Z"
+        }
+      ]
+    },
+    "issues": {
+      "open": 150,
+      "closed": 853,
+      "total": 1003,
+      "closeRate": "85.0"
+    },
+    "social": {
+      "blueskyFollowers": 140,
+      "linkedinFollowers": 984,
+      "mastodonFollowers": 69
+    },
+    "repository": {
+      "stars": 7662,
+      "forks": 633,
+      "watchers": 215
+    }
+  },
+  "topActiveUsers": [
+    {
+      "username": "github-actions",
+      "prs": 6,
+      "issues": 0,
+      "comments": 0,
+      "total": 18
+    },
+    {
+      "username": "afadesigns",
+      "prs": 4,
+      "issues": 0,
+      "comments": 2,
+      "total": 14
+    },
+    {
+      "username": "afbjorklund",
+      "prs": 1,
+      "issues": 0,
+      "comments": 7,
+      "total": 10
+    },
+    {
+      "username": "Zak-Ghani",
+      "prs": 0,
+      "issues": 2,
+      "comments": 6,
+      "total": 10
+    },
+    {
+      "username": "Aayushyamaan-Shah",
+      "prs": 2,
+      "issues": 0,
+      "comments": 2,
+      "total": 8
+    }
+  ]
+}
