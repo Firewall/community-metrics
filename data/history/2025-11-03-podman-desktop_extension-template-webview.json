@@ -1,5 +1,5 @@
 {
-  "timestamp": "2025-11-03T00:54:51.873Z",
+  "timestamp": "2025-11-03T18:39:43.935Z",
   "date": "2025-11-03",
   "repoLabel": "podman-desktop/extension-template-webview",
   "metrics": {
@@ -18,12 +18,14 @@
       "open": 0,
       "closed": 0,
       "total": 0,
-      "closeRate": 0
+      "closeRate": 0,
+      "openIssues": []
     },
     "social": {
-      "blueskyFollowers": 141,
+      "blueskyFollowers": 142,
       "linkedinFollowers": 985,
-      "mastodonFollowers": 69
+      "mastodonFollowers": 69,
+      "twitterFollowers": 18
     },
     "repository": {
       "stars": 0,

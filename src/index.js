@@ -8,7 +8,7 @@
 
 import { fetchDiscussions } from './fetchers/discussions.js';
 import { fetchOpenCommunityPRs, fetchAllTimeCommunityPRs } from './fetchers/pull-requests.js';
-import { fetchAllTimeCommunityIssues } from './fetchers/issues.js';
+import { fetchOpenCommunityIssues, fetchAllTimeCommunityIssues } from './fetchers/issues.js';
 import { fetchRecentActivity } from './fetchers/activity.js';
 import { fetchSocialMetrics } from './fetchers/social-media.js';
 import { fetchRepositoryMetadata } from './fetchers/repository.js';
@@ -36,6 +36,16 @@ async function fetchRepoMetrics(repo, socialMetrics = null) {
       createdAt: pr.createdAt,
     }));
 
+    const openIssues = (cached.snapshot.metrics.issues.openIssues || []).map(issue => ({
+      number: issue.number,
+      title: issue.title,
+      author: { login: issue.author },
+      assignees: { nodes: (issue.assignees || []).map(login => ({ login })) },
+      labels: { nodes: (issue.labels || []).map(name => ({ name })) },
+      url: issue.url,
+      createdAt: issue.createdAt,
+    }));
+
     return {
       repo,
       metrics: {
@@ -44,7 +54,8 @@ async function fetchRepoMetrics(repo, socialMetrics = null) {
         openCommunityPRs: openPRs,
         totalCommunityPRs: cached.snapshot.metrics.pullRequests.total,
         totalMergedCommunityPRs: cached.snapshot.metrics.pullRequests.merged,
-        openCommunityIssues: cached.snapshot.metrics.issues.open,
+        openCommunityIssues: Array.isArray(cached.snapshot.metrics.issues.open) ? cached.snapshot.metrics.issues.open : (openIssues.length || cached.snapshot.metrics.issues.open),
+        openCommunityIssuesList: openIssues,
         closedCommunityIssues: cached.snapshot.metrics.issues.closed,
         totalCommunityIssues: cached.snapshot.metrics.issues.total,
       },
@@ -57,10 +68,11 @@ async function fetchRepoMetrics(repo, socialMetrics = null) {
 
   console.log(`\n🔍 [${repoLabel}] Fetching data...`);
 
-  // Fetch discussions, open community PRs, recent activity, and repo metadata in parallel
-  const [discussionsData, openCommunityPRs, topActiveUsers, repoMetadata] = await Promise.all([
+  // Fetch discussions, open community PRs, open community issues, recent activity, and repo metadata in parallel
+  const [discussionsData, openCommunityPRs, openCommunityIssuesList, topActiveUsers, repoMetadata] = await Promise.all([
     fetchDiscussions(repo),
     fetchOpenCommunityPRs(repo),
+    fetchOpenCommunityIssues(repo),
     fetchRecentActivity(repo),
     fetchRepositoryMetadata(repo),
   ]);
@@ -84,7 +96,8 @@ async function fetchRepoMetrics(repo, socialMetrics = null) {
       openCommunityPRs,
       totalCommunityPRs,
       totalMergedCommunityPRs,
-      openCommunityIssues,
+      openCommunityIssues: openCommunityIssuesList.length || openCommunityIssues,
+      openCommunityIssuesList,
       closedCommunityIssues,
       totalCommunityIssues,
     },
@@ -103,6 +116,7 @@ function aggregateMetrics(repoResults) {
     totalCommunityPRs: 0,
     totalMergedCommunityPRs: 0,
     openCommunityIssues: 0,
+    openCommunityIssuesList: [],
     closedCommunityIssues: 0,
     totalCommunityIssues: 0,
   };
@@ -118,7 +132,10 @@ function aggregateMetrics(repoResults) {
     aggregate.openCommunityPRs.push(...metrics.openCommunityPRs);
     aggregate.totalCommunityPRs += metrics.totalCommunityPRs;
     aggregate.totalMergedCommunityPRs += metrics.totalMergedCommunityPRs;
-    aggregate.openCommunityIssues += metrics.openCommunityIssues;
+    aggregate.openCommunityIssues += Array.isArray(metrics.openCommunityIssues) ? metrics.openCommunityIssues.length : metrics.openCommunityIssues;
+    if (metrics.openCommunityIssuesList) {
+      aggregate.openCommunityIssuesList.push(...metrics.openCommunityIssuesList);
+    }
     aggregate.closedCommunityIssues += metrics.closedCommunityIssues;
     aggregate.totalCommunityIssues += metrics.totalCommunityIssues;
 

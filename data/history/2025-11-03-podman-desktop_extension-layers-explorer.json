@@ -1,5 +1,5 @@
 {
-  "timestamp": "2025-11-03T00:54:51.871Z",
+  "timestamp": "2025-11-03T18:39:43.933Z",
   "date": "2025-11-03",
   "repoLabel": "podman-desktop/extension-layers-explorer",
   "metrics": {
@@ -18,12 +18,24 @@
       "open": 1,
       "closed": 0,
       "total": 1,
-      "closeRate": "0.0"
+      "closeRate": "0.0",
+      "openIssues": [
+        {
+          "number": 280,
+          "title": "Doesn't work where is the error message or log file",
+          "author": "matthewbaynham",
+          "assignees": [],
+          "labels": [],
+          "url": "https://github.com/podman-desktop/extension-layers-explorer/issues/280",
+          "createdAt": "2025-07-24T12:33:36Z"
+        }
+      ]
     },
     "social": {
-      "blueskyFollowers": 141,
+      "blueskyFollowers": 142,
       "linkedinFollowers": 985,
-      "mastodonFollowers": 69
+      "mastodonFollowers": 69,
+      "twitterFollowers": 18
     },
     "repository": {
       "stars": 5,

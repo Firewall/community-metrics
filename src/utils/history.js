@@ -78,10 +78,19 @@ export async function saveSnapshot(metrics, topActiveUsers, rates, repoLabel = n
         })),
       },
       issues: {
-        open: metrics.openCommunityIssues,
+        open: metrics.openCommunityIssues?.length || metrics.openCommunityIssues || 0,
         closed: metrics.closedCommunityIssues,
         total: metrics.totalCommunityIssues,
         closeRate: rates.issueCloseRate,
+        openIssues: (metrics.openCommunityIssuesList || []).map(issue => ({
+          number: issue.number,
+          title: issue.title,
+          author: issue.author?.login || 'unknown',
+          assignees: (issue.assignees?.nodes || []).map(a => a.login),
+          labels: (issue.labels?.nodes || []).map(l => l.name),
+          url: issue.url,
+          createdAt: issue.createdAt,
+        })),
       },
     },
     topActiveUsers: topActiveUsers.slice(0, 5).map(user => ({
