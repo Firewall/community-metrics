@@ -1,12 +1,17 @@
 name: Update Metrics Dashboard
 
 on:
+  push:
+    branches:
+      - main
   schedule:
     - cron: '0 0 * * *'  # Run daily at midnight UTC
   workflow_dispatch:  # Allow manual trigger
 
 permissions:
   contents: write
+  pages: write
+  id-token: write
 
 jobs:
   update-metrics:
@@ -25,6 +30,7 @@ jobs:
         run: npm install
 
       - name: Fetch metrics and save snapshot
+        if: github.event_name != 'push'
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: npm start
@@ -33,6 +39,7 @@ jobs:
         run: npm run dashboard
 
       - name: Commit and push changes
+        if: github.event_name != 'push'
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
