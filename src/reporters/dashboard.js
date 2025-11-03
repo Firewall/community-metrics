@@ -132,14 +132,6 @@ export async function generateDashboardHTML() {
       text-shadow: 0 0 40px rgba(102, 126, 234, 0.3);
       display: inline-block;
     }
-    .last-updated {
-      text-align: center;
-      color: var(--text-muted);
-      margin-bottom: 3rem;
-      font-size: 0.9375rem;
-      font-weight: 500;
-      letter-spacing: 0.01em;
-    }
     .section-title {
       color: var(--text-primary);
       font-size: clamp(1.25rem, 2.5vw, 1.625rem);
@@ -421,6 +413,13 @@ export async function generateDashboardHTML() {
       line-height: 1.5;
       letter-spacing: -0.01em;
     }
+    .pr-repo {
+      color: #8b5cf6;
+      font-size: 0.8125rem;
+      font-weight: 500;
+      margin-bottom: 0.625rem;
+      opacity: 0.9;
+    }
     .pr-meta {
       display: flex;
       gap: 1.25rem;
@@ -520,7 +519,6 @@ export async function generateDashboardHTML() {
            class="logo-img">
       <h1>Community Metrics Dashboard</h1>
     </div>
-    <div class="last-updated">Last updated: ${new Date().toLocaleString()}</div>
 
     <div class="repo-selector">
       <label for="repoSelect">Repository:</label>
@@ -1002,10 +1000,14 @@ export async function generateDashboardHTML() {
       } else {
         prsList.innerHTML = \`
           <ul class="pr-list">
-            \${openPRs.map(pr => \`
+            \${openPRs.map(pr => {
+              const repoMatch = pr.url.match(/github\\.com\\/([^/]+\\/[^/]+)\\/pull/);
+              const repo = repoMatch ? repoMatch[1] : '';
+              return \`
               <li class="pr-item">
                 <div class="pr-number">#\${pr.number}</div>
                 <div class="pr-title">\${pr.title}</div>
+                \${repo ? \`<div class="pr-repo">📦 \${repo}</div>\` : ''}
                 <div class="pr-meta">
                   <span class="pr-author">
                     <img src="https://github.com/\${pr.author}.png?size=48" alt="\${pr.author}" class="pr-avatar" />
@@ -1015,7 +1017,8 @@ export async function generateDashboardHTML() {
                   <a href="\${pr.url}" target="_blank" class="pr-link">View on GitHub →</a>
                 </div>
               </li>
-            \`).join('')}
+            \`;
+            }).join('')}
           </ul>
         \`;
       }
