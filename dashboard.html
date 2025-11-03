@@ -452,6 +452,20 @@
       box-shadow: 0 0 0 4px rgba(102, 126, 234, 0.2), 0 4px 16px rgba(102, 126, 234, 0.15);
       outline: none;
     }
+    .repo-selector select option {
+      background: #1e293b;
+      color: #f1f5f9;
+      padding: 0.75rem 1rem;
+      font-weight: 600;
+      font-size: 1rem;
+      font-family: 'Inter', sans-serif;
+    }
+    .repo-selector select option:checked,
+    .repo-selector select option:hover,
+    .repo-selector select option:focus {
+      background: #667eea;
+      color: #ffffff;
+    }
     #issues-table-container {
       overflow-x: auto;
       max-height: calc(85vh - 200px);
