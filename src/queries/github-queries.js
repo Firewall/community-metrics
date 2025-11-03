@@ -46,6 +46,38 @@ export const QUERIES = {
       }
     }
   `,
+  openIssues: `
+    query($owner: String!, $name: String!, $after: String) {
+      repository(owner: $owner, name: $name) {
+        issues(first: 100, after: $after, states: [OPEN]) {
+          pageInfo {
+            hasNextPage
+            endCursor
+          }
+          nodes {
+            number
+            title
+            author {
+              login
+            }
+            assignees(first: 10) {
+              nodes {
+                login
+              }
+            }
+            labels(first: 10) {
+              nodes {
+                name
+              }
+            }
+            url
+            createdAt
+            updatedAt
+          }
+        }
+      }
+    }
+  `,
   allPullRequests: `
     query($owner: String!, $name: String!, $after: String) {
       repository(owner: $owner, name: $name) {

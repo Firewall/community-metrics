@@ -310,7 +310,7 @@ export async function generateDashboardHTML() {
       background: linear-gradient(135deg, var(--bg-card-start) 0%, var(--bg-card-end) 100%);
       border-radius: 24px;
       padding: 2.5rem;
-      max-width: 920px;
+      max-width: 95vw;
       width: 100%;
       max-height: 85vh;
       overflow-y: auto;
@@ -509,6 +509,126 @@ export async function generateDashboardHTML() {
       box-shadow: 0 0 0 4px rgba(102, 126, 234, 0.2), 0 4px 16px rgba(102, 126, 234, 0.15);
       outline: none;
     }
+    #issues-table-container {
+      overflow-x: auto;
+      max-height: calc(85vh - 200px);
+    }
+    .issues-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 1rem;
+      min-width: 800px;
+    }
+    .issues-table thead tr {
+      background: rgba(100, 116, 139, 0.1);
+      border-bottom: 2px solid var(--border-color);
+    }
+    .issues-table th {
+      color: var(--text-primary);
+      font-weight: 700;
+      font-size: 0.875rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      padding: 1rem 1.25rem;
+      text-align: left;
+    }
+    .issues-table tbody tr {
+      border-bottom: 1px solid var(--border-color);
+      transition: all 0.2s ease;
+      cursor: pointer;
+    }
+    .issues-table tbody tr:hover {
+      background: rgba(102, 126, 234, 0.08);
+      border-color: rgba(102, 126, 234, 0.4);
+    }
+    .issues-table td {
+      padding: 1.25rem 1.25rem;
+      color: var(--text-secondary);
+      font-size: 0.9375rem;
+    }
+    .issue-id {
+      color: #667eea;
+      font-weight: 700;
+      font-family: 'SF Mono', 'Monaco', 'Inconsolata', 'Roboto Mono', monospace;
+    }
+    .issue-title {
+      color: var(--text-primary);
+      font-weight: 600;
+      max-width: 400px;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+    .issue-repo {
+      color: #8b5cf6;
+      font-weight: 500;
+      font-size: 0.875rem;
+    }
+    .issue-user {
+      display: flex;
+      align-items: center;
+      gap: 0.625rem;
+      color: #f093fb;
+      font-weight: 500;
+      font-size: 0.875rem;
+    }
+    .issue-avatar {
+      width: 28px;
+      height: 28px;
+      border-radius: 50%;
+      border: 2px solid rgba(240, 147, 251, 0.35);
+      transition: all 0.2s ease;
+    }
+    .issues-table tbody tr:hover .issue-avatar {
+      border-color: rgba(240, 147, 251, 0.6);
+      transform: scale(1.05);
+    }
+    .issue-assignee-empty {
+      color: var(--text-muted);
+      font-style: italic;
+      font-size: 0.8125rem;
+    }
+    .issue-type {
+      font-size: 0.875rem;
+    }
+    .issue-type-badge {
+      display: inline-block;
+      padding: 0.375rem 0.75rem;
+      border-radius: 12px;
+      font-weight: 600;
+      font-size: 0.8125rem;
+      text-transform: capitalize;
+    }
+    .issue-type-badge.bug {
+      background: rgba(244, 63, 94, 0.15);
+      color: #f43f5e;
+      border: 1px solid rgba(244, 63, 94, 0.3);
+    }
+    .issue-type-badge.enhancement {
+      background: rgba(59, 130, 246, 0.15);
+      color: #3b82f6;
+      border: 1px solid rgba(59, 130, 246, 0.3);
+    }
+    .issue-type-badge.feature {
+      background: rgba(139, 92, 246, 0.15);
+      color: #8b5cf6;
+      border: 1px solid rgba(139, 92, 246, 0.3);
+    }
+    .issue-type-badge.question {
+      background: rgba(245, 158, 11, 0.15);
+      color: #f59e0b;
+      border: 1px solid rgba(245, 158, 11, 0.3);
+    }
+    .issue-type-badge.documentation {
+      background: rgba(34, 197, 94, 0.15);
+      color: #22c55e;
+      border: 1px solid rgba(34, 197, 94, 0.3);
+    }
+    .issue-type-badge.default {
+      background: rgba(102, 126, 234, 0.15);
+      color: #667eea;
+      border: 1px solid rgba(102, 126, 234, 0.3);
+    }
   </style>
 </head>
 <body>
@@ -535,7 +655,7 @@ export async function generateDashboardHTML() {
         <div class="stat-value" id="stat-prs">${latestSnapshot.metrics.pullRequests.open}</div>
         <div class="stat-label">Open PRs</div>
       </div>
-      <div class="stat-card">
+      <div class="stat-card clickable" id="open-issues-card">
         <div class="stat-value" id="stat-issues">${latestSnapshot.metrics.issues.open}</div>
         <div class="stat-label">Open Issues</div>
       </div>
@@ -628,6 +748,16 @@ export async function generateDashboardHTML() {
           <button class="modal-close" onclick="document.getElementById('prs-modal').classList.remove('active')">Close</button>
         </div>
         <div id="prs-list"></div>
+      </div>
+    </div>
+
+    <div class="modal" id="issues-modal">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h2 id="issues-modal-title">Open Issues</h2>
+          <button class="modal-close" onclick="document.getElementById('issues-modal').classList.remove('active')">Close</button>
+        </div>
+        <div id="issues-table-container"></div>
       </div>
     </div>
 
@@ -1031,6 +1161,119 @@ export async function generateDashboardHTML() {
     document.getElementById('prs-modal').addEventListener('click', (e) => {
       if (e.target.id === 'prs-modal') {
         document.getElementById('prs-modal').classList.remove('active');
+      }
+    });
+
+    function showIssuesModal() {
+      const snapshots = snapshotsByRepo[currentRepoLabel] || [];
+      if (snapshots.length === 0) return;
+
+      const latestSnapshot = snapshots[snapshots.length - 1];
+      const openIssues = (latestSnapshot.metrics.issues.openIssues || []).sort((a, b) => {
+        const dateA = new Date(a.createdAt);
+        const dateB = new Date(b.createdAt);
+        return dateB - dateA; // Sort descending (newest first)
+      });
+
+      const modalTitle = document.getElementById('issues-modal-title');
+      const issuesContainer = document.getElementById('issues-table-container');
+
+      modalTitle.textContent = \`Open Issues - \${currentRepoLabel === 'All Repositories' ? '🌐 All Repositories' : '📦 ' + currentRepoLabel}\`;
+
+      if (openIssues.length === 0) {
+        issuesContainer.innerHTML = \`
+          <div class="empty-state">
+            <div class="empty-state-icon">🎉</div>
+            <p>No open issues!</p>
+          </div>
+        \`;
+      } else {
+        issuesContainer.innerHTML = \`
+          <table class="issues-table">
+            <thead>
+              <tr>
+                <th>Issue ID</th>
+                <th>Issue Name</th>
+                <th>Type</th>
+                <th>Repo</th>
+                <th>Creator</th>
+                <th>Assignee</th>
+              </tr>
+            </thead>
+            <tbody>
+              \${openIssues.map(issue => {
+                const repoMatch = issue.url.match(/github\\.com\\/([^/]+\\/[^/]+)\\/issues/);
+                const repo = repoMatch ? repoMatch[1] : '';
+                const assignee = issue.assignees && issue.assignees.length > 0 ? issue.assignees[0] : null;
+                const labels = issue.labels?.nodes || issue.labels || [];
+                const issueType = labels.find(l => {
+                  const name = typeof l === 'string' ? l : l.name;
+                  const lower = name.toLowerCase();
+                  return lower.includes('bug') || lower.includes('enhancement') || lower.includes('feature') || lower.includes('question') || lower.includes('documentation');
+                }) || (labels.length > 0 ? (typeof labels[0] === 'string' ? labels[0] : labels[0].name) : '');
+                const issueTypeDisplay = typeof issueType === 'string' ? issueType : (issueType.name || '');
+                // Extract type from label (e.g., "kind/bug" -> "bug", "bug" -> "bug")
+                const typeName = issueTypeDisplay.toLowerCase();
+                let displayType = '';
+                let typeClass = 'default';
+                if (typeName.includes('bug')) {
+                  displayType = 'Bug';
+                  typeClass = 'bug';
+                } else if (typeName.includes('enhancement')) {
+                  displayType = 'Enhancement';
+                  typeClass = 'enhancement';
+                } else if (typeName.includes('feature')) {
+                  displayType = 'Feature';
+                  typeClass = 'feature';
+                } else if (typeName.includes('question')) {
+                  displayType = 'Question';
+                  typeClass = 'question';
+                } else if (typeName.includes('documentation')) {
+                  displayType = 'Documentation';
+                  typeClass = 'documentation';
+                } else if (issueTypeDisplay) {
+                  // Use the label name, removing prefix if present (e.g., "kind/bug" -> "bug")
+                  displayType = issueTypeDisplay.split('/').pop().split(' ')[0]; // Get last part after / and remove emoji
+                  typeClass = 'default';
+                }
+                const issueUrl = issue.url.replace(/"/g, '&quot;');
+                const issueTitle = issue.title.replace(/"/g, '&quot;').replace(/'/g, '&#39;');
+                return \`
+                <tr onclick="window.open('\${issueUrl}', '_blank')" title="Click to open issue on GitHub">
+                  <td class="issue-id">#\${issue.number}</td>
+                  <td class="issue-title">\${issueTitle}</td>
+                  <td class="issue-type">\${displayType ? \`<span class="issue-type-badge \${typeClass}">\${displayType}</span>\` : '-'}</td>
+                  <td class="issue-repo">\${repo || 'N/A'}</td>
+                  <td>
+                    <div class="issue-user">
+                      <img src="https://github.com/\${issue.author}.png?size=56" alt="\${issue.author}" class="issue-avatar" />
+                      @\${issue.author}
+                    </div>
+                  </td>
+                  <td>
+                    \${assignee ? \`
+                      <div class="issue-user">
+                        <img src="https://github.com/\${assignee}.png?size=56" alt="\${assignee}" class="issue-avatar" />
+                        @\${assignee}
+                      </div>
+                    \` : \`<span class="issue-assignee-empty">Unassigned</span>\`}
+                  </td>
+                </tr>
+              \`;
+              }).join('')}
+            </tbody>
+          </table>
+        \`;
+      }
+
+      document.getElementById('issues-modal').classList.add('active');
+    }
+
+    document.getElementById('open-issues-card').addEventListener('click', showIssuesModal);
+
+    document.getElementById('issues-modal').addEventListener('click', (e) => {
+      if (e.target.id === 'issues-modal') {
+        document.getElementById('issues-modal').classList.remove('active');
       }
     });
 

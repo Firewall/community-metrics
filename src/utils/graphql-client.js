@@ -73,6 +73,7 @@ function getPageInfo(data, queryName) {
     case 'allPullRequests':
     case 'recentPullRequests':
       return data.data.repository.pullRequests.pageInfo;
+    case 'openIssues':
     case 'allIssues':
     case 'recentIssues':
       return data.data.repository.issues.pageInfo;
@@ -90,6 +91,7 @@ export function getNodes(data, queryName) {
     case 'allPullRequests':
     case 'recentPullRequests':
       return data.data.repository.pullRequests.nodes;
+    case 'openIssues':
     case 'allIssues':
     case 'recentIssues':
       return data.data.repository.issues.nodes;
