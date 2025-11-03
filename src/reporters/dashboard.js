@@ -132,14 +132,6 @@ export async function generateDashboardHTML() {
       text-shadow: 0 0 40px rgba(102, 126, 234, 0.3);
       display: inline-block;
     }
-    .last-updated {
-      text-align: center;
-      color: var(--text-muted);
-      margin-bottom: 3rem;
-      font-size: 0.9375rem;
-      font-weight: 500;
-      letter-spacing: 0.01em;
-    }
     .section-title {
       color: var(--text-primary);
       font-size: clamp(1.25rem, 2.5vw, 1.625rem);
@@ -527,7 +519,6 @@ export async function generateDashboardHTML() {
            class="logo-img">
       <h1>Community Metrics Dashboard</h1>
     </div>
-    <div class="last-updated">Last updated: ${new Date().toLocaleString()}</div>
 
     <div class="repo-selector">
       <label for="repoSelect">Repository:</label>
