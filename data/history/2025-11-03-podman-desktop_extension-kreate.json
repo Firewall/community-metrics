@@ -1,5 +1,5 @@
 {
-  "timestamp": "2025-11-03T00:54:51.870Z",
+  "timestamp": "2025-11-03T18:39:43.932Z",
   "date": "2025-11-03",
   "repoLabel": "podman-desktop/extension-kreate",
   "metrics": {
@@ -18,12 +18,33 @@
       "open": 2,
       "closed": 0,
       "total": 2,
-      "closeRate": "0.0"
+      "closeRate": "0.0",
+      "openIssues": [
+        {
+          "number": 116,
+          "title": "Could not create ConfigMap",
+          "author": "jberkus",
+          "assignees": [],
+          "labels": [],
+          "url": "https://github.com/podman-desktop/extension-kreate/issues/116",
+          "createdAt": "2025-03-06T23:13:39Z"
+        },
+        {
+          "number": 221,
+          "title": "Kreate extension fails to create manifest for any resource with error \"execute command error: E0424\"",
+          "author": "AlexonOliveiraRH",
+          "assignees": [],
+          "labels": [],
+          "url": "https://github.com/podman-desktop/extension-kreate/issues/221",
+          "createdAt": "2025-04-24T16:40:52Z"
+        }
+      ]
     },
     "social": {
-      "blueskyFollowers": 141,
+      "blueskyFollowers": 142,
       "linkedinFollowers": 985,
-      "mastodonFollowers": 69
+      "mastodonFollowers": 69,
+      "twitterFollowers": 18
     },
     "repository": {
       "stars": 3,
