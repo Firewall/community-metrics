@@ -421,6 +421,13 @@ export async function generateDashboardHTML() {
       line-height: 1.5;
       letter-spacing: -0.01em;
     }
+    .pr-repo {
+      color: #8b5cf6;
+      font-size: 0.8125rem;
+      font-weight: 500;
+      margin-bottom: 0.625rem;
+      opacity: 0.9;
+    }
     .pr-meta {
       display: flex;
       gap: 1.25rem;
@@ -1002,10 +1009,14 @@ export async function generateDashboardHTML() {
       } else {
         prsList.innerHTML = \`
           <ul class="pr-list">
-            \${openPRs.map(pr => \`
+            \${openPRs.map(pr => {
+              const repoMatch = pr.url.match(/github\\.com\\/([^/]+\\/[^/]+)\\/pull/);
+              const repo = repoMatch ? repoMatch[1] : '';
+              return \`
               <li class="pr-item">
                 <div class="pr-number">#\${pr.number}</div>
                 <div class="pr-title">\${pr.title}</div>
+                \${repo ? \`<div class="pr-repo">📦 \${repo}</div>\` : ''}
                 <div class="pr-meta">
                   <span class="pr-author">
                     <img src="https://github.com/\${pr.author}.png?size=48" alt="\${pr.author}" class="pr-avatar" />
@@ -1015,7 +1026,8 @@ export async function generateDashboardHTML() {
                   <a href="\${pr.url}" target="_blank" class="pr-link">View on GitHub →</a>
                 </div>
               </li>
-            \`).join('')}
+            \`;
+            }).join('')}
           </ul>
         \`;
       }
