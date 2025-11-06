@@ -1,0 +1,1663 @@
+{
+  "timestamp": "2025-11-06T00:52:49.592Z",
+  "date": "2025-11-06",
+  "repoLabel": "podman-desktop/podman-desktop",
+  "metrics": {
+    "discussions": {
+      "totalUpvotes": 100,
+      "totalComments": 251
+    },
+    "pullRequests": {
+      "open": 8,
+      "total": 249,
+      "merged": 195,
+      "mergeRate": "78.3",
+      "openPRs": [
+        {
+          "number": 14455,
+          "title": "fix documented uninstall steps for windows using powershell",
+          "author": "aferre",
+          "url": "https://github.com/podman-desktop/podman-desktop/pull/14455",
+          "createdAt": "2025-10-17T10:51:09Z"
+        },
+        {
+          "number": 14410,
+          "title": "chore(provider-registry): wip tests failing for docker container type",
+          "author": "sAchin-680",
+          "url": "https://github.com/podman-desktop/podman-desktop/pull/14410",
+          "createdAt": "2025-10-14T18:40:35Z"
+        },
+        {
+          "number": 14335,
+          "title": "fix: clarify extension search scope",
+          "author": "afadesigns",
+          "url": "https://github.com/podman-desktop/podman-desktop/pull/14335",
+          "createdAt": "2025-10-08T20:36:27Z"
+        },
+        {
+          "number": 14334,
+          "title": "fix: reduce extension wording duplication on installed page",
+          "author": "afadesigns",
+          "url": "https://github.com/podman-desktop/podman-desktop/pull/14334",
+          "createdAt": "2025-10-08T18:34:51Z"
+        },
+        {
+          "number": 14274,
+          "title": "fix: Log lines in podman desktop start with a � character",
+          "author": "gagandeepp",
+          "url": "https://github.com/podman-desktop/podman-desktop/pull/14274",
+          "createdAt": "2025-10-06T10:55:32Z"
+        },
+        {
+          "number": 14259,
+          "title": "feat: add autostop all podman machines on exit (#12944)",
+          "author": "turesayer",
+          "url": "https://github.com/podman-desktop/podman-desktop/pull/14259",
+          "createdAt": "2025-10-04T17:44:29Z"
+        },
+        {
+          "number": 13775,
+          "title": "chore(extensions/kind): apply review suggestions in ingress-downloader",
+          "author": "Blaimi",
+          "url": "https://github.com/podman-desktop/podman-desktop/pull/13775",
+          "createdAt": "2025-09-02T15:24:53Z"
+        },
+        {
+          "number": 12765,
+          "title": "fix(extension: kubernetes): ensure currentContext and MenuItem label are string to avoid type errors",
+          "author": "am6737",
+          "url": "https://github.com/podman-desktop/podman-desktop/pull/12765",
+          "createdAt": "2025-06-07T16:54:07Z"
+        }
+      ]
+    },
+    "issues": {
+      "open": 116,
+      "closed": 772,
+      "total": 888,
+      "closeRate": "86.9",
+      "openIssues": [
+        {
+          "number": 1632,
+          "title": "Registry information is not retained after closing Podman Desktop",
+          "author": "kdubois",
+          "assignees": [
+            "odockal"
+          ],
+          "labels": [
+            "kind/bug 🐞",
+            "area/registries",
+            "os/linux 🐧"
+          ],
+          "url": "https://github.com/podman-desktop/podman-desktop/issues/1632",
+          "createdAt": "2023-03-08T10:59:22Z"
+        },
+        {
+          "number": 2903,
+          "title": "Podman Desktop service installation vs. Podman systemd service installation",
+          "author": "afbjorklund",
+          "assignees": [],
+          "labels": [
+            "kind/enhancement ✨",
+            "os/linux 🐧",
+            "area/extension/podman 🦭",
+            "lifecycle/frozen"
+          ],
+          "url": "https://github.com/podman-desktop/podman-desktop/issues/2903",
+          "createdAt": "2023-06-18T20:37:40Z"
+        },
+        {
+          "number": 3311,
+          "title": "Limit which directories are exposed to Podman machine",
+          "author": "Krinkle",
+          "assignees": [],
+          "labels": [
+            "kind/enhancement ✨",
+            "area/extension/podman 🦭"
+          ],
+          "url": "https://github.com/podman-desktop/podman-desktop/issues/3311",
+          "createdAt": "2023-07-22T15:19:58Z"
+        },
+        {
+          "number": 4801,
+          "title": "Can't restart kind-control-plane container on Windows",
+          "author": "vietk",
+          "assignees": [
+            "jeffmaury",
+            "odockal"
+          ],
+          "labels": [
+            "kind/bug 🐞",
+            "area/extension/kind 🍾"
+          ],
+          "url": "https://github.com/podman-desktop/podman-desktop/issues/4801",
+          "createdAt": "2023-11-14T12:27:55Z"
+        },
+        {
+          "number": 5616,
+          "title": "Automatic podman access from WSL ",
+          "author": "Huskydog9988",
+          "assignees": [],
+          "labels": [
+            "kind/enhancement ✨",
+            "os/windows 🪟",
+            "area/podman-upstream 🦭",
+            "engine/podman 🦭",
+            "area/extension/podman 🦭"
+          ],
+          "url": "https://github.com/podman-desktop/podman-desktop/issues/5616",
+          "createdAt": "2024-01-21T20:44:27Z"
+        },
+        {
+          "number": 5845,
+          "title": "(mac) Option to remove menu bar icon",
+          "author": "jlous",
+          "assignees": [],
+          "labels": [
+            "kind/enhancement ✨",
+            "good first issue 🧁",
+            "area/system-tray 📤",
+            "hacktoberfest",
+            "lifecycle/frozen"
+          ],
+          "url": "https://github.com/podman-desktop/podman-desktop/issues/5845",
+          "createdAt": "2024-02-05T14:52:29Z"
+        },
+        {
+          "number": 6517,
+          "title": "Cluster not Reachable when exec Authentication is used",
+          "author": "hofq",
+          "assignees": [],
+          "labels": [
+            "kind/bug 🐞",
+            "area/kubernetes ☸️"
+          ],
+          "url": "https://github.com/podman-desktop/podman-desktop/issues/6517",
+          "createdAt": "2024-03-25T11:05:53Z"
+        },
+        {
+          "number": 6843,
+          "title": "Not start with listen on all interface and with VPN ikev2/ipsec",
+          "author": "agrisvv",
+          "assignees": [],
+          "labels": [
+            "kind/bug 🐞",
+            "area/dashboard 📊",
+            "sprint/unplanned",
+            "lifecycle/stale",
+            "qe/regression"
+          ],
+          "url": "https://github.com/podman-desktop/podman-desktop/issues/6843",
+          "createdAt": "2024-04-22T08:28:27Z"
+        },
+        {
+          "number": 7272,
+          "title": "doc: Revisit troubleshooting docs for macos/brew",
+          "author": "rafaeltuelho",
+          "assignees": [
+            "shipsing"
+          ],
+          "labels": [
+            "kind/enhancement ✨",
+            "area/documentation 📖",
+            "area/brew"
+          ],
+          "url": "https://github.com/podman-desktop/podman-desktop/issues/7272",
+          "createdAt": "2024-05-21T15:50:54Z"
+        },
+        {
+          "number": 7414,
+          "title": "Podman Desktop unable to detect the Virtual Machine Platform already enabled",
+          "author": "zikzakjack",
+          "assignees": [
+            "dgolovin"
+          ],
+          "labels": [
+            "kind/bug 🐞",
+            "engine/podman 🦭",
+            "area/extension/podman 🦭"
+          ],
+          "url": "https://github.com/podman-desktop/podman-desktop/issues/7414",
+          "createdAt": "2024-06-01T17:29:51Z"
+        },
+        {
+          "number": 7982,
+          "title": "Disable kubernetes integration",
+          "author": "ggobbe",
+          "assignees": [],
+          "labels": [
+            "kind/enhancement ✨",
+            "area/ui",
+            "area/kubernetes ☸️"
+          ],
+          "url": "https://github.com/podman-desktop/podman-desktop/issues/7982",
+          "createdAt": "2024-07-09T07:16:31Z"
+        },
+        {
+          "number": 8418,
+          "title": "Docker image incorrectly displays status UNUSED",
+          "author": "scscgit",
+          "assignees": [],
+          "labels": [
+            "kind/bug 🐞",
+            "area/docker-compatibility 🐳"
+          ],
+          "url": "https://github.com/podman-desktop/podman-desktop/issues/8418",
+          "createdAt": "2024-08-11T12:51:44Z"
+        },
+        {
+          "number": 8420,
+          "title": "Export+Import for all associated resources of Containers including options, e.g. Mounts",
+          "author": "scscgit",
+          "assignees": [],
+          "labels": [
+            "kind/enhancement ✨",
+            "area/extension/podman 🦭",
+            "UX/UI Issue"
+          ],
+          "url": "https://github.com/podman-desktop/podman-desktop/issues/8420",
+          "createdAt": "2024-08-11T16:13:59Z"
+        },
+        {
+          "number": 8482,
+          "title": "Execute image push operation as a background process",
+          "author": "agiertli",
+          "assignees": [
+            "dgolovin"
+          ],
+          "labels": [
+            "kind/enhancement ✨",
+            "area/dashboard 📊"
+          ],
+          "url": "https://github.com/podman-desktop/podman-desktop/issues/8482",
+          "createdAt": "2024-08-15T12:16:50Z"
+        },
+        {
+          "number": 8763,
+          "title": "Podman desktop not work with registrie Openshift Local default-route-openshift-image-registry.apps-crc.testing",
+          "author": "brianmolinaspring",
+          "assignees": [],
+          "labels": [
+            "kind/enhancement ✨",
+            "area/extension/crc",
+            "lifecycle/stale"
+          ],
+          "url": "https://github.com/podman-desktop/podman-desktop/issues/8763",
+          "createdAt": "2024-09-05T14:09:24Z"
+        },
+        {
+          "number": 9439,
+          "title": "Podman-Desktop should respect registries.conf from ~/.config/containers/registries.conf",
+          "author": "dvonessen",
+          "assignees": [],
+          "labels": [
+            "kind/feature 💡",
+            "area/registries",
+            "engine/podman 🦭"
+          ],
+          "url": "https://github.com/podman-desktop/podman-desktop/issues/9439",
+          "createdAt": "2024-10-17T06:47:32Z"
+        },
+        {
+          "number": 9461,
+          "title": "[Windows] Detect and update the cgroups-v2 for wsl by default as part of installation",
+          "author": "praveenkumar",
+          "assignees": [],
+          "labels": [
+            "kind/feature 💡",
+            "os/windows 🪟"
+          ],
+          "url": "https://github.com/podman-desktop/podman-desktop/issues/9461",
+          "createdAt": "2024-10-18T08:22:04Z"
+        },
+        {
+          "number": 9683,
+          "title": "Install OpenShift client binary and add it to the path same as we do for kubectl",
+          "author": "praveenkumar",
+          "assignees": [],
+          "labels": [
+            "kind/feature 💡",
+            "area/extensions"
+          ],
+          "url": "https://github.com/podman-desktop/podman-desktop/issues/9683",
+          "createdAt": "2024-10-30T14:50:23Z"
+        },
+        {
+          "number": 9830,
+          "title": "The container has been successfully run, but the Podman Desktop shows that it is not running, and the container cannot be started from the Podman Desktop.",
+          "author": "edoger",
+          "assignees": [],
+          "labels": [
+            "kind/bug 🐞",
+            "area/update"
+          ],
+          "url": "https://github.com/podman-desktop/podman-desktop/issues/9830",
+          "createdAt": "2024-11-08T16:57:11Z"
+        },
+        {
+          "number": 9985,
+          "title": "Import certificate for a new registry through the Graphical Interface",
+          "author": "luizmalere",
+          "assignees": [
+            "MariaLeonova"
+          ],
+          "labels": [
+            "area/ui",
+            "area/ui-components",
+            "UX/UI Issue"
+          ],
+          "url": "https://github.com/podman-desktop/podman-desktop/issues/9985",
+          "createdAt": "2024-11-19T18:38:52Z"
+        },
+        {
+          "number": 10297,
+          "title": "Podman-desktop does not pickup system certificates.",
+          "author": "janderssonse",
+          "assignees": [
+            "jeffmaury"
+          ],
+          "labels": [
+            "kind/bug 🐞",
+            "area/settings ⚙️",
+            "os/linux 🐧",
+            "status/info-needed ℹ️",
+            "area/brew"
+          ],
+          "url": "https://github.com/podman-desktop/podman-desktop/issues/10297",
+          "createdAt": "2024-12-10T21:17:13Z"
+        },
+        {
+          "number": 10356,
+          "title": "After last update, podman-desktop consumes a lot of CPU and memory when idle",
+          "author": "rdbisme",
+          "assignees": [],
+          "labels": [
+            "kind/bug 🐞",
+            "os/windows 🪟",
+            "status/info-needed ℹ️"
+          ],
+          "url": "https://github.com/podman-desktop/podman-desktop/issues/10356",
+          "createdAt": "2024-12-16T01:42:31Z"
+        },
+        {
+          "number": 10460,
+          "title": "Update images && rebuild compose'd",
+          "author": "ParaplegicRacehorse",
+          "assignees": [],
+          "labels": [
+            "kind/enhancement ✨",
+            "theme/compose"
+          ],
+          "url": "https://github.com/podman-desktop/podman-desktop/issues/10460",
+          "createdAt": "2024-12-20T18:55:56Z"
+        },
+        {
+          "number": 10462,
+          "title": "Podman Desktop not checking VirtualMachinePlatform state properly",
+          "author": "jski",
+          "assignees": [
+            "jeffmaury"
+          ],
+          "labels": [
+            "kind/bug 🐞",
+            "area/install 🎁",
+            "os/windows 🪟",
+            "area/extension/podman 🦭",
+            "area/onboarding"
+          ],
+          "url": "https://github.com/podman-desktop/podman-desktop/issues/10462",
+          "createdAt": "2024-12-21T15:03:57Z"
+        },
+        {
+          "number": 10574,
+          "title": "Kubernetes Cluster Authentication Spam When Using AWS Auth Helper & SSO",
+          "author": "damaestro",
+          "assignees": [],
+          "labels": [
+            "kind/bug 🐞",
+            "status/info-needed ℹ️",
+            "area/authentication 🔑",
+            "area/brew"
+          ],
+          "url": "https://github.com/podman-desktop/podman-desktop/issues/10574",
+          "createdAt": "2025-01-08T19:41:58Z"
+        },
+        {
+          "number": 10578,
+          "title": "Automatically start podman containers at boot",
+          "author": "thromera",
+          "assignees": [
+            "Firewall"
+          ],
+          "labels": [
+            "kind/feature 💡",
+            "area/settings ⚙️",
+            "area/podman-upstream 🦭",
+            "area/extension/podman 🦭"
+          ],
+          "url": "https://github.com/podman-desktop/podman-desktop/issues/10578",
+          "createdAt": "2025-01-09T11:47:50Z"
+        },
+        {
+          "number": 11079,
+          "title": "About Add Registry & Container Status",
+          "author": "zfchai",
+          "assignees": [],
+          "labels": [
+            "kind/enhancement ✨",
+            "area/ui",
+            "area/registries"
+          ],
+          "url": "https://github.com/podman-desktop/podman-desktop/issues/11079",
+          "createdAt": "2025-02-11T10:22:07Z"
+        },
+        {
+          "number": 11168,
+          "title": "Password visibility in registries",
+          "author": "stephan-sch",
+          "assignees": [],
+          "labels": [
+            "kind/enhancement ✨",
+            "good first issue 🧁",
+            "area/authentication 🔑",
+            "hacktoberfest"
+          ],
+          "url": "https://github.com/podman-desktop/podman-desktop/issues/11168",
+          "createdAt": "2025-02-15T06:24:04Z"
+        },
+        {
+          "number": 11294,
+          "title": "Compose installation: unhelpful error message",
+          "author": "sebastian-philipp",
+          "assignees": [],
+          "labels": [
+            "kind/bug 🐞",
+            "area/extension/docker 🐳",
+            "area/brew"
+          ],
+          "url": "https://github.com/podman-desktop/podman-desktop/issues/11294",
+          "createdAt": "2025-02-21T10:18:21Z"
+        },
+        {
+          "number": 11297,
+          "title": "Embed compose in `podman-desktop-airgap` binaries",
+          "author": "chrisrodrigue",
+          "assignees": [],
+          "labels": [
+            "kind/enhancement ✨"
+          ],
+          "url": "https://github.com/podman-desktop/podman-desktop/issues/11297",
+          "createdAt": "2025-02-23T00:30:30Z"
+        },
+        {
+          "number": 11454,
+          "title": "Flathub Podman-Desktop : Arch Linux / Debian",
+          "author": "decyphertek-io",
+          "assignees": [],
+          "labels": [
+            "kind/bug 🐞",
+            "area/documentation 📖",
+            "os/linux 🐧"
+          ],
+          "url": "https://github.com/podman-desktop/podman-desktop/issues/11454",
+          "createdAt": "2025-02-28T21:38:04Z"
+        },
+        {
+          "number": 11460,
+          "title": "can neither install compose nor kubectl cli extension",
+          "author": "zeratax",
+          "assignees": [],
+          "labels": [
+            "kind/bug 🐞",
+            "status/info-needed ℹ️",
+            "area/kubernetes ☸️"
+          ],
+          "url": "https://github.com/podman-desktop/podman-desktop/issues/11460",
+          "createdAt": "2025-03-02T23:42:31Z"
+        },
+        {
+          "number": 11535,
+          "title": "High CPU Usage Spikes when Podman Desktop is Running (Even Idle)",
+          "author": "matvejs16",
+          "assignees": [],
+          "labels": [
+            "kind/bug 🐞",
+            "area/extension/podman 🦭"
+          ],
+          "url": "https://github.com/podman-desktop/podman-desktop/issues/11535",
+          "createdAt": "2025-03-06T00:54:53Z"
+        },
+        {
+          "number": 11559,
+          "title": "Users attempting to edit immutable properties should get a clearer error message.",
+          "author": "jberkus",
+          "assignees": [],
+          "labels": [
+            "kind/enhancement ✨",
+            "area/kubernetes ☸️"
+          ],
+          "url": "https://github.com/podman-desktop/podman-desktop/issues/11559",
+          "createdAt": "2025-03-06T23:53:36Z"
+        },
+        {
+          "number": 11560,
+          "title": "Deleting Objects in Kind cluster does not actually delete them",
+          "author": "jberkus",
+          "assignees": [],
+          "labels": [
+            "kind/bug 🐞",
+            "area/kubernetes ☸️"
+          ],
+          "url": "https://github.com/podman-desktop/podman-desktop/issues/11560",
+          "createdAt": "2025-03-07T00:38:23Z"
+        },
+        {
+          "number": 11623,
+          "title": "Unable to install kubectl",
+          "author": "heydonovan",
+          "assignees": [],
+          "labels": [
+            "kind/bug 🐞",
+            "os/macOS 🍎",
+            "area/extension/kubectl-cli"
+          ],
+          "url": "https://github.com/podman-desktop/podman-desktop/issues/11623",
+          "createdAt": "2025-03-11T14:45:13Z"
+        },
+        {
+          "number": 11630,
+          "title": "Network tab",
+          "author": "brccabral",
+          "assignees": [
+            "Firewall"
+          ],
+          "labels": [
+            "kind/epic⚡",
+            "kind/feature 💡",
+            "area/extension/podman 🦭",
+            "qe/review"
+          ],
+          "url": "https://github.com/podman-desktop/podman-desktop/issues/11630",
+          "createdAt": "2025-03-11T23:15:22Z"
+        },
+        {
+          "number": 11735,
+          "title": "Add Multilingual Support",
+          "author": "pansy1110",
+          "assignees": [],
+          "labels": [
+            "lifecycle/frozen",
+            "area/i18n",
+            "UX/UI Issue"
+          ],
+          "url": "https://github.com/podman-desktop/podman-desktop/issues/11735",
+          "createdAt": "2025-03-19T01:21:54Z"
+        },
+        {
+          "number": 11791,
+          "title": "v1.17.2 Podman Desktop unable to detect the Virtual Machine Platform",
+          "author": "dflor003",
+          "assignees": [],
+          "labels": [
+            "kind/bug 🐞",
+            "os/windows 🪟",
+            "area/extension/podman 🦭"
+          ],
+          "url": "https://github.com/podman-desktop/podman-desktop/issues/11791",
+          "createdAt": "2025-03-21T16:18:28Z"
+        },
+        {
+          "number": 11905,
+          "title": "Podman compose wrapper doesn't see an image when platform is selected and uses docker-compose",
+          "author": "piotr-kowenzowski-asi",
+          "assignees": [],
+          "labels": [
+            "kind/bug 🐞",
+            "area/podman-upstream 🦭",
+            "status/info-needed ℹ️",
+            "area/brew"
+          ],
+          "url": "https://github.com/podman-desktop/podman-desktop/issues/11905",
+          "createdAt": "2025-03-28T15:11:35Z"
+        },
+        {
+          "number": 11912,
+          "title": "✘ mysql Error   Cannot connect to the Docker daemon at npipe:////./pipe/podman-machine-default. I...              3.0s",
+          "author": "scstc",
+          "assignees": [
+            "danivilla9"
+          ],
+          "labels": [
+            "kind/bug 🐞",
+            "status/info-needed ℹ️",
+            "lifecycle/stale"
+          ],
+          "url": "https://github.com/podman-desktop/podman-desktop/issues/11912",
+          "createdAt": "2025-03-29T18:52:54Z"
+        },
+        {
+          "number": 11997,
+          "title": "Entering the Terminal of the pod infra container triggers a flood of errors recorded in the ‘ExecIDs’",
+          "author": "dwojewod",
+          "assignees": [],
+          "labels": [
+            "kind/bug 🐞",
+            "os/linux 🐧",
+            "area/extension/podman 🦭"
+          ],
+          "url": "https://github.com/podman-desktop/podman-desktop/issues/11997",
+          "createdAt": "2025-04-02T23:52:03Z"
+        },
+        {
+          "number": 12135,
+          "title": "Port Forwarding causes lots of \"A JavaScript error occurred in the main process\" alerts",
+          "author": "overheadhunter",
+          "assignees": [],
+          "labels": [
+            "kind/bug 🐞",
+            "area/kubernetes ☸️",
+            "area/brew"
+          ],
+          "url": "https://github.com/podman-desktop/podman-desktop/issues/12135",
+          "createdAt": "2025-04-10T14:06:08Z"
+        },
+        {
+          "number": 12148,
+          "title": "Add kind.binary.path configuration setting",
+          "author": "whiteley",
+          "assignees": [],
+          "labels": [
+            "kind/enhancement ✨",
+            "area/settings ⚙️",
+            "area/extension/kind 🍾",
+            "lifecycle/stale"
+          ],
+          "url": "https://github.com/podman-desktop/podman-desktop/issues/12148",
+          "createdAt": "2025-04-10T21:07:26Z"
+        },
+        {
+          "number": 12173,
+          "title": "getting \"initialisation\" prompts even though the machien already exists",
+          "author": "jonnytest1",
+          "assignees": [
+            "danivilla9"
+          ],
+          "labels": [
+            "kind/bug 🐞",
+            "os/windows 🪟",
+            "area/extension/podman 🦭"
+          ],
+          "url": "https://github.com/podman-desktop/podman-desktop/issues/12173",
+          "createdAt": "2025-04-11T14:26:25Z"
+        },
+        {
+          "number": 12174,
+          "title": "Open Browser action in Containers screen does not provide an option for multiple port container",
+          "author": "jameslabocki",
+          "assignees": [],
+          "labels": [
+            "kind/enhancement ✨",
+            "area/extension/podman 🦭",
+            "lifecycle/stale",
+            "UX/UI Issue"
+          ],
+          "url": "https://github.com/podman-desktop/podman-desktop/issues/12174",
+          "createdAt": "2025-04-11T20:03:24Z"
+        },
+        {
+          "number": 12309,
+          "title": "[RFE] Add support for automating installation, configuration, and updates",
+          "author": "myllynen",
+          "assignees": [],
+          "labels": [
+            "kind/feature 💡",
+            "area/install 🎁",
+            "area/update",
+            "lifecycle/stale"
+          ],
+          "url": "https://github.com/podman-desktop/podman-desktop/issues/12309",
+          "createdAt": "2025-04-23T08:21:10Z"
+        },
+        {
+          "number": 12315,
+          "title": "excuse, Mac M1 ship podman cant run, When will it be supported?",
+          "author": "duxiaoxu",
+          "assignees": [],
+          "labels": [
+            "kind/feature 💡",
+            "status/info-needed ℹ️",
+            "lifecycle/stale"
+          ],
+          "url": "https://github.com/podman-desktop/podman-desktop/issues/12315",
+          "createdAt": "2025-04-24T02:45:33Z"
+        },
+        {
+          "number": 12421,
+          "title": "[RFE] provide an extension to edit Containerfiles in podman desktop",
+          "author": "yocum137",
+          "assignees": [],
+          "labels": [
+            "kind/enhancement ✨",
+            "area/extensions 🧩",
+            "area/extensions"
+          ],
+          "url": "https://github.com/podman-desktop/podman-desktop/issues/12421",
+          "createdAt": "2025-05-07T20:58:53Z"
+        },
+        {
+          "number": 12422,
+          "title": "[RFE] add-on to issue 12421 - ability to use git with Dockerfiles",
+          "author": "yocum137",
+          "assignees": [],
+          "labels": [
+            "kind/enhancement ✨",
+            "area/extensions 🧩",
+            "area/extensions"
+          ],
+          "url": "https://github.com/podman-desktop/podman-desktop/issues/12422",
+          "createdAt": "2025-05-07T21:02:20Z"
+        },
+        {
+          "number": 12474,
+          "title": "Disable Prompts to Initialize or Create a Podman Machine",
+          "author": "shanecoley",
+          "assignees": [],
+          "labels": [
+            "kind/feature 💡",
+            "area/documentation 📖",
+            "area/settings ⚙️"
+          ],
+          "url": "https://github.com/podman-desktop/podman-desktop/issues/12474",
+          "createdAt": "2025-05-13T22:20:54Z"
+        },
+        {
+          "number": 12499,
+          "title": "v1.18.1 New install stuck on \"Windows virtualization\" check",
+          "author": "SEP-jlpeters",
+          "assignees": [],
+          "labels": [
+            "kind/bug 🐞",
+            "os/windows 🪟",
+            "status/info-needed ℹ️",
+            "area/extension/podman 🦭"
+          ],
+          "url": "https://github.com/podman-desktop/podman-desktop/issues/12499",
+          "createdAt": "2025-05-15T14:30:26Z"
+        },
+        {
+          "number": 12501,
+          "title": "Images List - Which Remote Podman Host?",
+          "author": "shanecoley",
+          "assignees": [],
+          "labels": [
+            "kind/enhancement ✨",
+            "area/ui"
+          ],
+          "url": "https://github.com/podman-desktop/podman-desktop/issues/12501",
+          "createdAt": "2025-05-15T16:42:36Z"
+        },
+        {
+          "number": 12518,
+          "title": "Podman Desktop can't find Podman machine",
+          "author": "dvt32",
+          "assignees": [],
+          "labels": [
+            "kind/bug 🐞",
+            "os/windows 🪟",
+            "status/info-needed ℹ️",
+            "area/extension/podman 🦭",
+            "area/update"
+          ],
+          "url": "https://github.com/podman-desktop/podman-desktop/issues/12518",
+          "createdAt": "2025-05-16T14:45:38Z"
+        },
+        {
+          "number": 12628,
+          "title": "Kubernetes Dashboard (add 2 kind objects) or in preference seting kubernetes add list of kind you want add into dashboard",
+          "author": "marteloudini",
+          "assignees": [],
+          "labels": [
+            "kind/enhancement ✨",
+            "area/kubernetes ☸️"
+          ],
+          "url": "https://github.com/podman-desktop/podman-desktop/issues/12628",
+          "createdAt": "2025-05-26T12:15:13Z"
+        },
+        {
+          "number": 12679,
+          "title": "Show progress bar on pull (Original title: Podman hangs on pull)",
+          "author": "craigloewen-msft",
+          "assignees": [],
+          "labels": [
+            "kind/bug 🐞",
+            "area/podman-upstream 🦭",
+            "engine/podman 🦭"
+          ],
+          "url": "https://github.com/podman-desktop/podman-desktop/issues/12679",
+          "createdAt": "2025-05-29T15:27:07Z"
+        },
+        {
+          "number": 12738,
+          "title": "Podman desktop fails to fetch remote URLs",
+          "author": "UnasZole",
+          "assignees": [
+            "jeffmaury"
+          ],
+          "labels": [
+            "kind/bug 🐞",
+            "area/proxy"
+          ],
+          "url": "https://github.com/podman-desktop/podman-desktop/issues/12738",
+          "createdAt": "2025-06-04T10:29:13Z"
+        },
+        {
+          "number": 12764,
+          "title": "Kubernetes extension menu items type mismatch causing errors",
+          "author": "am6737",
+          "assignees": [],
+          "labels": [
+            "kind/bug 🐞",
+            "area/extension/kube-context ☸"
+          ],
+          "url": "https://github.com/podman-desktop/podman-desktop/issues/12764",
+          "createdAt": "2025-06-07T16:45:20Z"
+        },
+        {
+          "number": 12767,
+          "title": "Mount /Volumes by default for podman machine",
+          "author": "Mr-win7",
+          "assignees": [],
+          "labels": [
+            "kind/enhancement ✨",
+            "os/macOS 🍎",
+            "area/extension/podman 🦭"
+          ],
+          "url": "https://github.com/podman-desktop/podman-desktop/issues/12767",
+          "createdAt": "2025-06-08T12:56:02Z"
+        },
+        {
+          "number": 12775,
+          "title": "Create a scroll up/down bar for the left side extensions menu",
+          "author": "AlexonOliveiraRH",
+          "assignees": [],
+          "labels": [
+            "kind/enhancement ✨",
+            "area/ui",
+            "UX/UI Issue"
+          ],
+          "url": "https://github.com/podman-desktop/podman-desktop/issues/12775",
+          "createdAt": "2025-06-09T20:27:40Z"
+        },
+        {
+          "number": 12776,
+          "title": "Cannot install Podman Desktop Extensions From Github (certificate has expired)",
+          "author": "connelhooley",
+          "assignees": [],
+          "labels": [
+            "kind/bug 🐞",
+            "status/info-needed ℹ️",
+            "area/extensions"
+          ],
+          "url": "https://github.com/podman-desktop/podman-desktop/issues/12776",
+          "createdAt": "2025-06-09T20:43:33Z"
+        },
+        {
+          "number": 12795,
+          "title": "Authentication Extension Not Properly Loading (Unusable)",
+          "author": "HunterGerlach",
+          "assignees": [],
+          "labels": [
+            "kind/bug 🐞",
+            "area/authentication 🔑"
+          ],
+          "url": "https://github.com/podman-desktop/podman-desktop/issues/12795",
+          "createdAt": "2025-06-10T20:58:45Z"
+        },
+        {
+          "number": 12840,
+          "title": "where to update the exist image",
+          "author": "HomyeeKing",
+          "assignees": [],
+          "labels": [
+            "kind/enhancement ✨",
+            "area/ui"
+          ],
+          "url": "https://github.com/podman-desktop/podman-desktop/issues/12840",
+          "createdAt": "2025-06-13T09:00:45Z"
+        },
+        {
+          "number": 12845,
+          "title": "Display PORT column in list of containers",
+          "author": "alexladerman",
+          "assignees": [],
+          "labels": [
+            "kind/feature 💡",
+            "area/ui"
+          ],
+          "url": "https://github.com/podman-desktop/podman-desktop/issues/12845",
+          "createdAt": "2025-06-15T08:33:00Z"
+        },
+        {
+          "number": 12858,
+          "title": "Podman Desktop engine version stuck at 5.5.0 despite engine running 5.5.1",
+          "author": "idev-github",
+          "assignees": [],
+          "labels": [
+            "kind/bug 🐞",
+            "engine/podman 🦭",
+            "status/info-needed ℹ️",
+            "area/extension/podman 🦭",
+            "area/brew"
+          ],
+          "url": "https://github.com/podman-desktop/podman-desktop/issues/12858",
+          "createdAt": "2025-06-16T14:30:08Z"
+        },
+        {
+          "number": 12861,
+          "title": "Include the Docker CLI like Rancher Desktop does",
+          "author": "runxc1",
+          "assignees": [],
+          "labels": [
+            "kind/enhancement ✨",
+            "area/docker-desktop-extension 🐳🧩"
+          ],
+          "url": "https://github.com/podman-desktop/podman-desktop/issues/12861",
+          "createdAt": "2025-06-16T23:29:30Z"
+        },
+        {
+          "number": 12925,
+          "title": "Cannot start from a waypipe session",
+          "author": "flozanorht",
+          "assignees": [],
+          "labels": [
+            "kind/bug 🐞",
+            "area/dashboard 📊",
+            "area/install 🎁",
+            "os/linux 🐧",
+            "status/info-needed ℹ️"
+          ],
+          "url": "https://github.com/podman-desktop/podman-desktop/issues/12925",
+          "createdAt": "2025-06-20T22:57:09Z"
+        },
+        {
+          "number": 12926,
+          "title": "Image and Container is missing in dashboard",
+          "author": "zhurongbo111",
+          "assignees": [],
+          "labels": [
+            "kind/bug 🐞",
+            "os/windows 🪟",
+            "status/info-needed ℹ️",
+            "area/extension/podman 🦭"
+          ],
+          "url": "https://github.com/podman-desktop/podman-desktop/issues/12926",
+          "createdAt": "2025-06-21T00:52:08Z"
+        },
+        {
+          "number": 12944,
+          "title": "Option to stop container engine on Podman Desktop exit",
+          "author": "supleed2",
+          "assignees": [],
+          "labels": [
+            "good first issue 🧁",
+            "area/dashboard 📊",
+            "kind/feature 💡"
+          ],
+          "url": "https://github.com/podman-desktop/podman-desktop/issues/12944",
+          "createdAt": "2025-06-23T19:04:50Z"
+        },
+        {
+          "number": 12971,
+          "title": "Will not show or connect to remote server",
+          "author": "hackel",
+          "assignees": [],
+          "labels": [
+            "kind/bug 🐞",
+            "status/info-needed ℹ️",
+            "area/extension/podman 🦭"
+          ],
+          "url": "https://github.com/podman-desktop/podman-desktop/issues/12971",
+          "createdAt": "2025-06-25T23:40:35Z"
+        },
+        {
+          "number": 12980,
+          "title": "Podman Desktop 5.1.1 Version Kubernetes namespace selection missing 5.1.1",
+          "author": "tppalani",
+          "assignees": [],
+          "labels": [
+            "kind/feature 💡",
+            "area/kubernetes ☸️"
+          ],
+          "url": "https://github.com/podman-desktop/podman-desktop/issues/12980",
+          "createdAt": "2025-06-26T15:15:36Z"
+        },
+        {
+          "number": 12983,
+          "title": "can't start pod man machines on mac M1 15.5",
+          "author": "heaventouch",
+          "assignees": [],
+          "labels": [
+            "kind/bug 🐞",
+            "status/info-needed ℹ️",
+            "area/onboarding"
+          ],
+          "url": "https://github.com/podman-desktop/podman-desktop/issues/12983",
+          "createdAt": "2025-06-27T03:03:38Z"
+        },
+        {
+          "number": 13003,
+          "title": "accessing the host machine's port 3389 fails",
+          "author": "tk-programmer",
+          "assignees": [],
+          "labels": [
+            "kind/bug 🐞",
+            "os/windows 🪟",
+            "status/info-needed ℹ️"
+          ],
+          "url": "https://github.com/podman-desktop/podman-desktop/issues/13003",
+          "createdAt": "2025-06-28T02:13:51Z"
+        },
+        {
+          "number": 13025,
+          "title": "Remember expand/collapse state for composite containers in \"Containers\"",
+          "author": "dvt32",
+          "assignees": [],
+          "labels": [
+            "kind/enhancement ✨",
+            "area/ui-components"
+          ],
+          "url": "https://github.com/podman-desktop/podman-desktop/issues/13025",
+          "createdAt": "2025-06-30T20:14:39Z"
+        },
+        {
+          "number": 13069,
+          "title": "Log lines in podman desktop start with a � character",
+          "author": "brechtvhb",
+          "assignees": [
+            "gagandeepp"
+          ],
+          "labels": [
+            "kind/bug 🐞",
+            "good first issue 🧁",
+            "hacktoberfest"
+          ],
+          "url": "https://github.com/podman-desktop/podman-desktop/issues/13069",
+          "createdAt": "2025-07-04T07:35:21Z"
+        },
+        {
+          "number": 13094,
+          "title": "Docs for testcontainers is out of date / incorrect",
+          "author": "steinybot",
+          "assignees": [],
+          "labels": [
+            "kind/bug 🐞",
+            "area/documentation 📖"
+          ],
+          "url": "https://github.com/podman-desktop/podman-desktop/issues/13094",
+          "createdAt": "2025-07-08T09:32:19Z"
+        },
+        {
+          "number": 13139,
+          "title": "Kind cluster node 'NotReady' after cluster restart",
+          "author": "harshitrjpt",
+          "assignees": [],
+          "labels": [
+            "kind/bug 🐞",
+            "area/kubernetes ☸️",
+            "area/extension/kind 🍾"
+          ],
+          "url": "https://github.com/podman-desktop/podman-desktop/issues/13139",
+          "createdAt": "2025-07-10T07:27:34Z"
+        },
+        {
+          "number": 13183,
+          "title": "Podman Desktop should not require local environment if remote connection exists",
+          "author": "kansoit",
+          "assignees": [],
+          "labels": [
+            "kind/enhancement ✨",
+            "os/windows 🪟",
+            "area/extension/podman 🦭",
+            "area/podman-remote"
+          ],
+          "url": "https://github.com/podman-desktop/podman-desktop/issues/13183",
+          "createdAt": "2025-07-11T19:43:14Z"
+        },
+        {
+          "number": 13185,
+          "title": "Kubernetes pod tab crashes application",
+          "author": "RP-pl",
+          "assignees": [],
+          "labels": [
+            "kind/enhancement ✨",
+            "area/kubernetes ☸️"
+          ],
+          "url": "https://github.com/podman-desktop/podman-desktop/issues/13185",
+          "createdAt": "2025-07-12T17:17:08Z"
+        },
+        {
+          "number": 13186,
+          "title": "podman-desktop 1.20.0 crashed with SIGTRAP in `temporal_rs_PlainDate_iso_month`",
+          "author": "booxter",
+          "assignees": [],
+          "labels": [
+            "kind/bug 🐞",
+            "os/macOS 🍎",
+            "area/electron"
+          ],
+          "url": "https://github.com/podman-desktop/podman-desktop/issues/13186",
+          "createdAt": "2025-07-12T17:59:14Z"
+        },
+        {
+          "number": 13206,
+          "title": "Can't specify logging driver in compose file",
+          "author": "therealprof",
+          "assignees": [],
+          "labels": [
+            "kind/bug 🐞",
+            "area/extensions/compose 🎹"
+          ],
+          "url": "https://github.com/podman-desktop/podman-desktop/issues/13206",
+          "createdAt": "2025-07-15T09:53:19Z"
+        },
+        {
+          "number": 13209,
+          "title": "Unable to Detect or Install Compose or Kubectl using Podman Desktop",
+          "author": "ohmydds",
+          "assignees": [],
+          "labels": [
+            "kind/bug 🐞",
+            "area/extensions/compose 🎹",
+            "area/extensions",
+            "area/brew"
+          ],
+          "url": "https://github.com/podman-desktop/podman-desktop/issues/13209",
+          "createdAt": "2025-07-15T16:33:27Z"
+        },
+        {
+          "number": 13212,
+          "title": "What's New: should link to latest...current to show diff from installed version",
+          "author": "kaovilai",
+          "assignees": [],
+          "labels": [
+            "kind/enhancement ✨",
+            "area/release"
+          ],
+          "url": "https://github.com/podman-desktop/podman-desktop/issues/13212",
+          "createdAt": "2025-07-15T19:01:13Z"
+        },
+        {
+          "number": 13269,
+          "title": "Flatpak version 1.20.1 does not display Chinese UI even when system locale is zh_CN.UTF-8",
+          "author": "Jayz-21",
+          "assignees": [],
+          "labels": [
+            "kind/enhancement ✨",
+            "area/i18n"
+          ],
+          "url": "https://github.com/podman-desktop/podman-desktop/issues/13269",
+          "createdAt": "2025-07-17T21:28:58Z"
+        },
+        {
+          "number": 13280,
+          "title": "Excessive CPU spikes on Windows: Podman Desktop 1.20.2 repeatedly spawns `podman.exe` every ~3 s (`system connection list`, `--version`)",
+          "author": "Lenocc",
+          "assignees": [],
+          "labels": [
+            "kind/bug 🐞",
+            "os/windows 🪟",
+            "engine/podman 🦭"
+          ],
+          "url": "https://github.com/podman-desktop/podman-desktop/issues/13280",
+          "createdAt": "2025-07-19T14:59:10Z"
+        },
+        {
+          "number": 13286,
+          "title": "Flatpak version 1.20.1 does not show remote connections",
+          "author": "joshbrooks",
+          "assignees": [
+            "ScrewTSW"
+          ],
+          "labels": [
+            "kind/bug 🐞",
+            "os/linux 🐧",
+            "area/flatpak 📦"
+          ],
+          "url": "https://github.com/podman-desktop/podman-desktop/issues/13286",
+          "createdAt": "2025-07-21T04:48:57Z"
+        },
+        {
+          "number": 13296,
+          "title": "Unable to log into red hat SSO",
+          "author": "edhaynes",
+          "assignees": [
+            "dgolovin"
+          ],
+          "labels": [
+            "kind/bug 🐞",
+            "area/authentication 🔑"
+          ],
+          "url": "https://github.com/podman-desktop/podman-desktop/issues/13296",
+          "createdAt": "2025-07-21T21:12:48Z"
+        },
+        {
+          "number": 13349,
+          "title": "podman-machine-default not pingable, wrong address",
+          "author": "2222029",
+          "assignees": [],
+          "labels": [
+            "kind/bug 🐞",
+            "os/windows 🪟",
+            "status/info-needed ℹ️",
+            "area/extension/podman 🦭"
+          ],
+          "url": "https://github.com/podman-desktop/podman-desktop/issues/13349",
+          "createdAt": "2025-07-25T09:30:04Z"
+        },
+        {
+          "number": 13459,
+          "title": "Clink on mapper port opens browser",
+          "author": "splix",
+          "assignees": [],
+          "labels": [
+            "kind/enhancement ✨"
+          ],
+          "url": "https://github.com/podman-desktop/podman-desktop/issues/13459",
+          "createdAt": "2025-08-01T00:38:32Z"
+        },
+        {
+          "number": 13484,
+          "title": "Podman fails to properly mount host /tmp directory on Macos",
+          "author": "dudinea",
+          "assignees": [],
+          "labels": [
+            "kind/bug 🐞",
+            "area/podman-upstream 🦭",
+            "engine/podman 🦭",
+            "os/macOS 🍎"
+          ],
+          "url": "https://github.com/podman-desktop/podman-desktop/issues/13484",
+          "createdAt": "2025-08-02T23:50:14Z"
+        },
+        {
+          "number": 13534,
+          "title": "Podman machine setup screen has almost no progress indicator",
+          "author": "agnry",
+          "assignees": [],
+          "labels": [
+            "kind/enhancement ✨",
+            "engine/podman 🦭",
+            "UX/UI Issue"
+          ],
+          "url": "https://github.com/podman-desktop/podman-desktop/issues/13534",
+          "createdAt": "2025-08-08T15:17:34Z"
+        },
+        {
+          "number": 13564,
+          "title": "Nodeports (kind) do not work on podman desktop for macOS",
+          "author": "planetf1",
+          "assignees": [
+            "amisskii"
+          ],
+          "labels": [
+            "kind/enhancement ✨",
+            "area/kubernetes ☸️",
+            "os/macOS 🍎"
+          ],
+          "url": "https://github.com/podman-desktop/podman-desktop/issues/13564",
+          "createdAt": "2025-08-12T09:15:45Z"
+        },
+        {
+          "number": 13568,
+          "title": "coredns errors in kind when enabling Contour ingress controller",
+          "author": "thesse1",
+          "assignees": [
+            "MarsKubeX"
+          ],
+          "labels": [
+            "kind/bug 🐞",
+            "area/kubernetes ☸️"
+          ],
+          "url": "https://github.com/podman-desktop/podman-desktop/issues/13568",
+          "createdAt": "2025-08-12T09:58:54Z"
+        },
+        {
+          "number": 13595,
+          "title": "Unable to open desktop application under Windows because of missing ssh2 module",
+          "author": "triemann-ecue",
+          "assignees": [],
+          "labels": [
+            "kind/bug 🐞",
+            "os/windows 🪟"
+          ],
+          "url": "https://github.com/podman-desktop/podman-desktop/issues/13595",
+          "createdAt": "2025-08-14T06:28:05Z"
+        },
+        {
+          "number": 13673,
+          "title": "Enable Landlock Security Module in Default Linux Image in Podman Desktop",
+          "author": "edwinjhlee",
+          "assignees": [],
+          "labels": [
+            "kind/feature 💡"
+          ],
+          "url": "https://github.com/podman-desktop/podman-desktop/issues/13673",
+          "createdAt": "2025-08-21T10:01:08Z"
+        },
+        {
+          "number": 13693,
+          "title": "DockerCLI  always 'docker build' requires 1 argument",
+          "author": "yc-2503",
+          "assignees": [],
+          "labels": [
+            "kind/enhancement ✨",
+            "area/docker-compatibility 🐳"
+          ],
+          "url": "https://github.com/podman-desktop/podman-desktop/issues/13693",
+          "createdAt": "2025-08-25T08:58:40Z"
+        },
+        {
+          "number": 13711,
+          "title": "Problems with connecting to the db running on podman, logs not working properly, issues with container states",
+          "author": "ikorlevic",
+          "assignees": [],
+          "labels": [
+            "kind/bug 🐞",
+            "os/windows 🪟",
+            "engine/podman 🦭",
+            "status/info-needed ℹ️",
+            "area/extension/podman 🦭"
+          ],
+          "url": "https://github.com/podman-desktop/podman-desktop/issues/13711",
+          "createdAt": "2025-08-26T07:47:53Z"
+        },
+        {
+          "number": 13814,
+          "title": "Podman Desktop 1.21.0 breaks Devcontainers support",
+          "author": "ThomasVitale",
+          "assignees": [
+            "bmahabirbu"
+          ],
+          "labels": [
+            "kind/bug 🐞",
+            "engine/podman 🦭",
+            "os/macOS 🍎"
+          ],
+          "url": "https://github.com/podman-desktop/podman-desktop/issues/13814",
+          "createdAt": "2025-09-04T14:31:32Z"
+        },
+        {
+          "number": 13828,
+          "title": "Wrapped AWS CLI command breaks Podman Desktop",
+          "author": "dutch",
+          "assignees": [],
+          "labels": [
+            "kind/bug 🐞",
+            "status/info-needed ℹ️",
+            "area/extension/kube-context ☸"
+          ],
+          "url": "https://github.com/podman-desktop/podman-desktop/issues/13828",
+          "createdAt": "2025-09-05T19:29:57Z"
+        },
+        {
+          "number": 13829,
+          "title": "Error \"failed to detect podman installation\" thrown repeatedly",
+          "author": "orende",
+          "assignees": [],
+          "labels": [
+            "kind/bug 🐞",
+            "os/linux 🐧",
+            "area/flatpak 📦",
+            "area/extension/podman 🦭"
+          ],
+          "url": "https://github.com/podman-desktop/podman-desktop/issues/13829",
+          "createdAt": "2025-09-06T04:57:39Z"
+        },
+        {
+          "number": 13836,
+          "title": "Enhance message of multiple podman installations, and possibly prevent it if installations are the same",
+          "author": "santidhammo",
+          "assignees": [],
+          "labels": [
+            "kind/enhancement ✨"
+          ],
+          "url": "https://github.com/podman-desktop/podman-desktop/issues/13836",
+          "createdAt": "2025-09-08T07:55:29Z"
+        },
+        {
+          "number": 13885,
+          "title": "Podman Desktop fails to detect correct version of podman",
+          "author": "luolong",
+          "assignees": [
+            "jiridostal"
+          ],
+          "labels": [
+            "kind/bug 🐞",
+            "area/brew"
+          ],
+          "url": "https://github.com/podman-desktop/podman-desktop/issues/13885",
+          "createdAt": "2025-09-10T06:43:44Z"
+        },
+        {
+          "number": 13921,
+          "title": "Navbar tabs don't stay hidden between restarts",
+          "author": "peetw",
+          "assignees": [],
+          "labels": [
+            "kind/bug 🐞",
+            "area/settings ⚙️"
+          ],
+          "url": "https://github.com/podman-desktop/podman-desktop/issues/13921",
+          "createdAt": "2025-09-13T09:57:42Z"
+        },
+        {
+          "number": 13922,
+          "title": "Add official Nix support",
+          "author": "KristijanZic",
+          "assignees": [],
+          "labels": [
+            "kind/feature 💡",
+            "os/macOS 🍎"
+          ],
+          "url": "https://github.com/podman-desktop/podman-desktop/issues/13922",
+          "createdAt": "2025-09-13T15:07:22Z"
+        },
+        {
+          "number": 14098,
+          "title": "Unable to install compose - weird error messages",
+          "author": "quadristan",
+          "assignees": [],
+          "labels": [
+            "kind/bug 🐞",
+            "os/linux 🐧",
+            "status/info-needed ℹ️",
+            "area/extensions/compose 🎹"
+          ],
+          "url": "https://github.com/podman-desktop/podman-desktop/issues/14098",
+          "createdAt": "2025-09-28T08:46:37Z"
+        },
+        {
+          "number": 14258,
+          "title": "Podman Desktop for Windows Stuck in Startup",
+          "author": "Zendorea",
+          "assignees": [],
+          "labels": [
+            "kind/bug 🐞",
+            "area/podman-upstream 🦭",
+            "area/extension/podman 🦭"
+          ],
+          "url": "https://github.com/podman-desktop/podman-desktop/issues/14258",
+          "createdAt": "2025-10-04T02:35:25Z"
+        },
+        {
+          "number": 14304,
+          "title": "unable to embed pictures in the about extension when developing extensions",
+          "author": "Zak-Ghani",
+          "assignees": [],
+          "labels": [
+            "kind/bug 🐞",
+            "area/extensions 🧩"
+          ],
+          "url": "https://github.com/podman-desktop/podman-desktop/issues/14304",
+          "createdAt": "2025-10-07T11:03:14Z"
+        },
+        {
+          "number": 14475,
+          "title": "Installation via winget with scope machine fails - no applicable installer found",
+          "author": "theq78",
+          "assignees": [],
+          "labels": [
+            "kind/bug 🐞",
+            "area/install 🎁"
+          ],
+          "url": "https://github.com/podman-desktop/podman-desktop/issues/14475",
+          "createdAt": "2025-10-20T12:58:26Z"
+        },
+        {
+          "number": 14515,
+          "title": "Unable to download docker-compose binary (certificate expired)",
+          "author": "madeyoga",
+          "assignees": [],
+          "labels": [
+            "kind/bug 🐞",
+            "status/info-needed ℹ️",
+            "area/extensions/compose 🎹"
+          ],
+          "url": "https://github.com/podman-desktop/podman-desktop/issues/14515",
+          "createdAt": "2025-10-22T10:02:15Z"
+        },
+        {
+          "number": 14546,
+          "title": "Bring back documentation to alias docker CLI",
+          "author": "supergibbs",
+          "assignees": [],
+          "labels": [
+            "kind/enhancement ✨"
+          ],
+          "url": "https://github.com/podman-desktop/podman-desktop/issues/14546",
+          "createdAt": "2025-10-22T17:43:01Z"
+        },
+        {
+          "number": 14622,
+          "title": "Allow configuration of PowerShell profile",
+          "author": "paulomorgado",
+          "assignees": [],
+          "labels": [
+            "kind/feature 💡",
+            "os/windows 🪟"
+          ],
+          "url": "https://github.com/podman-desktop/podman-desktop/issues/14622",
+          "createdAt": "2025-10-28T12:25:09Z"
+        },
+        {
+          "number": 14676,
+          "title": "Package podman-desktop in Fedora",
+          "author": "gordonmessmer",
+          "assignees": [],
+          "labels": [
+            "kind/enhancement ✨",
+            "os/linux 🐧"
+          ],
+          "url": "https://github.com/podman-desktop/podman-desktop/issues/14676",
+          "createdAt": "2025-10-30T20:04:33Z"
+        },
+        {
+          "number": 14706,
+          "title": "Unable to download docker-compose binary: HttpError: certificate has expired when trying to install compose extension",
+          "author": "rivasd",
+          "assignees": [],
+          "labels": [
+            "kind/bug 🐞"
+          ],
+          "url": "https://github.com/podman-desktop/podman-desktop/issues/14706",
+          "createdAt": "2025-11-01T20:10:59Z"
+        },
+        {
+          "number": 14735,
+          "title": "Rebuild image option",
+          "author": "Wardrop",
+          "assignees": [],
+          "labels": [
+            "kind/enhancement ✨",
+            "area/ui",
+            "area/ui 📈"
+          ],
+          "url": "https://github.com/podman-desktop/podman-desktop/issues/14735",
+          "createdAt": "2025-11-04T01:23:47Z"
+        },
+        {
+          "number": 14748,
+          "title": "Feedback dialog may erase entered data",
+          "author": "j-h-a",
+          "assignees": [],
+          "labels": [
+            "kind/bug 🐞",
+            "area/ui",
+            "area/ui 📈"
+          ],
+          "url": "https://github.com/podman-desktop/podman-desktop/issues/14748",
+          "createdAt": "2025-11-04T22:39:23Z"
+        },
+        {
+          "number": 14758,
+          "title": "Preferences drawer icon inverted",
+          "author": "jnicholes",
+          "assignees": [],
+          "labels": [
+            "kind/bug 🐞",
+            "status/need-triage"
+          ],
+          "url": "https://github.com/podman-desktop/podman-desktop/issues/14758",
+          "createdAt": "2025-11-05T16:35:09Z"
+        }
+      ]
+    },
+    "social": {
+      "blueskyFollowers": 143,
+      "linkedinFollowers": 986,
+      "mastodonFollowers": 69
+    },
+    "repository": {
+      "stars": 6902,
+      "forks": 460,
+      "watchers": 50
+    }
+  },
+  "topActiveUsers": [
+    {
+      "username": "Zak-Ghani",
+      "prs": 0,
+      "issues": 2,
+      "comments": 5,
+      "total": 9
+    },
+    {
+      "username": "ThanosTsiamis",
+      "prs": 1,
+      "issues": 1,
+      "comments": 3,
+      "total": 8
+    },
+    {
+      "username": "Aayushyamaan-Shah",
+      "prs": 2,
+      "issues": 0,
+      "comments": 2,
+      "total": 8
+    },
+    {
+      "username": "afadesigns",
+      "prs": 2,
+      "issues": 0,
+      "comments": 2,
+      "total": 8
+    },
+    {
+      "username": "madeyoga",
+      "prs": 0,
+      "issues": 1,
+      "comments": 2,
+      "total": 4
+    }
+  ]
+}
