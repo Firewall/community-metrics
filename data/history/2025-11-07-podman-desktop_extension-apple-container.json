@@ -1,0 +1,36 @@
+{
+  "timestamp": "2025-11-07T00:52:45.891Z",
+  "date": "2025-11-07",
+  "repoLabel": "podman-desktop/extension-apple-container",
+  "metrics": {
+    "discussions": {
+      "totalUpvotes": 0,
+      "totalComments": 0
+    },
+    "pullRequests": {
+      "open": 0,
+      "total": 0,
+      "merged": 0,
+      "mergeRate": 0,
+      "openPRs": []
+    },
+    "issues": {
+      "open": 0,
+      "closed": 0,
+      "total": 0,
+      "closeRate": 0,
+      "openIssues": []
+    },
+    "social": {
+      "blueskyFollowers": 143,
+      "linkedinFollowers": 987,
+      "mastodonFollowers": 69
+    },
+    "repository": {
+      "stars": 16,
+      "forks": 1,
+      "watchers": 0
+    }
+  },
+  "topActiveUsers": []
+}
