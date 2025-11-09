@@ -1,0 +1,73 @@
+{
+  "timestamp": "2025-11-09T00:55:28.518Z",
+  "date": "2025-11-09",
+  "repoLabel": "podman-desktop/extension-podman-quadlet",
+  "metrics": {
+    "discussions": {
+      "totalUpvotes": 0,
+      "totalComments": 0
+    },
+    "pullRequests": {
+      "open": 0,
+      "total": 12,
+      "merged": 9,
+      "mergeRate": "75.0",
+      "openPRs": []
+    },
+    "issues": {
+      "open": 3,
+      "closed": 7,
+      "total": 10,
+      "closeRate": "70.0",
+      "openIssues": [
+        {
+          "number": 269,
+          "title": "Volumes with `~` break quadlet generation",
+          "author": "AdrienPoupa",
+          "assignees": [],
+          "labels": [
+            "bug",
+            "podlet",
+            "os/windows"
+          ],
+          "url": "https://github.com/podman-desktop/extension-podman-quadlet/issues/269",
+          "createdAt": "2025-02-08T22:47:58Z"
+        },
+        {
+          "number": 759,
+          "title": "bug: QuadletUnitParser may fail silently on [Volume] units and break UI",
+          "author": "joshbrooks",
+          "assignees": [
+            "axel7083"
+          ],
+          "labels": [
+            "bug",
+            "sprint/unplanned"
+          ],
+          "url": "https://github.com/podman-desktop/extension-podman-quadlet/issues/759",
+          "createdAt": "2025-07-18T10:06:49Z"
+        },
+        {
+          "number": 837,
+          "title": "\"Extension is out of sync\"",
+          "author": "worldofgeese",
+          "assignees": [],
+          "labels": [],
+          "url": "https://github.com/podman-desktop/extension-podman-quadlet/issues/837",
+          "createdAt": "2025-08-25T09:25:28Z"
+        }
+      ]
+    },
+    "social": {
+      "blueskyFollowers": 143,
+      "linkedinFollowers": 988,
+      "mastodonFollowers": 69
+    },
+    "repository": {
+      "stars": 8,
+      "forks": 8,
+      "watchers": 9
+    }
+  },
+  "topActiveUsers": []
+}
