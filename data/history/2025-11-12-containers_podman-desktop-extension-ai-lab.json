@@ -1,0 +1,246 @@
+{
+  "timestamp": "2025-11-12T00:53:36.297Z",
+  "date": "2025-11-12",
+  "repoLabel": "containers/podman-desktop-extension-ai-lab",
+  "metrics": {
+    "discussions": {
+      "totalUpvotes": 0,
+      "totalComments": 0
+    },
+    "pullRequests": {
+      "open": 2,
+      "total": 42,
+      "merged": 35,
+      "mergeRate": "83.3",
+      "openPRs": [
+        {
+          "number": 3065,
+          "title": "feat(playground): mcp servers listed",
+          "author": "manusa",
+          "url": "https://github.com/containers/podman-desktop-extension-ai-lab/pull/3065",
+          "createdAt": "2025-05-22T10:10:03Z"
+        },
+        {
+          "number": 2518,
+          "title": "feat(state-management): add error handling and service resolution to …",
+          "author": "sparesparrow",
+          "url": "https://github.com/containers/podman-desktop-extension-ai-lab/pull/2518",
+          "createdAt": "2025-02-12T16:56:23Z"
+        }
+      ]
+    },
+    "issues": {
+      "open": 19,
+      "closed": 52,
+      "total": 71,
+      "closeRate": "73.2",
+      "openIssues": [
+        {
+          "number": 234,
+          "title": "User should be able to supply a github repository that matches the structure of a sample application that AI studio knows about.",
+          "author": "sallyom",
+          "assignees": [],
+          "labels": [],
+          "url": "https://github.com/containers/podman-desktop-extension-ai-lab/issues/234",
+          "createdAt": "2024-02-05T21:57:15Z"
+        },
+        {
+          "number": 519,
+          "title": "model download: show downladed/total size",
+          "author": "vrothberg",
+          "assignees": [],
+          "labels": [
+            "kind/enhancement ✨"
+          ],
+          "url": "https://github.com/containers/podman-desktop-extension-ai-lab/issues/519",
+          "createdAt": "2024-03-13T08:25:54Z"
+        },
+        {
+          "number": 1068,
+          "title": "Podman AI Lab extension catalog minor recipe list issues",
+          "author": "mattreid",
+          "assignees": [],
+          "labels": [],
+          "url": "https://github.com/containers/podman-desktop-extension-ai-lab/issues/1068",
+          "createdAt": "2024-05-07T19:21:01Z"
+        },
+        {
+          "number": 1067,
+          "title": "\"Error: No provider with a running engine\". Unable to launch an AI Application despite Podman running",
+          "author": "mattreid",
+          "assignees": [],
+          "labels": [],
+          "url": "https://github.com/containers/podman-desktop-extension-ai-lab/issues/1067",
+          "createdAt": "2024-05-07T19:52:08Z"
+        },
+        {
+          "number": 1074,
+          "title": "RFE: Expose llama_cpp.server --n_ctx option",
+          "author": "jmontleon",
+          "assignees": [],
+          "labels": [],
+          "url": "https://github.com/containers/podman-desktop-extension-ai-lab/issues/1074",
+          "createdAt": "2024-05-09T21:03:09Z"
+        },
+        {
+          "number": 1075,
+          "title": "RFE: Allow overriding the default image",
+          "author": "jmontleon",
+          "assignees": [],
+          "labels": [],
+          "url": "https://github.com/containers/podman-desktop-extension-ai-lab/issues/1075",
+          "createdAt": "2024-05-09T21:06:18Z"
+        },
+        {
+          "number": 1080,
+          "title": "Code snippets are not blockquoted and syntax hilighted",
+          "author": "tigert",
+          "assignees": [],
+          "labels": [],
+          "url": "https://github.com/containers/podman-desktop-extension-ai-lab/issues/1080",
+          "createdAt": "2024-05-13T09:56:47Z"
+        },
+        {
+          "number": 1138,
+          "title": "Default Services Python Snippet in Service Details fails due to https",
+          "author": "aokugel",
+          "assignees": [],
+          "labels": [],
+          "url": "https://github.com/containers/podman-desktop-extension-ai-lab/issues/1138",
+          "createdAt": "2024-05-30T11:22:24Z"
+        },
+        {
+          "number": 1524,
+          "title": "Allow specify name of container while creating a model service ",
+          "author": "rrbanda",
+          "assignees": [],
+          "labels": [
+            "kind/feature 💡"
+          ],
+          "url": "https://github.com/containers/podman-desktop-extension-ai-lab/issues/1524",
+          "createdAt": "2024-08-10T03:51:36Z"
+        },
+        {
+          "number": 1763,
+          "title": " libkrun is taking about 100 GB of storage on a Mac M1",
+          "author": "rrbanda",
+          "assignees": [],
+          "labels": [],
+          "url": "https://github.com/containers/podman-desktop-extension-ai-lab/issues/1763",
+          "createdAt": "2024-09-23T14:50:32Z"
+        },
+        {
+          "number": 2010,
+          "title": "Misleading message",
+          "author": "pwright",
+          "assignees": [],
+          "labels": [
+            "kind/bug 🐞",
+            "good first issue"
+          ],
+          "url": "https://github.com/containers/podman-desktop-extension-ai-lab/issues/2010",
+          "createdAt": "2024-10-29T10:37:06Z"
+        },
+        {
+          "number": 2185,
+          "title": "not authorized to pull quay.io/ai-lab/granite-7b-lab:latest",
+          "author": "carljmosca",
+          "assignees": [],
+          "labels": [
+            "kind/bug 🐞"
+          ],
+          "url": "https://github.com/containers/podman-desktop-extension-ai-lab/issues/2185",
+          "createdAt": "2024-11-30T22:00:59Z"
+        },
+        {
+          "number": 2474,
+          "title": "Can't interact with playground  - Inference server is not healthy, current status: unhealthy - Linux (Fedora 41)",
+          "author": "grantomation",
+          "assignees": [],
+          "labels": [
+            "kind/bug 🐞"
+          ],
+          "url": "https://github.com/containers/podman-desktop-extension-ai-lab/issues/2474",
+          "createdAt": "2025-02-04T07:21:39Z"
+        },
+        {
+          "number": 2711,
+          "title": "Is there a way to offline install the extension and the models?",
+          "author": "harrykhh",
+          "assignees": [],
+          "labels": [
+            "kind/feature 💡"
+          ],
+          "url": "https://github.com/containers/podman-desktop-extension-ai-lab/issues/2711",
+          "createdAt": "2025-03-15T21:43:48Z"
+        },
+        {
+          "number": 2780,
+          "title": "Update your Podman Machine to improve performance warning on Fedora Linux",
+          "author": "lautou",
+          "assignees": [],
+          "labels": [
+            "kind/bug 🐞"
+          ],
+          "url": "https://github.com/containers/podman-desktop-extension-ai-lab/issues/2780",
+          "createdAt": "2025-03-27T17:45:42Z"
+        },
+        {
+          "number": 2796,
+          "title": "Podman to run AI models: Adopt basetenlabs/truss packaging system to create containers with the model + code + dependency",
+          "author": "qdrddr",
+          "assignees": [],
+          "labels": [
+            "kind/enhancement ✨"
+          ],
+          "url": "https://github.com/containers/podman-desktop-extension-ai-lab/issues/2796",
+          "createdAt": "2025-04-01T22:50:25Z"
+        },
+        {
+          "number": 2846,
+          "title": "Doesn't work with Gemma3 models",
+          "author": "acidkill",
+          "assignees": [],
+          "labels": [
+            "kind/bug 🐞"
+          ],
+          "url": "https://github.com/containers/podman-desktop-extension-ai-lab/issues/2846",
+          "createdAt": "2025-04-10T22:42:05Z"
+        },
+        {
+          "number": 3146,
+          "title": "Optionally add the MODEL_JINJA=true env variable to model service container",
+          "author": "calebevans",
+          "assignees": [],
+          "labels": [
+            "kind/enhancement ✨"
+          ],
+          "url": "https://github.com/containers/podman-desktop-extension-ai-lab/issues/3146",
+          "createdAt": "2025-06-08T14:32:39Z"
+        },
+        {
+          "number": 3287,
+          "title": "Vulkan-Venus ring_submit abort on MacOS",
+          "author": "kpouget",
+          "assignees": [],
+          "labels": [
+            "kind/bug 🐞"
+          ],
+          "url": "https://github.com/containers/podman-desktop-extension-ai-lab/issues/3287",
+          "createdAt": "2025-07-11T09:31:23Z"
+        }
+      ]
+    },
+    "social": {
+      "blueskyFollowers": 144,
+      "linkedinFollowers": 988,
+      "mastodonFollowers": 69
+    },
+    "repository": {
+      "stars": 262,
+      "forks": 66,
+      "watchers": 17
+    }
+  },
+  "topActiveUsers": []
+}
