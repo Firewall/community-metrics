@@ -1,0 +1,73 @@
+{
+  "timestamp": "2025-11-14T00:53:11.571Z",
+  "date": "2025-11-14",
+  "repoLabel": "podman-desktop/extension-kubernetes-dashboard",
+  "metrics": {
+    "discussions": {
+      "totalUpvotes": 0,
+      "totalComments": 0
+    },
+    "pullRequests": {
+      "open": 4,
+      "total": 8,
+      "merged": 3,
+      "mergeRate": "37.5",
+      "openPRs": [
+        {
+          "number": 432,
+          "title": "feat: Support ctrl+f keybinding in terminal windows and allow close",
+          "author": "adameska",
+          "url": "https://github.com/podman-desktop/extension-kubernetes-dashboard/pull/432",
+          "createdAt": "2025-11-03T22:04:56Z"
+        },
+        {
+          "number": 428,
+          "title": "feat: Colorize terminal logs based on log level",
+          "author": "adameska",
+          "url": "https://github.com/podman-desktop/extension-kubernetes-dashboard/pull/428",
+          "createdAt": "2025-11-03T14:11:15Z"
+        },
+        {
+          "number": 427,
+          "title": "feat: Allow copying text from the terminal",
+          "author": "adameska",
+          "url": "https://github.com/podman-desktop/extension-kubernetes-dashboard/pull/427",
+          "createdAt": "2025-11-03T14:04:17Z"
+        },
+        {
+          "number": 417,
+          "title": "feat: enhance log window to allow configuring options for viewing log…",
+          "author": "adameska",
+          "url": "https://github.com/podman-desktop/extension-kubernetes-dashboard/pull/417",
+          "createdAt": "2025-10-30T18:50:58Z"
+        }
+      ]
+    },
+    "issues": {
+      "open": 0,
+      "closed": 0,
+      "total": 0,
+      "closeRate": 0,
+      "openIssues": []
+    },
+    "social": {
+      "blueskyFollowers": 145,
+      "linkedinFollowers": 991,
+      "mastodonFollowers": 69
+    },
+    "repository": {
+      "stars": 3,
+      "forks": 10,
+      "watchers": 1
+    }
+  },
+  "topActiveUsers": [
+    {
+      "username": "adameska",
+      "prs": 5,
+      "issues": 0,
+      "comments": 5,
+      "total": 20
+    }
+  ]
+}
