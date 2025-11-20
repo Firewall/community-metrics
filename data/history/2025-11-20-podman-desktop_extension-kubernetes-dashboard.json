@@ -1,0 +1,80 @@
+{
+  "timestamp": "2025-11-20T00:51:38.171Z",
+  "date": "2025-11-20",
+  "repoLabel": "podman-desktop/extension-kubernetes-dashboard",
+  "metrics": {
+    "discussions": {
+      "totalUpvotes": 0,
+      "totalComments": 0
+    },
+    "pullRequests": {
+      "open": 5,
+      "total": 9,
+      "merged": 3,
+      "mergeRate": "33.3",
+      "openPRs": [
+        {
+          "number": 485,
+          "title": "feat: Colorize json if detected",
+          "author": "adameska",
+          "url": "https://github.com/podman-desktop/extension-kubernetes-dashboard/pull/485",
+          "createdAt": "2025-11-18T18:17:52Z"
+        },
+        {
+          "number": 432,
+          "title": "feat: Support ctrl+f keybinding in terminal windows and allow close",
+          "author": "adameska",
+          "url": "https://github.com/podman-desktop/extension-kubernetes-dashboard/pull/432",
+          "createdAt": "2025-11-03T22:04:56Z"
+        },
+        {
+          "number": 428,
+          "title": "feat: Colorize terminal logs based on log level",
+          "author": "adameska",
+          "url": "https://github.com/podman-desktop/extension-kubernetes-dashboard/pull/428",
+          "createdAt": "2025-11-03T14:11:15Z"
+        },
+        {
+          "number": 427,
+          "title": "feat: Allow copying text from the terminal",
+          "author": "adameska",
+          "url": "https://github.com/podman-desktop/extension-kubernetes-dashboard/pull/427",
+          "createdAt": "2025-11-03T14:04:17Z"
+        },
+        {
+          "number": 417,
+          "title": "feat: enhance log window to allow configuring options for viewing log…",
+          "author": "adameska",
+          "url": "https://github.com/podman-desktop/extension-kubernetes-dashboard/pull/417",
+          "createdAt": "2025-10-30T18:50:58Z"
+        }
+      ]
+    },
+    "issues": {
+      "open": 0,
+      "closed": 0,
+      "total": 0,
+      "closeRate": 0,
+      "openIssues": []
+    },
+    "social": {
+      "blueskyFollowers": 146,
+      "linkedinFollowers": 997,
+      "mastodonFollowers": 72
+    },
+    "repository": {
+      "stars": 4,
+      "forks": 10,
+      "watchers": 1
+    }
+  },
+  "topActiveUsers": [
+    {
+      "username": "adameska",
+      "prs": 6,
+      "issues": 0,
+      "comments": 12,
+      "total": 30
+    }
+  ]
+}
