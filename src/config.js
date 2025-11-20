@@ -8,7 +8,11 @@ const __dirname = dirname(__filename);
 // Load environment variables from .env if it exists
 const envPath = join(__dirname, '../.env');
 if (existsSync(envPath)) {
-  process.loadEnvFile();
+  try {
+    process.loadEnvFile(envPath);
+  } catch (error) {
+    console.warn('Failed to load .env file:', error.message);
+  }
 }
 
 const GH_TOKEN = process.env.GH_TOKEN;

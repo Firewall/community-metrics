@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Community Metrics Dashboard</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --gradient-primary: linear-gradient(135deg, #667eea 0%, #764ba2 50%, #f093fb 100%);
+      --bg-dark: #0a0e27;
+      --bg-card-start: #1e293b;
+      --bg-card-end: #0f172a;
+      --text-primary: #f1f5f9;
+      --text-secondary: #cbd5e1;
+      --text-muted: #94a3b8;
+      --border-color: rgba(100, 116, 139, 0.2);
+      --shadow-card: 0 20px 60px rgba(0,0,0,0.4);
+    }
+    .header-logo {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 1.25rem;
+      margin-bottom: 1.5rem;
+    }
+    .logo-img {
+      height: clamp(2.5rem, 5vw, 3.5rem);
+      width: auto;
+      filter: drop-shadow(0 4px 12px rgba(102, 126, 234, 0.3));
+    }
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
+      background: var(--bg-dark);
+      background-image: 
+        radial-gradient(at 0% 0%, rgba(102, 126, 234, 0.15) 0px, transparent 50%),
+        radial-gradient(at 100% 100%, rgba(240, 147, 251, 0.15) 0px, transparent 50%);
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 2.5rem 1.5rem;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+    }
+    .message {
+      background: linear-gradient(135deg, var(--bg-card-start) 0%, var(--bg-card-end) 100%);
+      border-radius: 24px;
+      padding: 4rem 3.5rem;
+      text-align: center;
+      box-shadow: var(--shadow-card);
+      border: 1px solid var(--border-color);
+      max-width: 540px;
+      position: relative;
+      overflow: hidden;
+    }
+    .message::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 3px;
+      background: var(--gradient-primary);
+    }
+    h1 {
+      background: var(--gradient-primary);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      margin: 0;
+      font-size: clamp(1.875rem, 4vw, 2.5rem);
+      font-weight: 900;
+      letter-spacing: -0.02em;
+      line-height: 1.2;
+      display: inline-block;
+    }
+    p {
+      color: var(--text-secondary);
+      line-height: 1.75;
+      font-size: 1.0625rem;
+      letter-spacing: -0.01em;
+    }
+    code {
+      background: rgba(100, 116, 139, 0.25);
+      color: #f093fb;
+      padding: 0.5rem 0.875rem;
+      border-radius: 8px;
+      font-family: 'SF Mono', 'Monaco', 'Inconsolata', 'Roboto Mono', monospace;
+      font-weight: 600;
+      font-size: 0.9375rem;
+      letter-spacing: 0.02em;
+      border: 1px solid rgba(240, 147, 251, 0.2);
+    }
+  </style>
+</head>
+<body>
+  <div class="message">
+    <div class="header-logo">
+      <img src="https://podman-desktop.io/img/logo.svg" 
+           alt="Podman Desktop Logo" 
+           class="logo-img">
+      <h1>No Data Yet</h1>
+    </div>
+    <p>No historical data available. Run the metrics collector to start tracking your community metrics over time!</p>
+    <p style="margin-top: 2rem; font-size: 0.9375rem; color: var(--text-muted);">Run: <code>npm start</code></p>
+  </div>
+</body>
+</html>
+

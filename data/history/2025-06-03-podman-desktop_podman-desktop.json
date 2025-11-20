@@ -1,7 +1,7 @@
 {
-  "timestamp": "2025-11-05T00:53:53.046Z",
-  "date": "2025-11-05",
-  "repoLabel": "podman-desktop/extension-template-webview",
+  "timestamp": "2025-06-03T00:00:00.000Z",
+  "date": "2025-06-03",
+  "repoLabel": "podman-desktop/podman-desktop",
   "metrics": {
     "discussions": {
       "totalUpvotes": 0,
@@ -21,15 +21,16 @@
       "closeRate": 0,
       "openIssues": []
     },
-    "social": {
-      "blueskyFollowers": 143,
-      "linkedinFollowers": 988,
-      "mastodonFollowers": 69
-    },
     "repository": {
-      "stars": 0,
-      "forks": 4,
-      "watchers": 22
+      "stars": 5883,
+      "forks": 0,
+      "watchers": 0
+    },
+    "social": {
+      "linkedinFollowers": 636,
+      "blueskyFollowers": 0,
+      "mastodonFollowers": 36,
+      "twitterFollowers": 9
     }
   },
   "topActiveUsers": []
