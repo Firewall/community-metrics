@@ -242,13 +242,28 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   let currentRepoLabel = repoKeys[0];
+  let currentTimeRange = '1y';
 
   function updateDashboard(repoLabel) {
     currentRepoLabel = repoLabel;
-    const snapshots = snapshotsByRepo[repoLabel] || [];
-    if (snapshots.length === 0) return;
+    const allSnapshots = snapshotsByRepo[repoLabel] || [];
+    if (allSnapshots.length === 0) return;
 
-    const latestSnapshot = snapshots[snapshots.length - 1];
+    // Use the absolute latest snapshot for stats cards (current status)
+    const latestSnapshot = allSnapshots[allSnapshots.length - 1];
+
+    // Filter snapshots for charts based on time range
+    const now = new Date();
+    const snapshots = allSnapshots.filter(s => {
+      const date = new Date(s.date);
+      const diffTime = now - date;
+      const diffDays = diffTime / (1000 * 60 * 60 * 24);
+      
+      if (currentTimeRange === '1m') return diffDays <= 30;
+      if (currentTimeRange === '1y') return diffDays <= 365;
+      return true;
+    });
+
     const dates = snapshots.map(s => s.date);
     const prData = snapshots.map(s => s.metrics.pullRequests.open);
     const issuesData = snapshots.map(s => s.metrics.issues.open);
@@ -398,6 +413,11 @@ document.addEventListener('DOMContentLoaded', () => {
 
   document.getElementById('repoSelect').addEventListener('change', (e) => {
     updateDashboard(e.target.value);
+  });
+
+  document.getElementById('timeRangeSelect').addEventListener('change', (e) => {
+    currentTimeRange = e.target.value;
+    updateDashboard(currentRepoLabel);
   });
 
   // Initial render
