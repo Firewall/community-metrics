@@ -25,8 +25,13 @@
       "stars": 5883,
       "forks": 0,
       "watchers": 0
+    },
+    "social": {
+      "linkedinFollowers": 636,
+      "blueskyFollowers": 0,
+      "mastodonFollowers": 36,
+      "twitterFollowers": 9
     }
   },
   "topActiveUsers": []
 }
-
