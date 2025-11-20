@@ -1,4 +1,5 @@
 import { getDailySnapshots } from '../utils/history.js';
+import { config } from '../config.js';
 
 export async function generateDashboardHTML() {
   const snapshots = await getDailySnapshots();
@@ -282,6 +283,11 @@ export async function generateDashboardHTML() {
     .stat-card.clickable:hover::after {
       opacity: 0.7;
       transform: scale(1.1);
+    }
+    a.stat-card {
+      text-decoration: none;
+      color: inherit;
+      display: block;
     }
     .modal {
       display: none;
@@ -721,29 +727,29 @@ export async function generateDashboardHTML() {
     ${hasSocialMetrics ? `
     <h2 class="section-title">Social Media</h2>
     <div class="stats-grid">
-      ${latestSnapshot.metrics.social?.blueskyFollowers > 0 ? `
-      <div class="stat-card">
-        <div class="stat-value" id="stat-bluesky">${latestSnapshot.metrics.social.blueskyFollowers.toLocaleString()}</div>
-        <div class="stat-label">☁️ Bluesky</div>
-      </div>
-      ` : ''}
-      ${latestSnapshot.metrics.social?.mastodonFollowers > 0 ? `
-      <div class="stat-card">
-        <div class="stat-value" id="stat-mastodon">${latestSnapshot.metrics.social.mastodonFollowers.toLocaleString()}</div>
-        <div class="stat-label">🐘 Mastodon</div>
-      </div>
-      ` : ''}
       ${latestSnapshot.metrics.social?.linkedinFollowers > 0 ? `
-      <div class="stat-card">
+      <a href="${config.social.linkedin}" target="_blank" class="stat-card">
         <div class="stat-value" id="stat-linkedin">${latestSnapshot.metrics.social.linkedinFollowers.toLocaleString()}</div>
         <div class="stat-label">💼 LinkedIn</div>
-      </div>
+      </a>
+      ` : ''}
+      ${latestSnapshot.metrics.social?.blueskyFollowers > 0 ? `
+      <a href="https://bsky.app/profile/${config.social.bluesky}" target="_blank" class="stat-card">
+        <div class="stat-value" id="stat-bluesky">${latestSnapshot.metrics.social.blueskyFollowers.toLocaleString()}</div>
+        <div class="stat-label">☁️ Bluesky</div>
+      </a>
+      ` : ''}
+      ${latestSnapshot.metrics.social?.mastodonFollowers > 0 ? `
+      <a href="https://${config.social.mastodon.instance}/@${config.social.mastodon.username}" target="_blank" class="stat-card">
+        <div class="stat-value" id="stat-mastodon">${latestSnapshot.metrics.social.mastodonFollowers.toLocaleString()}</div>
+        <div class="stat-label">🐘 Mastodon</div>
+      </a>
       ` : ''}
       ${latestSnapshot.metrics.social?.twitterFollowers > 0 ? `
-      <div class="stat-card">
+      <a href="https://twitter.com/${config.social.twitter}" target="_blank" class="stat-card">
         <div class="stat-value" id="stat-twitter">${latestSnapshot.metrics.social.twitterFollowers.toLocaleString()}</div>
         <div class="stat-label">𝕏 Twitter</div>
-      </div>
+      </a>
       ` : ''}
     </div>
 
@@ -1034,6 +1040,24 @@ export async function generateDashboardHTML() {
     if (hasSocialMetrics) {
       const socialDatasets = [];
 
+      ${hasLinkedIn ? `
+      socialDatasets.push({
+        label: 'LinkedIn',
+        data: ${JSON.stringify(linkedinFollowers)},
+        borderColor: '#0077b5',
+        backgroundColor: 'rgba(0, 119, 181, 0.15)',
+        fill: false,
+        tension: 0.4,
+        borderWidth: 3,
+        pointRadius: 4,
+        pointBackgroundColor: '#0077b5',
+        pointBorderColor: '#0f172a',
+        pointBorderWidth: 2,
+        pointHoverRadius: 6,
+        spanGaps: true
+      });
+      ` : ''}
+
       ${hasBluesky ? `
       socialDatasets.push({
         label: 'Bluesky',
@@ -1063,24 +1087,6 @@ export async function generateDashboardHTML() {
         borderWidth: 3,
         pointRadius: 4,
         pointBackgroundColor: '#6364ff',
-        pointBorderColor: '#0f172a',
-        pointBorderWidth: 2,
-        pointHoverRadius: 6,
-        spanGaps: true
-      });
-      ` : ''}
-
-      ${hasLinkedIn ? `
-      socialDatasets.push({
-        label: 'LinkedIn',
-        data: ${JSON.stringify(linkedinFollowers)},
-        borderColor: '#0077b5',
-        backgroundColor: 'rgba(0, 119, 181, 0.15)',
-        fill: false,
-        tension: 0.4,
-        borderWidth: 3,
-        pointRadius: 4,
-        pointBackgroundColor: '#0077b5',
         pointBorderColor: '#0f172a',
         pointBorderWidth: 2,
         pointHoverRadius: 6,
@@ -1321,6 +1327,10 @@ export async function generateDashboardHTML() {
       }
 
       if (hasSocialMetrics) {
+        if (latestSnapshot.metrics.social?.linkedinFollowers) {
+          const el = document.getElementById('stat-linkedin');
+          if (el) el.textContent = latestSnapshot.metrics.social.linkedinFollowers.toLocaleString();
+        }
         if (latestSnapshot.metrics.social?.blueskyFollowers) {
           const el = document.getElementById('stat-bluesky');
           if (el) el.textContent = latestSnapshot.metrics.social.blueskyFollowers.toLocaleString();
@@ -1328,10 +1338,6 @@ export async function generateDashboardHTML() {
         if (latestSnapshot.metrics.social?.mastodonFollowers) {
           const el = document.getElementById('stat-mastodon');
           if (el) el.textContent = latestSnapshot.metrics.social.mastodonFollowers.toLocaleString();
-        }
-        if (latestSnapshot.metrics.social?.linkedinFollowers) {
-          const el = document.getElementById('stat-linkedin');
-          if (el) el.textContent = latestSnapshot.metrics.social.linkedinFollowers.toLocaleString();
         }
         if (latestSnapshot.metrics.social?.twitterFollowers) {
           const el = document.getElementById('stat-twitter');
@@ -1367,6 +1373,24 @@ export async function generateDashboardHTML() {
         // Rebuild datasets for the selected repo
         const newSocialDatasets = [];
 
+        if (linkedinFollowers.some(v => v !== null && v > 0)) {
+          newSocialDatasets.push({
+            label: 'LinkedIn',
+            data: linkedinFollowers,
+            borderColor: '#0077b5',
+            backgroundColor: 'rgba(0, 119, 181, 0.15)',
+            fill: false,
+            tension: 0.4,
+            borderWidth: 3,
+            pointRadius: 4,
+            pointBackgroundColor: '#0077b5',
+            pointBorderColor: '#0f172a',
+            pointBorderWidth: 2,
+            pointHoverRadius: 6,
+            spanGaps: true
+          });
+        }
+
         if (blueskyFollowers.some(v => v !== null && v > 0)) {
           newSocialDatasets.push({
             label: 'Bluesky',
@@ -1396,24 +1420,6 @@ export async function generateDashboardHTML() {
             borderWidth: 3,
             pointRadius: 4,
             pointBackgroundColor: '#6364ff',
-            pointBorderColor: '#0f172a',
-            pointBorderWidth: 2,
-            pointHoverRadius: 6,
-            spanGaps: true
-          });
-        }
-
-        if (linkedinFollowers.some(v => v !== null && v > 0)) {
-          newSocialDatasets.push({
-            label: 'LinkedIn',
-            data: linkedinFollowers,
-            borderColor: '#0077b5',
-            backgroundColor: 'rgba(0, 119, 181, 0.15)',
-            fill: false,
-            tension: 0.4,
-            borderWidth: 3,
-            pointRadius: 4,
-            pointBackgroundColor: '#0077b5',
             pointBorderColor: '#0f172a',
             pointBorderWidth: 2,
             pointHoverRadius: 6,
