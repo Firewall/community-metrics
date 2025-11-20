@@ -36,6 +36,8 @@ jobs:
         run: npm start
 
       - name: Generate dashboard
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: npm run dashboard
 
       - name: Commit and push changes
