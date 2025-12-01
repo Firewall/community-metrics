@@ -1,0 +1,59 @@
+{
+  "timestamp": "2025-12-01T01:04:01.563Z",
+  "date": "2025-12-01",
+  "repoLabel": "podman-desktop/extension-kubernetes-dashboard",
+  "metrics": {
+    "discussions": {
+      "totalUpvotes": 0,
+      "totalComments": 0
+    },
+    "pullRequests": {
+      "open": 2,
+      "total": 10,
+      "merged": 6,
+      "mergeRate": "60.0",
+      "openPRs": [
+        {
+          "number": 485,
+          "title": "feat: Colorize json if detected",
+          "author": "adameska",
+          "url": "https://github.com/podman-desktop/extension-kubernetes-dashboard/pull/485",
+          "createdAt": "2025-11-18T18:17:52Z"
+        },
+        {
+          "number": 417,
+          "title": "feat: enhance log window to allow configuring options for viewing log…",
+          "author": "adameska",
+          "url": "https://github.com/podman-desktop/extension-kubernetes-dashboard/pull/417",
+          "createdAt": "2025-10-30T18:50:58Z"
+        }
+      ]
+    },
+    "issues": {
+      "open": 0,
+      "closed": 0,
+      "total": 0,
+      "closeRate": 0,
+      "openIssues": []
+    },
+    "social": {
+      "blueskyFollowers": 148,
+      "linkedinFollowers": 1016,
+      "mastodonFollowers": 75
+    },
+    "repository": {
+      "stars": 4,
+      "forks": 10,
+      "watchers": 1
+    }
+  },
+  "topActiveUsers": [
+    {
+      "username": "adameska",
+      "prs": 5,
+      "issues": 0,
+      "comments": 15,
+      "total": 30
+    }
+  ]
+}
