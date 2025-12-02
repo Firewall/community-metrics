@@ -1,0 +1,70 @@
+{
+  "timestamp": "2025-12-02T00:54:33.548Z",
+  "date": "2025-12-02",
+  "repoLabel": "podman-desktop/extension-bootc",
+  "metrics": {
+    "discussions": {
+      "totalUpvotes": 0,
+      "totalComments": 0
+    },
+    "pullRequests": {
+      "open": 0,
+      "total": 25,
+      "merged": 22,
+      "mergeRate": "88.0",
+      "openPRs": []
+    },
+    "issues": {
+      "open": 3,
+      "closed": 21,
+      "total": 24,
+      "closeRate": "87.5",
+      "openIssues": [
+        {
+          "number": 465,
+          "title": "Relative path in outputs field",
+          "author": "p5",
+          "assignees": [],
+          "labels": [
+            "kind/bug 🐞"
+          ],
+          "url": "https://github.com/podman-desktop/extension-bootc/issues/465",
+          "createdAt": "2024-05-08T17:48:31Z"
+        },
+        {
+          "number": 1876,
+          "title": "Can't select the bootc image builder version",
+          "author": "lucamaf",
+          "assignees": [],
+          "labels": [
+            "kind/enhancement ✨"
+          ],
+          "url": "https://github.com/podman-desktop/extension-bootc/issues/1876",
+          "createdAt": "2025-08-20T09:32:45Z"
+        },
+        {
+          "number": 1881,
+          "title": "Can't access vm port from host",
+          "author": "macthev",
+          "assignees": [],
+          "labels": [
+            "kind/bug 🐞"
+          ],
+          "url": "https://github.com/podman-desktop/extension-bootc/issues/1881",
+          "createdAt": "2025-08-24T08:04:06Z"
+        }
+      ]
+    },
+    "social": {
+      "blueskyFollowers": 148,
+      "linkedinFollowers": 1018,
+      "mastodonFollowers": 75
+    },
+    "repository": {
+      "stars": 466,
+      "forks": 29,
+      "watchers": 15
+    }
+  },
+  "topActiveUsers": []
+}
