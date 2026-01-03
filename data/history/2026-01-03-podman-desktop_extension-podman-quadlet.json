@@ -1,0 +1,87 @@
+{
+  "timestamp": "2026-01-03T00:54:02.649Z",
+  "date": "2026-01-03",
+  "repoLabel": "podman-desktop/extension-podman-quadlet",
+  "metrics": {
+    "discussions": {
+      "totalUpvotes": 0,
+      "totalComments": 0
+    },
+    "pullRequests": {
+      "open": 1,
+      "total": 13,
+      "merged": 9,
+      "mergeRate": "69.2",
+      "openPRs": [
+        {
+          "number": 1137,
+          "title": "Container Provider Selection Persistence",
+          "author": "karoltheguy",
+          "url": "https://github.com/podman-desktop/extension-podman-quadlet/pull/1137",
+          "createdAt": "2026-01-01T01:02:04Z"
+        }
+      ]
+    },
+    "issues": {
+      "open": 2,
+      "closed": 10,
+      "total": 12,
+      "closeRate": "83.3",
+      "openIssues": [
+        {
+          "number": 269,
+          "title": "Volumes with `~` break quadlet generation",
+          "author": "AdrienPoupa",
+          "assignees": [],
+          "labels": [
+            "bug",
+            "podlet",
+            "os/windows"
+          ],
+          "url": "https://github.com/podman-desktop/extension-podman-quadlet/issues/269",
+          "createdAt": "2025-02-08T22:47:58Z"
+        },
+        {
+          "number": 759,
+          "title": "bug: QuadletUnitParser may fail silently on [Volume] units and break UI",
+          "author": "joshbrooks",
+          "assignees": [
+            "axel7083"
+          ],
+          "labels": [
+            "bug",
+            "sprint/unplanned"
+          ],
+          "url": "https://github.com/podman-desktop/extension-podman-quadlet/issues/759",
+          "createdAt": "2025-07-18T10:06:49Z"
+        }
+      ]
+    },
+    "social": {
+      "blueskyFollowers": 153,
+      "linkedinFollowers": 1046,
+      "mastodonFollowers": 78
+    },
+    "repository": {
+      "stars": 9,
+      "forks": 9,
+      "watchers": 9
+    }
+  },
+  "topActiveUsers": [
+    {
+      "username": "karoltheguy",
+      "prs": 1,
+      "issues": 0,
+      "comments": 1,
+      "total": 4
+    },
+    {
+      "username": "cYDN48",
+      "prs": 0,
+      "issues": 2,
+      "comments": 0,
+      "total": 4
+    }
+  ]
+}
