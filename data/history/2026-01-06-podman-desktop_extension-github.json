@@ -1,0 +1,36 @@
+{
+  "timestamp": "2026-01-06T00:57:36.844Z",
+  "date": "2026-01-06",
+  "repoLabel": "podman-desktop/extension-github",
+  "metrics": {
+    "discussions": {
+      "totalUpvotes": 0,
+      "totalComments": 0
+    },
+    "pullRequests": {
+      "open": 0,
+      "total": 0,
+      "merged": 0,
+      "mergeRate": 0,
+      "openPRs": []
+    },
+    "issues": {
+      "open": 0,
+      "closed": 0,
+      "total": 0,
+      "closeRate": 0,
+      "openIssues": []
+    },
+    "social": {
+      "blueskyFollowers": 154,
+      "linkedinFollowers": 1051,
+      "mastodonFollowers": 79
+    },
+    "repository": {
+      "stars": 0,
+      "forks": 1,
+      "watchers": 1
+    }
+  },
+  "topActiveUsers": []
+}
