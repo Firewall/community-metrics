@@ -1,0 +1,62 @@
+{
+  "timestamp": "2026-01-22T00:58:55.906Z",
+  "date": "2026-01-22",
+  "repoLabel": "podman-desktop/extension-layers-explorer",
+  "metrics": {
+    "discussions": {
+      "totalUpvotes": 0,
+      "totalComments": 0
+    },
+    "pullRequests": {
+      "open": 1,
+      "total": 5,
+      "merged": 3,
+      "mergeRate": "60.0",
+      "openPRs": [
+        {
+          "number": 363,
+          "title": "chore: 📢 Bump version to 0.4.0",
+          "author": "github-actions",
+          "url": "https://github.com/podman-desktop/extension-layers-explorer/pull/363",
+          "createdAt": "2026-01-21T14:33:38Z"
+        }
+      ]
+    },
+    "issues": {
+      "open": 1,
+      "closed": 0,
+      "total": 1,
+      "closeRate": "0.0",
+      "openIssues": [
+        {
+          "number": 280,
+          "title": "Doesn't work where is the error message or log file",
+          "author": "matthewbaynham",
+          "assignees": [],
+          "labels": [],
+          "url": "https://github.com/podman-desktop/extension-layers-explorer/issues/280",
+          "createdAt": "2025-07-24T12:33:36Z"
+        }
+      ]
+    },
+    "social": {
+      "blueskyFollowers": 155,
+      "linkedinFollowers": 1061,
+      "mastodonFollowers": 79
+    },
+    "repository": {
+      "stars": 5,
+      "forks": 5,
+      "watchers": 14
+    }
+  },
+  "topActiveUsers": [
+    {
+      "username": "github-actions",
+      "prs": 1,
+      "issues": 0,
+      "comments": 0,
+      "total": 3
+    }
+  ]
+}
