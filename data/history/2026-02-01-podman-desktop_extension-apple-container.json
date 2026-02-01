@@ -1,0 +1,46 @@
+{
+  "timestamp": "2026-02-01T01:17:56.730Z",
+  "date": "2026-02-01",
+  "repoLabel": "podman-desktop/extension-apple-container",
+  "metrics": {
+    "discussions": {
+      "totalUpvotes": 0,
+      "totalComments": 0
+    },
+    "pullRequests": {
+      "open": 0,
+      "total": 0,
+      "merged": 0,
+      "mergeRate": 0,
+      "openPRs": []
+    },
+    "issues": {
+      "open": 1,
+      "closed": 0,
+      "total": 1,
+      "closeRate": "0.0",
+      "openIssues": [
+        {
+          "number": 163,
+          "title": "Not showing Rosetta container",
+          "author": "wagneramichael",
+          "assignees": [],
+          "labels": [],
+          "url": "https://github.com/podman-desktop/extension-apple-container/issues/163",
+          "createdAt": "2025-12-17T05:30:34Z"
+        }
+      ]
+    },
+    "social": {
+      "blueskyFollowers": 156,
+      "linkedinFollowers": 1075,
+      "mastodonFollowers": 81
+    },
+    "repository": {
+      "stars": 26,
+      "forks": 3,
+      "watchers": 1
+    }
+  },
+  "topActiveUsers": []
+}
