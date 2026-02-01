@@ -1,0 +1,86 @@
+{
+  "timestamp": "2026-02-01T01:17:56.730Z",
+  "date": "2026-02-01",
+  "repoLabel": "podman-desktop/extension-podman-quadlet",
+  "metrics": {
+    "discussions": {
+      "totalUpvotes": 0,
+      "totalComments": 0
+    },
+    "pullRequests": {
+      "open": 0,
+      "total": 14,
+      "merged": 11,
+      "mergeRate": "78.6",
+      "openPRs": []
+    },
+    "issues": {
+      "open": 3,
+      "closed": 10,
+      "total": 13,
+      "closeRate": "76.9",
+      "openIssues": [
+        {
+          "number": 269,
+          "title": "Volumes with `~` break quadlet generation",
+          "author": "AdrienPoupa",
+          "assignees": [],
+          "labels": [
+            "podlet",
+            "os/windows"
+          ],
+          "url": "https://github.com/podman-desktop/extension-podman-quadlet/issues/269",
+          "createdAt": "2025-02-08T22:47:58Z"
+        },
+        {
+          "number": 759,
+          "title": "bug: QuadletUnitParser may fail silently on [Volume] units and break UI",
+          "author": "joshbrooks",
+          "assignees": [
+            "axel7083"
+          ],
+          "labels": [
+            "sprint/unplanned"
+          ],
+          "url": "https://github.com/podman-desktop/extension-podman-quadlet/issues/759",
+          "createdAt": "2025-07-18T10:06:49Z"
+        },
+        {
+          "number": 1153,
+          "title": "Error: cannot get quadlet version (1):",
+          "author": "SeeDuck",
+          "assignees": [],
+          "labels": [],
+          "url": "https://github.com/podman-desktop/extension-podman-quadlet/issues/1153",
+          "createdAt": "2026-01-11T13:15:13Z"
+        }
+      ]
+    },
+    "social": {
+      "blueskyFollowers": 156,
+      "linkedinFollowers": 1075,
+      "mastodonFollowers": 81
+    },
+    "repository": {
+      "stars": 10,
+      "forks": 9,
+      "watchers": 9
+    }
+  },
+  "topActiveUsers": [
+    {
+      "username": "karoltheguy",
+      "prs": 1,
+      "issues": 0,
+      "comments": 1,
+      "total": 4
+    },
+    {
+      "username": "SeeDuck",
+      "prs": 0,
+      "issues": 1,
+      "comments": 1,
+      "total": 3
+    }
+  ]
+}
