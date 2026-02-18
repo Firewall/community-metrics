@@ -28,14 +28,16 @@
     "vancura",
     "jiridostal",
     "simonrey1",
-    "serbangeorge-m"
+    "serbangeorge-m",
+    "JustMell0"
   ],
   "bots": [
     "dependabot",
     "mergify",
     "podman-desktop-bot",
     "codecov",
-    "coderabbitai"
+    "coderabbitai",
+    "github-actions"
   ],
   "emeritus": [
     "themr0c",
