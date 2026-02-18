@@ -277,8 +277,27 @@ document.addEventListener('DOMContentLoaded', () => {
     const twitterFollowers = snapshots.map(s => s.metrics.social?.twitterFollowers || null);
     const starsData = snapshots.map(s => s.metrics.repository?.stars || null);
 
-    document.getElementById('stat-prs').textContent = latestSnapshot.metrics.pullRequests.open;
-    document.getElementById('stat-issues').textContent = latestSnapshot.metrics.issues.open;
+
+// Filter PRs and Issues by creation date based on time range
+    const cutoffDate = new Date();
+    if (currentTimeRange === '1m') {
+      cutoffDate.setMonth(cutoffDate.getMonth() - 1);
+    } else if (currentTimeRange === '1y') {
+      cutoffDate.setFullYear(cutoffDate.getFullYear() - 1);
+    }
+    
+    const filteredOpenPRs = (latestSnapshot.metrics.pullRequests.openPRs || []).filter(pr => {
+      const createdDate = new Date(pr.createdAt);
+      return createdDate >= cutoffDate;
+    });
+    
+    const filteredOpenIssues = (latestSnapshot.metrics.issues.openIssues || []).filter(issue => {
+      const createdDate = new Date(issue.createdAt);
+      return createdDate >= cutoffDate;
+    });
+    
+    document.getElementById('stat-prs').textContent = filteredOpenPRs.length;
+    document.getElementById('stat-issues').textContent = filteredOpenIssues.length;
     document.getElementById('stat-pr-rate').textContent = latestSnapshot.metrics.pullRequests.mergeRate + '%';
     document.getElementById('stat-issue-rate').textContent = latestSnapshot.metrics.issues.closeRate + '%';
 
@@ -429,12 +448,28 @@ document.addEventListener('DOMContentLoaded', () => {
     if (snapshots.length === 0) return;
 
     const latestSnapshot = snapshots[snapshots.length - 1];
-    const openPRs = latestSnapshot.metrics.pullRequests.openPRs || [];
+    let openPRs = latestSnapshot.metrics.pullRequests.openPRs || [];
+    
+    // Filter PRs by time range
+    const cutoffDate = new Date();
+    if (currentTimeRange === '1m') {
+      cutoffDate.setMonth(cutoffDate.getMonth() - 1);
+    } else if (currentTimeRange === '1y') {
+      cutoffDate.setFullYear(cutoffDate.getFullYear() - 1);
+    }
+    
+    openPRs = openPRs.filter(pr => {
+      const createdDate = new Date(pr.createdAt);
+      return createdDate >= cutoffDate;
+    });
 
     const modalTitle = document.getElementById('modal-title');
     const prsList = document.getElementById('prs-list');
 
-    modalTitle.textContent = `Open Pull Requests - ${currentRepoLabel === 'All Repositories' ? '🌐 All Repositories' : '📦 ' + currentRepoLabel}`;
+    const timeRangeText = currentTimeRange === '1m' ? 'Last Month' : 'Last Year';
+    modalTitle.textContent = `Open Pull Requests (${timeRangeText}) - ${currentRepoLabel === 'All Repositories' ? '🌐 All Repositories' : '📦 ' + currentRepoLabel}`;
+
+
 
     if (openPRs.length === 0) {
       prsList.innerHTML = `
@@ -485,16 +520,31 @@ document.addEventListener('DOMContentLoaded', () => {
     if (snapshots.length === 0) return;
 
     const latestSnapshot = snapshots[snapshots.length - 1];
-    const openIssues = (latestSnapshot.metrics.issues.openIssues || []).sort((a, b) => {
-      const dateA = new Date(a.createdAt);
-      const dateB = new Date(b.createdAt);
-      return dateB - dateA; // Sort descending (newest first)
-    });
+    
+    // Filter issues by time range
+    const cutoffDate = new Date();
+    if (currentTimeRange === '1m') {
+      cutoffDate.setMonth(cutoffDate.getMonth() - 1);
+    } else if (currentTimeRange === '1y') {
+      cutoffDate.setFullYear(cutoffDate.getFullYear() - 1);
+    }
+    
+    const openIssues = (latestSnapshot.metrics.issues.openIssues || [])
+      .filter(issue => {
+        const createdDate = new Date(issue.createdAt);
+        return createdDate >= cutoffDate;
+      })
+      .sort((a, b) => {
+        const dateA = new Date(a.createdAt);
+        const dateB = new Date(b.createdAt);
+        return dateB - dateA; // Sort descending (newest first)
+      });
 
     const modalTitle = document.getElementById('issues-modal-title');
     const issuesContainer = document.getElementById('issues-table-container');
 
-    modalTitle.textContent = `Open Issues - ${currentRepoLabel === 'All Repositories' ? '🌐 All Repositories' : '📦 ' + currentRepoLabel}`;
+    const timeRangeText = currentTimeRange === '1m' ? 'Last Month' : 'Last Year';
+    modalTitle.textContent = `Open Issues (${timeRangeText}) - ${currentRepoLabel === 'All Repositories' ? '🌐 All Repositories' : '📦 ' + currentRepoLabel}`;
 
     if (openIssues.length === 0) {
       issuesContainer.innerHTML = `
