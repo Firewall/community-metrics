@@ -1,0 +1,36 @@
+{
+  "timestamp": "2026-02-23T01:10:13.785Z",
+  "date": "2026-02-23",
+  "repoLabel": "podman-desktop/extension-template-full",
+  "metrics": {
+    "discussions": {
+      "totalUpvotes": 0,
+      "totalComments": 0
+    },
+    "pullRequests": {
+      "open": 0,
+      "total": 0,
+      "merged": 0,
+      "mergeRate": 0,
+      "openPRs": []
+    },
+    "issues": {
+      "open": 0,
+      "closed": 0,
+      "total": 0,
+      "closeRate": 0,
+      "openIssues": []
+    },
+    "social": {
+      "blueskyFollowers": 163,
+      "linkedinFollowers": 1095,
+      "mastodonFollowers": 82
+    },
+    "repository": {
+      "stars": 1,
+      "forks": 5,
+      "watchers": 18
+    }
+  },
+  "topActiveUsers": []
+}
