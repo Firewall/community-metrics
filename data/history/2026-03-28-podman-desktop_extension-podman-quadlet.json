@@ -1,0 +1,83 @@
+{
+  "timestamp": "2026-03-28T01:11:48.115Z",
+  "date": "2026-03-28",
+  "repoLabel": "podman-desktop/extension-podman-quadlet",
+  "metrics": {
+    "discussions": {
+      "totalUpvotes": 0,
+      "totalComments": 0
+    },
+    "pullRequests": {
+      "open": 0,
+      "total": 4,
+      "merged": 3,
+      "mergeRate": "75.0",
+      "openPRs": []
+    },
+    "issues": {
+      "open": 3,
+      "closed": 13,
+      "total": 16,
+      "closeRate": "81.3",
+      "openIssues": [
+        {
+          "number": 759,
+          "title": "bug: QuadletUnitParser may fail silently on [Volume] units and break UI",
+          "author": "joshbrooks",
+          "assignees": [
+            "axel7083"
+          ],
+          "labels": [],
+          "url": "https://github.com/podman-desktop/extension-podman-quadlet/issues/759",
+          "createdAt": "2025-07-18T10:06:49Z"
+        },
+        {
+          "number": 1208,
+          "title": "feat: Syntax highlighting for environment files",
+          "author": "cYDN48",
+          "assignees": [],
+          "labels": [],
+          "url": "https://github.com/podman-desktop/extension-podman-quadlet/issues/1208",
+          "createdAt": "2026-02-02T19:11:51Z"
+        },
+        {
+          "number": 1295,
+          "title": "EnvironmentFile path with %h specifier fails to load in Quadlet view",
+          "author": "storrella",
+          "assignees": [
+            "axel7083"
+          ],
+          "labels": [],
+          "url": "https://github.com/podman-desktop/extension-podman-quadlet/issues/1295",
+          "createdAt": "2026-02-28T18:35:57Z"
+        }
+      ]
+    },
+    "social": {
+      "blueskyFollowers": 166,
+      "linkedinFollowers": 1118,
+      "mastodonFollowers": 86
+    },
+    "repository": {
+      "stars": 10,
+      "forks": 11,
+      "watchers": 8
+    }
+  },
+  "topActiveUsers": [
+    {
+      "username": "aicontentcreate2023-star",
+      "prs": 1,
+      "issues": 0,
+      "comments": 0,
+      "total": 3
+    },
+    {
+      "username": "storrella",
+      "prs": 0,
+      "issues": 1,
+      "comments": 0,
+      "total": 2
+    }
+  ]
+}
