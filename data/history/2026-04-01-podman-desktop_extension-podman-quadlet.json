@@ -1,0 +1,65 @@
+{
+  "timestamp": "2026-04-01T01:25:53.943Z",
+  "date": "2026-04-01",
+  "repoLabel": "podman-desktop/extension-podman-quadlet",
+  "metrics": {
+    "discussions": {
+      "totalUpvotes": 0,
+      "totalComments": 0
+    },
+    "pullRequests": {
+      "open": 0,
+      "total": 4,
+      "merged": 3,
+      "mergeRate": "75.0",
+      "openPRs": []
+    },
+    "issues": {
+      "open": 2,
+      "closed": 14,
+      "total": 16,
+      "closeRate": "87.5",
+      "openIssues": [
+        {
+          "number": 759,
+          "title": "bug: QuadletUnitParser may fail silently on [Volume] units and break UI",
+          "author": "joshbrooks",
+          "assignees": [
+            "axel7083"
+          ],
+          "labels": [],
+          "url": "https://github.com/podman-desktop/extension-podman-quadlet/issues/759",
+          "createdAt": "2025-07-18T10:06:49Z"
+        },
+        {
+          "number": 1208,
+          "title": "feat: Syntax highlighting for environment files",
+          "author": "cYDN48",
+          "assignees": [],
+          "labels": [],
+          "url": "https://github.com/podman-desktop/extension-podman-quadlet/issues/1208",
+          "createdAt": "2026-02-02T19:11:51Z"
+        }
+      ]
+    },
+    "social": {
+      "blueskyFollowers": 166,
+      "linkedinFollowers": 1122,
+      "mastodonFollowers": 86
+    },
+    "repository": {
+      "stars": 10,
+      "forks": 11,
+      "watchers": 8
+    }
+  },
+  "topActiveUsers": [
+    {
+      "username": "aicontentcreate2023-star",
+      "prs": 1,
+      "issues": 0,
+      "comments": 0,
+      "total": 3
+    }
+  ]
+}
