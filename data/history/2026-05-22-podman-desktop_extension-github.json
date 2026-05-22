@@ -1,0 +1,54 @@
+{
+  "timestamp": "2026-05-22T02:10:24.251Z",
+  "date": "2026-05-22",
+  "repoLabel": "podman-desktop/extension-github",
+  "metrics": {
+    "discussions": {
+      "totalUpvotes": 0,
+      "totalComments": 0
+    },
+    "pullRequests": {
+      "open": 0,
+      "total": 0,
+      "merged": 0,
+      "mergeRate": 0,
+      "openPRs": []
+    },
+    "issues": {
+      "open": 1,
+      "closed": 0,
+      "total": 1,
+      "closeRate": "0.0",
+      "openIssues": [
+        {
+          "number": 177,
+          "title": "GitHub Account Authentication extension",
+          "author": "apidevlab",
+          "assignees": [],
+          "labels": [],
+          "url": "https://github.com/podman-desktop/extension-github/issues/177",
+          "createdAt": "2026-04-27T21:41:11Z"
+        }
+      ]
+    },
+    "social": {
+      "blueskyFollowers": 180,
+      "linkedinFollowers": 1172,
+      "mastodonFollowers": 90
+    },
+    "repository": {
+      "stars": 0,
+      "forks": 4,
+      "watchers": 1
+    }
+  },
+  "topActiveUsers": [
+    {
+      "username": "apidevlab",
+      "prs": 0,
+      "issues": 1,
+      "comments": 0,
+      "total": 2
+    }
+  ]
+}
