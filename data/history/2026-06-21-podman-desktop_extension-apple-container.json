@@ -1,0 +1,78 @@
+{
+  "timestamp": "2026-06-21T02:37:56.768Z",
+  "date": "2026-06-21",
+  "repoLabel": "podman-desktop/extension-apple-container",
+  "metrics": {
+    "discussions": {
+      "totalUpvotes": 0,
+      "totalComments": 0
+    },
+    "pullRequests": {
+      "open": 1,
+      "total": 1,
+      "merged": 0,
+      "mergeRate": "0.0",
+      "openPRs": [
+        {
+          "number": 340,
+          "title": "chore: Update socktainer to 1.0.0",
+          "author": "Linus-XZX",
+          "url": "https://github.com/podman-desktop/extension-apple-container/pull/340",
+          "createdAt": "2026-06-02T04:34:14Z"
+        }
+      ]
+    },
+    "issues": {
+      "open": 2,
+      "closed": 0,
+      "total": 2,
+      "closeRate": "0.0",
+      "openIssues": [
+        {
+          "number": 163,
+          "title": "Not showing Rosetta container",
+          "author": "wagneramichael",
+          "assignees": [],
+          "labels": [],
+          "url": "https://github.com/podman-desktop/extension-apple-container/issues/163",
+          "createdAt": "2025-12-17T05:30:34Z"
+        },
+        {
+          "number": 240,
+          "title": "support socktainer versioning",
+          "author": "joebowbeer",
+          "assignees": [],
+          "labels": [],
+          "url": "https://github.com/podman-desktop/extension-apple-container/issues/240",
+          "createdAt": "2026-03-13T23:21:34Z"
+        }
+      ]
+    },
+    "social": {
+      "blueskyFollowers": 184,
+      "linkedinFollowers": 1189,
+      "mastodonFollowers": 91
+    },
+    "repository": {
+      "stars": 47,
+      "forks": 5,
+      "watchers": 2
+    }
+  },
+  "topActiveUsers": [
+    {
+      "username": "Linus-XZX",
+      "prs": 1,
+      "issues": 0,
+      "comments": 1,
+      "total": 4
+    },
+    {
+      "username": "codecov-commenter",
+      "prs": 0,
+      "issues": 0,
+      "comments": 3,
+      "total": 3
+    }
+  ]
+}
