@@ -1,0 +1,55 @@
+{
+  "timestamp": "2026-06-24T02:09:45.696Z",
+  "date": "2026-06-24",
+  "repoLabel": "podman-desktop/extension-minikube",
+  "metrics": {
+    "discussions": {
+      "totalUpvotes": 0,
+      "totalComments": 0
+    },
+    "pullRequests": {
+      "open": 0,
+      "total": 12,
+      "merged": 9,
+      "mergeRate": "75.0",
+      "openPRs": []
+    },
+    "issues": {
+      "open": 2,
+      "closed": 8,
+      "total": 10,
+      "closeRate": "80.0",
+      "openIssues": [
+        {
+          "number": 37,
+          "title": "Add cpu and memory sliders to minikube cluster creation",
+          "author": "aknochow",
+          "assignees": [],
+          "labels": [],
+          "url": "https://github.com/podman-desktop/extension-minikube/issues/37",
+          "createdAt": "2024-03-01T15:40:15Z"
+        },
+        {
+          "number": 347,
+          "title": "Stuck pushing my image to minikube",
+          "author": "sebastian-philipp",
+          "assignees": [],
+          "labels": [],
+          "url": "https://github.com/podman-desktop/extension-minikube/issues/347",
+          "createdAt": "2025-01-08T14:05:04Z"
+        }
+      ]
+    },
+    "social": {
+      "blueskyFollowers": 186,
+      "linkedinFollowers": 1188,
+      "mastodonFollowers": 92
+    },
+    "repository": {
+      "stars": 3,
+      "forks": 17,
+      "watchers": 13
+    }
+  },
+  "topActiveUsers": []
+}
