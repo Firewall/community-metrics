@@ -593,42 +593,77 @@ document.addEventListener('DOMContentLoaded', () => {
     if (openIssues.length === 0) {
       issuesContainer.innerHTML = '<div class="empty-state"><div class="empty-state-icon">🎉</div><p>No open issues!</p></div>';
     } else {
-      issuesContainer.innerHTML = '<table class="issues-table"><thead><tr>' +
-        '<th>Issue ID</th><th>Issue Name</th><th>Type</th><th>Repo</th><th>Creator</th><th>Assignee</th>' +
-        '</tr></thead><tbody>' +
-        openIssues.map(function(issue) {
-          var repoMatch = issue.url.match(/github\.com\/([^/]+\/[^/]+)\/issues/);
-          var repo = repoMatch ? repoMatch[1] : '';
-          var assignee = issue.assignees && issue.assignees.length > 0 ? issue.assignees[0] : null;
-          var labels = issue.labels || [];
-          var issueType = labels.find(function(l) {
-            var name = typeof l === 'string' ? l : l.name;
-            var lower = name.toLowerCase();
-            return lower.includes('bug') || lower.includes('enhancement') || lower.includes('feature') || lower.includes('question') || lower.includes('documentation');
-          }) || (labels.length > 0 ? (typeof labels[0] === 'string' ? labels[0] : labels[0].name) : '');
-          var issueTypeDisplay = typeof issueType === 'string' ? issueType : (issueType.name || '');
-          var typeName = issueTypeDisplay.toLowerCase();
-          var displayType = '';
-          var typeClass = 'default';
-          if (typeName.includes('bug')) { displayType = 'Bug'; typeClass = 'bug'; }
-          else if (typeName.includes('enhancement')) { displayType = 'Enhancement'; typeClass = 'enhancement'; }
-          else if (typeName.includes('feature')) { displayType = 'Feature'; typeClass = 'feature'; }
-          else if (typeName.includes('question')) { displayType = 'Question'; typeClass = 'question'; }
-          else if (typeName.includes('documentation')) { displayType = 'Documentation'; typeClass = 'documentation'; }
-          else if (issueTypeDisplay) { displayType = issueTypeDisplay.split('/').pop().split(' ')[0]; typeClass = 'default'; }
-          var issueUrl = issue.url.replace(/"/g, '&quot;');
-          var issueTitle = issue.title.replace(/"/g, '&quot;').replace(/'/g, '&#39;');
-          return '<tr onclick="window.open(\'' + issueUrl + '\', \'_blank\')" title="Click to open issue on GitHub">' +
-            '<td class="issue-id">#' + issue.number + '</td>' +
-            '<td class="issue-title">' + issueTitle + '</td>' +
-            '<td class="issue-type">' + (displayType ? '<span class="issue-type-badge ' + typeClass + '">' + displayType + '</span>' : '-') + '</td>' +
-            '<td class="issue-repo">' + (repo || 'N/A') + '</td>' +
-            '<td><div class="issue-user"><img src="https://github.com/' + issue.author + '.png?size=56" alt="' + issue.author + '" class="issue-avatar" /> @' + issue.author + '</div></td>' +
-            '<td>' + (assignee ?
-              '<div class="issue-user"><img src="https://github.com/' + assignee + '.png?size=56" alt="' + assignee + '" class="issue-avatar" /> @' + assignee + '</div>' :
-              '<span class="issue-assignee-empty">Unassigned</span>') +
-            '</td></tr>';
-        }).join('') + '</tbody></table>';
+      var groups = {};
+      openIssues.forEach(function(issue) {
+        var repoMatch = issue.url.match(/github\.com\/([^/]+\/[^/]+)\/issues/);
+        var repo = repoMatch ? repoMatch[1] : 'Unknown';
+        if (!groups[repo]) groups[repo] = [];
+        groups[repo].push(issue);
+      });
+
+      var now = Date.now();
+      function relAge(dateStr) {
+        var diff = now - new Date(dateStr).getTime();
+        var days = Math.floor(diff / 86400000);
+        if (days < 1) return 'today';
+        if (days === 1) return '1d';
+        if (days < 7) return days + 'd';
+        var weeks = Math.floor(days / 7);
+        if (weeks < 5) return weeks + 'w';
+        var months = Math.floor(days / 30);
+        return months + 'mo';
+      }
+
+      function classifyIssue(issue) {
+        var labels = issue.labels || [];
+        var issueType = labels.find(function(l) {
+          var name = typeof l === 'string' ? l : l.name;
+          var lower = name.toLowerCase();
+          return lower.includes('bug') || lower.includes('enhancement') || lower.includes('feature') || lower.includes('question') || lower.includes('documentation');
+        }) || (labels.length > 0 ? (typeof labels[0] === 'string' ? labels[0] : labels[0].name) : '');
+        var issueTypeDisplay = typeof issueType === 'string' ? issueType : (issueType.name || '');
+        var typeName = issueTypeDisplay.toLowerCase();
+        var displayType = '';
+        var typeClass = 'default';
+        if (typeName.includes('bug')) { displayType = 'Bug'; typeClass = 'bug'; }
+        else if (typeName.includes('enhancement')) { displayType = 'Enhancement'; typeClass = 'enhancement'; }
+        else if (typeName.includes('feature')) { displayType = 'Feature'; typeClass = 'feature'; }
+        else if (typeName.includes('question')) { displayType = 'Question'; typeClass = 'question'; }
+        else if (typeName.includes('documentation')) { displayType = 'Documentation'; typeClass = 'documentation'; }
+        else if (issueTypeDisplay) { displayType = issueTypeDisplay.split('/').pop().split(' ')[0]; typeClass = 'default'; }
+        return { displayType: displayType, typeClass: typeClass };
+      }
+
+      issuesContainer.innerHTML = Object.keys(groups).sort().map(function(repo) {
+        var items = groups[repo];
+        return '<div class="issue-group">' +
+          '<div class="issue-group-header">' +
+            '<span class="issue-group-name">' + repo + '</span>' +
+            '<span class="issue-group-count">' + items.length + '</span>' +
+          '</div>' +
+          '<table class="issue-table"><thead><tr>' +
+            '<th>#</th><th>Title</th><th>Type</th><th>Author</th><th>Assignee</th><th>Age</th>' +
+          '</tr></thead><tbody>' +
+          items.map(function(issue) {
+            var c = classifyIssue(issue);
+            var assignee = issue.assignees && issue.assignees.length > 0 ? issue.assignees[0] : null;
+            var issueUrl = issue.url.replace(/'/g, "\\'");
+            var issueTitle = issue.title.replace(/"/g, '&quot;').replace(/'/g, '&#39;');
+            return '<tr onclick="window.open(\'' + issueUrl + '\', \'_blank\')" title="Click to open on GitHub">' +
+              '<td class="t-id">#' + issue.number + '</td>' +
+              '<td class="t-title">' + issueTitle + '</td>' +
+              '<td>' + (c.displayType ? '<span class="issue-type-badge ' + c.typeClass + '">' + c.displayType + '</span>' : '-') + '</td>' +
+              '<td><div class="t-user"><img src="https://github.com/' + issue.author + '.png?size=40" alt="' + issue.author + '" class="t-avatar" loading="lazy" decoding="async" /> @' + issue.author + '</div></td>' +
+              '<td>' + (assignee ?
+                '<div class="t-user"><img src="https://github.com/' + assignee + '.png?size=40" alt="' + assignee + '" class="t-avatar" loading="lazy" decoding="async" /> @' + assignee + '</div>' :
+                '<span class="t-unassigned">—</span>') +
+              '</td>' +
+              '<td class="t-age">' + relAge(issue.createdAt) + '</td>' +
+            '</tr>';
+          }).join('') +
+          '</tbody></table>' +
+        '</div>';
+      }).join('');
     }
 
     document.getElementById('issues-modal').classList.add('active');

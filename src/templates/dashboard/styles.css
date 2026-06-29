@@ -317,7 +317,7 @@ h1 {
   background: #111113;
   border-radius: 16px;
   padding: 2rem;
-  max-width: 900px;
+  max-width: 1100px;
   width: 100%;
   max-height: 85vh;
   overflow-y: auto;
@@ -471,48 +471,76 @@ h1 {
   margin-bottom: 0.75rem;
 }
 
-/* ── Issues Table ── */
+/* ── Issues (Grouped Mini Tables) ── */
 #issues-table-container {
   overflow-x: auto;
   max-height: calc(85vh - 200px);
 }
-.issues-table {
+.issue-group {
+  margin-bottom: 1.5rem;
+}
+.issue-group:last-child {
+  margin-bottom: 0;
+}
+.issue-group-header {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 0;
+  margin-bottom: 0.375rem;
+}
+.issue-group-name {
+  color: #a78bfa;
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+.issue-group-count {
+  color: #3f3f46;
+  font-size: 0.625rem;
+  font-weight: 600;
+  background: #1c1c1f;
+  padding: 0.125rem 0.5rem;
+  border-radius: 10px;
+}
+.issue-table {
   width: 100%;
   border-collapse: collapse;
-  margin-top: 0.75rem;
-  min-width: 800px;
 }
-.issues-table thead tr {
-  border-bottom: 1px solid #27272a;
+.issue-table thead tr {
+  border-bottom: 1px solid #1c1c1f;
 }
-.issues-table th {
-  color: #a1a1aa;
+.issue-table th {
+  color: #3f3f46;
+  font-size: 0.5625rem;
   font-weight: 700;
-  font-size: 0.6875rem;
   text-transform: uppercase;
-  letter-spacing: 0.08em;
-  padding: 0.75rem 1rem;
+  letter-spacing: 0.1em;
+  padding: 0.375rem 0.625rem;
   text-align: left;
 }
-.issues-table tbody tr {
-  border-bottom: 1px solid #1c1c1f;
+.issue-table tbody tr {
+  border-bottom: 1px solid rgba(28, 28, 31, 0.5);
   transition: background 0.15s;
   cursor: pointer;
 }
-.issues-table tbody tr:hover {
-  background: rgba(129, 140, 248, 0.04);
+.issue-table tbody tr:hover {
+  background: rgba(244, 114, 182, 0.04);
 }
-.issues-table td {
-  padding: 1rem;
-  color: #a1a1aa;
-  font-size: 0.875rem;
+.issue-table td {
+  padding: 0.5rem 0.625rem;
+  font-size: 0.8125rem;
+  vertical-align: middle;
 }
-.issue-id {
-  color: #818cf8;
+.issue-table .t-id {
+  color: #f472b6;
   font-weight: 700;
-  font-family: 'SF Mono', 'Monaco', 'Inconsolata', 'Roboto Mono', monospace;
+  font-family: 'SF Mono', Monaco, Consolas, monospace;
+  font-size: 0.75rem;
+  width: 50px;
 }
-.issue-title {
+.issue-table .t-title {
   color: #fafafa;
   font-weight: 600;
   max-width: 400px;
@@ -520,39 +548,37 @@ h1 {
   text-overflow: ellipsis;
   white-space: nowrap;
 }
-.issue-repo {
-  color: #a78bfa;
-  font-weight: 500;
-  font-size: 0.8125rem;
-}
-.issue-user {
+.issue-table .t-user {
   display: flex;
   align-items: center;
-  gap: 0.5rem;
+  gap: 0.25rem;
   color: #f472b6;
+  font-size: 0.6875rem;
   font-weight: 500;
-  font-size: 0.8125rem;
+  white-space: nowrap;
 }
-.issue-avatar {
-  width: 24px;
-  height: 24px;
+.issue-table .t-avatar {
+  width: 18px;
+  height: 18px;
   border-radius: 50%;
-  border: 1.5px solid rgba(244, 114, 182, 0.3);
+  border: 1px solid rgba(244, 114, 182, 0.25);
 }
-.issue-assignee-empty {
-  color: #3f3f46;
+.issue-table .t-unassigned {
+  color: #27272a;
+  font-size: 0.6875rem;
   font-style: italic;
-  font-size: 0.75rem;
 }
-.issue-type {
-  font-size: 0.8125rem;
+.issue-table .t-age {
+  color: #3f3f46;
+  font-size: 0.6875rem;
+  white-space: nowrap;
 }
 .issue-type-badge {
   display: inline-block;
-  padding: 0.25rem 0.625rem;
-  border-radius: 6px;
+  padding: 0.125rem 0.5rem;
+  border-radius: 5px;
   font-weight: 600;
-  font-size: 0.6875rem;
+  font-size: 0.625rem;
   text-transform: capitalize;
 }
 .issue-type-badge.bug {
