@@ -1,0 +1,50 @@
+{
+  "maintainers": [
+    "tolusha",
+    "SkorikSergey",
+    "dmytro-ndp",
+    "olexii4",
+    "vinokurig",
+    "mkuznyetsov",
+    "akurinnoy",
+    "ibuziuk",
+    "artaleks9",
+    "RomanNikitenko",
+    "azatsarynnyy",
+    "adietish",
+    "vrubezhny",
+    "msivasubramaniaan"
+  ],
+  "bots": [
+    "dependabot",
+    "che-bot",
+    "github-actions",
+    "codecov",
+    "coderabbitai"
+  ],
+  "emeritus": [
+    "monaka",
+    "ScrewTSW",
+    "sleshchenko",
+    "sparkoo",
+    "skabashnyuk",
+    "mshaposhnik",
+    "benoitf",
+    "Ohrimenko1988",
+    "ashumilova",
+    "vparfonov",
+    "akorneta",
+    "metlos",
+    "flacatus",
+    "AndrienkoAleksandr",
+    "nickboldt",
+    "dkwon17",
+    "davidfestal",
+    "mmorhun",
+    "amisevsk",
+    "Katka92",
+    "musienko-maxim",
+    "AObuchow",
+    "l0rd"
+  ]
+}

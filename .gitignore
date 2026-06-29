@@ -10,7 +10,7 @@ node_modules/
 # Output files
 output/
 *.json
-!data/maintainers.json
+!data/*.json
 !data/history/*.json
 !package.json
 gh-summary.md
