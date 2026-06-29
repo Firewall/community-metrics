@@ -9,70 +9,35 @@ document.addEventListener('DOMContentLoaded', () => {
         display: true,
         position: 'top',
         labels: {
-          color: '#f1f5f9',
-          font: {
-            family: 'Inter, -apple-system, BlinkMacSystemFont, sans-serif',
-            size: 13,
-            weight: 600
-          },
-          padding: 18,
+          color: '#a1a1aa',
+          font: { family: 'Inter, sans-serif', size: 12, weight: 600 },
+          padding: 16,
           usePointStyle: true,
           pointStyle: 'circle'
         }
       },
       tooltip: {
-        backgroundColor: 'rgba(15, 23, 42, 0.98)',
-        titleColor: '#f1f5f9',
-        bodyColor: '#cbd5e1',
-        borderColor: 'rgba(100, 116, 139, 0.4)',
+        backgroundColor: 'rgba(17, 17, 19, 0.98)',
+        titleColor: '#fafafa',
+        bodyColor: '#a1a1aa',
+        borderColor: 'rgba(39, 39, 42, 0.8)',
         borderWidth: 1,
-        padding: 14,
-        cornerRadius: 10,
+        padding: 12,
+        cornerRadius: 8,
         displayColors: true,
-        titleFont: {
-          family: 'Inter, sans-serif',
-          size: 13,
-          weight: 700
-        },
-        bodyFont: {
-          family: 'Inter, sans-serif',
-          size: 12,
-          weight: 500
-        }
+        titleFont: { family: 'Inter, sans-serif', size: 12, weight: 700 },
+        bodyFont: { family: 'Inter, sans-serif', size: 11, weight: 500 }
       }
     },
     scales: {
       x: {
-        grid: {
-          display: true,
-          color: 'rgba(100, 116, 139, 0.12)',
-          drawBorder: false,
-          lineWidth: 1
-        },
-        ticks: {
-          color: '#94a3b8',
-          font: {
-            family: 'Inter, sans-serif',
-            size: 12,
-            weight: 500
-          }
-        }
+        grid: { display: true, color: 'rgba(39, 39, 42, 0.5)', drawBorder: false, lineWidth: 1 },
+        ticks: { color: '#3f3f46', font: { family: 'Inter, sans-serif', size: 11, weight: 500 } }
       },
       y: {
         beginAtZero: true,
-        grid: {
-          color: 'rgba(100, 116, 139, 0.12)',
-          drawBorder: false,
-          lineWidth: 1
-        },
-        ticks: {
-          color: '#94a3b8',
-          font: {
-            family: 'Inter, sans-serif',
-            size: 12,
-            weight: 500
-          }
-        }
+        grid: { color: 'rgba(39, 39, 42, 0.5)', drawBorder: false, lineWidth: 1 },
+        ticks: { color: '#3f3f46', font: { family: 'Inter, sans-serif', size: 11, weight: 500 } }
       }
     }
   };
@@ -82,16 +47,16 @@ document.addEventListener('DOMContentLoaded', () => {
     data: { labels: [], datasets: [{
       label: 'Open PRs',
       data: [],
-      borderColor: '#667eea',
-      backgroundColor: 'rgba(102, 126, 234, 0.15)',
+      borderColor: '#818cf8',
+      backgroundColor: 'rgba(129, 140, 248, 0.1)',
       fill: true,
       tension: 0.4,
-      borderWidth: 3,
-      pointRadius: 4,
-      pointBackgroundColor: '#667eea',
-      pointBorderColor: '#0f172a',
+      borderWidth: 2.5,
+      pointRadius: 3,
+      pointBackgroundColor: '#818cf8',
+      pointBorderColor: '#111113',
       pointBorderWidth: 2,
-      pointHoverRadius: 6
+      pointHoverRadius: 5
     }] },
     options: chartConfig
   });
@@ -101,16 +66,16 @@ document.addEventListener('DOMContentLoaded', () => {
     data: { labels: [], datasets: [{
       label: 'Open Issues',
       data: [],
-      borderColor: '#f093fb',
-      backgroundColor: 'rgba(240, 147, 251, 0.15)',
+      borderColor: '#f472b6',
+      backgroundColor: 'rgba(244, 114, 182, 0.1)',
       fill: true,
       tension: 0.4,
-      borderWidth: 3,
-      pointRadius: 4,
-      pointBackgroundColor: '#f093fb',
-      pointBorderColor: '#0f172a',
+      borderWidth: 2.5,
+      pointRadius: 3,
+      pointBackgroundColor: '#f472b6',
+      pointBorderColor: '#111113',
       pointBorderWidth: 2,
-      pointHoverRadius: 6
+      pointHoverRadius: 5
     }] },
     options: chartConfig
   });
@@ -121,30 +86,30 @@ document.addEventListener('DOMContentLoaded', () => {
       {
         label: 'Total Upvotes',
         data: [],
-        borderColor: '#4facfe',
-        backgroundColor: 'rgba(79, 172, 254, 0.15)',
+        borderColor: '#22d3ee',
+        backgroundColor: 'rgba(34, 211, 238, 0.08)',
         fill: true,
         tension: 0.4,
-        borderWidth: 3,
-        pointRadius: 4,
-        pointBackgroundColor: '#4facfe',
-        pointBorderColor: '#0f172a',
+        borderWidth: 2.5,
+        pointRadius: 3,
+        pointBackgroundColor: '#22d3ee',
+        pointBorderColor: '#111113',
         pointBorderWidth: 2,
-        pointHoverRadius: 6
+        pointHoverRadius: 5
       },
       {
         label: 'Total Comments',
         data: [],
-        borderColor: '#00f2fe',
-        backgroundColor: 'rgba(0, 242, 254, 0.15)',
+        borderColor: '#818cf8',
+        backgroundColor: 'rgba(129, 140, 248, 0.08)',
         fill: true,
         tension: 0.4,
-        borderWidth: 3,
-        pointRadius: 4,
-        pointBackgroundColor: '#00f2fe',
-        pointBorderColor: '#0f172a',
+        borderWidth: 2.5,
+        pointRadius: 3,
+        pointBackgroundColor: '#818cf8',
+        pointBorderColor: '#111113',
         pointBorderWidth: 2,
-        pointHoverRadius: 6
+        pointHoverRadius: 5
       }
     ] },
     options: chartConfig
@@ -156,30 +121,30 @@ document.addEventListener('DOMContentLoaded', () => {
       {
         label: 'PR Merge Rate (%)',
         data: [],
-        borderColor: '#43e97b',
-        backgroundColor: 'rgba(67, 233, 123, 0.15)',
+        borderColor: '#34d399',
+        backgroundColor: 'rgba(52, 211, 153, 0.08)',
         fill: true,
         tension: 0.4,
-        borderWidth: 3,
-        pointRadius: 4,
-        pointBackgroundColor: '#43e97b',
-        pointBorderColor: '#0f172a',
+        borderWidth: 2.5,
+        pointRadius: 3,
+        pointBackgroundColor: '#34d399',
+        pointBorderColor: '#111113',
         pointBorderWidth: 2,
-        pointHoverRadius: 6
+        pointHoverRadius: 5
       },
       {
         label: 'Issue Close Rate (%)',
         data: [],
-        borderColor: '#38f9d7',
-        backgroundColor: 'rgba(56, 249, 215, 0.15)',
+        borderColor: '#fbbf24',
+        backgroundColor: 'rgba(251, 191, 36, 0.08)',
         fill: true,
         tension: 0.4,
-        borderWidth: 3,
-        pointRadius: 4,
-        pointBackgroundColor: '#38f9d7',
-        pointBorderColor: '#0f172a',
+        borderWidth: 2.5,
+        pointRadius: 3,
+        pointBackgroundColor: '#fbbf24',
+        pointBorderColor: '#111113',
         pointBorderWidth: 2,
-        pointHoverRadius: 6
+        pointHoverRadius: 5
       }
     ] },
     options: {
@@ -189,19 +154,8 @@ document.addEventListener('DOMContentLoaded', () => {
         y: {
           beginAtZero: true,
           max: 100,
-          grid: {
-            color: 'rgba(100, 116, 139, 0.12)',
-            drawBorder: false,
-            lineWidth: 1
-          },
-          ticks: {
-            color: '#94a3b8',
-            font: {
-              family: 'Inter, sans-serif',
-              size: 12,
-              weight: 500
-            }
-          }
+          grid: { color: 'rgba(39, 39, 42, 0.5)', drawBorder: false, lineWidth: 1 },
+          ticks: { color: '#3f3f46', font: { family: 'Inter, sans-serif', size: 11, weight: 500 } }
         }
       }
     }
@@ -221,15 +175,15 @@ document.addEventListener('DOMContentLoaded', () => {
           label: 'GitHub Stars',
           data: [],
           borderColor: '#fbbf24',
-          backgroundColor: 'rgba(251, 191, 36, 0.15)',
+          backgroundColor: 'rgba(251, 191, 36, 0.1)',
           fill: true,
           tension: 0.4,
-          borderWidth: 3,
-          pointRadius: 4,
+          borderWidth: 2.5,
+          pointRadius: 3,
           pointBackgroundColor: '#fbbf24',
-          pointBorderColor: '#0f172a',
+          pointBorderColor: '#111113',
           pointBorderWidth: 2,
-          pointHoverRadius: 6,
+          pointHoverRadius: 5,
           spanGaps: true
         }] },
         options: chartConfig
@@ -260,15 +214,13 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const repoSelect = document.getElementById('repoSelect');
     repoSelect.innerHTML = project.repoKeys.map(repo =>
-      '<option value="' + repo + '">' + (repo === 'All Repositories' ? '🌐 All Repositories' : '📦 ' + repo) + '</option>'
+      '<option value="' + repo + '">' + (repo === 'All Repositories' ? 'All Repositories' : repo) + '</option>'
     ).join('');
 
-    // Stars
     const hasStars = project.flags.hasRepoMetrics;
     document.getElementById('stars-stat-card').style.display = hasStars ? '' : 'none';
     document.getElementById('stars-chart-card').style.display = hasStars ? '' : 'none';
 
-    // Social
     const hasSocial = project.flags.hasSocialMetrics;
     document.getElementById('social-section').style.display = hasSocial ? '' : 'none';
 
@@ -293,24 +245,24 @@ document.addEventListener('DOMContentLoaded', () => {
 
     let cards = '';
     if (social.linkedinFollowers > 0 && socialConfig.linkedin) {
-      cards += '<a href="' + socialConfig.linkedin + '" target="_blank" class="stat-card">' +
-        '<div class="stat-value" id="stat-linkedin">' + social.linkedinFollowers.toLocaleString() + '</div>' +
-        '<div class="stat-label">💼 LinkedIn</div></a>';
+      cards += '<a href="' + socialConfig.linkedin + '" target="_blank" class="soc">' +
+        '<div class="soc-val" id="stat-linkedin">' + social.linkedinFollowers.toLocaleString() + '</div>' +
+        '<div class="soc-label">LinkedIn</div></a>';
     }
     if (social.blueskyFollowers > 0 && socialConfig.bluesky) {
-      cards += '<a href="https://bsky.app/profile/' + socialConfig.bluesky + '" target="_blank" class="stat-card">' +
-        '<div class="stat-value" id="stat-bluesky">' + social.blueskyFollowers.toLocaleString() + '</div>' +
-        '<div class="stat-label">☁️ Bluesky</div></a>';
+      cards += '<a href="https://bsky.app/profile/' + socialConfig.bluesky + '" target="_blank" class="soc">' +
+        '<div class="soc-val" id="stat-bluesky">' + social.blueskyFollowers.toLocaleString() + '</div>' +
+        '<div class="soc-label">Bluesky</div></a>';
     }
     if (social.mastodonFollowers > 0 && socialConfig.mastodon) {
-      cards += '<a href="https://' + socialConfig.mastodon.instance + '/@' + socialConfig.mastodon.username + '" target="_blank" class="stat-card">' +
-        '<div class="stat-value" id="stat-mastodon">' + social.mastodonFollowers.toLocaleString() + '</div>' +
-        '<div class="stat-label">🐘 Mastodon</div></a>';
+      cards += '<a href="https://' + socialConfig.mastodon.instance + '/@' + socialConfig.mastodon.username + '" target="_blank" class="soc">' +
+        '<div class="soc-val" id="stat-mastodon">' + social.mastodonFollowers.toLocaleString() + '</div>' +
+        '<div class="soc-label">Mastodon</div></a>';
     }
     if (social.twitterFollowers > 0 && socialConfig.twitter) {
-      cards += '<a href="https://twitter.com/' + socialConfig.twitter + '" target="_blank" class="stat-card">' +
-        '<div class="stat-value" id="stat-twitter">' + social.twitterFollowers.toLocaleString() + '</div>' +
-        '<div class="stat-label">𝕏 Twitter</div></a>';
+      cards += '<a href="https://twitter.com/' + socialConfig.twitter + '" target="_blank" class="soc">' +
+        '<div class="soc-val" id="stat-twitter">' + social.twitterFollowers.toLocaleString() + '</div>' +
+        '<div class="soc-label">Twitter / X</div></a>';
     }
     document.getElementById('social-stats-grid').innerHTML = cards;
   }
@@ -361,10 +313,20 @@ document.addEventListener('DOMContentLoaded', () => {
       return createdDate >= cutoffDate;
     });
 
+    const prRate = latestSnapshot.metrics.pullRequests.mergeRate;
+    const issueRate = latestSnapshot.metrics.issues.closeRate;
+
     document.getElementById('stat-prs').textContent = filteredOpenPRs.length;
     document.getElementById('stat-issues').textContent = filteredOpenIssues.length;
-    document.getElementById('stat-pr-rate').textContent = latestSnapshot.metrics.pullRequests.mergeRate + '%';
-    document.getElementById('stat-issue-rate').textContent = latestSnapshot.metrics.issues.closeRate + '%';
+    document.getElementById('stat-pr-rate').textContent = prRate + '%';
+    document.getElementById('stat-issue-rate').textContent = issueRate + '%';
+
+    document.getElementById('stat-prs-side').textContent = filteredOpenPRs.length;
+    document.getElementById('stat-issues-side').textContent = filteredOpenIssues.length;
+    document.getElementById('stat-pr-rate-side').textContent = prRate + '%';
+    document.getElementById('stat-issue-rate-side').textContent = issueRate + '%';
+    document.getElementById('pr-rate-bar').style.width = prRate + '%';
+    document.getElementById('issue-rate-bar').style.width = issueRate + '%';
 
     if (project.flags.hasRepoMetrics && latestSnapshot.metrics.repository?.stars) {
       const el = document.getElementById('stat-stars');
@@ -430,37 +392,37 @@ document.addEventListener('DOMContentLoaded', () => {
       if (linkedinFollowers.some(v => v !== null && v > 0)) {
         newSocialDatasets.push({
           label: 'LinkedIn', data: linkedinFollowers,
-          borderColor: '#0077b5', backgroundColor: 'rgba(0, 119, 181, 0.15)',
-          fill: false, tension: 0.4, borderWidth: 3, pointRadius: 4,
-          pointBackgroundColor: '#0077b5', pointBorderColor: '#0f172a',
-          pointBorderWidth: 2, pointHoverRadius: 6, spanGaps: true
+          borderColor: '#0077b5', backgroundColor: 'rgba(0, 119, 181, 0.1)',
+          fill: false, tension: 0.4, borderWidth: 2.5, pointRadius: 3,
+          pointBackgroundColor: '#0077b5', pointBorderColor: '#111113',
+          pointBorderWidth: 2, pointHoverRadius: 5, spanGaps: true
         });
       }
       if (blueskyFollowers.some(v => v !== null && v > 0)) {
         newSocialDatasets.push({
           label: 'Bluesky', data: blueskyFollowers,
-          borderColor: '#0085ff', backgroundColor: 'rgba(0, 133, 255, 0.15)',
-          fill: false, tension: 0.4, borderWidth: 3, pointRadius: 4,
-          pointBackgroundColor: '#0085ff', pointBorderColor: '#0f172a',
-          pointBorderWidth: 2, pointHoverRadius: 6, spanGaps: true
+          borderColor: '#0085ff', backgroundColor: 'rgba(0, 133, 255, 0.1)',
+          fill: false, tension: 0.4, borderWidth: 2.5, pointRadius: 3,
+          pointBackgroundColor: '#0085ff', pointBorderColor: '#111113',
+          pointBorderWidth: 2, pointHoverRadius: 5, spanGaps: true
         });
       }
       if (mastodonFollowers.some(v => v !== null && v > 0)) {
         newSocialDatasets.push({
           label: 'Mastodon', data: mastodonFollowers,
-          borderColor: '#6364ff', backgroundColor: 'rgba(99, 100, 255, 0.15)',
-          fill: false, tension: 0.4, borderWidth: 3, pointRadius: 4,
-          pointBackgroundColor: '#6364ff', pointBorderColor: '#0f172a',
-          pointBorderWidth: 2, pointHoverRadius: 6, spanGaps: true
+          borderColor: '#6364ff', backgroundColor: 'rgba(99, 100, 255, 0.1)',
+          fill: false, tension: 0.4, borderWidth: 2.5, pointRadius: 3,
+          pointBackgroundColor: '#6364ff', pointBorderColor: '#111113',
+          pointBorderWidth: 2, pointHoverRadius: 5, spanGaps: true
         });
       }
       if (twitterFollowers.some(v => v !== null && v > 0)) {
         newSocialDatasets.push({
           label: 'Twitter/X', data: twitterFollowers,
-          borderColor: '#1da1f2', backgroundColor: 'rgba(29, 161, 242, 0.15)',
-          fill: false, tension: 0.4, borderWidth: 3, pointRadius: 4,
-          pointBackgroundColor: '#1da1f2', pointBorderColor: '#0f172a',
-          pointBorderWidth: 2, pointHoverRadius: 6, spanGaps: true
+          borderColor: '#1da1f2', backgroundColor: 'rgba(29, 161, 242, 0.1)',
+          fill: false, tension: 0.4, borderWidth: 2.5, pointRadius: 3,
+          pointBackgroundColor: '#1da1f2', pointBorderColor: '#111113',
+          pointBorderWidth: 2, pointHoverRadius: 5, spanGaps: true
         });
       }
 
@@ -504,7 +466,6 @@ document.addEventListener('DOMContentLoaded', () => {
     updateHash();
   });
 
-  // Modal Logic
   function showPRsModal() {
     const project = projects[currentProjectId];
     if (!project) return;
@@ -531,7 +492,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const prsList = document.getElementById('prs-list');
 
     const timeRangeText = currentTimeRange === '1m' ? 'Last Month' : 'Last Year';
-    modalTitle.textContent = 'Open Pull Requests (' + timeRangeText + ') - ' + (currentRepoLabel === 'All Repositories' ? '🌐 All Repositories' : '📦 ' + currentRepoLabel);
+    modalTitle.textContent = 'Open Pull Requests (' + timeRangeText + ') - ' + (currentRepoLabel === 'All Repositories' ? 'All Repositories' : currentRepoLabel);
 
     if (openPRs.length === 0) {
       prsList.innerHTML = '<div class="empty-state"><div class="empty-state-icon">🎉</div><p>No open pull requests!</p></div>';
@@ -542,13 +503,13 @@ document.addEventListener('DOMContentLoaded', () => {
         return '<li class="pr-item">' +
           '<div class="pr-number">#' + pr.number + '</div>' +
           '<div class="pr-title">' + pr.title + '</div>' +
-          (repo ? '<div class="pr-repo">📦 ' + repo + '</div>' : '') +
+          (repo ? '<div class="pr-repo">' + repo + '</div>' : '') +
           '<div class="pr-meta">' +
             '<span class="pr-author">' +
               '<img src="https://github.com/' + pr.author + '.png?size=48" alt="' + pr.author + '" class="pr-avatar" loading="lazy" decoding="async" />' +
               ' @' + pr.author +
             '</span>' +
-            '<span>📅 ' + new Date(pr.createdAt).toLocaleDateString() + '</span>' +
+            '<span>' + new Date(pr.createdAt).toLocaleDateString() + '</span>' +
             '<a href="' + pr.url + '" target="_blank" class="pr-link">View on GitHub →</a>' +
           '</div></li>';
       }).join('') + '</ul>';
@@ -556,14 +517,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
     document.getElementById('prs-modal').classList.add('active');
   }
-
-  document.getElementById('open-prs-card').addEventListener('click', showPRsModal);
-
-  document.getElementById('prs-modal').addEventListener('click', (e) => {
-    if (e.target.id === 'prs-modal') {
-      document.getElementById('prs-modal').classList.remove('active');
-    }
-  });
 
   function showIssuesModal() {
     const project = projects[currentProjectId];
@@ -596,7 +549,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const issuesContainer = document.getElementById('issues-table-container');
 
     const timeRangeText = currentTimeRange === '1m' ? 'Last Month' : 'Last Year';
-    modalTitle.textContent = 'Open Issues (' + timeRangeText + ') - ' + (currentRepoLabel === 'All Repositories' ? '🌐 All Repositories' : '📦 ' + currentRepoLabel);
+    modalTitle.textContent = 'Open Issues (' + timeRangeText + ') - ' + (currentRepoLabel === 'All Repositories' ? 'All Repositories' : currentRepoLabel);
 
     if (openIssues.length === 0) {
       issuesContainer.innerHTML = '<div class="empty-state"><div class="empty-state-icon">🎉</div><p>No open issues!</p></div>';
@@ -642,7 +595,17 @@ document.addEventListener('DOMContentLoaded', () => {
     document.getElementById('issues-modal').classList.add('active');
   }
 
+  document.getElementById('open-prs-card').addEventListener('click', showPRsModal);
+  document.getElementById('side-prs-card').addEventListener('click', showPRsModal);
+
   document.getElementById('open-issues-card').addEventListener('click', showIssuesModal);
+  document.getElementById('side-issues-card').addEventListener('click', showIssuesModal);
+
+  document.getElementById('prs-modal').addEventListener('click', (e) => {
+    if (e.target.id === 'prs-modal') {
+      document.getElementById('prs-modal').classList.remove('active');
+    }
+  });
 
   document.getElementById('issues-modal').addEventListener('click', (e) => {
     if (e.target.id === 'issues-modal') {
@@ -650,7 +613,6 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
 
-  // Initial render — restore state from URL hash if present
   var initialParams = readHash();
   var initialProject = initialParams && initialParams.project && projects[initialParams.project] ? initialParams.project : projectKeys[0];
   var initialTime = initialParams && initialParams.time ? initialParams.time : '1y';
