@@ -14,88 +14,117 @@
 </head>
 <body>
   <div class="container">
-    <div class="header-logo">
-      <img id="project-logo" src="" alt="Project Logo" class="logo-img">
-      <h1 id="project-title">Community Metrics Dashboard</h1>
+
+    <div class="title-block">
+      <div class="header-logo">
+        <img id="project-logo" src="" alt="Project Logo" class="logo-img">
+        <h1 id="project-title">Community Metrics Dashboard</h1>
+      </div>
     </div>
 
     <div class="repo-selector">
-      <label for="projectSelect">Project:</label>
+      <label for="projectSelect">Project</label>
       <select id="projectSelect">
         {{PROJECT_OPTIONS}}
       </select>
-
-      <label for="repoSelect" style="margin-left: 1.5rem;">Repository:</label>
+      <label for="repoSelect">Repository</label>
       <select id="repoSelect">
         {{REPO_OPTIONS}}
       </select>
-
-      <label for="timeRangeSelect" style="margin-left: 1.5rem;">Time Range:</label>
+      <label for="timeRangeSelect">Time Range</label>
       <select id="timeRangeSelect">
         <option value="1m">Last Month</option>
         <option value="1y" selected>Last Year</option>
       </select>
     </div>
 
-    <h2 class="section-title">Repository Metrics</h2>
-    <div class="stats-grid">
-      <div class="stat-card clickable" id="open-prs-card">
-        <div class="stat-value" id="stat-prs">-</div>
-        <div class="stat-label">Open PRs</div>
+    <div class="kpi-strip">
+      <div class="kpi clickable" id="open-prs-card">
+        <div class="kpi-val c-indigo" id="stat-prs">-</div>
+        <div class="kpi-label">Open PRs</div>
       </div>
-      <div class="stat-card clickable" id="open-issues-card">
-        <div class="stat-value" id="stat-issues">-</div>
-        <div class="stat-label">Open Issues</div>
+      <div class="kpi clickable" id="open-issues-card">
+        <div class="kpi-val c-pink" id="stat-issues">-</div>
+        <div class="kpi-label">Open Issues</div>
       </div>
-      <div class="stat-card">
-        <div class="stat-value" id="stat-pr-rate">-</div>
-        <div class="stat-label">PR Merge Rate</div>
+      <div class="kpi">
+        <div class="kpi-val c-emerald" id="stat-pr-rate">-</div>
+        <div class="kpi-label">Merge Rate</div>
       </div>
-      <div class="stat-card">
-        <div class="stat-value" id="stat-issue-rate">-</div>
-        <div class="stat-label">Issue Close Rate</div>
+      <div class="kpi">
+        <div class="kpi-val c-amber" id="stat-issue-rate">-</div>
+        <div class="kpi-label">Close Rate</div>
       </div>
-      <div class="stat-card" id="stars-stat-card" style="display: none;">
-        <div class="stat-value" id="stat-stars">-</div>
-        <div class="stat-label">GitHub Stars</div>
+      <div class="kpi" id="stars-stat-card" style="display: none;">
+        <div class="kpi-val c-cyan" id="stat-stars">-</div>
+        <div class="kpi-label">GitHub Stars</div>
       </div>
     </div>
 
-    <div class="grid">
-      <div class="chart-card">
-        <h2>Pull Requests Over Time</h2>
+    <div class="sec-head">Contributor Activity</div>
+    <div class="two-col">
+      <div class="chart-block">
+        <h3>Pull Requests Over Time</h3>
         <canvas id="prChart"></canvas>
       </div>
+      <div class="side-stats">
+        <div class="ss clickable" id="side-prs-card">
+          <div class="ss-val c-indigo" id="stat-prs-side">-</div>
+          <div class="ss-label">Open PRs</div>
+        </div>
+        <div class="ss">
+          <div class="ss-val c-emerald" id="stat-pr-rate-side">-</div>
+          <div class="ss-label">Merge Rate</div>
+          <div class="rate-bar"><div class="rate-fill rf-emerald" id="pr-rate-bar"></div></div>
+        </div>
+      </div>
+    </div>
 
-      <div class="chart-card">
-        <h2>Issues Over Time</h2>
+    <div class="sec-head">Community Health</div>
+    <div class="two-col">
+      <div class="chart-block">
+        <h3>Issues Over Time</h3>
         <canvas id="issuesChart"></canvas>
       </div>
+      <div class="side-stats">
+        <div class="ss clickable" id="side-issues-card">
+          <div class="ss-val c-pink" id="stat-issues-side">-</div>
+          <div class="ss-label">Open Issues</div>
+        </div>
+        <div class="ss">
+          <div class="ss-val c-amber" id="stat-issue-rate-side">-</div>
+          <div class="ss-label">Close Rate</div>
+          <div class="rate-bar"><div class="rate-fill rf-amber" id="issue-rate-bar"></div></div>
+        </div>
+      </div>
+    </div>
 
-      <div class="chart-card">
-        <h2>Discussion Engagement</h2>
+    <div class="sec-head">Engagement</div>
+    <div class="two-col-equal">
+      <div class="chart-block">
+        <h3>Discussion Engagement</h3>
         <canvas id="discussionsChart"></canvas>
       </div>
-
-      <div class="chart-card">
-        <h2>Success Rates</h2>
+      <div class="chart-block">
+        <h3>Success Rates</h3>
         <canvas id="ratesChart"></canvas>
       </div>
+    </div>
 
-      <div class="chart-card" id="stars-chart-card" style="display: none;">
-        <h2>GitHub Stars</h2>
+    <div id="stars-chart-card" style="display: none;">
+      <div class="sec-head">Stars</div>
+      <div class="chart-block">
+        <h3>GitHub Stars</h3>
         <canvas id="starsChart"></canvas>
       </div>
     </div>
 
     <div id="social-section" style="display: none;">
-      <h2 class="section-title">Social Media</h2>
-      <div class="stats-grid" id="social-stats-grid"></div>
-      <div class="grid">
-        <div class="chart-card">
-          <h2>Social Media Followers</h2>
-          <canvas id="socialChart"></canvas>
-        </div>
+      <div class="sec-head">Reach</div>
+      <div class="social-strip" id="social-stats-grid"></div>
+      <div class="chart-block" style="margin-top: 1rem;">
+        <h3>Social Media Followers</h3>
+        <canvas id="socialChart"></canvas>
       </div>
     </div>
 
