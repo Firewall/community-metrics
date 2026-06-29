@@ -20,7 +20,8 @@
     "che-bot",
     "github-actions",
     "codecov",
-    "coderabbitai"
+    "coderabbitai",
+    "red-hat-konflux"
   ],
   "emeritus": [
     "monaka",
