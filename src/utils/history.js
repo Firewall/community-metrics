@@ -132,7 +132,11 @@ export async function loadHistory() {
     const snapshots = await Promise.all(
       jsonFiles.map(async (file) => {
         const content = await fs.readFile(path.join(HISTORY_DIR, file), 'utf-8');
-        return JSON.parse(content);
+        const snapshot = JSON.parse(content);
+        if (snapshot.repoLabel === 'aggregate') {
+          snapshot.repoLabel = 'aggregate-podman-desktop';
+        }
+        return snapshot;
       })
     );
 

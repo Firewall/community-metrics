@@ -1,0 +1,71 @@
+{
+  "projects": [
+    {
+      "id": "podman-desktop",
+      "name": "Podman Desktop",
+      "logo": "https://podman-desktop.io/img/logo.svg",
+      "repos": [
+        "podman-desktop/podman-desktop",
+        "podman-desktop/extension-bootc",
+        "podman-desktop/extension-kubernetes-dashboard",
+        "podman-desktop/extension-postgresql",
+        "podman-desktop/extension-minikube",
+        "podman-desktop/extension-github",
+        "podman-desktop/extension-podman-quadlet",
+        "podman-desktop/extension-apple-container",
+        "podman-desktop/extension-kreate",
+        "podman-desktop/extension-layers-explorer",
+        "podman-desktop/podman-desktop-catalog",
+        "podman-desktop/extension-template-minimal",
+        "podman-desktop/extension-template-full",
+        "podman-desktop/extension-template-webview",
+        "podman-desktop/community",
+        "containers/podman-desktop-extension-ai-lab"
+      ],
+      "maintainersFile": "data/maintainers.json",
+      "social": {
+        "bluesky": "podman-desktop.io",
+        "linkedin": "https://www.linkedin.com/company/podman-desktop",
+        "twitter": "podmandesktop",
+        "mastodon": {
+          "instance": "fosstodon.org",
+          "username": "podmandesktop"
+        }
+      }
+    },
+    {
+      "id": "eclipse-che",
+      "name": "Eclipse Che",
+      "logo": "https://raw.githubusercontent.com/eclipse/che/assets/eclipseche.png",
+      "repos": [
+        "eclipse-che/che",
+        "eclipse-che/che-server",
+        "eclipse-che/che-operator",
+        "eclipse-che/che-docs",
+        "eclipse-che/che-plugin-registry",
+        "eclipse-che/che-dashboard",
+        "devfile/api",
+        "devfile/devworkspace-operator",
+        "devfile/developer-images",
+        "devfile/registry",
+        "devfile/library",
+        "devfile/alizer",
+        "che-incubator/kubernetes-image-puller",
+        "che-incubator/chectl",
+        "che-incubator/che-code",
+        "che-incubator/che-ai-pullrequest-assistant",
+        "che-incubator/zeroclaw-image",
+        "redhat-developer/devspaces-demo",
+        "redhat-developer/devspaces-gateway-plugin",
+        "redhat-developer/devspaces-vscode-extensions",
+        "redhat-developer/devspaces-remote-ssh",
+        "redhat-developer/devspaces-toolbox-plugin",
+        "redhat-developer/devspaces-multicluster-redirector",
+        "redhat-developer/devspaces-interop-tests",
+        "redhat-developer/devspaces-auto-validation"
+      ],
+      "maintainersFile": "data/eclipse-che-maintainers.json",
+      "social": null
+    }
+  ]
+}

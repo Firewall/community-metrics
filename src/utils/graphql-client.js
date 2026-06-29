@@ -25,8 +25,10 @@ export async function paginatedFetch(queryName, processor, repo, progressMessage
   let cursor = null;
   let processedCount = 0;
 
+  const repoLabel = `${repo.owner}/${repo.name}`;
+
   if (progressMessage) {
-    console.log(`📊 ${progressMessage}...`);
+    console.log(`📊 [${repoLabel}] ${progressMessage}...`);
   }
 
   while (hasNextPage) {
@@ -56,7 +58,7 @@ export async function paginatedFetch(queryName, processor, repo, progressMessage
 
     // Show progress for long-running operations
     if (progressMessage && processedCount > 0 && processedCount % 100 === 0) {
-      console.log(`   Processed ${processedCount} items so far...`);
+      console.log(`   [${repoLabel}] Processed ${processedCount} items so far...`);
     }
 
     // Add small delay to be respectful to API (reduced for better performance)

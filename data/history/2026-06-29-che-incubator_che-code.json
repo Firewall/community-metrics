@@ -1,0 +1,103 @@
+{
+  "timestamp": "2026-06-29T07:57:35.754Z",
+  "date": "2026-06-29",
+  "repoLabel": "che-incubator/che-code",
+  "metrics": {
+    "discussions": {
+      "totalUpvotes": 0,
+      "totalComments": 0
+    },
+    "pullRequests": {
+      "open": 6,
+      "total": 265,
+      "merged": 227,
+      "mergeRate": "85.7",
+      "openPRs": [
+        {
+          "number": 739,
+          "title": "fix: override undici to patched versions",
+          "author": "sbouchet",
+          "url": "https://github.com/che-incubator/che-code/pull/739",
+          "createdAt": "2026-06-26T13:33:54Z"
+        },
+        {
+          "number": 725,
+          "title": "Added ppc64le support",
+          "author": "prabhuk25",
+          "url": "https://github.com/che-incubator/che-code/pull/725",
+          "createdAt": "2026-06-18T15:55:36Z"
+        },
+        {
+          "number": 717,
+          "title": "Fix CVE-2026-8723 by updating qs to patched version",
+          "author": "sbouchet",
+          "url": "https://github.com/che-incubator/che-code/pull/717",
+          "createdAt": "2026-06-03T12:54:47Z"
+        },
+        {
+          "number": 626,
+          "title": "Rebase off of VS Code v1.108.X to support GitHub Copilot in Eclipse Che",
+          "author": "cgruver",
+          "url": "https://github.com/che-incubator/che-code/pull/626",
+          "createdAt": "2026-01-09T19:19:59Z"
+        },
+        {
+          "number": 336,
+          "title": "[WIP] build CLI from sources",
+          "author": "vitaliy-guliy",
+          "url": "https://github.com/che-incubator/che-code/pull/336",
+          "createdAt": "2024-03-05T12:31:45Z"
+        },
+        {
+          "number": 327,
+          "title": "[wip] add ssh support",
+          "author": "vitaliy-guliy",
+          "url": "https://github.com/che-incubator/che-code/pull/327",
+          "createdAt": "2024-02-08T14:54:15Z"
+        }
+      ]
+    },
+    "issues": {
+      "open": 0,
+      "closed": 0,
+      "total": 0,
+      "closeRate": 0,
+      "openIssues": []
+    },
+    "repository": {
+      "stars": 34,
+      "forks": 47,
+      "watchers": 7
+    }
+  },
+  "topActiveUsers": [
+    {
+      "username": "sbouchet",
+      "prs": 10,
+      "issues": 0,
+      "comments": 10,
+      "total": 40
+    },
+    {
+      "username": "rgrunber",
+      "prs": 4,
+      "issues": 0,
+      "comments": 3,
+      "total": 15
+    },
+    {
+      "username": "openshift-ci-robot",
+      "prs": 0,
+      "issues": 0,
+      "comments": 4,
+      "total": 4
+    },
+    {
+      "username": "prabhuk25",
+      "prs": 1,
+      "issues": 0,
+      "comments": 0,
+      "total": 3
+    }
+  ]
+}

@@ -1,0 +1,131 @@
+{
+  "timestamp": "2026-06-29T07:57:35.745Z",
+  "date": "2026-06-29",
+  "repoLabel": "devfile/registry",
+  "metrics": {
+    "discussions": {
+      "totalUpvotes": 0,
+      "totalComments": 0
+    },
+    "pullRequests": {
+      "open": 10,
+      "total": 615,
+      "merged": 443,
+      "mergeRate": "72.0",
+      "openPRs": [
+        {
+          "number": 689,
+          "title": "TEST CHANGE - DO NOT MERGE",
+          "author": "johnmcollier",
+          "url": "https://github.com/devfile/registry/pull/689",
+          "createdAt": "2026-06-26T17:58:50Z"
+        },
+        {
+          "number": 670,
+          "title": "chore(deps): update github actions",
+          "author": "red-hat-konflux",
+          "url": "https://github.com/devfile/registry/pull/670",
+          "createdAt": "2026-02-20T00:49:38Z"
+        },
+        {
+          "number": 669,
+          "title": "chore(deps): update registry.access.redhat.com/ubi9/openjdk-21 docker tag to v1.24-2.1779791379",
+          "author": "red-hat-konflux",
+          "url": "https://github.com/devfile/registry/pull/669",
+          "createdAt": "2026-02-20T00:49:14Z"
+        },
+        {
+          "number": 641,
+          "title": "chore(deps): update registry.access.redhat.com/ubi9/openjdk-17 docker tag to v1.24-2.1779791369",
+          "author": "red-hat-konflux",
+          "url": "https://github.com/devfile/registry/pull/641",
+          "createdAt": "2025-09-11T04:15:41Z"
+        },
+        {
+          "number": 640,
+          "title": "chore(deps): update registry.access.redhat.com/ubi8/openjdk-21 docker tag to v1.23-4.1779788016",
+          "author": "red-hat-konflux",
+          "url": "https://github.com/devfile/registry/pull/640",
+          "createdAt": "2025-09-11T04:15:20Z"
+        },
+        {
+          "number": 639,
+          "title": "chore(deps): update registry.access.redhat.com/ubi8/openjdk-17 docker tag to v1.23-4.1779787974",
+          "author": "red-hat-konflux",
+          "url": "https://github.com/devfile/registry/pull/639",
+          "createdAt": "2025-09-11T04:15:15Z"
+        },
+        {
+          "number": 637,
+          "title": "chore(deps): update docker.io/ollama/ollama docker tag to v0.30.5",
+          "author": "red-hat-konflux",
+          "url": "https://github.com/devfile/registry/pull/637",
+          "createdAt": "2025-09-11T04:14:45Z"
+        },
+        {
+          "number": 636,
+          "title": "chore(deps): update registry.access.redhat.com/ubi9/python-39 docker tag to v1-1780505855",
+          "author": "red-hat-konflux",
+          "url": "https://github.com/devfile/registry/pull/636",
+          "createdAt": "2025-09-11T04:14:41Z"
+        },
+        {
+          "number": 633,
+          "title": "chore(deps): update registry.access.redhat.com/ubi8/dotnet-80 docker tag to v8.0.127-1779958746",
+          "author": "red-hat-konflux",
+          "url": "https://github.com/devfile/registry/pull/633",
+          "createdAt": "2025-09-11T04:14:25Z"
+        },
+        {
+          "number": 631,
+          "title": "Update go sample description to match devfile",
+          "author": "michael-valdron",
+          "url": "https://github.com/devfile/registry/pull/631",
+          "createdAt": "2025-09-10T14:38:34Z"
+        }
+      ]
+    },
+    "issues": {
+      "open": 0,
+      "closed": 0,
+      "total": 0,
+      "closeRate": 0,
+      "openIssues": []
+    },
+    "repository": {
+      "stars": 54,
+      "forks": 95,
+      "watchers": 19
+    }
+  },
+  "topActiveUsers": [
+    {
+      "username": "openshift-ci",
+      "prs": 0,
+      "issues": 0,
+      "comments": 8,
+      "total": 8
+    },
+    {
+      "username": "johnmcollier",
+      "prs": 1,
+      "issues": 0,
+      "comments": 0,
+      "total": 3
+    },
+    {
+      "username": "red-hat-konflux",
+      "prs": 1,
+      "issues": 0,
+      "comments": 0,
+      "total": 3
+    },
+    {
+      "username": "michael-valdron",
+      "prs": 0,
+      "issues": 0,
+      "comments": 1,
+      "total": 1
+    }
+  ]
+}

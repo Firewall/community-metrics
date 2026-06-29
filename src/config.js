@@ -1,12 +1,13 @@
 import { fileURLToPath } from 'url';
 import { dirname, join } from 'path';
-import { existsSync } from 'fs';
+import { existsSync, readFileSync } from 'fs';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
+const ROOT_DIR = join(__dirname, '..');
 
 // Load environment variables from .env if it exists
-const envPath = join(__dirname, '../.env');
+const envPath = join(ROOT_DIR, '.env');
 if (existsSync(envPath)) {
   try {
     process.loadEnvFile(envPath);
@@ -22,66 +23,60 @@ if (!GH_TOKEN) {
   process.exit(1);
 }
 
-// Default repositories for podman-desktop ecosystem
-const DEFAULT_REPOS = [
-  'podman-desktop/podman-desktop',
-  'podman-desktop/extension-bootc',
-  'podman-desktop/extension-kubernetes-dashboard',
-  'podman-desktop/extension-postgresql',
-  'podman-desktop/extension-minikube',
-  'podman-desktop/extension-github',
-  'podman-desktop/extension-podman-quadlet',
-  'podman-desktop/extension-apple-container',
-  'podman-desktop/extension-kreate',
-  'podman-desktop/extension-layers-explorer',
-  'podman-desktop/podman-desktop-catalog',
-  'podman-desktop/extension-template-minimal',
-  'podman-desktop/extension-template-full',
-  'podman-desktop/extension-template-webview',
-  'podman-desktop/community',
-  'containers/podman-desktop-extension-ai-lab',
-];
+function parseRepoString(repoStr) {
+  const [owner, name] = repoStr.trim().split('/');
+  return { owner, name };
+}
 
-// Parse repositories from REPOS environment variable
-// Format: "owner1/repo1,owner2/repo2" or single "owner/repo"
+function loadProjects() {
+  const projectsPath = join(ROOT_DIR, 'data/projects.json');
+  try {
+    const data = JSON.parse(readFileSync(projectsPath, 'utf-8'));
+    const projectsFilter = process.env.PROJECTS
+      ? process.env.PROJECTS.split(',').map(p => p.trim())
+      : null;
+
+    return data.projects
+      .filter(p => !projectsFilter || projectsFilter.includes(p.id))
+      .map(p => ({
+        ...p,
+        repos: p.repos.map(parseRepoString),
+        maintainersFile: join(ROOT_DIR, p.maintainersFile),
+      }));
+  } catch (error) {
+    console.warn('Failed to load projects.json, falling back to defaults:', error.message);
+    return [];
+  }
+}
+
+const projects = loadProjects();
+
+// REPOS env var overrides all project repos
 function parseRepos() {
   const reposEnv = process.env.REPOS;
-
   if (reposEnv) {
-    // Multiple repos format: "owner1/repo1,owner2/repo2"
-    return reposEnv.split(',').map(repo => {
-      const [owner, name] = repo.trim().split('/');
-      return { owner, name };
-    });
-  } else {
-    // Use default repositories
-    return DEFAULT_REPOS.map(repo => {
-      const [owner, name] = repo.split('/');
-      return { owner, name };
-    });
+    return reposEnv.split(',').map(parseRepoString);
   }
+  const allRepos = projects.flatMap(p => p.repos);
+  const seen = new Set();
+  return allRepos.filter(r => {
+    const key = `${r.owner}/${r.name}`;
+    if (seen.has(key)) return false;
+    seen.add(key);
+    return true;
+  });
 }
 
 export const config = {
   ghToken: GH_TOKEN,
   repos: parseRepos(),
-  maintainersFile: process.env.MAINTAINERS_FILE || join(__dirname, '../data/maintainers.json'),
+  projects,
+  maintainersFile: process.env.MAINTAINERS_FILE || join(ROOT_DIR, 'data/maintainers.json'),
   lookbackMonths: parseInt(process.env.LOOKBACK_MONTHS) || 1,
   social: {
-    // Set BLUESKY_HANDLE environment variable to track Bluesky followers
-    // Example: export BLUESKY_HANDLE=yourhandle.bsky.social
     bluesky: process.env.BLUESKY_HANDLE || 'podman-desktop.io',
-
-    // LinkedIn company page
-    // Example: export LINKEDIN_COMPANY=https://www.linkedin.com/company/podman-desktop
     linkedin: process.env.LINKEDIN_COMPANY || 'https://www.linkedin.com/company/podman-desktop',
-
-    // Twitter/X handle (manual tracking via TWITTER_FOLLOWERS env var)
-    // Example: export TWITTER_HANDLE=podmandesktop TWITTER_FOLLOWERS=1234
     twitter: process.env.TWITTER_HANDLE || 'podmandesktop',
-
-    // Mastodon account (instance and username)
-    // Example: export MASTODON_INSTANCE=fosstodon.org MASTODON_USERNAME=podmandesktop
     mastodon: {
       instance: process.env.MASTODON_INSTANCE || 'fosstodon.org',
       username: process.env.MASTODON_USERNAME || 'podmandesktop',
