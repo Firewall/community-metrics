@@ -277,6 +277,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const latestSnapshot = allSnapshots[allSnapshots.length - 1];
 
+    const MAX_CHART_POINTS = 60;
+
     const now = new Date();
     const snapshots = allSnapshots.filter(s => {
       const date = new Date(s.date);
@@ -287,14 +289,24 @@ document.addEventListener('DOMContentLoaded', () => {
       return true;
     });
 
-    const dates = snapshots.map(s => s.date);
-    const prData = snapshots.map(s => s.metrics.pullRequests.open);
-    const issuesData = snapshots.map(s => s.metrics.issues.open);
-    const upvotesData = snapshots.map(s => s.metrics.discussions.totalUpvotes);
-    const commentsData = snapshots.map(s => s.metrics.discussions.totalComments);
-    const prMergeRates = snapshots.map(s => s.metrics.pullRequests.mergeRate);
-    const issueCloseRates = snapshots.map(s => s.metrics.issues.closeRate);
-    const starsData = snapshots.map(s => s.metrics.repository?.stars || null);
+    var chartSnapshots = snapshots;
+    if (snapshots.length > MAX_CHART_POINTS) {
+      chartSnapshots = [snapshots[0]];
+      var step = (snapshots.length - 1) / (MAX_CHART_POINTS - 1);
+      for (var i = 1; i < MAX_CHART_POINTS - 1; i++) {
+        chartSnapshots.push(snapshots[Math.round(i * step)]);
+      }
+      chartSnapshots.push(snapshots[snapshots.length - 1]);
+    }
+
+    const dates = chartSnapshots.map(s => s.date);
+    const prData = chartSnapshots.map(s => s.metrics.pullRequests.open);
+    const issuesData = chartSnapshots.map(s => s.metrics.issues.open);
+    const upvotesData = chartSnapshots.map(s => s.metrics.discussions.totalUpvotes);
+    const commentsData = chartSnapshots.map(s => s.metrics.discussions.totalComments);
+    const prMergeRates = chartSnapshots.map(s => s.metrics.pullRequests.mergeRate);
+    const issueCloseRates = chartSnapshots.map(s => s.metrics.issues.closeRate);
+    const starsData = chartSnapshots.map(s => s.metrics.repository?.stars || null);
 
     const cutoffDate = new Date();
     if (currentTimeRange === '1m') {
@@ -381,10 +393,10 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     if (project.flags.hasSocialMetrics) {
-      const blueskyFollowers = snapshots.map(s => s.metrics.social?.blueskyFollowers || null);
-      const mastodonFollowers = snapshots.map(s => s.metrics.social?.mastodonFollowers || null);
-      const linkedinFollowers = snapshots.map(s => s.metrics.social?.linkedinFollowers || null);
-      const twitterFollowers = snapshots.map(s => s.metrics.social?.twitterFollowers || null);
+      const blueskyFollowers = chartSnapshots.map(s => s.metrics.social?.blueskyFollowers || null);
+      const mastodonFollowers = chartSnapshots.map(s => s.metrics.social?.mastodonFollowers || null);
+      const linkedinFollowers = chartSnapshots.map(s => s.metrics.social?.linkedinFollowers || null);
+      const twitterFollowers = chartSnapshots.map(s => s.metrics.social?.twitterFollowers || null);
 
       const chart = ensureSocialChart();
       const newSocialDatasets = [];
