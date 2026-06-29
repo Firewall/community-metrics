@@ -497,22 +497,49 @@ document.addEventListener('DOMContentLoaded', () => {
     if (openPRs.length === 0) {
       prsList.innerHTML = '<div class="empty-state"><div class="empty-state-icon">🎉</div><p>No open pull requests!</p></div>';
     } else {
-      prsList.innerHTML = '<ul class="pr-list">' + openPRs.map(function(pr) {
+      var groups = {};
+      openPRs.forEach(function(pr) {
         var repoMatch = pr.url.match(/github\.com\/([^/]+\/[^/]+)\/pull/);
-        var repo = repoMatch ? repoMatch[1] : '';
-        return '<li class="pr-item">' +
-          '<div class="pr-number">#' + pr.number + '</div>' +
-          '<div class="pr-title">' + pr.title + '</div>' +
-          (repo ? '<div class="pr-repo">' + repo + '</div>' : '') +
-          '<div class="pr-meta">' +
-            '<span class="pr-author">' +
-              '<img src="https://github.com/' + pr.author + '.png?size=48" alt="' + pr.author + '" class="pr-avatar" loading="lazy" decoding="async" />' +
-              ' @' + pr.author +
-            '</span>' +
-            '<span>' + new Date(pr.createdAt).toLocaleDateString() + '</span>' +
-            '<a href="' + pr.url + '" target="_blank" class="pr-link">View on GitHub →</a>' +
-          '</div></li>';
-      }).join('') + '</ul>';
+        var repo = repoMatch ? repoMatch[1] : 'Unknown';
+        if (!groups[repo]) groups[repo] = [];
+        groups[repo].push(pr);
+      });
+
+      var now = Date.now();
+      function relAge(dateStr) {
+        var diff = now - new Date(dateStr).getTime();
+        var days = Math.floor(diff / 86400000);
+        if (days < 1) return 'today';
+        if (days === 1) return '1d';
+        if (days < 7) return days + 'd';
+        var weeks = Math.floor(days / 7);
+        if (weeks < 5) return weeks + 'w';
+        var months = Math.floor(days / 30);
+        return months + 'mo';
+      }
+
+      prsList.innerHTML = Object.keys(groups).sort().map(function(repo) {
+        var items = groups[repo];
+        return '<div class="pr-group">' +
+          '<div class="pr-group-header">' +
+            '<span class="pr-group-name">' + repo + '</span>' +
+            '<span class="pr-group-count">' + items.length + '</span>' +
+          '</div>' +
+          items.map(function(pr) {
+            return '<a href="' + pr.url + '" target="_blank" class="pr-row">' +
+              '<span class="pr-num">#' + pr.number + '</span>' +
+              '<span class="pr-title">' + pr.title + '</span>' +
+              '<div class="pr-meta">' +
+                '<span class="pr-author">' +
+                  '<img src="https://github.com/' + pr.author + '.png?size=40" alt="' + pr.author + '" class="pr-avatar" loading="lazy" decoding="async" />' +
+                  ' @' + pr.author +
+                '</span>' +
+                '<span class="pr-age">' + relAge(pr.createdAt) + '</span>' +
+              '</div>' +
+            '</a>';
+          }).join('') +
+        '</div>';
+      }).join('');
     }
 
     document.getElementById('prs-modal').classList.add('active');

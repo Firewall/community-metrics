@@ -374,74 +374,92 @@ h1 {
   border-color: rgba(239, 68, 68, 0.4);
 }
 
-/* ── PR List ── */
-.pr-list {
-  list-style: none;
-  padding: 0;
-  margin: 0;
+/* ── PR List (Grouped by Repo) ── */
+.pr-group {
+  margin-bottom: 1.25rem;
 }
-.pr-item {
-  background: rgba(255, 255, 255, 0.02);
-  border: 1px solid #1c1c1f;
-  border-radius: 12px;
-  padding: 1.25rem;
-  margin-bottom: 0.75rem;
-  transition: all 0.2s ease;
+.pr-group:last-child {
+  margin-bottom: 0;
 }
-.pr-item:hover {
-  background: rgba(129, 140, 248, 0.04);
-  border-color: rgba(129, 140, 248, 0.2);
-  transform: translateX(4px);
-}
-.pr-number {
-  color: #818cf8;
-  font-weight: 700;
-  font-size: 0.8125rem;
-  margin-bottom: 0.375rem;
-}
-.pr-title {
-  color: #fafafa;
-  font-size: 0.9375rem;
-  font-weight: 600;
-  margin-bottom: 0.375rem;
-  line-height: 1.4;
-}
-.pr-repo {
-  color: #a78bfa;
-  font-size: 0.75rem;
-  font-weight: 500;
-  margin-bottom: 0.375rem;
-}
-.pr-meta {
-  display: flex;
-  gap: 1rem;
-  flex-wrap: wrap;
-  align-items: center;
-  font-size: 0.8125rem;
-  color: #52525b;
-  margin-top: 0.5rem;
-}
-.pr-author {
-  color: #f472b6;
+.pr-group-header {
   display: flex;
   align-items: center;
   gap: 0.5rem;
+  padding: 0.5rem 0;
+  margin-bottom: 0.25rem;
+}
+.pr-group-name {
+  color: #a78bfa;
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+.pr-group-count {
+  color: #3f3f46;
+  font-size: 0.625rem;
+  font-weight: 600;
+  background: #1c1c1f;
+  padding: 0.125rem 0.5rem;
+  border-radius: 10px;
+}
+.pr-row {
+  display: flex;
+  align-items: center;
+  gap: 0.625rem;
+  padding: 0.4375rem 0.75rem;
+  border-left: 2px solid #1c1c1f;
+  margin-left: 0.25rem;
+  transition: all 0.15s;
+  cursor: pointer;
+  font-size: 0.8125rem;
+  text-decoration: none;
+}
+.pr-row:hover {
+  background: rgba(129, 140, 248, 0.04);
+  border-left-color: #818cf8;
+}
+.pr-num {
+  color: #818cf8;
+  font-weight: 700;
+  font-family: 'SF Mono', Monaco, Consolas, monospace;
+  font-size: 0.75rem;
+  min-width: 48px;
+  flex-shrink: 0;
+}
+.pr-title {
+  color: #fafafa;
+  font-weight: 600;
+  flex: 1;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.pr-meta {
+  display: flex;
+  align-items: center;
+  gap: 0.625rem;
+  flex-shrink: 0;
+}
+.pr-author {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+  color: #f472b6;
+  font-size: 0.6875rem;
   font-weight: 500;
+  white-space: nowrap;
 }
 .pr-avatar {
-  width: 22px;
-  height: 22px;
+  width: 18px;
+  height: 18px;
   border-radius: 50%;
-  border: 1.5px solid rgba(244, 114, 182, 0.3);
+  border: 1px solid rgba(244, 114, 182, 0.25);
 }
-.pr-link {
-  color: #818cf8;
-  text-decoration: none;
-  font-weight: 600;
-  transition: color 0.2s;
-}
-.pr-link:hover {
-  color: #a5b4fc;
+.pr-age {
+  color: #3f3f46;
+  font-size: 0.6875rem;
+  white-space: nowrap;
 }
 .empty-state {
   text-align: center;
