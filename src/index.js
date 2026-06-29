@@ -16,6 +16,7 @@ import { displayMetrics, displayTopActiveUsers, displayOpenPRs } from './reporte
 import { outputGitHubActions } from './reporters/github-actions.js';
 import { config } from './config.js';
 import { saveSnapshot, hasSnapshotForToday } from './utils/history.js';
+import { setMaintainersFile } from './utils/maintainers.js';
 
 // Parse command line arguments
 const args = process.argv.slice(2);
@@ -179,64 +180,72 @@ function aggregateMetrics(repoResults) {
   return { aggregate, topActiveUsers, aggregateRepoMetadata };
 }
 
+async function processProject(project) {
+  console.log('\n\n');
+  console.log('═'.repeat(60));
+  console.log(`🏗️  PROJECT: ${project.name}`);
+  console.log('═'.repeat(60));
+
+  setMaintainersFile(project.maintainersFile);
+
+  let socialMetrics = null;
+  if (project.social) {
+    console.log('\n📱 Fetching social media metrics...');
+    socialMetrics = await fetchSocialMetrics(project.social);
+  }
+
+  console.log(`\n🚀 Fetching metrics for ${project.repos.length} repositories in parallel...`);
+
+  const repoResults = await Promise.all(
+    project.repos.map(repo => fetchRepoMetrics(repo, socialMetrics))
+  );
+
+  for (const result of repoResults) {
+    const rates = displayMetrics(result.metrics, result.repo);
+    displayTopActiveUsers(result.topActiveUsers);
+    displayOpenPRs(result.metrics.openCommunityPRs);
+
+    if (!result.cached) {
+      const repoLabel = `${result.repo.owner}/${result.repo.name}`;
+      await saveSnapshot(result.metrics, result.topActiveUsers, rates, repoLabel, result.socialMetrics, result.repoMetadata);
+    }
+
+    if (project.repos.length === 1) {
+      outputGitHubActions(result.metrics, rates, result.topActiveUsers);
+    }
+  }
+
+  if (project.repos.length > 1) {
+    console.log('\n\n');
+    console.log('─'.repeat(60));
+    console.log(`📊 AGGREGATE METRICS - ${project.name}`);
+    console.log('─'.repeat(60));
+
+    const { aggregate, topActiveUsers, aggregateRepoMetadata } = aggregateMetrics(repoResults);
+    const rates = displayMetrics(aggregate);
+    displayTopActiveUsers(topActiveUsers);
+    displayOpenPRs(aggregate.openCommunityPRs);
+
+    const hasNewData = repoResults.some(r => !r.cached);
+    if (hasNewData) {
+      const socialMetrics = repoResults[0]?.socialMetrics;
+      await saveSnapshot(aggregate, topActiveUsers, rates, `aggregate-${project.id}`, socialMetrics, aggregateRepoMetadata);
+    } else {
+      console.log('\n📦 Using cached aggregate data (no new snapshots needed today)');
+    }
+
+    outputGitHubActions(aggregate, rates, topActiveUsers);
+  }
+}
+
 async function main() {
   try {
     if (ignoreCache) {
       console.log('\n⚠️  Cache disabled - fetching fresh data for all repositories');
     }
-    console.log(`\n🚀 Fetching metrics for ${config.repos.length} repositories in parallel...`);
 
-    // Fetch social media metrics once (shared across all repos)
-    console.log('\n📱 Fetching social media metrics...');
-    const socialMetrics = await fetchSocialMetrics(config.social);
-
-    // Fetch all repositories in parallel for maximum performance
-    const repoResults = await Promise.all(
-      config.repos.map(repo => fetchRepoMetrics(repo, socialMetrics))
-    );
-
-    // Display and save results for each repository
-    for (const result of repoResults) {
-      // Display individual repo results
-      const rates = displayMetrics(result.metrics, result.repo);
-      displayTopActiveUsers(result.topActiveUsers);
-      displayOpenPRs(result.metrics.openCommunityPRs);
-
-      // Save snapshot to history only if not cached
-      if (!result.cached) {
-        const repoLabel = `${result.repo.owner}/${result.repo.name}`;
-        await saveSnapshot(result.metrics, result.topActiveUsers, rates, repoLabel, result.socialMetrics, result.repoMetadata);
-      }
-
-      // Output GitHub Actions for individual repo if only one repo
-      if (config.repos.length === 1) {
-        outputGitHubActions(result.metrics, rates, result.topActiveUsers);
-      }
-    }
-
-    // If multiple repos, show aggregate
-    if (config.repos.length > 1) {
-      console.log('\n\n');
-      console.log('═'.repeat(60));
-      console.log('📊 AGGREGATE METRICS (All Repositories)');
-      console.log('═'.repeat(60));
-
-      const { aggregate, topActiveUsers, aggregateRepoMetadata } = aggregateMetrics(repoResults);
-      const rates = displayMetrics(aggregate);
-      displayTopActiveUsers(topActiveUsers);
-      displayOpenPRs(aggregate.openCommunityPRs);
-
-      // Save aggregate snapshot only if any repo fetched new data
-      const hasNewData = repoResults.some(r => !r.cached);
-      if (hasNewData) {
-        // Use social metrics from first repo (they're the same across all repos)
-        const socialMetrics = repoResults[0]?.socialMetrics;
-        await saveSnapshot(aggregate, topActiveUsers, rates, 'aggregate', socialMetrics, aggregateRepoMetadata);
-      } else {
-        console.log('\n📦 Using cached aggregate data (no new snapshots needed today)');
-      }
-
-      outputGitHubActions(aggregate, rates, topActiveUsers);
+    for (const project of config.projects) {
+      await processProject(project);
     }
 
   } catch (error) {
