@@ -1,0 +1,338 @@
+{
+  "timestamp": "2026-06-30T02:12:44.354Z",
+  "date": "2026-06-30",
+  "repoLabel": "devfile/devworkspace-operator",
+  "metrics": {
+    "discussions": {
+      "totalUpvotes": 0,
+      "totalComments": 0
+    },
+    "pullRequests": {
+      "open": 9,
+      "total": 236,
+      "merged": 186,
+      "mergeRate": "78.8",
+      "openPRs": [
+        {
+          "number": 1667,
+          "title": "chore (deps): bump go version to v1.26.4",
+          "author": "rohanKanojia",
+          "url": "https://github.com/devfile/devworkspace-operator/pull/1667",
+          "createdAt": "2026-06-29T16:12:08Z"
+        },
+        {
+          "number": 1655,
+          "title": "fix(backup): apply configured podSecurityContext to backup CronJob",
+          "author": "snecklifter",
+          "url": "https://github.com/devfile/devworkspace-operator/pull/1655",
+          "createdAt": "2026-06-19T15:19:05Z"
+        },
+        {
+          "number": 1654,
+          "title": "fix(backup): use configured imagePullPolicy for backup CronJob",
+          "author": "snecklifter",
+          "url": "https://github.com/devfile/devworkspace-operator/pull/1654",
+          "createdAt": "2026-06-19T15:17:38Z"
+        },
+        {
+          "number": 1642,
+          "title": "chore (deps) : update controller-runtime to v0.24.1",
+          "author": "rohanKanojia",
+          "url": "https://github.com/devfile/devworkspace-operator/pull/1642",
+          "createdAt": "2026-06-09T12:15:17Z"
+        },
+        {
+          "number": 1478,
+          "title": "ci: compare CPU and memory usage between stable and PR DWO deployments (#1477)",
+          "author": "rohanKanojia",
+          "url": "https://github.com/devfile/devworkspace-operator/pull/1478",
+          "createdAt": "2025-08-01T12:37:33Z"
+        },
+        {
+          "number": 1439,
+          "title": "feat : Add support to add Service annotations from DevWorkspaceRouting configuration (#1293)",
+          "author": "rohanKanojia",
+          "url": "https://github.com/devfile/devworkspace-operator/pull/1439",
+          "createdAt": "2025-05-29T08:26:24Z"
+        },
+        {
+          "number": 1236,
+          "title": "[Devtools] Add Security Insights for CNCF",
+          "author": "Jdubrick",
+          "url": "https://github.com/devfile/devworkspace-operator/pull/1236",
+          "createdAt": "2024-03-01T21:07:47Z"
+        },
+        {
+          "number": 1070,
+          "title": "allow to configure specific annotations",
+          "author": "gbonnefille",
+          "url": "https://github.com/devfile/devworkspace-operator/pull/1070",
+          "createdAt": "2023-03-21T17:38:24Z"
+        },
+        {
+          "number": 946,
+          "title": "[WIP] added contributing.md file to assist new contributors",
+          "author": "kernelpanic77",
+          "url": "https://github.com/devfile/devworkspace-operator/pull/946",
+          "createdAt": "2022-10-06T11:12:29Z"
+        }
+      ]
+    },
+    "issues": {
+      "open": 22,
+      "closed": 43,
+      "total": 65,
+      "closeRate": "66.2",
+      "openIssues": [
+        {
+          "number": 796,
+          "title": "Do not trigger validating webhook for pod execs unrelated to devworkspaces",
+          "author": "cristian-radu",
+          "assignees": [],
+          "labels": [],
+          "url": "https://github.com/devfile/devworkspace-operator/issues/796",
+          "createdAt": "2022-03-17T09:35:33Z"
+        },
+        {
+          "number": 810,
+          "title": "garbage collect stray instances",
+          "author": "davidkarlsen",
+          "assignees": [],
+          "labels": [],
+          "url": "https://github.com/devfile/devworkspace-operator/issues/810",
+          "createdAt": "2022-04-06T15:55:14Z"
+        },
+        {
+          "number": 935,
+          "title": "Adding contributing.md for DWO",
+          "author": "kernelpanic77",
+          "assignees": [
+            "kernelpanic77"
+          ],
+          "labels": [],
+          "url": "https://github.com/devfile/devworkspace-operator/issues/935",
+          "createdAt": "2022-09-22T11:50:52Z"
+        },
+        {
+          "number": 971,
+          "title": "kustomize 4.5.7 does not replace namespaces in subjects of rolebinding and clusterrolebinding",
+          "author": "vishaltak",
+          "assignees": [],
+          "labels": [],
+          "url": "https://github.com/devfile/devworkspace-operator/issues/971",
+          "createdAt": "2022-11-04T09:32:40Z"
+        },
+        {
+          "number": 1068,
+          "title": "Parametrize IngressClass name",
+          "author": "gbonnefille",
+          "assignees": [],
+          "labels": [],
+          "url": "https://github.com/devfile/devworkspace-operator/issues/1068",
+          "createdAt": "2023-03-16T16:54:46Z"
+        },
+        {
+          "number": 1118,
+          "title": "Need helm charts to support the eclipse-che helm charts",
+          "author": "brandonp42",
+          "assignees": [],
+          "labels": [],
+          "url": "https://github.com/devfile/devworkspace-operator/issues/1118",
+          "createdAt": "2023-06-04T17:45:52Z"
+        },
+        {
+          "number": 1157,
+          "title": "Webhook Server Certificate",
+          "author": "bdwyertech",
+          "assignees": [],
+          "labels": [
+            "bug"
+          ],
+          "url": "https://github.com/devfile/devworkspace-operator/issues/1157",
+          "createdAt": "2023-08-03T18:27:46Z"
+        },
+        {
+          "number": 1237,
+          "title": "Webhook Certificate not generated during OLM installation",
+          "author": "stringang",
+          "assignees": [],
+          "labels": [
+            "bug"
+          ],
+          "url": "https://github.com/devfile/devworkspace-operator/issues/1237",
+          "createdAt": "2024-03-02T07:46:10Z"
+        },
+        {
+          "number": 1410,
+          "title": "RFE: Ability to have a nested clonePath under projects",
+          "author": "isuftin",
+          "assignees": [],
+          "labels": [],
+          "url": "https://github.com/devfile/devworkspace-operator/issues/1410",
+          "createdAt": "2025-04-10T15:01:27Z"
+        },
+        {
+          "number": 1423,
+          "title": "Update `operator-sdk` version to latest version",
+          "author": "rohanKanojia",
+          "assignees": [],
+          "labels": [],
+          "url": "https://github.com/devfile/devworkspace-operator/issues/1423",
+          "createdAt": "2025-05-02T19:29:42Z"
+        },
+        {
+          "number": 1468,
+          "title": "Add E2E test to verify that PVC is cleaned up after DevWorkspace deletion",
+          "author": "rohanKanojia",
+          "assignees": [],
+          "labels": [],
+          "url": "https://github.com/devfile/devworkspace-operator/issues/1468",
+          "createdAt": "2025-07-16T10:30:51Z"
+        },
+        {
+          "number": 1475,
+          "title": "Investigate how to measure Reconciliation Time in DevWorkspace Operator",
+          "author": "rohanKanojia",
+          "assignees": [],
+          "labels": [],
+          "url": "https://github.com/devfile/devworkspace-operator/issues/1475",
+          "createdAt": "2025-07-30T16:07:03Z"
+        },
+        {
+          "number": 1476,
+          "title": "Add CI Check for CPU/Memory Usage Regression in DevWorkspace Operator",
+          "author": "rohanKanojia",
+          "assignees": [
+            "rohanKanojia"
+          ],
+          "labels": [],
+          "url": "https://github.com/devfile/devworkspace-operator/issues/1476",
+          "createdAt": "2025-07-30T16:20:16Z"
+        },
+        {
+          "number": 1503,
+          "title": "Remove the Hardcoded Wait for imagePullSecrets or replace it with a configurable option",
+          "author": "rohanKanojia",
+          "assignees": [],
+          "labels": [],
+          "url": "https://github.com/devfile/devworkspace-operator/issues/1503",
+          "createdAt": "2025-09-09T04:49:34Z"
+        },
+        {
+          "number": 1529,
+          "title": "postStartTimeout causes workspace to fail even when postStart command succeeds for some container images",
+          "author": "rohanKanojia",
+          "assignees": [],
+          "labels": [],
+          "url": "https://github.com/devfile/devworkspace-operator/issues/1529",
+          "createdAt": "2025-10-16T17:19:19Z"
+        },
+        {
+          "number": 1535,
+          "title": "Intermittent E2E test failure: DevWorkspace fails to start due to FailedMount on OpenShift CI",
+          "author": "rohanKanojia",
+          "assignees": [],
+          "labels": [],
+          "url": "https://github.com/devfile/devworkspace-operator/issues/1535",
+          "createdAt": "2025-11-07T10:17:05Z"
+        },
+        {
+          "number": 1548,
+          "title": "Implement mounting PVC into SubPath",
+          "author": "maheshrajrp",
+          "assignees": [],
+          "labels": [],
+          "url": "https://github.com/devfile/devworkspace-operator/issues/1548",
+          "createdAt": "2025-12-15T13:50:01Z"
+        },
+        {
+          "number": 1580,
+          "title": "Workspaces with container components from contributions are not backed up",
+          "author": "rohanKanojia",
+          "assignees": [],
+          "labels": [],
+          "url": "https://github.com/devfile/devworkspace-operator/issues/1580",
+          "createdAt": "2026-02-03T11:39:52Z"
+        },
+        {
+          "number": 1623,
+          "title": "Support for hostNetwork and dnsPolicy in webhookserver pods",
+          "author": "shadan227",
+          "assignees": [],
+          "labels": [],
+          "url": "https://github.com/devfile/devworkspace-operator/issues/1623",
+          "createdAt": "2026-05-12T14:10:25Z"
+        },
+        {
+          "number": 1636,
+          "title": "Backup CronJob should apply DevWorkspaceOperatorConfig `podSecurityContext`",
+          "author": "rohanKanojia",
+          "assignees": [],
+          "labels": [],
+          "url": "https://github.com/devfile/devworkspace-operator/issues/1636",
+          "createdAt": "2026-05-25T08:45:15Z"
+        },
+        {
+          "number": 1637,
+          "title": "Backup CronJob should use DevWorkspaceOperatorConfig `imagePullPolicy`",
+          "author": "rohanKanojia",
+          "assignees": [],
+          "labels": [],
+          "url": "https://github.com/devfile/devworkspace-operator/issues/1637",
+          "createdAt": "2026-05-25T08:49:15Z"
+        },
+        {
+          "number": 1648,
+          "title": "Support disabling shared workspace endpoint TLS secret when externalTLSConfig is enabled for DevWorkspace endpoints",
+          "author": "simxr",
+          "assignees": [],
+          "labels": [],
+          "url": "https://github.com/devfile/devworkspace-operator/issues/1648",
+          "createdAt": "2026-06-16T15:15:14Z"
+        }
+      ]
+    },
+    "repository": {
+      "stars": 89,
+      "forks": 72,
+      "watchers": 19
+    }
+  },
+  "topActiveUsers": [
+    {
+      "username": "openshift-ci",
+      "prs": 0,
+      "issues": 0,
+      "comments": 41,
+      "total": 41
+    },
+    {
+      "username": "rohanKanojia",
+      "prs": 2,
+      "issues": 0,
+      "comments": 14,
+      "total": 20
+    },
+    {
+      "username": "snecklifter",
+      "prs": 3,
+      "issues": 0,
+      "comments": 2,
+      "total": 11
+    },
+    {
+      "username": "che-incubator-bot",
+      "prs": 3,
+      "issues": 0,
+      "comments": 0,
+      "total": 9
+    },
+    {
+      "username": "danielpenad",
+      "prs": 1,
+      "issues": 1,
+      "comments": 0,
+      "total": 5
+    }
+  ]
+}

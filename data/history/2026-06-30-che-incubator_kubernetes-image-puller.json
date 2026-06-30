@@ -1,0 +1,140 @@
+{
+  "timestamp": "2026-06-30T02:12:44.357Z",
+  "date": "2026-06-30",
+  "repoLabel": "che-incubator/kubernetes-image-puller",
+  "metrics": {
+    "discussions": {
+      "totalUpvotes": 0,
+      "totalComments": 0
+    },
+    "pullRequests": {
+      "open": 5,
+      "total": 121,
+      "merged": 88,
+      "mergeRate": "72.7",
+      "openPRs": [
+        {
+          "number": 207,
+          "title": "Add support for deployment annotations",
+          "author": "charles-teese-telestream",
+          "url": "https://github.com/che-incubator/kubernetes-image-puller/pull/207",
+          "createdAt": "2025-12-19T16:50:56Z"
+        },
+        {
+          "number": 201,
+          "title": "Correct examples in readme and values.yaml",
+          "author": "kornelbicskei",
+          "url": "https://github.com/che-incubator/kubernetes-image-puller/pull/201",
+          "createdAt": "2025-03-10T19:31:06Z"
+        },
+        {
+          "number": 198,
+          "title": "chore: Update from rhel8/go-toolset:1.22.9-1 to rhel8/go-toolset:1.22.9-2",
+          "author": "che-incubator-bot",
+          "url": "https://github.com/che-incubator/kubernetes-image-puller/pull/198",
+          "createdAt": "2025-02-08T00:05:08Z"
+        },
+        {
+          "number": 197,
+          "title": "chore: Update from rhel8/go-toolset:1.22.9-1 to rhel8/go-toolset:1.22.9-2",
+          "author": "che-incubator-bot",
+          "url": "https://github.com/che-incubator/kubernetes-image-puller/pull/197",
+          "createdAt": "2025-02-01T00:05:35Z"
+        },
+        {
+          "number": 195,
+          "title": "Optimized error and normal prompts when creating daemonSet exceptions",
+          "author": "chriskery",
+          "url": "https://github.com/che-incubator/kubernetes-image-puller/pull/195",
+          "createdAt": "2025-01-06T08:48:46Z"
+        }
+      ]
+    },
+    "issues": {
+      "open": 8,
+      "closed": 6,
+      "total": 14,
+      "closeRate": "42.9",
+      "openIssues": [
+        {
+          "number": 93,
+          "title": "[feature request] - compatibility with containerd",
+          "author": "vikas027",
+          "assignees": [],
+          "labels": [],
+          "url": "https://github.com/che-incubator/kubernetes-image-puller/issues/93",
+          "createdAt": "2021-12-16T00:35:00Z"
+        },
+        {
+          "number": 94,
+          "title": "[feature request] - support for multiple node selectors",
+          "author": "vikas027",
+          "assignees": [],
+          "labels": [],
+          "url": "https://github.com/che-incubator/kubernetes-image-puller/issues/94",
+          "createdAt": "2021-12-16T00:41:23Z"
+        },
+        {
+          "number": 122,
+          "title": "Add Resource to the deployment",
+          "author": "timrhomberg",
+          "assignees": [],
+          "labels": [],
+          "url": "https://github.com/che-incubator/kubernetes-image-puller/issues/122",
+          "createdAt": "2023-02-09T08:42:12Z"
+        },
+        {
+          "number": 146,
+          "title": "NodeSelector value is mangled when passed from YAML to ConfigMap",
+          "author": "dasantonym",
+          "assignees": [],
+          "labels": [],
+          "url": "https://github.com/che-incubator/kubernetes-image-puller/issues/146",
+          "createdAt": "2023-06-12T14:19:24Z"
+        },
+        {
+          "number": 159,
+          "title": "Rate limit for image pulling",
+          "author": "stevefan1999-personal",
+          "assignees": [],
+          "labels": [],
+          "url": "https://github.com/che-incubator/kubernetes-image-puller/issues/159",
+          "createdAt": "2023-08-23T15:43:48Z"
+        },
+        {
+          "number": 161,
+          "title": "Publish Helm chart to a repository/registry",
+          "author": "MaesterZ",
+          "assignees": [],
+          "labels": [],
+          "url": "https://github.com/che-incubator/kubernetes-image-puller/issues/161",
+          "createdAt": "2023-08-25T13:34:44Z"
+        },
+        {
+          "number": 176,
+          "title": "Expose KIP_IMAGE env var in helm chart",
+          "author": "tomaxsas",
+          "assignees": [],
+          "labels": [],
+          "url": "https://github.com/che-incubator/kubernetes-image-puller/issues/176",
+          "createdAt": "2024-03-07T06:21:20Z"
+        },
+        {
+          "number": 205,
+          "title": "NodeSelector value is mangled when passed from YAML to ConfigMap",
+          "author": "prathod09",
+          "assignees": [],
+          "labels": [],
+          "url": "https://github.com/che-incubator/kubernetes-image-puller/issues/205",
+          "createdAt": "2025-12-10T20:01:47Z"
+        }
+      ]
+    },
+    "repository": {
+      "stars": 284,
+      "forks": 41,
+      "watchers": 9
+    }
+  },
+  "topActiveUsers": []
+}
