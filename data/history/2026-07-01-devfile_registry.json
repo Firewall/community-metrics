@@ -1,0 +1,68 @@
+{
+  "timestamp": "2026-07-01T02:17:22.933Z",
+  "date": "2026-07-01",
+  "repoLabel": "devfile/registry",
+  "metrics": {
+    "discussions": {
+      "totalUpvotes": 0,
+      "totalComments": 0
+    },
+    "pullRequests": {
+      "open": 2,
+      "total": 490,
+      "merged": 368,
+      "mergeRate": "75.1",
+      "openPRs": [
+        {
+          "number": 689,
+          "title": "TEST CHANGE - DO NOT MERGE",
+          "author": "johnmcollier",
+          "url": "https://github.com/devfile/registry/pull/689",
+          "createdAt": "2026-06-26T17:58:50Z"
+        },
+        {
+          "number": 631,
+          "title": "Update go sample description to match devfile",
+          "author": "michael-valdron",
+          "url": "https://github.com/devfile/registry/pull/631",
+          "createdAt": "2025-09-10T14:38:34Z"
+        }
+      ]
+    },
+    "issues": {
+      "open": 0,
+      "closed": 0,
+      "total": 0,
+      "closeRate": 0,
+      "openIssues": []
+    },
+    "repository": {
+      "stars": 54,
+      "forks": 95,
+      "watchers": 19
+    }
+  },
+  "topActiveUsers": [
+    {
+      "username": "openshift-ci",
+      "prs": 0,
+      "issues": 0,
+      "comments": 9,
+      "total": 9
+    },
+    {
+      "username": "johnmcollier",
+      "prs": 1,
+      "issues": 0,
+      "comments": 0,
+      "total": 3
+    },
+    {
+      "username": "michael-valdron",
+      "prs": 0,
+      "issues": 0,
+      "comments": 1,
+      "total": 1
+    }
+  ]
+}
