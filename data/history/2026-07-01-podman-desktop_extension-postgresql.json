@@ -1,0 +1,45 @@
+{
+  "timestamp": "2026-07-01T02:15:46.787Z",
+  "date": "2026-07-01",
+  "repoLabel": "podman-desktop/extension-postgresql",
+  "metrics": {
+    "discussions": {
+      "totalUpvotes": 0,
+      "totalComments": 0
+    },
+    "pullRequests": {
+      "open": 0,
+      "total": 0,
+      "merged": 0,
+      "mergeRate": 0,
+      "openPRs": []
+    },
+    "issues": {
+      "open": 1,
+      "closed": 0,
+      "total": 1,
+      "closeRate": "0.0",
+      "openIssues": [
+        {
+          "number": 426,
+          "title": "Support Custom Postgres Image",
+          "author": "zhcn000000",
+          "assignees": [],
+          "labels": [],
+          "url": "https://github.com/podman-desktop/extension-postgresql/issues/426",
+          "createdAt": "2026-01-02T06:23:46Z"
+        }
+      ]
+    },
+    "social": {
+      "blueskyFollowers": 187,
+      "mastodonFollowers": 95
+    },
+    "repository": {
+      "stars": 1,
+      "forks": 4,
+      "watchers": 1
+    }
+  },
+  "topActiveUsers": []
+}
