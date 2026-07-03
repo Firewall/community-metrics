@@ -1,0 +1,103 @@
+{
+  "timestamp": "2026-07-03T01:53:44.800Z",
+  "date": "2026-07-03",
+  "repoLabel": "eclipse-che/che-docs",
+  "metrics": {
+    "discussions": {
+      "totalUpvotes": 0,
+      "totalComments": 0
+    },
+    "pullRequests": {
+      "open": 9,
+      "total": 1839,
+      "merged": 1642,
+      "mergeRate": "89.3",
+      "openPRs": [
+        {
+          "number": 3142,
+          "title": "fix: flatten Upgrade nav to remove redundant nesting",
+          "author": "gtrivedi88",
+          "url": "https://github.com/eclipse-che/che-docs/pull/3142",
+          "createdAt": "2026-07-02T11:44:30Z"
+        },
+        {
+          "number": 3141,
+          "title": "feat: add GitOps installation procedures",
+          "author": "gtrivedi88",
+          "url": "https://github.com/eclipse-che/che-docs/pull/3141",
+          "createdAt": "2026-07-02T09:21:57Z"
+        },
+        {
+          "number": 3136,
+          "title": "chore: promote Get Started to top-level Antora module (JTBD Phase 2)",
+          "author": "gtrivedi88",
+          "url": "https://github.com/eclipse-che/che-docs/pull/3136",
+          "createdAt": "2026-06-29T14:30:04Z"
+        },
+        {
+          "number": 3134,
+          "title": "chore: promote Secure to top-level Antora module (JTBD Phase 2)",
+          "author": "gtrivedi88",
+          "url": "https://github.com/eclipse-che/che-docs/pull/3134",
+          "createdAt": "2026-06-29T14:24:34Z"
+        },
+        {
+          "number": 3132,
+          "title": "chore: promote Configure to top-level Antora module (JTBD Phase 2)",
+          "author": "gtrivedi88",
+          "url": "https://github.com/eclipse-che/che-docs/pull/3132",
+          "createdAt": "2026-06-26T14:12:34Z"
+        },
+        {
+          "number": 2936,
+          "title": "docs: update prerequisites for installing Ingress-Nginx Controller on…",
+          "author": "JaivigneshJv",
+          "url": "https://github.com/eclipse-che/che-docs/pull/2936",
+          "createdAt": "2025-07-23T05:49:29Z"
+        },
+        {
+          "number": 2816,
+          "title": "docs: advanced config properties",
+          "author": "deerskindoll",
+          "url": "https://github.com/eclipse-che/che-docs/pull/2816",
+          "createdAt": "2024-11-12T15:26:22Z"
+        },
+        {
+          "number": 2624,
+          "title": "Docs: Adding a step to verify Authorized Applications",
+          "author": "satyamburhade",
+          "url": "https://github.com/eclipse-che/che-docs/pull/2624",
+          "createdAt": "2023-07-12T18:04:07Z"
+        },
+        {
+          "number": 2623,
+          "title": "Update proc_setting-up-the-microsoft-azure-devops-services-oauth-app.…",
+          "author": "satyamburhade",
+          "url": "https://github.com/eclipse-che/che-docs/pull/2623",
+          "createdAt": "2023-07-12T16:20:50Z"
+        }
+      ]
+    },
+    "issues": {
+      "open": 0,
+      "closed": 0,
+      "total": 0,
+      "closeRate": 0,
+      "openIssues": []
+    },
+    "repository": {
+      "stars": 64,
+      "forks": 175,
+      "watchers": 34
+    }
+  },
+  "topActiveUsers": [
+    {
+      "username": "gtrivedi88",
+      "prs": 12,
+      "issues": 0,
+      "comments": 1,
+      "total": 37
+    }
+  ]
+}

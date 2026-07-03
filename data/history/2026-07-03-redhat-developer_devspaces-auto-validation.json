@@ -1,0 +1,64 @@
+{
+  "timestamp": "2026-07-03T01:53:44.814Z",
+  "date": "2026-07-03",
+  "repoLabel": "redhat-developer/devspaces-auto-validation",
+  "metrics": {
+    "discussions": {
+      "totalUpvotes": 0,
+      "totalComments": 0
+    },
+    "pullRequests": {
+      "open": 1,
+      "total": 6,
+      "merged": 5,
+      "mergeRate": "83.3",
+      "openPRs": [
+        {
+          "number": 3,
+          "title": "Fix java quarkus devfile sample",
+          "author": "sbouchet",
+          "url": "https://github.com/redhat-developer/devspaces-auto-validation/pull/3",
+          "createdAt": "2026-05-20T10:29:30Z"
+        }
+      ]
+    },
+    "issues": {
+      "open": 1,
+      "closed": 0,
+      "total": 1,
+      "closeRate": "0.0",
+      "openIssues": [
+        {
+          "number": 11,
+          "title": "As a user I want logs into a file",
+          "author": "sbouchet",
+          "assignees": [],
+          "labels": [],
+          "url": "https://github.com/redhat-developer/devspaces-auto-validation/issues/11",
+          "createdAt": "2026-06-04T15:42:12Z"
+        }
+      ]
+    },
+    "repository": {
+      "stars": 0,
+      "forks": 1,
+      "watchers": 0
+    }
+  },
+  "topActiveUsers": [
+    {
+      "username": "sbouchet",
+      "prs": 1,
+      "issues": 1,
+      "comments": 0,
+      "total": 5
+    },
+    {
+      "username": "rgrunber",
+      "prs": 0,
+      "issues": 0,
+      "comments": 1,
+      "total": 1
+    }
+  ]
+}
