@@ -1,0 +1,80 @@
+{
+  "timestamp": "2026-07-03T01:52:12.929Z",
+  "date": "2026-07-03",
+  "repoLabel": "podman-desktop/extension-kubernetes-dashboard",
+  "metrics": {
+    "discussions": {
+      "totalUpvotes": 0,
+      "totalComments": 0
+    },
+    "pullRequests": {
+      "open": 1,
+      "total": 13,
+      "merged": 7,
+      "mergeRate": "53.8",
+      "openPRs": [
+        {
+          "number": 1021,
+          "title": "Feat/add scaling",
+          "author": "adameska",
+          "url": "https://github.com/podman-desktop/extension-kubernetes-dashboard/pull/1021",
+          "createdAt": "2026-06-05T19:00:52Z"
+        }
+      ]
+    },
+    "issues": {
+      "open": 2,
+      "closed": 0,
+      "total": 2,
+      "closeRate": "0.0",
+      "openIssues": [
+        {
+          "number": 989,
+          "title": "Port Forwarding causes lots of \"A JavaScript error occurred in the main process\" alerts",
+          "author": "overheadhunter",
+          "assignees": [],
+          "labels": [
+            "domain/kubernetes/reviewed"
+          ],
+          "url": "https://github.com/podman-desktop/extension-kubernetes-dashboard/issues/989",
+          "createdAt": "2025-04-10T14:06:08Z"
+        },
+        {
+          "number": 860,
+          "title": "Cannot scale replica set",
+          "author": "adameska",
+          "assignees": [],
+          "labels": [],
+          "url": "https://github.com/podman-desktop/extension-kubernetes-dashboard/issues/860",
+          "createdAt": "2026-04-07T14:16:56Z"
+        }
+      ]
+    },
+    "social": {
+      "blueskyFollowers": 187,
+      "linkedinFollowers": 1193,
+      "mastodonFollowers": 95
+    },
+    "repository": {
+      "stars": 5,
+      "forks": 16,
+      "watchers": 1
+    }
+  },
+  "topActiveUsers": [
+    {
+      "username": "adameska",
+      "prs": 3,
+      "issues": 0,
+      "comments": 9,
+      "total": 18
+    },
+    {
+      "username": "OneCricketeer",
+      "prs": 0,
+      "issues": 0,
+      "comments": 2,
+      "total": 2
+    }
+  ]
+}
