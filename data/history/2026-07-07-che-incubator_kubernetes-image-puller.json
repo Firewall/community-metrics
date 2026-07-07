@@ -1,0 +1,123 @@
+{
+  "timestamp": "2026-07-07T02:01:16.479Z",
+  "date": "2026-07-07",
+  "repoLabel": "che-incubator/kubernetes-image-puller",
+  "metrics": {
+    "discussions": {
+      "totalUpvotes": 0,
+      "totalComments": 0
+    },
+    "pullRequests": {
+      "open": 4,
+      "total": 136,
+      "merged": 102,
+      "mergeRate": "75.0",
+      "openPRs": [
+        {
+          "number": 237,
+          "title": "fix: update GitHub Actions to Node 24-compatible versions",
+          "author": "snecklifter",
+          "url": "https://github.com/che-incubator/kubernetes-image-puller/pull/237",
+          "createdAt": "2026-07-06T14:50:56Z"
+        },
+        {
+          "number": 236,
+          "title": "fix: increase e2e test timeout from 120s to 600s",
+          "author": "snecklifter",
+          "url": "https://github.com/che-incubator/kubernetes-image-puller/pull/236",
+          "createdAt": "2026-07-06T14:02:24Z"
+        },
+        {
+          "number": 234,
+          "title": "fix: remove stale Mattermost notification from CI",
+          "author": "snecklifter",
+          "url": "https://github.com/che-incubator/kubernetes-image-puller/pull/234",
+          "createdAt": "2026-07-06T13:20:40Z"
+        },
+        {
+          "number": 222,
+          "title": "fix: harden Kubernetes pod security for daemonset pods",
+          "author": "snecklifter",
+          "url": "https://github.com/che-incubator/kubernetes-image-puller/pull/222",
+          "createdAt": "2026-07-03T10:23:00Z"
+        }
+      ]
+    },
+    "issues": {
+      "open": 6,
+      "closed": 14,
+      "total": 20,
+      "closeRate": "70.0",
+      "openIssues": [
+        {
+          "number": 93,
+          "title": "[feature request] - compatibility with containerd",
+          "author": "vikas027",
+          "assignees": [],
+          "labels": [],
+          "url": "https://github.com/che-incubator/kubernetes-image-puller/issues/93",
+          "createdAt": "2021-12-16T00:35:00Z"
+        },
+        {
+          "number": 94,
+          "title": "[feature request] - support for multiple node selectors",
+          "author": "vikas027",
+          "assignees": [],
+          "labels": [],
+          "url": "https://github.com/che-incubator/kubernetes-image-puller/issues/94",
+          "createdAt": "2021-12-16T00:41:23Z"
+        },
+        {
+          "number": 159,
+          "title": "Rate limit for image pulling",
+          "author": "stevefan1999-personal",
+          "assignees": [],
+          "labels": [],
+          "url": "https://github.com/che-incubator/kubernetes-image-puller/issues/159",
+          "createdAt": "2023-08-23T15:43:48Z"
+        },
+        {
+          "number": 161,
+          "title": "Publish Helm chart to a repository/registry",
+          "author": "MaesterZ",
+          "assignees": [],
+          "labels": [],
+          "url": "https://github.com/che-incubator/kubernetes-image-puller/issues/161",
+          "createdAt": "2023-08-25T13:34:44Z"
+        },
+        {
+          "number": 217,
+          "title": "Harden Kubernetes pod security for daemonset pods",
+          "author": "snecklifter",
+          "assignees": [],
+          "labels": [],
+          "url": "https://github.com/che-incubator/kubernetes-image-puller/issues/217",
+          "createdAt": "2026-07-03T10:18:57Z"
+        },
+        {
+          "number": 235,
+          "title": "e2e tests time out on cold cache due to large image pulls",
+          "author": "snecklifter",
+          "assignees": [],
+          "labels": [],
+          "url": "https://github.com/che-incubator/kubernetes-image-puller/issues/235",
+          "createdAt": "2026-07-06T14:00:22Z"
+        }
+      ]
+    },
+    "repository": {
+      "stars": 285,
+      "forks": 43,
+      "watchers": 9
+    }
+  },
+  "topActiveUsers": [
+    {
+      "username": "snecklifter",
+      "prs": 15,
+      "issues": 6,
+      "comments": 6,
+      "total": 63
+    }
+  ]
+}

@@ -1,0 +1,66 @@
+{
+  "timestamp": "2026-07-07T01:59:56.577Z",
+  "date": "2026-07-07",
+  "repoLabel": "podman-desktop/extension-podman-quadlet",
+  "metrics": {
+    "discussions": {
+      "totalUpvotes": 0,
+      "totalComments": 0
+    },
+    "pullRequests": {
+      "open": 0,
+      "total": 4,
+      "merged": 3,
+      "mergeRate": "75.0",
+      "openPRs": []
+    },
+    "issues": {
+      "open": 3,
+      "closed": 16,
+      "total": 19,
+      "closeRate": "84.2",
+      "openIssues": [
+        {
+          "number": 759,
+          "title": "bug: QuadletUnitParser may fail silently on [Volume] units and break UI",
+          "author": "joshbrooks",
+          "assignees": [
+            "axel7083"
+          ],
+          "labels": [],
+          "url": "https://github.com/podman-desktop/extension-podman-quadlet/issues/759",
+          "createdAt": "2025-07-18T10:06:49Z"
+        },
+        {
+          "number": 1208,
+          "title": "feat: Syntax highlighting for environment files",
+          "author": "cYDN48",
+          "assignees": [],
+          "labels": [],
+          "url": "https://github.com/podman-desktop/extension-podman-quadlet/issues/1208",
+          "createdAt": "2026-02-02T19:11:51Z"
+        },
+        {
+          "number": 1448,
+          "title": "Quadlet editor resets file permissions to 0666 after saving",
+          "author": "gmipf",
+          "assignees": [],
+          "labels": [],
+          "url": "https://github.com/podman-desktop/extension-podman-quadlet/issues/1448",
+          "createdAt": "2026-04-25T13:16:20Z"
+        }
+      ]
+    },
+    "social": {
+      "blueskyFollowers": 187,
+      "linkedinFollowers": 1197,
+      "mastodonFollowers": 97
+    },
+    "repository": {
+      "stars": 11,
+      "forks": 12,
+      "watchers": 8
+    }
+  },
+  "topActiveUsers": []
+}
