@@ -1,0 +1,384 @@
+{
+  "timestamp": "2026-07-08T01:30:50.689Z",
+  "date": "2026-07-08",
+  "repoLabel": "devfile/api",
+  "metrics": {
+    "discussions": {
+      "totalUpvotes": 0,
+      "totalComments": 1
+    },
+    "pullRequests": {
+      "open": 0,
+      "total": 171,
+      "merged": 153,
+      "mergeRate": "89.5",
+      "openPRs": []
+    },
+    "issues": {
+      "open": 24,
+      "closed": 1367,
+      "total": 1391,
+      "closeRate": "98.3",
+      "openIssues": [
+        {
+          "number": 1268,
+          "title": "Library panics when child devfile overrides parent with list attribute",
+          "author": "rm3l",
+          "assignees": [],
+          "labels": [
+            "kind/bug",
+            "help wanted",
+            "area/api",
+            "area/library",
+            "lifecycle/frozen"
+          ],
+          "url": "https://github.com/devfile/api/issues/1268",
+          "createdAt": "2023-09-27T09:01:15Z"
+        },
+        {
+          "number": 1489,
+          "title": "[DEVREG-6] Community/Product registry maintenance task",
+          "author": "michael-valdron",
+          "assignees": [],
+          "labels": [
+            "area/registry",
+            "devtools-week",
+            "lifecycle/frozen",
+            "kind/task"
+          ],
+          "url": "https://github.com/devfile/api/issues/1489",
+          "createdAt": "2024-03-21T18:59:18Z"
+        },
+        {
+          "number": 1626,
+          "title": "Upgrade devfile registry operator to use operator SDK v1.39.1",
+          "author": "michael-valdron",
+          "assignees": [],
+          "labels": [
+            "area/registry",
+            "kind/user-story",
+            "lifecycle/frozen"
+          ],
+          "url": "https://github.com/devfile/api/issues/1626",
+          "createdAt": "2024-08-21T21:17:11Z"
+        },
+        {
+          "number": 1684,
+          "title": "Bump devfile-web next.js dependency",
+          "author": "thepetk",
+          "assignees": [
+            "michael-valdron"
+          ],
+          "labels": [
+            "area/landing-page",
+            "area/registry-viewer",
+            "lifecycle/frozen"
+          ],
+          "url": "https://github.com/devfile/api/issues/1684",
+          "createdAt": "2025-02-03T13:06:50Z"
+        },
+        {
+          "number": 1693,
+          "title": "OpenShift 4.16+ support for Registry Operator",
+          "author": "michael-valdron",
+          "assignees": [
+            "michael-valdron"
+          ],
+          "labels": [
+            "kind/epic",
+            "area/registry",
+            "kind/user-story",
+            "lifecycle/frozen"
+          ],
+          "url": "https://github.com/devfile/api/issues/1693",
+          "createdAt": "2025-03-13T16:36:22Z"
+        },
+        {
+          "number": 1695,
+          "title": "Publish `0.4.0` release for registry-operator",
+          "author": "michael-valdron",
+          "assignees": [],
+          "labels": [
+            "area/registry",
+            "area/releng",
+            "lifecycle/frozen",
+            "kind/task"
+          ],
+          "url": "https://github.com/devfile/api/issues/1695",
+          "createdAt": "2025-03-13T16:49:07Z"
+        },
+        {
+          "number": 1719,
+          "title": "Implement renovate under devfile organization",
+          "author": "michael-valdron",
+          "assignees": [],
+          "labels": [
+            "area/ci",
+            "lifecycle/frozen",
+            "kind/task"
+          ],
+          "url": "https://github.com/devfile/api/issues/1719",
+          "createdAt": "2025-06-10T20:15:34Z"
+        },
+        {
+          "number": 1725,
+          "title": "Add renovate to Devfile API",
+          "author": "michael-valdron",
+          "assignees": [],
+          "labels": [
+            "area/api",
+            "area/ci",
+            "lifecycle/frozen",
+            "kind/task"
+          ],
+          "url": "https://github.com/devfile/api/issues/1725",
+          "createdAt": "2025-06-10T20:38:08Z"
+        },
+        {
+          "number": 1726,
+          "title": "Modify renovate configuration under Devfile Web",
+          "author": "michael-valdron",
+          "assignees": [],
+          "labels": [
+            "area/ci",
+            "area/landing-page",
+            "area/registry-viewer",
+            "lifecycle/frozen",
+            "kind/task"
+          ],
+          "url": "https://github.com/devfile/api/issues/1726",
+          "createdAt": "2025-06-10T20:42:19Z"
+        },
+        {
+          "number": 1727,
+          "title": "Add renovate to Devfile Registry Operator",
+          "author": "michael-valdron",
+          "assignees": [],
+          "labels": [
+            "area/registry",
+            "area/ci",
+            "lifecycle/frozen",
+            "kind/task"
+          ],
+          "url": "https://github.com/devfile/api/issues/1727",
+          "createdAt": "2025-06-10T20:44:48Z"
+        },
+        {
+          "number": 1729,
+          "title": "Add renovate to Alizer",
+          "author": "michael-valdron",
+          "assignees": [],
+          "labels": [
+            "area/ci",
+            "area/alizer",
+            "lifecycle/frozen",
+            "kind/task"
+          ],
+          "url": "https://github.com/devfile/api/issues/1729",
+          "createdAt": "2025-06-10T21:01:17Z"
+        },
+        {
+          "number": 1731,
+          "title": "Add renovate to Devfile Library",
+          "author": "michael-valdron",
+          "assignees": [],
+          "labels": [
+            "area/ci",
+            "area/library",
+            "lifecycle/frozen",
+            "kind/task"
+          ],
+          "url": "https://github.com/devfile/api/issues/1731",
+          "createdAt": "2025-06-10T21:04:17Z"
+        },
+        {
+          "number": 1747,
+          "title": "Add renovate to the rest of devfile org repos",
+          "author": "thepetk",
+          "assignees": [],
+          "labels": [
+            "area/api",
+            "kind/epic",
+            "area/registry",
+            "area/ci",
+            "area/library",
+            "area/integration-tests",
+            "area/landing-page",
+            "area/alizer",
+            "lifecycle/frozen"
+          ],
+          "url": "https://github.com/devfile/api/issues/1747",
+          "createdAt": "2025-08-01T13:05:40Z"
+        },
+        {
+          "number": 1749,
+          "title": "Modify renovate configuration under Devfile Registry",
+          "author": "michael-valdron",
+          "assignees": [],
+          "labels": [
+            "area/registry",
+            "area/ci",
+            "lifecycle/frozen",
+            "kind/task"
+          ],
+          "url": "https://github.com/devfile/api/issues/1749",
+          "createdAt": "2025-08-20T15:40:18Z"
+        },
+        {
+          "number": 1751,
+          "title": "Ensure devfile-web dependencies are up-to-date",
+          "author": "thepetk",
+          "assignees": [],
+          "labels": [
+            "area/ci",
+            "area/landing-page",
+            "lifecycle/frozen",
+            "kind/task"
+          ],
+          "url": "https://github.com/devfile/api/issues/1751",
+          "createdAt": "2025-09-07T11:28:57Z"
+        },
+        {
+          "number": 1767,
+          "title": "Fix registry-support renovate",
+          "author": "michael-valdron",
+          "assignees": [],
+          "labels": [
+            "kind/bug",
+            "area/registry",
+            "lifecycle/stale"
+          ],
+          "url": "https://github.com/devfile/api/issues/1767",
+          "createdAt": "2026-03-03T17:19:20Z"
+        },
+        {
+          "number": 1768,
+          "title": "Guided Devfile install mission in KubeStellar Console",
+          "author": "clubanderson",
+          "assignees": [],
+          "labels": [
+            "lifecycle/stale"
+          ],
+          "url": "https://github.com/devfile/api/issues/1768",
+          "createdAt": "2026-03-18T15:46:25Z"
+        },
+        {
+          "number": 1769,
+          "title": "Devfile AI-driven Maintainance Tasks Automation Initiatives",
+          "author": "thepetk",
+          "assignees": [
+            "thepetk",
+            "michael-valdron"
+          ],
+          "labels": [
+            "area/api",
+            "kind/epic",
+            "area/registry",
+            "area/ci",
+            "area/library",
+            "area/registry-viewer",
+            "lifecycle/stale",
+            "area/alizer"
+          ],
+          "url": "https://github.com/devfile/api/issues/1769",
+          "createdAt": "2026-04-07T12:36:00Z"
+        },
+        {
+          "number": 1771,
+          "title": "Your project is on the ACMM Leaderboard — see your AI-readiness score",
+          "author": "clubanderson",
+          "assignees": [],
+          "labels": [],
+          "url": "https://github.com/devfile/api/issues/1771",
+          "createdAt": "2026-04-23T06:23:57Z"
+        },
+        {
+          "number": 1772,
+          "title": "Fix registry-support next image workflow",
+          "author": "michael-valdron",
+          "assignees": [
+            "michael-valdron"
+          ],
+          "labels": [
+            "kind/bug",
+            "area/registry",
+            "area/ci"
+          ],
+          "url": "https://github.com/devfile/api/issues/1772",
+          "createdAt": "2026-06-10T01:37:26Z"
+        },
+        {
+          "number": 1773,
+          "title": "Provide governance for AI-usage under the Devfile project",
+          "author": "michael-valdron",
+          "assignees": [],
+          "labels": [
+            "area/documentation"
+          ],
+          "url": "https://github.com/devfile/api/issues/1773",
+          "createdAt": "2026-06-10T01:59:28Z"
+        },
+        {
+          "number": 1774,
+          "title": "[registry] Create skill for upgrading the Go version",
+          "author": "michael-valdron",
+          "assignees": [],
+          "labels": [
+            "area/registry",
+            "kind/task"
+          ],
+          "url": "https://github.com/devfile/api/issues/1774",
+          "createdAt": "2026-06-10T02:07:14Z"
+        },
+        {
+          "number": 1775,
+          "title": "[registry] Create skill for upgrading the Go stack/sample Go runtime version",
+          "author": "michael-valdron",
+          "assignees": [],
+          "labels": [
+            "area/registry",
+            "kind/task"
+          ],
+          "url": "https://github.com/devfile/api/issues/1775",
+          "createdAt": "2026-06-10T12:05:15Z"
+        },
+        {
+          "number": 1777,
+          "title": "[chore] Fix deprecations for devfile-resources/devfile-resources.github.io deploy CI",
+          "author": "michael-valdron",
+          "assignees": [
+            "michael-valdron"
+          ],
+          "labels": [
+            "area/ci",
+            "area/landing-page",
+            "kind/task"
+          ],
+          "url": "https://github.com/devfile/api/issues/1777",
+          "createdAt": "2026-06-19T14:24:19Z"
+        }
+      ]
+    },
+    "repository": {
+      "stars": 340,
+      "forks": 77,
+      "watchers": 20
+    }
+  },
+  "topActiveUsers": [
+    {
+      "username": "michael-valdron",
+      "prs": 0,
+      "issues": 6,
+      "comments": 2,
+      "total": 14
+    },
+    {
+      "username": "openshift-ci",
+      "prs": 0,
+      "issues": 0,
+      "comments": 1,
+      "total": 1
+    }
+  ]
+}
