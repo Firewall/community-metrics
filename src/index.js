@@ -196,9 +196,32 @@ async function processProject(project) {
 
   console.log(`\n🚀 Fetching metrics for ${project.repos.length} repositories in parallel...`);
 
-  const repoResults = await Promise.all(
+  const settledResults = await Promise.allSettled(
     project.repos.map(repo => fetchRepoMetrics(repo, socialMetrics))
   );
+
+  const repoResults = [];
+  const failedRepos = [];
+
+  settledResults.forEach((result, index) => {
+    if (result.status === 'fulfilled') {
+      repoResults.push(result.value);
+    } else {
+      const repo = project.repos[index];
+      const repoLabel = `${repo.owner}/${repo.name}`;
+      failedRepos.push(repoLabel);
+      console.error(`\n❌ [${repoLabel}] Failed to fetch metrics: ${result.reason?.message || result.reason}`);
+    }
+  });
+
+  if (failedRepos.length > 0) {
+    console.warn(`\n⚠️  ${failedRepos.length}/${project.repos.length} repositories failed. Continuing with ${repoResults.length} successful results.`);
+  }
+
+  if (repoResults.length === 0) {
+    console.error(`\n❌ All repositories failed for project ${project.name}. Skipping.`);
+    return { total: project.repos.length, failed: failedRepos.length };
+  }
 
   for (const result of repoResults) {
     const rates = displayMetrics(result.metrics, result.repo);
@@ -210,12 +233,12 @@ async function processProject(project) {
       await saveSnapshot(result.metrics, result.topActiveUsers, rates, repoLabel, result.socialMetrics, result.repoMetadata);
     }
 
-    if (project.repos.length === 1) {
+    if (repoResults.length === 1) {
       outputGitHubActions(result.metrics, rates, result.topActiveUsers);
     }
   }
 
-  if (project.repos.length > 1) {
+  if (repoResults.length > 1) {
     console.log('\n\n');
     console.log('─'.repeat(60));
     console.log(`📊 AGGREGATE METRICS - ${project.name}`);
@@ -236,6 +259,8 @@ async function processProject(project) {
 
     outputGitHubActions(aggregate, rates, topActiveUsers);
   }
+
+  return { total: project.repos.length, failed: failedRepos.length };
 }
 
 async function main() {
@@ -244,8 +269,19 @@ async function main() {
       console.log('\n⚠️  Cache disabled - fetching fresh data for all repositories');
     }
 
+    let totalRepos = 0;
+    let totalFailed = 0;
+
     for (const project of config.projects) {
-      await processProject(project);
+      const result = await processProject(project);
+      if (result) {
+        totalRepos += result.total;
+        totalFailed += result.failed;
+      }
+    }
+
+    if (totalFailed > 0) {
+      console.warn(`\n⚠️  Completed with ${totalFailed}/${totalRepos} repository failures.`);
     }
 
   } catch (error) {
