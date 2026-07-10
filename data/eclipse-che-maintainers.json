@@ -13,7 +13,15 @@
     "azatsarynnyy",
     "adietish",
     "vrubezhny",
-    "msivasubramaniaan"
+    "msivasubramaniaan",
+    "sbouchet",
+    "rgrunber",
+    "svor",
+    "rohanKanojia",
+    "gtrivedi88",
+    "Allda",
+    "michael-valdron",
+    "dkwon17"
   ],
   "bots": [
     "dependabot",
@@ -21,7 +29,9 @@
     "github-actions",
     "codecov",
     "coderabbitai",
-    "red-hat-konflux"
+    "red-hat-konflux",
+    "team-devfile-bot",
+    "che-incubator-bot"
   ],
   "emeritus": [
     "monaka",
@@ -39,7 +49,6 @@
     "flacatus",
     "AndrienkoAleksandr",
     "nickboldt",
-    "dkwon17",
     "davidfestal",
     "mmorhun",
     "amisevsk",
