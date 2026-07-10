@@ -1,23 +1,66 @@
 import { QUERIES } from '../queries/github-queries.js';
 import { config } from '../config.js';
 
+const MAX_RETRIES = 3;
+
 export async function makeGraphQLRequest(query, variables) {
-  const response = await fetch("https://api.github.com/graphql", {
-    method: "POST",
-    headers: {
-      Authorization: `Bearer ${config.ghToken}`,
-      "Content-Type": "application/json",
-    },
-    body: JSON.stringify({ query, variables }),
-  });
+  for (let attempt = 0; attempt <= MAX_RETRIES; attempt++) {
+    try {
+      const response = await fetch("https://api.github.com/graphql", {
+        method: "POST",
+        headers: {
+          Authorization: `Bearer ${config.ghToken}`,
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({ query, variables }),
+      });
 
-  const data = await response.json();
+      if (!response.ok) {
+        const status = response.status;
+        const isRetryable = status === 429 || status >= 500;
 
-  if (data.errors) {
-    throw new Error(`GraphQL Error: ${JSON.stringify(data.errors)}`);
+        if (isRetryable && attempt < MAX_RETRIES) {
+          let delay = 1000 * Math.pow(2, attempt) + Math.random() * 1000;
+
+          if (status === 429) {
+            const retryAfter = response.headers.get('Retry-After');
+            if (retryAfter) {
+              delay = Math.max(parseInt(retryAfter, 10) * 1000, delay);
+            }
+          }
+
+          console.warn(`GitHub API returned ${status} (attempt ${attempt + 1}/${MAX_RETRIES + 1}). Retrying in ${Math.round(delay)}ms...`);
+          await new Promise(resolve => setTimeout(resolve, delay));
+          continue;
+        }
+
+        const body = await response.text().catch(() => '');
+        throw new Error(`GitHub API HTTP ${status}: ${body.slice(0, 200)}`);
+      }
+
+      const data = await response.json();
+
+      if (data.errors) {
+        throw new Error(`GraphQL Error: ${JSON.stringify(data.errors)}`);
+      }
+
+      return data;
+
+    } catch (error) {
+      if (error.message.startsWith('GitHub API HTTP') || error.message.startsWith('GraphQL Error')) {
+        throw error;
+      }
+
+      if (attempt < MAX_RETRIES) {
+        const delay = 1000 * Math.pow(2, attempt) + Math.random() * 1000;
+        console.warn(`GitHub API request failed (attempt ${attempt + 1}/${MAX_RETRIES + 1}): ${error.message}. Retrying in ${Math.round(delay)}ms...`);
+        await new Promise(resolve => setTimeout(resolve, delay));
+        continue;
+      }
+
+      throw error;
+    }
   }
-
-  return data;
 }
 
 export async function paginatedFetch(queryName, processor, repo, progressMessage = null, extraVariables = {}) {
