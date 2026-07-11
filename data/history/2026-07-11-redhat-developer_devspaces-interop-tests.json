@@ -1,0 +1,31 @@
+{
+  "timestamp": "2026-07-11T01:30:36.478Z",
+  "date": "2026-07-11",
+  "repoLabel": "redhat-developer/devspaces-interop-tests",
+  "metrics": {
+    "discussions": {
+      "totalUpvotes": 0,
+      "totalComments": 0
+    },
+    "pullRequests": {
+      "open": 0,
+      "total": 4,
+      "merged": 4,
+      "mergeRate": "100.0",
+      "openPRs": []
+    },
+    "issues": {
+      "open": 0,
+      "closed": 0,
+      "total": 0,
+      "closeRate": 0,
+      "openIssues": []
+    },
+    "repository": {
+      "stars": 0,
+      "forks": 2,
+      "watchers": 10
+    }
+  },
+  "topActiveUsers": []
+}
