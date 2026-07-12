@@ -1,0 +1,61 @@
+{
+  "timestamp": "2026-07-12T01:32:12.363Z",
+  "date": "2026-07-12",
+  "repoLabel": "eclipse-che/che-dashboard",
+  "metrics": {
+    "discussions": {
+      "totalUpvotes": 0,
+      "totalComments": 0
+    },
+    "pullRequests": {
+      "open": 1,
+      "total": 73,
+      "merged": 58,
+      "mergeRate": "79.5",
+      "openPRs": [
+        {
+          "number": 1631,
+          "title": "fix(a11y): add tabIndex to workspace progress steps",
+          "author": "olkornii",
+          "url": "https://github.com/eclipse-che/che-dashboard/pull/1631",
+          "createdAt": "2026-07-09T09:42:06Z"
+        }
+      ]
+    },
+    "issues": {
+      "open": 0,
+      "closed": 0,
+      "total": 0,
+      "closeRate": 0,
+      "openIssues": []
+    },
+    "repository": {
+      "stars": 19,
+      "forks": 63,
+      "watchers": 20
+    }
+  },
+  "topActiveUsers": [
+    {
+      "username": "openshift-ci",
+      "prs": 0,
+      "issues": 0,
+      "comments": 51,
+      "total": 51
+    },
+    {
+      "username": "olkornii",
+      "prs": 1,
+      "issues": 0,
+      "comments": 2,
+      "total": 5
+    },
+    {
+      "username": "snecklifter",
+      "prs": 1,
+      "issues": 0,
+      "comments": 1,
+      "total": 4
+    }
+  ]
+}
