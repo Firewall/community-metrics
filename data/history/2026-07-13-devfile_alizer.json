@@ -1,0 +1,61 @@
+{
+  "timestamp": "2026-07-13T01:46:09.017Z",
+  "date": "2026-07-13",
+  "repoLabel": "devfile/alizer",
+  "metrics": {
+    "discussions": {
+      "totalUpvotes": 0,
+      "totalComments": 0
+    },
+    "pullRequests": {
+      "open": 1,
+      "total": 145,
+      "merged": 62,
+      "mergeRate": "42.8",
+      "openPRs": [
+        {
+          "number": 325,
+          "title": "Exclude resources from dependabot checks",
+          "author": "thepetk",
+          "url": "https://github.com/devfile/alizer/pull/325",
+          "createdAt": "2026-01-29T11:47:57Z"
+        }
+      ]
+    },
+    "issues": {
+      "open": 0,
+      "closed": 0,
+      "total": 0,
+      "closeRate": 0,
+      "openIssues": []
+    },
+    "repository": {
+      "stars": 9,
+      "forks": 14,
+      "watchers": 7
+    }
+  },
+  "topActiveUsers": [
+    {
+      "username": "openshift-ci",
+      "prs": 0,
+      "issues": 0,
+      "comments": 8,
+      "total": 8
+    },
+    {
+      "username": "thepetk",
+      "prs": 1,
+      "issues": 0,
+      "comments": 0,
+      "total": 3
+    },
+    {
+      "username": "qodo-code-review",
+      "prs": 0,
+      "issues": 0,
+      "comments": 2,
+      "total": 2
+    }
+  ]
+}
