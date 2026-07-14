@@ -1,0 +1,49 @@
+{
+  "timestamp": "2026-07-14T01:22:42.081Z",
+  "date": "2026-07-14",
+  "repoLabel": "redhat-developer/devspaces-multicluster-redirector",
+  "metrics": {
+    "discussions": {
+      "totalUpvotes": 0,
+      "totalComments": 0
+    },
+    "pullRequests": {
+      "open": 0,
+      "total": 0,
+      "merged": 0,
+      "mergeRate": 0,
+      "openPRs": []
+    },
+    "issues": {
+      "open": 1,
+      "closed": 0,
+      "total": 1,
+      "closeRate": "0.0",
+      "openIssues": [
+        {
+          "number": 11,
+          "title": "Allow redirection based on several groups",
+          "author": "misanche",
+          "assignees": [],
+          "labels": [],
+          "url": "https://github.com/redhat-developer/devspaces-multicluster-redirector/issues/11",
+          "createdAt": "2026-06-24T13:06:59Z"
+        }
+      ]
+    },
+    "repository": {
+      "stars": 3,
+      "forks": 0,
+      "watchers": 0
+    }
+  },
+  "topActiveUsers": [
+    {
+      "username": "misanche",
+      "prs": 0,
+      "issues": 1,
+      "comments": 0,
+      "total": 2
+    }
+  ]
+}
