@@ -1,0 +1,54 @@
+{
+  "timestamp": "2026-07-15T01:20:03.649Z",
+  "date": "2026-07-15",
+  "repoLabel": "redhat-developer/devspaces-gateway-plugin",
+  "metrics": {
+    "discussions": {
+      "totalUpvotes": 0,
+      "totalComments": 0
+    },
+    "pullRequests": {
+      "open": 1,
+      "total": 3,
+      "merged": 0,
+      "mergeRate": "0.0",
+      "openPRs": [
+        {
+          "number": 334,
+          "title": "Fix OpenShift OAuth flow and Gateway connection hangs",
+          "author": "csfercoci",
+          "url": "https://github.com/redhat-developer/devspaces-gateway-plugin/pull/334",
+          "createdAt": "2026-07-10T16:29:05Z"
+        }
+      ]
+    },
+    "issues": {
+      "open": 0,
+      "closed": 0,
+      "total": 0,
+      "closeRate": 0,
+      "openIssues": []
+    },
+    "repository": {
+      "stars": 7,
+      "forks": 8,
+      "watchers": 14
+    }
+  },
+  "topActiveUsers": [
+    {
+      "username": "codecov-commenter",
+      "prs": 0,
+      "issues": 0,
+      "comments": 9,
+      "total": 9
+    },
+    {
+      "username": "csfercoci",
+      "prs": 2,
+      "issues": 0,
+      "comments": 0,
+      "total": 6
+    }
+  ]
+}
