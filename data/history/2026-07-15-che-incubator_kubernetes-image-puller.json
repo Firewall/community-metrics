@@ -1,0 +1,76 @@
+{
+  "timestamp": "2026-07-15T01:20:03.640Z",
+  "date": "2026-07-15",
+  "repoLabel": "che-incubator/kubernetes-image-puller",
+  "metrics": {
+    "discussions": {
+      "totalUpvotes": 0,
+      "totalComments": 0
+    },
+    "pullRequests": {
+      "open": 0,
+      "total": 71,
+      "merged": 66,
+      "mergeRate": "93.0",
+      "openPRs": []
+    },
+    "issues": {
+      "open": 4,
+      "closed": 16,
+      "total": 20,
+      "closeRate": "80.0",
+      "openIssues": [
+        {
+          "number": 93,
+          "title": "[feature request] - compatibility with containerd",
+          "author": "vikas027",
+          "assignees": [],
+          "labels": [],
+          "url": "https://github.com/che-incubator/kubernetes-image-puller/issues/93",
+          "createdAt": "2021-12-16T00:35:00Z"
+        },
+        {
+          "number": 94,
+          "title": "[feature request] - support for multiple node selectors",
+          "author": "vikas027",
+          "assignees": [],
+          "labels": [],
+          "url": "https://github.com/che-incubator/kubernetes-image-puller/issues/94",
+          "createdAt": "2021-12-16T00:41:23Z"
+        },
+        {
+          "number": 159,
+          "title": "Rate limit for image pulling",
+          "author": "stevefan1999-personal",
+          "assignees": [],
+          "labels": [],
+          "url": "https://github.com/che-incubator/kubernetes-image-puller/issues/159",
+          "createdAt": "2023-08-23T15:43:48Z"
+        },
+        {
+          "number": 161,
+          "title": "Publish Helm chart to a repository/registry",
+          "author": "MaesterZ",
+          "assignees": [],
+          "labels": [],
+          "url": "https://github.com/che-incubator/kubernetes-image-puller/issues/161",
+          "createdAt": "2023-08-25T13:34:44Z"
+        }
+      ]
+    },
+    "repository": {
+      "stars": 286,
+      "forks": 43,
+      "watchers": 9
+    }
+  },
+  "topActiveUsers": [
+    {
+      "username": "snecklifter",
+      "prs": 19,
+      "issues": 6,
+      "comments": 8,
+      "total": 77
+    }
+  ]
+}
