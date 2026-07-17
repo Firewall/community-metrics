@@ -1,0 +1,49 @@
+{
+  "timestamp": "2026-07-17T01:32:55.451Z",
+  "date": "2026-07-17",
+  "repoLabel": "che-incubator/kubernetes-image-puller",
+  "metrics": {
+    "discussions": {
+      "totalUpvotes": 0,
+      "totalComments": 0
+    },
+    "pullRequests": {
+      "open": 0,
+      "total": 71,
+      "merged": 66,
+      "mergeRate": "93.0",
+      "openPRs": []
+    },
+    "issues": {
+      "open": 1,
+      "closed": 19,
+      "total": 20,
+      "closeRate": "95.0",
+      "openIssues": [
+        {
+          "number": 161,
+          "title": "Publish Helm chart to a repository/registry",
+          "author": "MaesterZ",
+          "assignees": [],
+          "labels": [],
+          "url": "https://github.com/che-incubator/kubernetes-image-puller/issues/161",
+          "createdAt": "2023-08-25T13:34:44Z"
+        }
+      ]
+    },
+    "repository": {
+      "stars": 286,
+      "forks": 43,
+      "watchers": 9
+    }
+  },
+  "topActiveUsers": [
+    {
+      "username": "snecklifter",
+      "prs": 19,
+      "issues": 6,
+      "comments": 8,
+      "total": 77
+    }
+  ]
+}
