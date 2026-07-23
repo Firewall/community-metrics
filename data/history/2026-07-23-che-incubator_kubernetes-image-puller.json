@@ -1,0 +1,67 @@
+{
+  "timestamp": "2026-07-23T01:48:44.423Z",
+  "date": "2026-07-23",
+  "repoLabel": "che-incubator/kubernetes-image-puller",
+  "metrics": {
+    "discussions": {
+      "totalUpvotes": 0,
+      "totalComments": 0
+    },
+    "pullRequests": {
+      "open": 0,
+      "total": 73,
+      "merged": 68,
+      "mergeRate": "93.2",
+      "openPRs": []
+    },
+    "issues": {
+      "open": 3,
+      "closed": 20,
+      "total": 23,
+      "closeRate": "87.0",
+      "openIssues": [
+        {
+          "number": 252,
+          "title": "Consolidate release workflows into a single workflow",
+          "author": "snecklifter",
+          "assignees": [],
+          "labels": [],
+          "url": "https://github.com/che-incubator/kubernetes-image-puller/issues/252",
+          "createdAt": "2026-07-20T08:50:48Z"
+        },
+        {
+          "number": 253,
+          "title": "Add signing and provenance to published Helm chart",
+          "author": "snecklifter",
+          "assignees": [],
+          "labels": [],
+          "url": "https://github.com/che-incubator/kubernetes-image-puller/issues/253",
+          "createdAt": "2026-07-20T08:50:52Z"
+        },
+        {
+          "number": 255,
+          "title": "Enable vulnerability reporting",
+          "author": "snecklifter",
+          "assignees": [],
+          "labels": [],
+          "url": "https://github.com/che-incubator/kubernetes-image-puller/issues/255",
+          "createdAt": "2026-07-21T12:01:46Z"
+        }
+      ]
+    },
+    "repository": {
+      "stars": 287,
+      "forks": 43,
+      "watchers": 9
+    }
+  },
+  "topActiveUsers": [
+    {
+      "username": "snecklifter",
+      "prs": 21,
+      "issues": 9,
+      "comments": 9,
+      "total": 90
+    }
+  ]
+}
