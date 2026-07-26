@@ -1,0 +1,160 @@
+{
+  "timestamp": "2026-07-26T01:46:55.930Z",
+  "date": "2026-07-26",
+  "repoLabel": "devfile/api",
+  "metrics": {
+    "discussions": {
+      "totalUpvotes": 0,
+      "totalComments": 1
+    },
+    "pullRequests": {
+      "open": 1,
+      "total": 161,
+      "merged": 143,
+      "mergeRate": "88.8",
+      "openPRs": [
+        {
+          "number": 1782,
+          "title": "Create go.yml",
+          "author": "blccopyrigth7-creator",
+          "url": "https://github.com/devfile/api/pull/1782",
+          "createdAt": "2026-07-22T12:42:16Z"
+        }
+      ]
+    },
+    "issues": {
+      "open": 7,
+      "closed": 1082,
+      "total": 1089,
+      "closeRate": "99.4",
+      "openIssues": [
+        {
+          "number": 1268,
+          "title": "Library panics when child devfile overrides parent with list attribute",
+          "author": "rm3l",
+          "assignees": [],
+          "labels": [
+            "kind/bug",
+            "help wanted",
+            "area/api",
+            "area/library",
+            "lifecycle/frozen"
+          ],
+          "url": "https://github.com/devfile/api/issues/1268",
+          "createdAt": "2023-09-27T09:01:15Z"
+        },
+        {
+          "number": 1684,
+          "title": "Bump devfile-web next.js dependency",
+          "author": "thepetk",
+          "assignees": [
+            "michael-valdron"
+          ],
+          "labels": [
+            "area/landing-page",
+            "area/registry-viewer",
+            "lifecycle/frozen"
+          ],
+          "url": "https://github.com/devfile/api/issues/1684",
+          "createdAt": "2025-02-03T13:06:50Z"
+        },
+        {
+          "number": 1747,
+          "title": "Add renovate to the rest of devfile org repos",
+          "author": "thepetk",
+          "assignees": [],
+          "labels": [
+            "area/api",
+            "kind/epic",
+            "area/registry",
+            "area/ci",
+            "area/library",
+            "area/integration-tests",
+            "area/landing-page",
+            "area/alizer",
+            "lifecycle/frozen"
+          ],
+          "url": "https://github.com/devfile/api/issues/1747",
+          "createdAt": "2025-08-01T13:05:40Z"
+        },
+        {
+          "number": 1751,
+          "title": "Ensure devfile-web dependencies are up-to-date",
+          "author": "thepetk",
+          "assignees": [],
+          "labels": [
+            "area/ci",
+            "area/landing-page",
+            "lifecycle/frozen",
+            "kind/task"
+          ],
+          "url": "https://github.com/devfile/api/issues/1751",
+          "createdAt": "2025-09-07T11:28:57Z"
+        },
+        {
+          "number": 1768,
+          "title": "Guided Devfile install mission in KubeStellar Console",
+          "author": "clubanderson",
+          "assignees": [],
+          "labels": [
+            "lifecycle/stale"
+          ],
+          "url": "https://github.com/devfile/api/issues/1768",
+          "createdAt": "2026-03-18T15:46:25Z"
+        },
+        {
+          "number": 1769,
+          "title": "Devfile AI-driven Maintainance Tasks Automation Initiatives",
+          "author": "thepetk",
+          "assignees": [
+            "thepetk",
+            "michael-valdron"
+          ],
+          "labels": [
+            "area/api",
+            "kind/epic",
+            "area/registry",
+            "area/ci",
+            "area/library",
+            "area/registry-viewer",
+            "area/alizer"
+          ],
+          "url": "https://github.com/devfile/api/issues/1769",
+          "createdAt": "2026-04-07T12:36:00Z"
+        },
+        {
+          "number": 1771,
+          "title": "Your project is on the ACMM Leaderboard — see your AI-readiness score",
+          "author": "clubanderson",
+          "assignees": [],
+          "labels": [
+            "lifecycle/stale"
+          ],
+          "url": "https://github.com/devfile/api/issues/1771",
+          "createdAt": "2026-04-23T06:23:57Z"
+        }
+      ]
+    },
+    "repository": {
+      "stars": 341,
+      "forks": 77,
+      "watchers": 20
+    }
+  },
+  "topActiveUsers": [
+    {
+      "username": "blccopyrigth7-creator",
+      "prs": 1,
+      "issues": 0,
+      "comments": 0,
+      "total": 3
+    },
+    {
+      "username": "openshift-ci",
+      "prs": 0,
+      "issues": 0,
+      "comments": 2,
+      "total": 2
+    }
+  ]
+}
