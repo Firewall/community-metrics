@@ -1,0 +1,46 @@
+{
+  "timestamp": "2026-07-31T01:48:33.704Z",
+  "date": "2026-07-31",
+  "repoLabel": "redhat-developer/devspaces-toolbox-plugin",
+  "metrics": {
+    "discussions": {
+      "totalUpvotes": 0,
+      "totalComments": 0
+    },
+    "pullRequests": {
+      "open": 2,
+      "total": 2,
+      "merged": 0,
+      "mergeRate": "0.0",
+      "openPRs": [
+        {
+          "number": 8,
+          "title": "Show workspace owner and add filter toggle for cluster admins",
+          "author": "SupremeMortal",
+          "url": "https://github.com/redhat-developer/devspaces-toolbox-plugin/pull/8",
+          "createdAt": "2026-06-12T11:35:51Z"
+        },
+        {
+          "number": 7,
+          "title": "Expose each DevWorkspace project to Toolbox instead of /projects",
+          "author": "AgentK20",
+          "url": "https://github.com/redhat-developer/devspaces-toolbox-plugin/pull/7",
+          "createdAt": "2026-06-03T04:19:11Z"
+        }
+      ]
+    },
+    "issues": {
+      "open": 0,
+      "closed": 0,
+      "total": 0,
+      "closeRate": 0,
+      "openIssues": []
+    },
+    "repository": {
+      "stars": 3,
+      "forks": 6,
+      "watchers": 0
+    }
+  },
+  "topActiveUsers": []
+}
