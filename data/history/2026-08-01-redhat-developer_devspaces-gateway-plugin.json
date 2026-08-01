@@ -1,0 +1,53 @@
+{
+  "timestamp": "2026-08-01T01:49:34.476Z",
+  "date": "2026-08-01",
+  "repoLabel": "redhat-developer/devspaces-gateway-plugin",
+  "metrics": {
+    "discussions": {
+      "totalUpvotes": 0,
+      "totalComments": 0
+    },
+    "pullRequests": {
+      "open": 0,
+      "total": 4,
+      "merged": 0,
+      "mergeRate": "0.0",
+      "openPRs": []
+    },
+    "issues": {
+      "open": 0,
+      "closed": 0,
+      "total": 0,
+      "closeRate": 0,
+      "openIssues": []
+    },
+    "repository": {
+      "stars": 7,
+      "forks": 9,
+      "watchers": 14
+    }
+  },
+  "topActiveUsers": [
+    {
+      "username": "codecov-commenter",
+      "prs": 0,
+      "issues": 0,
+      "comments": 13,
+      "total": 13
+    },
+    {
+      "username": "csfercoci",
+      "prs": 2,
+      "issues": 0,
+      "comments": 0,
+      "total": 6
+    },
+    {
+      "username": "TheChosenMok",
+      "prs": 1,
+      "issues": 0,
+      "comments": 0,
+      "total": 3
+    }
+  ]
+}
