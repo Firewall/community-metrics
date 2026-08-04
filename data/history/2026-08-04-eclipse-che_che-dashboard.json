@@ -1,0 +1,46 @@
+{
+  "timestamp": "2026-08-04T01:24:40.957Z",
+  "date": "2026-08-04",
+  "repoLabel": "eclipse-che/che-dashboard",
+  "metrics": {
+    "discussions": {
+      "totalUpvotes": 0,
+      "totalComments": 0
+    },
+    "pullRequests": {
+      "open": 0,
+      "total": 74,
+      "merged": 60,
+      "mergeRate": "81.1",
+      "openPRs": []
+    },
+    "issues": {
+      "open": 0,
+      "closed": 0,
+      "total": 0,
+      "closeRate": 0,
+      "openIssues": []
+    },
+    "repository": {
+      "stars": 19,
+      "forks": 63,
+      "watchers": 20
+    }
+  },
+  "topActiveUsers": [
+    {
+      "username": "openshift-ci",
+      "prs": 0,
+      "issues": 0,
+      "comments": 27,
+      "total": 27
+    },
+    {
+      "username": "olkornii",
+      "prs": 2,
+      "issues": 0,
+      "comments": 3,
+      "total": 9
+    }
+  ]
+}
