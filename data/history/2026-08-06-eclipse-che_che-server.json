@@ -1,0 +1,54 @@
+{
+  "timestamp": "2026-08-06T01:26:52.221Z",
+  "date": "2026-08-06",
+  "repoLabel": "eclipse-che/che-server",
+  "metrics": {
+    "discussions": {
+      "totalUpvotes": 0,
+      "totalComments": 0
+    },
+    "pullRequests": {
+      "open": 1,
+      "total": 45,
+      "merged": 34,
+      "mergeRate": "75.6",
+      "openPRs": [
+        {
+          "number": 1043,
+          "title": "chore(deps): bump io.fabric8.kubernetes-client from 7.7.0 to 7.8.0",
+          "author": "bianicu",
+          "url": "https://github.com/eclipse-che/che-server/pull/1043",
+          "createdAt": "2026-08-05T09:25:39Z"
+        }
+      ]
+    },
+    "issues": {
+      "open": 0,
+      "closed": 0,
+      "total": 0,
+      "closeRate": 0,
+      "openIssues": []
+    },
+    "repository": {
+      "stars": 143,
+      "forks": 77,
+      "watchers": 14
+    }
+  },
+  "topActiveUsers": [
+    {
+      "username": "openshift-ci",
+      "prs": 0,
+      "issues": 0,
+      "comments": 21,
+      "total": 21
+    },
+    {
+      "username": "bianicu",
+      "prs": 1,
+      "issues": 0,
+      "comments": 0,
+      "total": 3
+    }
+  ]
+}
