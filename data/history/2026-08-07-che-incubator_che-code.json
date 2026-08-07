@@ -1,0 +1,75 @@
+{
+  "timestamp": "2026-08-07T02:05:22.087Z",
+  "date": "2026-08-07",
+  "repoLabel": "che-incubator/che-code",
+  "metrics": {
+    "discussions": {
+      "totalUpvotes": 0,
+      "totalComments": 0
+    },
+    "pullRequests": {
+      "open": 5,
+      "total": 89,
+      "merged": 65,
+      "mergeRate": "73.0",
+      "openPRs": [
+        {
+          "number": 752,
+          "title": "feat: add clone path and related test",
+          "author": "batleforc",
+          "url": "https://github.com/che-incubator/che-code/pull/752",
+          "createdAt": "2026-07-08T18:24:44Z"
+        },
+        {
+          "number": 725,
+          "title": "Added ppc64le support",
+          "author": "prabhuk25",
+          "url": "https://github.com/che-incubator/che-code/pull/725",
+          "createdAt": "2026-06-18T15:55:36Z"
+        },
+        {
+          "number": 626,
+          "title": "Rebase off of VS Code v1.108.X to support GitHub Copilot in Eclipse Che",
+          "author": "cgruver",
+          "url": "https://github.com/che-incubator/che-code/pull/626",
+          "createdAt": "2026-01-09T19:19:59Z"
+        },
+        {
+          "number": 336,
+          "title": "[WIP] build CLI from sources",
+          "author": "vitaliy-guliy",
+          "url": "https://github.com/che-incubator/che-code/pull/336",
+          "createdAt": "2024-03-05T12:31:45Z"
+        },
+        {
+          "number": 327,
+          "title": "[wip] add ssh support",
+          "author": "vitaliy-guliy",
+          "url": "https://github.com/che-incubator/che-code/pull/327",
+          "createdAt": "2024-02-08T14:54:15Z"
+        }
+      ]
+    },
+    "issues": {
+      "open": 0,
+      "closed": 0,
+      "total": 0,
+      "closeRate": 0,
+      "openIssues": []
+    },
+    "repository": {
+      "stars": 35,
+      "forks": 47,
+      "watchers": 7
+    }
+  },
+  "topActiveUsers": [
+    {
+      "username": "batleforc",
+      "prs": 1,
+      "issues": 0,
+      "comments": 1,
+      "total": 4
+    }
+  ]
+}
