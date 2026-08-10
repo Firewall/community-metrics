@@ -1,0 +1,213 @@
+{
+  "timestamp": "2026-08-10T00:55:29.442Z",
+  "date": "2026-08-10",
+  "repoLabel": "devfile/devworkspace-operator",
+  "metrics": {
+    "discussions": {
+      "totalUpvotes": 0,
+      "totalComments": 0
+    },
+    "pullRequests": {
+      "open": 5,
+      "total": 103,
+      "merged": 82,
+      "mergeRate": "79.6",
+      "openPRs": [
+        {
+          "number": 1680,
+          "title": "feat: implement Gateway API routing class for DevWorkspaceRouting",
+          "author": "btjd",
+          "url": "https://github.com/devfile/devworkspace-operator/pull/1680",
+          "createdAt": "2026-07-28T13:48:12Z"
+        },
+        {
+          "number": 1669,
+          "title": "Fix issue #1668 about auto renew certificate on mutating / validating",
+          "author": "disaster37",
+          "url": "https://github.com/devfile/devworkspace-operator/pull/1669",
+          "createdAt": "2026-07-02T08:50:49Z"
+        },
+        {
+          "number": 1236,
+          "title": "[Devtools] Add Security Insights for CNCF",
+          "author": "Jdubrick",
+          "url": "https://github.com/devfile/devworkspace-operator/pull/1236",
+          "createdAt": "2024-03-01T21:07:47Z"
+        },
+        {
+          "number": 1070,
+          "title": "allow to configure specific annotations",
+          "author": "gbonnefille",
+          "url": "https://github.com/devfile/devworkspace-operator/pull/1070",
+          "createdAt": "2023-03-21T17:38:24Z"
+        },
+        {
+          "number": 946,
+          "title": "[WIP] added contributing.md file to assist new contributors",
+          "author": "kernelpanic77",
+          "url": "https://github.com/devfile/devworkspace-operator/pull/946",
+          "createdAt": "2022-10-06T11:12:29Z"
+        }
+      ]
+    },
+    "issues": {
+      "open": 12,
+      "closed": 30,
+      "total": 42,
+      "closeRate": "71.4",
+      "openIssues": [
+        {
+          "number": 796,
+          "title": "Do not trigger validating webhook for pod execs unrelated to devworkspaces",
+          "author": "cristian-radu",
+          "assignees": [],
+          "labels": [],
+          "url": "https://github.com/devfile/devworkspace-operator/issues/796",
+          "createdAt": "2022-03-17T09:35:33Z"
+        },
+        {
+          "number": 810,
+          "title": "garbage collect stray instances",
+          "author": "davidkarlsen",
+          "assignees": [],
+          "labels": [],
+          "url": "https://github.com/devfile/devworkspace-operator/issues/810",
+          "createdAt": "2022-04-06T15:55:14Z"
+        },
+        {
+          "number": 935,
+          "title": "Adding contributing.md for DWO",
+          "author": "kernelpanic77",
+          "assignees": [
+            "kernelpanic77"
+          ],
+          "labels": [],
+          "url": "https://github.com/devfile/devworkspace-operator/issues/935",
+          "createdAt": "2022-09-22T11:50:52Z"
+        },
+        {
+          "number": 971,
+          "title": "kustomize 4.5.7 does not replace namespaces in subjects of rolebinding and clusterrolebinding",
+          "author": "vishaltak",
+          "assignees": [],
+          "labels": [],
+          "url": "https://github.com/devfile/devworkspace-operator/issues/971",
+          "createdAt": "2022-11-04T09:32:40Z"
+        },
+        {
+          "number": 1068,
+          "title": "Parametrize IngressClass name",
+          "author": "gbonnefille",
+          "assignees": [],
+          "labels": [],
+          "url": "https://github.com/devfile/devworkspace-operator/issues/1068",
+          "createdAt": "2023-03-16T16:54:46Z"
+        },
+        {
+          "number": 1118,
+          "title": "Need helm charts to support the eclipse-che helm charts",
+          "author": "brandonp42",
+          "assignees": [],
+          "labels": [],
+          "url": "https://github.com/devfile/devworkspace-operator/issues/1118",
+          "createdAt": "2023-06-04T17:45:52Z"
+        },
+        {
+          "number": 1157,
+          "title": "Webhook Server Certificate",
+          "author": "bdwyertech",
+          "assignees": [],
+          "labels": [
+            "bug"
+          ],
+          "url": "https://github.com/devfile/devworkspace-operator/issues/1157",
+          "createdAt": "2023-08-03T18:27:46Z"
+        },
+        {
+          "number": 1237,
+          "title": "Webhook Certificate not generated during OLM installation",
+          "author": "stringang",
+          "assignees": [],
+          "labels": [
+            "bug"
+          ],
+          "url": "https://github.com/devfile/devworkspace-operator/issues/1237",
+          "createdAt": "2024-03-02T07:46:10Z"
+        },
+        {
+          "number": 1410,
+          "title": "RFE: Ability to have a nested clonePath under projects",
+          "author": "isuftin",
+          "assignees": [],
+          "labels": [],
+          "url": "https://github.com/devfile/devworkspace-operator/issues/1410",
+          "createdAt": "2025-04-10T15:01:27Z"
+        },
+        {
+          "number": 1548,
+          "title": "Implement mounting PVC into SubPath",
+          "author": "maheshrajrp",
+          "assignees": [],
+          "labels": [],
+          "url": "https://github.com/devfile/devworkspace-operator/issues/1548",
+          "createdAt": "2025-12-15T13:50:01Z"
+        },
+        {
+          "number": 1623,
+          "title": "Support for hostNetwork and dnsPolicy in webhookserver pods",
+          "author": "shadan227",
+          "assignees": [],
+          "labels": [
+            "help wanted"
+          ],
+          "url": "https://github.com/devfile/devworkspace-operator/issues/1623",
+          "createdAt": "2026-05-12T14:10:25Z"
+        },
+        {
+          "number": 1668,
+          "title": "Add cert-manager CA injection annotation to DevWorkspace validating webhook",
+          "author": "simxr",
+          "assignees": [],
+          "labels": [],
+          "url": "https://github.com/devfile/devworkspace-operator/issues/1668",
+          "createdAt": "2026-07-01T09:30:18Z"
+        }
+      ]
+    },
+    "repository": {
+      "stars": 91,
+      "forks": 74,
+      "watchers": 19
+    }
+  },
+  "topActiveUsers": [
+    {
+      "username": "openshift-ci",
+      "prs": 0,
+      "issues": 0,
+      "comments": 25,
+      "total": 25
+    },
+    {
+      "username": "btjd",
+      "prs": 7,
+      "issues": 0,
+      "comments": 3,
+      "total": 24
+    },
+    {
+      "username": "manweg",
+      "prs": 1,
+      "issues": 1,
+      "comments": 0,
+      "total": 5
+    },
+    {
+      "username": "github-advanced-security",
+      "prs": 0,
+      "issues": 0,
+      "comments": 1,
+      "total": 1
+    }
+  ]
+}
