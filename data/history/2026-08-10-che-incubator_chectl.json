@@ -1,0 +1,39 @@
+{
+  "timestamp": "2026-08-10T00:55:29.446Z",
+  "date": "2026-08-10",
+  "repoLabel": "che-incubator/chectl",
+  "metrics": {
+    "discussions": {
+      "totalUpvotes": 0,
+      "totalComments": 0
+    },
+    "pullRequests": {
+      "open": 0,
+      "total": 568,
+      "merged": 187,
+      "mergeRate": "32.9",
+      "openPRs": []
+    },
+    "issues": {
+      "open": 0,
+      "closed": 43,
+      "total": 43,
+      "closeRate": "100.0",
+      "openIssues": []
+    },
+    "repository": {
+      "stars": 77,
+      "forks": 67,
+      "watchers": 6
+    }
+  },
+  "topActiveUsers": [
+    {
+      "username": "openshift-ci",
+      "prs": 0,
+      "issues": 0,
+      "comments": 31,
+      "total": 31
+    }
+  ]
+}
