@@ -1,0 +1,39 @@
+{
+  "timestamp": "2026-08-14T01:02:35.402Z",
+  "date": "2026-08-14",
+  "repoLabel": "redhat-developer/devspaces-vscode-extensions",
+  "metrics": {
+    "discussions": {
+      "totalUpvotes": 0,
+      "totalComments": 0
+    },
+    "pullRequests": {
+      "open": 1,
+      "total": 39,
+      "merged": 37,
+      "mergeRate": "94.9",
+      "openPRs": [
+        {
+          "number": 55,
+          "title": "Pin 3rd-party actions to SHA1",
+          "author": "fbricon",
+          "url": "https://github.com/redhat-developer/devspaces-vscode-extensions/pull/55",
+          "createdAt": "2023-02-17T09:21:29Z"
+        }
+      ]
+    },
+    "issues": {
+      "open": 0,
+      "closed": 0,
+      "total": 0,
+      "closeRate": 0,
+      "openIssues": []
+    },
+    "repository": {
+      "stars": 5,
+      "forks": 13,
+      "watchers": 18
+    }
+  },
+  "topActiveUsers": []
+}
