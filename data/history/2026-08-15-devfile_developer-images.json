@@ -1,0 +1,68 @@
+{
+  "timestamp": "2026-08-15T00:37:46.224Z",
+  "date": "2026-08-15",
+  "repoLabel": "devfile/developer-images",
+  "metrics": {
+    "discussions": {
+      "totalUpvotes": 0,
+      "totalComments": 0
+    },
+    "pullRequests": {
+      "open": 4,
+      "total": 64,
+      "merged": 52,
+      "mergeRate": "81.3",
+      "openPRs": [
+        {
+          "number": 258,
+          "title": "base: Use bat, fd, rg from dnf repos",
+          "author": "jnohlgard",
+          "url": "https://github.com/devfile/developer-images/pull/258",
+          "createdAt": "2026-05-30T15:31:34Z"
+        },
+        {
+          "number": 257,
+          "title": "base: Verify GitHub CLI `gh` download via checksums file",
+          "author": "jnohlgard",
+          "url": "https://github.com/devfile/developer-images/pull/257",
+          "createdAt": "2026-05-30T15:12:55Z"
+        },
+        {
+          "number": 224,
+          "title": "feat: podman kubedock enhancement",
+          "author": "eye0fra",
+          "url": "https://github.com/devfile/developer-images/pull/224",
+          "createdAt": "2025-06-03T13:19:17Z"
+        },
+        {
+          "number": 137,
+          "title": "add: cuda gpu capable images",
+          "author": "codekow",
+          "url": "https://github.com/devfile/developer-images/pull/137",
+          "createdAt": "2023-11-01T23:22:37Z"
+        }
+      ]
+    },
+    "issues": {
+      "open": 0,
+      "closed": 0,
+      "total": 0,
+      "closeRate": 0,
+      "openIssues": []
+    },
+    "repository": {
+      "stars": 63,
+      "forks": 70,
+      "watchers": 14
+    }
+  },
+  "topActiveUsers": [
+    {
+      "username": "openshift-ci",
+      "prs": 0,
+      "issues": 0,
+      "comments": 7,
+      "total": 7
+    }
+  ]
+}
