@@ -1,0 +1,54 @@
+{
+  "timestamp": "2026-08-17T00:37:44.524Z",
+  "date": "2026-08-17",
+  "repoLabel": "devfile/registry",
+  "metrics": {
+    "discussions": {
+      "totalUpvotes": 0,
+      "totalComments": 0
+    },
+    "pullRequests": {
+      "open": 1,
+      "total": 438,
+      "merged": 324,
+      "mergeRate": "74.0",
+      "openPRs": [
+        {
+          "number": 689,
+          "title": "TEST CHANGE - DO NOT MERGE",
+          "author": "johnmcollier",
+          "url": "https://github.com/devfile/registry/pull/689",
+          "createdAt": "2026-06-26T17:58:50Z"
+        }
+      ]
+    },
+    "issues": {
+      "open": 0,
+      "closed": 0,
+      "total": 0,
+      "closeRate": 0,
+      "openIssues": []
+    },
+    "repository": {
+      "stars": 54,
+      "forks": 95,
+      "watchers": 19
+    }
+  },
+  "topActiveUsers": [
+    {
+      "username": "openshift-ci",
+      "prs": 0,
+      "issues": 0,
+      "comments": 30,
+      "total": 30
+    },
+    {
+      "username": "thepetk",
+      "prs": 0,
+      "issues": 0,
+      "comments": 1,
+      "total": 1
+    }
+  ]
+}
