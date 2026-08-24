@@ -1,0 +1,31 @@
+{
+  "timestamp": "2026-08-24T00:39:10.978Z",
+  "date": "2026-08-24",
+  "repoLabel": "che-incubator/zeroclaw-image",
+  "metrics": {
+    "discussions": {
+      "totalUpvotes": 0,
+      "totalComments": 0
+    },
+    "pullRequests": {
+      "open": 0,
+      "total": 0,
+      "merged": 0,
+      "mergeRate": 0,
+      "openPRs": []
+    },
+    "issues": {
+      "open": 0,
+      "closed": 0,
+      "total": 0,
+      "closeRate": 0,
+      "openIssues": []
+    },
+    "repository": {
+      "stars": 0,
+      "forks": 0,
+      "watchers": 0
+    }
+  },
+  "topActiveUsers": []
+}
