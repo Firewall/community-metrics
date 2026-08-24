@@ -1,0 +1,57 @@
+{
+  "timestamp": "2026-08-24T00:37:44.178Z",
+  "date": "2026-08-24",
+  "repoLabel": "podman-desktop/extension-kubernetes-dashboard",
+  "metrics": {
+    "discussions": {
+      "totalUpvotes": 0,
+      "totalComments": 0
+    },
+    "pullRequests": {
+      "open": 0,
+      "total": 15,
+      "merged": 10,
+      "mergeRate": "66.7",
+      "openPRs": []
+    },
+    "issues": {
+      "open": 2,
+      "closed": 2,
+      "total": 4,
+      "closeRate": "50.0",
+      "openIssues": [
+        {
+          "number": 989,
+          "title": "Port Forwarding causes lots of \"A JavaScript error occurred in the main process\" alerts",
+          "author": "overheadhunter",
+          "assignees": [],
+          "labels": [
+            "domain/kubernetes/reviewed"
+          ],
+          "url": "https://github.com/podman-desktop/extension-kubernetes-dashboard/issues/989",
+          "createdAt": "2025-04-10T14:06:08Z"
+        },
+        {
+          "number": 860,
+          "title": "Cannot scale replica set",
+          "author": "adameska",
+          "assignees": [],
+          "labels": [],
+          "url": "https://github.com/podman-desktop/extension-kubernetes-dashboard/issues/860",
+          "createdAt": "2026-04-07T14:16:56Z"
+        }
+      ]
+    },
+    "social": {
+      "blueskyFollowers": 191,
+      "linkedinFollowers": 1230,
+      "mastodonFollowers": 101
+    },
+    "repository": {
+      "stars": 5,
+      "forks": 17,
+      "watchers": 1
+    }
+  },
+  "topActiveUsers": []
+}
