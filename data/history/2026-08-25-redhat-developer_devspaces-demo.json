@@ -1,0 +1,31 @@
+{
+  "timestamp": "2026-08-25T00:38:56.264Z",
+  "date": "2026-08-25",
+  "repoLabel": "redhat-developer/devspaces-demo",
+  "metrics": {
+    "discussions": {
+      "totalUpvotes": 0,
+      "totalComments": 0
+    },
+    "pullRequests": {
+      "open": 0,
+      "total": 0,
+      "merged": 0,
+      "mergeRate": 0,
+      "openPRs": []
+    },
+    "issues": {
+      "open": 0,
+      "closed": 0,
+      "total": 0,
+      "closeRate": 0,
+      "openIssues": []
+    },
+    "repository": {
+      "stars": 19,
+      "forks": 14,
+      "watchers": 23
+    }
+  },
+  "topActiveUsers": []
+}
