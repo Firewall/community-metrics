@@ -1,0 +1,2266 @@
+{
+  "timestamp": "2026-08-30T02:16:37.223Z",
+  "date": "2026-08-30",
+  "repoLabel": "aggregate-eclipse-che",
+  "metrics": {
+    "discussions": {
+      "totalUpvotes": 0,
+      "totalComments": 1
+    },
+    "pullRequests": {
+      "open": 25,
+      "total": 6300,
+      "merged": 5030,
+      "mergeRate": "79.8",
+      "openPRs": [
+        {
+          "number": 798,
+          "title": "fix: default empty workspace to open the projects root folder",
+          "author": "achdmbp",
+          "url": "https://github.com/che-incubator/che-code/pull/798",
+          "createdAt": "2026-08-28T17:41:11Z"
+        },
+        {
+          "number": 1783,
+          "title": "chore: add renovate configuration for go dependency automation",
+          "author": "ysinghc",
+          "url": "https://github.com/devfile/api/pull/1783",
+          "createdAt": "2026-08-19T23:03:46Z"
+        },
+        {
+          "number": 23930,
+          "title": "Update README formatting and remove emojis to match documentation style (Issue 23630)",
+          "author": "dwan-ith",
+          "url": "https://github.com/eclipse-che/che/pull/23930",
+          "createdAt": "2026-08-10T06:13:58Z"
+        },
+        {
+          "number": 1680,
+          "title": "feat: implement Gateway API routing class for DevWorkspaceRouting",
+          "author": "btjd",
+          "url": "https://github.com/devfile/devworkspace-operator/pull/1680",
+          "createdAt": "2026-07-28T13:48:12Z"
+        },
+        {
+          "number": 1782,
+          "title": "Create go.yml",
+          "author": "blccopyrigth7-creator",
+          "url": "https://github.com/devfile/api/pull/1782",
+          "createdAt": "2026-07-22T12:42:16Z"
+        },
+        {
+          "number": 752,
+          "title": "feat: add clone path and related test",
+          "author": "batleforc",
+          "url": "https://github.com/che-incubator/che-code/pull/752",
+          "createdAt": "2026-07-08T18:24:44Z"
+        },
+        {
+          "number": 689,
+          "title": "TEST CHANGE - DO NOT MERGE",
+          "author": "johnmcollier",
+          "url": "https://github.com/devfile/registry/pull/689",
+          "createdAt": "2026-06-26T17:58:50Z"
+        },
+        {
+          "number": 725,
+          "title": "Added ppc64le support",
+          "author": "prabhuk25",
+          "url": "https://github.com/che-incubator/che-code/pull/725",
+          "createdAt": "2026-06-18T15:55:36Z"
+        },
+        {
+          "number": 8,
+          "title": "Show workspace owner and add filter toggle for cluster admins",
+          "author": "SupremeMortal",
+          "url": "https://github.com/redhat-developer/devspaces-toolbox-plugin/pull/8",
+          "createdAt": "2026-06-12T11:35:51Z"
+        },
+        {
+          "number": 7,
+          "title": "Expose each DevWorkspace project to Toolbox instead of /projects",
+          "author": "AgentK20",
+          "url": "https://github.com/redhat-developer/devspaces-toolbox-plugin/pull/7",
+          "createdAt": "2026-06-03T04:19:11Z"
+        },
+        {
+          "number": 258,
+          "title": "base: Use bat, fd, rg from dnf repos",
+          "author": "jnohlgard",
+          "url": "https://github.com/devfile/developer-images/pull/258",
+          "createdAt": "2026-05-30T15:31:34Z"
+        },
+        {
+          "number": 257,
+          "title": "base: Verify GitHub CLI `gh` download via checksums file",
+          "author": "jnohlgard",
+          "url": "https://github.com/devfile/developer-images/pull/257",
+          "createdAt": "2026-05-30T15:12:55Z"
+        },
+        {
+          "number": 626,
+          "title": "Rebase off of VS Code v1.108.X to support GitHub Copilot in Eclipse Che",
+          "author": "cgruver",
+          "url": "https://github.com/che-incubator/che-code/pull/626",
+          "createdAt": "2026-01-09T19:19:59Z"
+        },
+        {
+          "number": 2936,
+          "title": "docs: update prerequisites for installing Ingress-Nginx Controller on…",
+          "author": "JaivigneshJv",
+          "url": "https://github.com/eclipse-che/che-docs/pull/2936",
+          "createdAt": "2025-07-23T05:49:29Z"
+        },
+        {
+          "number": 224,
+          "title": "feat: podman kubedock enhancement",
+          "author": "eye0fra",
+          "url": "https://github.com/devfile/developer-images/pull/224",
+          "createdAt": "2025-06-03T13:19:17Z"
+        },
+        {
+          "number": 2816,
+          "title": "docs: advanced config properties",
+          "author": "deerskindoll",
+          "url": "https://github.com/eclipse-che/che-docs/pull/2816",
+          "createdAt": "2024-11-12T15:26:22Z"
+        },
+        {
+          "number": 336,
+          "title": "[WIP] build CLI from sources",
+          "author": "vitaliy-guliy",
+          "url": "https://github.com/che-incubator/che-code/pull/336",
+          "createdAt": "2024-03-05T12:31:45Z"
+        },
+        {
+          "number": 1236,
+          "title": "[Devtools] Add Security Insights for CNCF",
+          "author": "Jdubrick",
+          "url": "https://github.com/devfile/devworkspace-operator/pull/1236",
+          "createdAt": "2024-03-01T21:07:47Z"
+        },
+        {
+          "number": 327,
+          "title": "[wip] add ssh support",
+          "author": "vitaliy-guliy",
+          "url": "https://github.com/che-incubator/che-code/pull/327",
+          "createdAt": "2024-02-08T14:54:15Z"
+        },
+        {
+          "number": 137,
+          "title": "add: cuda gpu capable images",
+          "author": "codekow",
+          "url": "https://github.com/devfile/developer-images/pull/137",
+          "createdAt": "2023-11-01T23:22:37Z"
+        },
+        {
+          "number": 2624,
+          "title": "Docs: Adding a step to verify Authorized Applications",
+          "author": "satyamburhade",
+          "url": "https://github.com/eclipse-che/che-docs/pull/2624",
+          "createdAt": "2023-07-12T18:04:07Z"
+        },
+        {
+          "number": 2623,
+          "title": "Update proc_setting-up-the-microsoft-azure-devops-services-oauth-app.…",
+          "author": "satyamburhade",
+          "url": "https://github.com/eclipse-che/che-docs/pull/2623",
+          "createdAt": "2023-07-12T16:20:50Z"
+        },
+        {
+          "number": 1070,
+          "title": "allow to configure specific annotations",
+          "author": "gbonnefille",
+          "url": "https://github.com/devfile/devworkspace-operator/pull/1070",
+          "createdAt": "2023-03-21T17:38:24Z"
+        },
+        {
+          "number": 55,
+          "title": "Pin 3rd-party actions to SHA1",
+          "author": "fbricon",
+          "url": "https://github.com/redhat-developer/devspaces-vscode-extensions/pull/55",
+          "createdAt": "2023-02-17T09:21:29Z"
+        },
+        {
+          "number": 946,
+          "title": "[WIP] added contributing.md file to assist new contributors",
+          "author": "kernelpanic77",
+          "url": "https://github.com/devfile/devworkspace-operator/pull/946",
+          "createdAt": "2022-10-06T11:12:29Z"
+        }
+      ]
+    },
+    "issues": {
+      "open": 149,
+      "closed": 7749,
+      "total": 7898,
+      "closeRate": "98.1",
+      "openIssues": [
+        {
+          "number": 5297,
+          "title": "Remove Trailing Whitespace on Save",
+          "author": "davidwindell",
+          "assignees": [],
+          "labels": [
+            "kind/enhancement",
+            "lifecycle/frozen"
+          ],
+          "url": "https://github.com/eclipse-che/che/issues/5297",
+          "createdAt": "2017-06-08T10:18:54Z"
+        },
+        {
+          "number": 5482,
+          "title": "Continuous Testing support on Che ",
+          "author": "gorkem",
+          "assignees": [],
+          "labels": [
+            "kind/enhancement",
+            "severity/P1",
+            "lifecycle/frozen",
+            "area/plugins"
+          ],
+          "url": "https://github.com/eclipse-che/che/issues/5482",
+          "createdAt": "2017-06-27T18:50:28Z"
+        },
+        {
+          "number": 6957,
+          "title": "Development support for applications using istio.",
+          "author": "gorkem",
+          "assignees": [],
+          "labels": [
+            "kind/epic",
+            "lifecycle/frozen"
+          ],
+          "url": "https://github.com/eclipse-che/che/issues/6957",
+          "createdAt": "2017-10-24T14:50:31Z"
+        },
+        {
+          "number": 8286,
+          "title": "Live collaboration capabilities",
+          "author": "slemeur",
+          "assignees": [
+            "sunix"
+          ],
+          "labels": [
+            "kind/epic",
+            "lifecycle/frozen",
+            "roadmap/1-year"
+          ],
+          "url": "https://github.com/eclipse-che/che/issues/8286",
+          "createdAt": "2018-01-12T20:03:22Z"
+        },
+        {
+          "number": 12973,
+          "title": "K3s support",
+          "author": "sr229",
+          "assignees": [],
+          "labels": [
+            "severity/P2",
+            "lifecycle/frozen",
+            "area/install"
+          ],
+          "url": "https://github.com/eclipse-che/che/issues/12973",
+          "createdAt": "2019-03-26T02:43:24Z"
+        },
+        {
+          "number": 13020,
+          "title": "Plugin broker should be able to send warning about plugins configuration to WS master",
+          "author": "garagatyi",
+          "assignees": [],
+          "labels": [
+            "lifecycle/frozen"
+          ],
+          "url": "https://github.com/eclipse-che/che/issues/13020",
+          "createdAt": "2019-03-29T12:19:48Z"
+        },
+        {
+          "number": 13729,
+          "title": "Include source map into theia image by default",
+          "author": "vzhukovs",
+          "assignees": [],
+          "labels": [
+            "severity/P1",
+            "area/editor/theia",
+            "lifecycle/frozen",
+            "kind/technical-debt"
+          ],
+          "url": "https://github.com/eclipse-che/che/issues/13729",
+          "createdAt": "2019-04-16T12:57:38Z"
+        },
+        {
+          "number": 13249,
+          "title": "Make it possible to debug Theia plugins in sidecars",
+          "author": "tsmaeder",
+          "assignees": [],
+          "labels": [
+            "severity/P1",
+            "area/editor/theia",
+            "lifecycle/frozen"
+          ],
+          "url": "https://github.com/eclipse-che/che/issues/13249",
+          "createdAt": "2019-04-26T11:48:19Z"
+        },
+        {
+          "number": 13555,
+          "title": "Yaml plugin should not need to be run inside its own side car container",
+          "author": "sunix",
+          "assignees": [],
+          "labels": [
+            "kind/enhancement",
+            "area/plugin-registry",
+            "lifecycle/frozen"
+          ],
+          "url": "https://github.com/eclipse-che/che/issues/13555",
+          "createdAt": "2019-06-17T10:25:03Z"
+        },
+        {
+          "number": 13621,
+          "title": "Even if the project is deleted from a VS Code workspace, it's back when the Che workspace is re-started",
+          "author": "slemeur",
+          "assignees": [
+            "tsmaeder"
+          ],
+          "labels": [
+            "kind/bug",
+            "status/blocked",
+            "severity/P1",
+            "lifecycle/frozen",
+            "area/editor/vscode"
+          ],
+          "url": "https://github.com/eclipse-che/che/issues/13621",
+          "createdAt": "2019-06-22T10:33:38Z"
+        },
+        {
+          "number": 13666,
+          "title": "Workspace panel is not getting update with newly added task",
+          "author": "slemeur",
+          "assignees": [],
+          "labels": [
+            "kind/bug",
+            "severity/P1",
+            "lifecycle/frozen",
+            "area/plugins"
+          ],
+          "url": "https://github.com/eclipse-che/che/issues/13666",
+          "createdAt": "2019-07-02T09:54:00Z"
+        },
+        {
+          "number": 13836,
+          "title": "Have a nice looking page in the default che plugin registry",
+          "author": "sunix",
+          "assignees": [],
+          "labels": [
+            "kind/enhancement",
+            "good first issue",
+            "area/plugin-registry",
+            "lifecycle/frozen"
+          ],
+          "url": "https://github.com/eclipse-che/che/issues/13836",
+          "createdAt": "2019-07-12T15:59:06Z"
+        },
+        {
+          "number": 13965,
+          "title": "[minor]Not language/machine dependent keybinding information for quick fix",
+          "author": "apupier",
+          "assignees": [],
+          "labels": [
+            "kind/bug",
+            "severity/P2",
+            "area/editor/theia",
+            "lifecycle/frozen"
+          ],
+          "url": "https://github.com/eclipse-che/che/issues/13965",
+          "createdAt": "2019-07-23T08:55:19Z"
+        },
+        {
+          "number": 13971,
+          "title": "Need to Log In to Stop Workspace",
+          "author": "tsmaeder",
+          "assignees": [],
+          "labels": [
+            "status/info-needed",
+            "lifecycle/frozen"
+          ],
+          "url": "https://github.com/eclipse-che/che/issues/13971",
+          "createdAt": "2019-07-23T12:02:57Z"
+        },
+        {
+          "number": 14119,
+          "title": "doc: Fix existing doc to promote che plugins and packaging with vscode extension rather than Theia plugins.",
+          "author": "sunix",
+          "assignees": [],
+          "labels": [
+            "kind/task",
+            "severity/P2",
+            "area/doc",
+            "lifecycle/frozen"
+          ],
+          "url": "https://github.com/eclipse-che/che/issues/14119",
+          "createdAt": "2019-08-05T08:57:48Z"
+        },
+        {
+          "number": 14596,
+          "title": "create a Devfile registry for all che-in-che flow",
+          "author": "sunix",
+          "assignees": [],
+          "labels": [
+            "kind/enhancement",
+            "severity/P2",
+            "area/devfile-registry",
+            "lifecycle/frozen"
+          ],
+          "url": "https://github.com/eclipse-che/che/issues/14596",
+          "createdAt": "2019-09-19T08:31:30Z"
+        },
+        {
+          "number": 14691,
+          "title": "Adding a devfile to devfile registry at runtime doesn't work",
+          "author": "VeerMuchandi",
+          "assignees": [],
+          "labels": [
+            "severity/P1",
+            "area/devfile-registry",
+            "area/doc",
+            "lifecycle/frozen"
+          ],
+          "url": "https://github.com/eclipse-che/che/issues/14691",
+          "createdAt": "2019-09-27T11:57:35Z"
+        },
+        {
+          "number": 14694,
+          "title": "Open terminal in new browser window",
+          "author": "vitaliy-guliy",
+          "assignees": [],
+          "labels": [
+            "kind/enhancement",
+            "severity/P2",
+            "lifecycle/frozen",
+            "area/plugins"
+          ],
+          "url": "https://github.com/eclipse-che/che/issues/14694",
+          "createdAt": "2019-09-27T14:04:39Z"
+        },
+        {
+          "number": 14879,
+          "title": "Faster workspace startup experience",
+          "author": "slemeur",
+          "assignees": [
+            "olexii4"
+          ],
+          "labels": [
+            "kind/epic",
+            "lifecycle/frozen",
+            "roadmap/1-year"
+          ],
+          "url": "https://github.com/eclipse-che/che/issues/14879",
+          "createdAt": "2019-10-14T09:39:18Z"
+        },
+        {
+          "number": 15007,
+          "title": "Git Support Cannot Handle che-theia Self-Hosting Structure",
+          "author": "tsmaeder",
+          "assignees": [],
+          "labels": [
+            "kind/bug",
+            "severity/P1",
+            "area/editor/theia",
+            "lifecycle/frozen"
+          ],
+          "url": "https://github.com/eclipse-che/che/issues/15007",
+          "createdAt": "2019-10-29T09:58:54Z"
+        },
+        {
+          "number": 15021,
+          "title": "Make external URL of exposed endpoints of the workspace available as environment variable of all the containers",
+          "author": "sunix",
+          "assignees": [],
+          "labels": [
+            "kind/enhancement",
+            "lifecycle/frozen"
+          ],
+          "url": "https://github.com/eclipse-che/che/issues/15021",
+          "createdAt": "2019-10-29T17:35:51Z"
+        },
+        {
+          "number": 15160,
+          "title": "Inconvenient Self-Hosting for external Contributors",
+          "author": "tsmaeder",
+          "assignees": [],
+          "labels": [
+            "kind/enhancement",
+            "severity/P1",
+            "area/editor/theia",
+            "lifecycle/frozen"
+          ],
+          "url": "https://github.com/eclipse-che/che/issues/15160",
+          "createdAt": "2019-11-11T10:33:58Z"
+        },
+        {
+          "number": 15273,
+          "title": "Openshift connector and Che: not possible to have 2 components connected to 2 projects in the same workspace",
+          "author": "sunix",
+          "assignees": [],
+          "labels": [
+            "kind/bug",
+            "severity/P2",
+            "lifecycle/frozen",
+            "area/plugins"
+          ],
+          "url": "https://github.com/eclipse-che/che/issues/15273",
+          "createdAt": "2019-11-21T10:39:27Z"
+        },
+        {
+          "number": 15281,
+          "title": "Use Che Bot to provide factory link to PR in che-plugin-registry",
+          "author": "evidolob",
+          "assignees": [],
+          "labels": [
+            "kind/enhancement",
+            "area/plugin-registry",
+            "lifecycle/frozen"
+          ],
+          "url": "https://github.com/eclipse-che/che/issues/15281",
+          "createdAt": "2019-11-22T07:38:40Z"
+        },
+        {
+          "number": 15320,
+          "title": "Do not consume eclipse-theia without any quality gate",
+          "author": "rhopp",
+          "assignees": [],
+          "labels": [
+            "kind/task",
+            "severity/P1",
+            "lifecycle/frozen"
+          ],
+          "url": "https://github.com/eclipse-che/che/issues/15320",
+          "createdAt": "2019-11-26T13:03:57Z"
+        },
+        {
+          "number": 15331,
+          "title": "chectl: Failed to connect to Kubernetes API. Unauthorized",
+          "author": "rjbaucells",
+          "assignees": [],
+          "labels": [
+            "kind/bug",
+            "severity/P1",
+            "area/chectl",
+            "lifecycle/frozen"
+          ],
+          "url": "https://github.com/eclipse-che/che/issues/15331",
+          "createdAt": "2019-11-26T22:04:24Z"
+        },
+        {
+          "number": 15391,
+          "title": "Provide pre-configured Camel K instance with Camel K stack",
+          "author": "apupier",
+          "assignees": [],
+          "labels": [
+            "kind/enhancement",
+            "area/languages",
+            "lifecycle/frozen"
+          ],
+          "url": "https://github.com/eclipse-che/che/issues/15391",
+          "createdAt": "2019-12-03T12:42:56Z"
+        },
+        {
+          "number": 15419,
+          "title": "username provide to the git commiter should be first name + lastname",
+          "author": "sunix",
+          "assignees": [],
+          "labels": [
+            "kind/bug",
+            "severity/P2",
+            "good first issue",
+            "lifecycle/frozen",
+            "area/git/dev-environment-config",
+            "area/dogfooding",
+            "area/git/oauth-services"
+          ],
+          "url": "https://github.com/eclipse-che/che/issues/15419",
+          "createdAt": "2019-12-06T18:49:59Z"
+        },
+        {
+          "number": 15521,
+          "title": "Fix \"Development Workflow\" Wiki",
+          "author": "tsmaeder",
+          "assignees": [],
+          "labels": [
+            "kind/task",
+            "sprint/next",
+            "severity/P1",
+            "area/doc",
+            "lifecycle/frozen",
+            "team/A",
+            "team/B"
+          ],
+          "url": "https://github.com/eclipse-che/che/issues/15521",
+          "createdAt": "2019-12-18T09:31:55Z"
+        },
+        {
+          "number": 15566,
+          "title": "plugin commands are not in workspace panel",
+          "author": "mingfang",
+          "assignees": [],
+          "labels": [
+            "kind/bug",
+            "severity/P2",
+            "lifecycle/frozen",
+            "area/plugins"
+          ],
+          "url": "https://github.com/eclipse-che/che/issues/15566",
+          "createdAt": "2019-12-23T16:03:11Z"
+        },
+        {
+          "number": 15608,
+          "title": "Explore Groovy support for Eclipse Che",
+          "author": "slemeur",
+          "assignees": [],
+          "labels": [
+            "kind/enhancement",
+            "kind/task",
+            "lifecycle/frozen",
+            "area/plugins"
+          ],
+          "url": "https://github.com/eclipse-che/che/issues/15608",
+          "createdAt": "2020-01-07T08:57:30Z"
+        },
+        {
+          "number": 15716,
+          "title": "Don't allow to start workspace if user already reached runtime number limit",
+          "author": "maxandersen",
+          "assignees": [],
+          "labels": [
+            "kind/enhancement",
+            "severity/P2",
+            "area/dashboard",
+            "lifecycle/frozen"
+          ],
+          "url": "https://github.com/eclipse-che/che/issues/15716",
+          "createdAt": "2020-01-16T10:31:42Z"
+        },
+        {
+          "number": 15720,
+          "title": "git set your username/email config warning action not helpful",
+          "author": "maxandersen",
+          "assignees": [],
+          "labels": [
+            "kind/bug",
+            "severity/P2",
+            "lifecycle/frozen",
+            "area/git/dev-environment-config"
+          ],
+          "url": "https://github.com/eclipse-che/che/issues/15720",
+          "createdAt": "2020-01-16T10:48:57Z"
+        },
+        {
+          "number": 15760,
+          "title": "VS Code Extension Usage needs to be more prominent",
+          "author": "tsmaeder",
+          "assignees": [],
+          "labels": [
+            "kind/enhancement",
+            "status/analyzing",
+            "area/doc",
+            "lifecycle/frozen"
+          ],
+          "url": "https://github.com/eclipse-che/che/issues/15760",
+          "createdAt": "2020-01-21T08:34:17Z"
+        },
+        {
+          "number": 15766,
+          "title": "Enable some user defined plugins by default when starting a workspace",
+          "author": "themr0c",
+          "assignees": [],
+          "labels": [
+            "kind/enhancement",
+            "lifecycle/frozen",
+            "area/plugins"
+          ],
+          "url": "https://github.com/eclipse-che/che/issues/15766",
+          "createdAt": "2020-01-21T13:52:10Z"
+        },
+        {
+          "number": 15808,
+          "title": "Command palette skips steps upon focus loss",
+          "author": "ericwill",
+          "assignees": [],
+          "labels": [
+            "kind/bug",
+            "severity/P2",
+            "area/editor/theia",
+            "lifecycle/frozen"
+          ],
+          "url": "https://github.com/eclipse-che/che/issues/15808",
+          "createdAt": "2020-01-23T21:07:13Z"
+        },
+        {
+          "number": 15847,
+          "title": "Show image information on Workspace view",
+          "author": "gorkem",
+          "assignees": [],
+          "labels": [
+            "kind/enhancement",
+            "severity/P1",
+            "lifecycle/frozen",
+            "area/plugins"
+          ],
+          "url": "https://github.com/eclipse-che/che/issues/15847",
+          "createdAt": "2020-01-27T20:33:59Z"
+        },
+        {
+          "number": 15898,
+          "title": "Consider pinning non che-sample projects in devfile registry to specific commits",
+          "author": "JPinkney",
+          "assignees": [],
+          "labels": [
+            "kind/enhancement",
+            "severity/P2",
+            "area/devfile-registry",
+            "lifecycle/frozen"
+          ],
+          "url": "https://github.com/eclipse-che/che/issues/15898",
+          "createdAt": "2020-01-31T16:45:12Z"
+        },
+        {
+          "number": 15953,
+          "title": "link to console is openshift broken",
+          "author": "gorkem",
+          "assignees": [],
+          "labels": [
+            "kind/bug",
+            "severity/P1",
+            "lifecycle/frozen",
+            "area/plugins"
+          ],
+          "url": "https://github.com/eclipse-che/che/issues/15953",
+          "createdAt": "2020-02-06T16:38:46Z"
+        },
+        {
+          "number": 15976,
+          "title": "Move che-theia plugins to dedicate repository and optimize build flow of che-theia image",
+          "author": "vzhukovs",
+          "assignees": [],
+          "labels": [
+            "kind/enhancement",
+            "status/info-needed",
+            "area/editor/theia",
+            "lifecycle/frozen",
+            "area/plugins"
+          ],
+          "url": "https://github.com/eclipse-che/che/issues/15976",
+          "createdAt": "2020-02-10T13:55:36Z"
+        },
+        {
+          "number": 16066,
+          "title": "Force Maven Devfiles to use Maven",
+          "author": "tsmaeder",
+          "assignees": [],
+          "labels": [
+            "kind/enhancement",
+            "status/info-needed",
+            "area/languages",
+            "lifecycle/frozen"
+          ],
+          "url": "https://github.com/eclipse-che/che/issues/16066",
+          "createdAt": "2020-02-18T13:35:54Z"
+        },
+        {
+          "number": 16085,
+          "title": "LSP features does not work in another directory",
+          "author": "sergiuilie",
+          "assignees": [],
+          "labels": [
+            "kind/bug",
+            "severity/P1",
+            "area/editor/theia",
+            "area/languages",
+            "lifecycle/frozen",
+            "area/plugins"
+          ],
+          "url": "https://github.com/eclipse-che/che/issues/16085",
+          "createdAt": "2020-02-19T16:12:39Z"
+        },
+        {
+          "number": 16087,
+          "title": "Find home for VSCode plugin that helps create devfile",
+          "author": "JPinkney",
+          "assignees": [],
+          "labels": [
+            "kind/task",
+            "severity/P2",
+            "area/languages",
+            "lifecycle/frozen"
+          ],
+          "url": "https://github.com/eclipse-che/che/issues/16087",
+          "createdAt": "2020-02-19T16:33:19Z"
+        },
+        {
+          "number": 16131,
+          "title": "Support OpenShift usage for Camel K extension",
+          "author": "apupier",
+          "assignees": [],
+          "labels": [
+            "kind/enhancement",
+            "status/info-needed",
+            "lifecycle/frozen"
+          ],
+          "url": "https://github.com/eclipse-che/che/issues/16131",
+          "createdAt": "2020-02-25T14:43:58Z"
+        },
+        {
+          "number": 16185,
+          "title": "cloud-shell needs to be updated to 7.6.0",
+          "author": "ericwill",
+          "assignees": [],
+          "labels": [
+            "area/plugin-registry",
+            "lifecycle/frozen",
+            "area/plugins",
+            "automated"
+          ],
+          "url": "https://github.com/eclipse-che/che/issues/16185",
+          "createdAt": "2020-02-28T16:09:39Z"
+        },
+        {
+          "number": 16187,
+          "title": "theia-dev needs to be updated to 0.0.3",
+          "author": "ericwill",
+          "assignees": [],
+          "labels": [
+            "area/plugin-registry",
+            "lifecycle/frozen",
+            "area/plugins",
+            "automated"
+          ],
+          "url": "https://github.com/eclipse-che/che/issues/16187",
+          "createdAt": "2020-02-28T16:09:42Z"
+        },
+        {
+          "number": 16188,
+          "title": "code-server needs to be updated to 2.1698-vsc1.41.1",
+          "author": "ericwill",
+          "assignees": [],
+          "labels": [
+            "area/plugin-registry",
+            "lifecycle/frozen",
+            "area/plugins",
+            "automated"
+          ],
+          "url": "https://github.com/eclipse-che/che/issues/16188",
+          "createdAt": "2020-02-28T16:09:43Z"
+        },
+        {
+          "number": 16205,
+          "title": "How to save gitlab user credentials or ssh keys on eclipse che",
+          "author": "YasithaSandeep",
+          "assignees": [],
+          "labels": [
+            "kind/question",
+            "status/info-needed",
+            "lifecycle/frozen"
+          ],
+          "url": "https://github.com/eclipse-che/che/issues/16205",
+          "createdAt": "2020-03-03T04:53:44Z"
+        },
+        {
+          "number": 16266,
+          "title": "Allow adding just the url to `.vsix` plugins into devfile",
+          "author": "SDAdham",
+          "assignees": [],
+          "labels": [
+            "kind/enhancement",
+            "status/info-needed",
+            "lifecycle/frozen"
+          ],
+          "url": "https://github.com/eclipse-che/che/issues/16266",
+          "createdAt": "2020-03-06T14:23:49Z"
+        },
+        {
+          "number": 16269,
+          "title": "Allow git repository switch from the git menu rather than showing dialog which leads to confusions",
+          "author": "SDAdham",
+          "assignees": [],
+          "labels": [
+            "kind/enhancement",
+            "severity/P2",
+            "area/editor/theia",
+            "lifecycle/frozen"
+          ],
+          "url": "https://github.com/eclipse-che/che/issues/16269",
+          "createdAt": "2020-03-06T14:33:06Z"
+        },
+        {
+          "number": 16348,
+          "title": "Show progress of git when workspace is starting up",
+          "author": "SDAdham",
+          "assignees": [],
+          "labels": [
+            "kind/enhancement",
+            "severity/P2",
+            "lifecycle/frozen",
+            "area/plugins"
+          ],
+          "url": "https://github.com/eclipse-che/che/issues/16348",
+          "createdAt": "2020-03-13T03:50:46Z"
+        },
+        {
+          "number": 16487,
+          "title": "override `workdir` in devfile dockerimage component type",
+          "author": "sunix",
+          "assignees": [],
+          "labels": [
+            "kind/enhancement",
+            "severity/P2",
+            "lifecycle/frozen",
+            "area/devfile-spec"
+          ],
+          "url": "https://github.com/eclipse-che/che/issues/16487",
+          "createdAt": "2020-03-30T09:15:36Z"
+        },
+        {
+          "number": 16539,
+          "title": "Investigate whether is possible to use `buildkit` tool to build docker images inside a running container",
+          "author": "vitaliy-guliy",
+          "assignees": [],
+          "labels": [
+            "kind/enhancement",
+            "lifecycle/frozen"
+          ],
+          "url": "https://github.com/eclipse-che/che/issues/16539",
+          "createdAt": "2020-04-03T10:37:05Z"
+        },
+        {
+          "number": 16684,
+          "title": "eclipse che issue ",
+          "author": "hari1992-web",
+          "assignees": [],
+          "labels": [
+            "kind/bug",
+            "status/info-needed",
+            "lifecycle/frozen"
+          ],
+          "url": "https://github.com/eclipse-che/che/issues/16684",
+          "createdAt": "2020-04-21T12:15:04Z"
+        },
+        {
+          "number": 16698,
+          "title": "Creating a new quarkus projects all the \"short cuts\" seem to point to old generated project",
+          "author": "maxandersen",
+          "assignees": [],
+          "labels": [
+            "kind/bug",
+            "area/languages",
+            "lifecycle/frozen",
+            "area/plugins"
+          ],
+          "url": "https://github.com/eclipse-che/che/issues/16698",
+          "createdAt": "2020-04-21T23:36:56Z"
+        },
+        {
+          "number": 16723,
+          "title": "Support Jupyter Notebooks Natively in Che via Python Plugin",
+          "author": "murphye",
+          "assignees": [],
+          "labels": [
+            "kind/enhancement",
+            "severity/P2",
+            "area/plugin-registry",
+            "lifecycle/frozen"
+          ],
+          "url": "https://github.com/eclipse-che/che/issues/16723",
+          "createdAt": "2020-04-23T06:04:19Z"
+        },
+        {
+          "number": 16730,
+          "title": "Add User Python Path for when using Python in Che",
+          "author": "murphye",
+          "assignees": [],
+          "labels": [
+            "kind/enhancement",
+            "area/languages",
+            "lifecycle/frozen"
+          ],
+          "url": "https://github.com/eclipse-che/che/issues/16730",
+          "createdAt": "2020-04-23T15:14:02Z"
+        },
+        {
+          "number": 16754,
+          "title": "A che task should reuse the same terminal.",
+          "author": "sunix",
+          "assignees": [],
+          "labels": [
+            "kind/enhancement",
+            "severity/P2",
+            "area/editor/theia",
+            "lifecycle/frozen"
+          ],
+          "url": "https://github.com/eclipse-che/che/issues/16754",
+          "createdAt": "2020-04-26T09:13:22Z"
+        },
+        {
+          "number": 16851,
+          "title": "Separate vscode-java version from development target",
+          "author": "ericwill",
+          "assignees": [
+            "tsmaeder"
+          ],
+          "labels": [
+            "kind/epic",
+            "area/languages",
+            "lifecycle/frozen",
+            "area/plugins",
+            "area/ci/multi-arch"
+          ],
+          "url": "https://github.com/eclipse-che/che/issues/16851",
+          "createdAt": "2020-05-05T20:00:23Z"
+        },
+        {
+          "number": 16852,
+          "title": "Rework che-theia build process to not use source linking",
+          "author": "tsmaeder",
+          "assignees": [
+            "tsmaeder"
+          ],
+          "labels": [
+            "kind/enhancement",
+            "sprint/current",
+            "severity/P2",
+            "lifecycle/frozen",
+            "area/plugins"
+          ],
+          "url": "https://github.com/eclipse-che/che/issues/16852",
+          "createdAt": "2020-05-06T08:36:44Z"
+        },
+        {
+          "number": 16869,
+          "title": "php stack: the command `Configure Apache Web Server DocumentRoot` should be done in the entrypoint (command) or CMD (args)",
+          "author": "sunix",
+          "assignees": [],
+          "labels": [
+            "kind/enhancement",
+            "severity/P2",
+            "area/languages",
+            "good first issue",
+            "lifecycle/frozen",
+            "area/getting-started"
+          ],
+          "url": "https://github.com/eclipse-che/che/issues/16869",
+          "createdAt": "2020-05-07T12:59:02Z"
+        },
+        {
+          "number": 16945,
+          "title": "Language server not starting correctly (when VS Code globalstorage volume is shared?)",
+          "author": "apupier",
+          "assignees": [],
+          "labels": [
+            "kind/bug",
+            "severity/P2",
+            "area/editor/theia",
+            "lifecycle/frozen"
+          ],
+          "url": "https://github.com/eclipse-che/che/issues/16945",
+          "createdAt": "2020-05-15T13:40:19Z"
+        },
+        {
+          "number": 16953,
+          "title": "Include MongoDB for VS Code in plugin registry",
+          "author": "JPinkney",
+          "assignees": [],
+          "labels": [
+            "kind/enhancement",
+            "kind/task",
+            "area/plugin-registry",
+            "lifecycle/frozen"
+          ],
+          "url": "https://github.com/eclipse-che/che/issues/16953",
+          "createdAt": "2020-05-15T21:21:15Z"
+        },
+        {
+          "number": 17004,
+          "title": "Explore and document limiting workspaces egress",
+          "author": "gorkem",
+          "assignees": [],
+          "labels": [
+            "kind/task",
+            "severity/P1",
+            "area/doc",
+            "lifecycle/frozen"
+          ],
+          "url": "https://github.com/eclipse-che/che/issues/17004",
+          "createdAt": "2020-05-25T06:25:42Z"
+        },
+        {
+          "number": 17109,
+          "title": "Angular extension pack",
+          "author": "SDAdham",
+          "assignees": [],
+          "labels": [
+            "kind/enhancement",
+            "severity/P2",
+            "lifecycle/frozen",
+            "area/plugins"
+          ],
+          "url": "https://github.com/eclipse-che/che/issues/17109",
+          "createdAt": "2020-06-06T10:15:52Z"
+        },
+        {
+          "number": 17196,
+          "title": "Plugins view eats Characters in Filter Field when under Load",
+          "author": "tsmaeder",
+          "assignees": [],
+          "labels": [
+            "kind/bug",
+            "severity/P2",
+            "area/editor/theia",
+            "lifecycle/frozen",
+            "area/ux"
+          ],
+          "url": "https://github.com/eclipse-che/che/issues/17196",
+          "createdAt": "2020-06-19T13:01:05Z"
+        },
+        {
+          "number": 17232,
+          "title": "Adapt Welcome plugin to new WebView plugin API",
+          "author": "vitaliy-guliy",
+          "assignees": [],
+          "labels": [
+            "kind/enhancement",
+            "severity/P2",
+            "lifecycle/frozen",
+            "area/plugins"
+          ],
+          "url": "https://github.com/eclipse-che/che/issues/17232",
+          "createdAt": "2020-06-24T14:30:21Z"
+        },
+        {
+          "number": 17487,
+          "title": "Migrate from Swagger 2.0 to OpenAPI 3.0",
+          "author": "sunix",
+          "assignees": [
+            "sunix"
+          ],
+          "labels": [
+            "kind/enhancement",
+            "lifecycle/frozen"
+          ],
+          "url": "https://github.com/eclipse-che/che/issues/17487",
+          "createdAt": "2020-07-27T12:33:36Z"
+        },
+        {
+          "number": 17584,
+          "title": "In a workspace, mark some volume as ephemeral (but not all, like projects ...) to save storage space",
+          "author": "sunix",
+          "assignees": [],
+          "labels": [
+            "kind/enhancement",
+            "severity/P2",
+            "lifecycle/frozen",
+            "area/devfile-spec"
+          ],
+          "url": "https://github.com/eclipse-che/che/issues/17584",
+          "createdAt": "2020-08-05T13:50:21Z"
+        },
+        {
+          "number": 17587,
+          "title": "Volume for Theia data directory missing (plugin settings permanence)",
+          "author": "matthewfisch",
+          "assignees": [],
+          "labels": [
+            "severity/P2",
+            "area/editor/theia",
+            "lifecycle/frozen"
+          ],
+          "url": "https://github.com/eclipse-che/che/issues/17587",
+          "createdAt": "2020-08-05T19:38:56Z"
+        },
+        {
+          "number": 17640,
+          "title": "README and CONTRIBUTE files in che-plugin-registry need improving",
+          "author": "ericwill",
+          "assignees": [],
+          "labels": [
+            "kind/enhancement",
+            "kind/task",
+            "area/plugin-registry",
+            "lifecycle/frozen"
+          ],
+          "url": "https://github.com/eclipse-che/che/issues/17640",
+          "createdAt": "2020-08-13T19:41:30Z"
+        },
+        {
+          "number": 17651,
+          "title": "\"Kill Workspace\" button",
+          "author": "tsmaeder",
+          "assignees": [],
+          "labels": [
+            "kind/enhancement",
+            "severity/P2",
+            "area/dashboard",
+            "lifecycle/frozen",
+            "engine/devworkspace"
+          ],
+          "url": "https://github.com/eclipse-che/che/issues/17651",
+          "createdAt": "2020-08-18T11:49:46Z"
+        },
+        {
+          "number": 17679,
+          "title": "Path to Plugin not changed during --offline build due to missing tag",
+          "author": "DarthBlair",
+          "assignees": [],
+          "labels": [
+            "kind/bug",
+            "severity/P2",
+            "area/plugin-registry",
+            "lifecycle/frozen"
+          ],
+          "url": "https://github.com/eclipse-che/che/issues/17679",
+          "createdAt": "2020-08-20T16:59:03Z"
+        },
+        {
+          "number": 17730,
+          "title": "FR: Add LibreOffice Online as editor to che",
+          "author": "gattytto",
+          "assignees": [],
+          "labels": [
+            "kind/enhancement",
+            "severity/P2",
+            "area/editor/theia",
+            "lifecycle/frozen",
+            "area/plugins"
+          ],
+          "url": "https://github.com/eclipse-che/che/issues/17730",
+          "createdAt": "2020-08-27T16:34:42Z"
+        },
+        {
+          "number": 17750,
+          "title": "Measure the effects of image pull caching ",
+          "author": "gorkem",
+          "assignees": [],
+          "labels": [
+            "kind/task",
+            "severity/P2",
+            "lifecycle/frozen",
+            "area/image-puller"
+          ],
+          "url": "https://github.com/eclipse-che/che/issues/17750",
+          "createdAt": "2020-08-28T21:43:39Z"
+        },
+        {
+          "number": 17769,
+          "title": "tekton sidecar: missing octant daemon autostart and allowed hosts ENV var.",
+          "author": "gattytto",
+          "assignees": [],
+          "labels": [
+            "kind/bug",
+            "severity/P2",
+            "lifecycle/frozen",
+            "area/plugins"
+          ],
+          "url": "https://github.com/eclipse-che/che/issues/17769",
+          "createdAt": "2020-09-01T19:13:01Z"
+        },
+        {
+          "number": 17782,
+          "title": "Support kerberos authentication for private git repos",
+          "author": "pdaverh",
+          "assignees": [
+            "vitaliy-guliy"
+          ],
+          "labels": [
+            "kind/enhancement",
+            "lifecycle/frozen",
+            "area/plugins",
+            "area/git/oauth-services"
+          ],
+          "url": "https://github.com/eclipse-che/che/issues/17782",
+          "createdAt": "2020-09-03T19:15:35Z"
+        },
+        {
+          "number": 17847,
+          "title": "allow automounting of dotfiles repo",
+          "author": "maxandersen",
+          "assignees": [
+            "l0rd"
+          ],
+          "labels": [
+            "kind/enhancement",
+            "severity/P2",
+            "lifecycle/frozen"
+          ],
+          "url": "https://github.com/eclipse-che/che/issues/17847",
+          "createdAt": "2020-09-12T05:18:35Z"
+        },
+        {
+          "number": 17924,
+          "title": "Provide experimental \"portable JDK\" devfile",
+          "author": "ericwill",
+          "assignees": [
+            "tsmaeder"
+          ],
+          "labels": [
+            "kind/task",
+            "status/blocked",
+            "area/languages",
+            "area/devfile-registry",
+            "lifecycle/frozen"
+          ],
+          "url": "https://github.com/eclipse-che/che/issues/17924",
+          "createdAt": "2020-09-21T21:14:15Z"
+        },
+        {
+          "number": 17954,
+          "title": "User Preferences-Adding External Accounts",
+          "author": "parvathyvr",
+          "assignees": [],
+          "labels": [
+            "kind/enhancement",
+            "kind/epic",
+            "severity/P2",
+            "help wanted",
+            "area/dashboard",
+            "lifecycle/frozen"
+          ],
+          "url": "https://github.com/eclipse-che/che/issues/17954",
+          "createdAt": "2020-09-24T15:07:56Z"
+        },
+        {
+          "number": 18025,
+          "title": "Prompt the user to fork when he tries to commit changes to a repository he has no push rights.",
+          "author": "themr0c",
+          "assignees": [],
+          "labels": [
+            "kind/enhancement",
+            "severity/P2",
+            "lifecycle/frozen",
+            "area/plugins",
+            "area/git/dev-environment-config"
+          ],
+          "url": "https://github.com/eclipse-che/che/issues/18025",
+          "createdAt": "2020-10-02T10:12:59Z"
+        },
+        {
+          "number": 18114,
+          "title": "Che should be able to deal with large git projects. Allowing `git clone --depth 1` in the devfile.",
+          "author": "sunix",
+          "assignees": [],
+          "labels": [
+            "kind/enhancement",
+            "area/editor/theia",
+            "lifecycle/frozen",
+            "area/devfile-spec",
+            "area/git/dev-environment-config"
+          ],
+          "url": "https://github.com/eclipse-che/che/issues/18114",
+          "createdAt": "2020-10-15T08:48:31Z"
+        },
+        {
+          "number": 18162,
+          "title": "Set labels for workspaces to display correct icons on OpenShift Console ",
+          "author": "gorkem",
+          "assignees": [],
+          "labels": [
+            "kind/enhancement",
+            "severity/P2",
+            "lifecycle/frozen"
+          ],
+          "url": "https://github.com/eclipse-che/che/issues/18162",
+          "createdAt": "2020-10-21T17:01:04Z"
+        },
+        {
+          "number": 18251,
+          "title": "FR: add g-code syntax and simulator to che",
+          "author": "gattytto",
+          "assignees": [],
+          "labels": [
+            "kind/enhancement",
+            "lifecycle/frozen",
+            "area/plugins"
+          ],
+          "url": "https://github.com/eclipse-che/che/issues/18251",
+          "createdAt": "2020-10-31T01:38:43Z"
+        },
+        {
+          "number": 18343,
+          "title": "FR: overlay mode for sidecar/cli volumes",
+          "author": "gattytto",
+          "assignees": [],
+          "labels": [
+            "kind/enhancement",
+            "severity/P2",
+            "lifecycle/frozen",
+            "engine/devworkspace"
+          ],
+          "url": "https://github.com/eclipse-che/che/issues/18343",
+          "createdAt": "2020-11-12T07:18:00Z"
+        },
+        {
+          "number": 18344,
+          "title": "create workspace failed when customize the hostname",
+          "author": "whafra",
+          "assignees": [],
+          "labels": [
+            "kind/question",
+            "severity/P1",
+            "lifecycle/frozen",
+            "area/install"
+          ],
+          "url": "https://github.com/eclipse-che/che/issues/18344",
+          "createdAt": "2020-11-12T08:03:03Z"
+        },
+        {
+          "number": 18587,
+          "title": "Get started samples: add the stack Quarkus-hibernate + postgres + postgres extension",
+          "author": "sunix",
+          "assignees": [],
+          "labels": [
+            "kind/enhancement",
+            "severity/P2",
+            "area/devfile-registry",
+            "lifecycle/frozen",
+            "area/samples"
+          ],
+          "url": "https://github.com/eclipse-che/che/issues/18587",
+          "createdAt": "2020-12-10T11:20:59Z"
+        },
+        {
+          "number": 18937,
+          "title": "Yarn-Linked Packages may not work in Che-Theia",
+          "author": "tsmaeder",
+          "assignees": [],
+          "labels": [
+            "kind/bug",
+            "severity/P2",
+            "area/editor/theia",
+            "lifecycle/frozen",
+            "area/plugins"
+          ],
+          "url": "https://github.com/eclipse-che/che/issues/18937",
+          "createdAt": "2021-02-01T13:20:15Z"
+        },
+        {
+          "number": 19575,
+          "title": "Android Studio as Che Editor using Projector",
+          "author": "vzhukovs",
+          "assignees": [
+            "vzhukovs"
+          ],
+          "labels": [
+            "kind/enhancement",
+            "severity/P2",
+            "lifecycle/frozen",
+            "area/editor/jetbrains/intellij"
+          ],
+          "url": "https://github.com/eclipse-che/che/issues/19575",
+          "createdAt": "2021-04-13T13:46:23Z"
+        },
+        {
+          "number": 19673,
+          "title": "Workspace startup should not override my workspace folders",
+          "author": "tsmaeder",
+          "assignees": [],
+          "labels": [
+            "kind/enhancement",
+            "severity/P2",
+            "area/editor/theia",
+            "lifecycle/frozen",
+            "area/devfile-spec"
+          ],
+          "url": "https://github.com/eclipse-che/che/issues/19673",
+          "createdAt": "2021-04-26T10:44:42Z"
+        },
+        {
+          "number": 19942,
+          "title": "Display the running workspace containers logs in the che-theia output view",
+          "author": "sunix",
+          "assignees": [],
+          "labels": [
+            "kind/enhancement",
+            "lifecycle/frozen",
+            "area/plugins"
+          ],
+          "url": "https://github.com/eclipse-che/che/issues/19942",
+          "createdAt": "2021-06-08T14:21:47Z"
+        },
+        {
+          "number": 20242,
+          "title": "Enable multiarch support for building jetbrains-editor-images",
+          "author": "vzhukovs",
+          "assignees": [
+            "vzhukovs"
+          ],
+          "labels": [
+            "kind/task",
+            "severity/P2",
+            "lifecycle/frozen",
+            "area/editor/jetbrains/intellij",
+            "area/ci/multi-arch"
+          ],
+          "url": "https://github.com/eclipse-che/che/issues/20242",
+          "createdAt": "2021-08-03T11:17:10Z"
+        },
+        {
+          "number": 20282,
+          "title": "Custom Theia Editor Support in Eclipse Che",
+          "author": "JonasHelming",
+          "assignees": [],
+          "labels": [
+            "kind/enhancement",
+            "lifecycle/frozen",
+            "area/editors",
+            "severity/P3"
+          ],
+          "url": "https://github.com/eclipse-che/che/issues/20282",
+          "createdAt": "2021-08-11T12:40:47Z"
+        },
+        {
+          "number": 20477,
+          "title": "Folder preference settings are ignored",
+          "author": "phaumer",
+          "assignees": [],
+          "labels": [
+            "kind/bug",
+            "severity/P2",
+            "area/editor/theia",
+            "lifecycle/frozen"
+          ],
+          "url": "https://github.com/eclipse-che/che/issues/20477",
+          "createdAt": "2021-09-16T23:58:56Z"
+        },
+        {
+          "number": 21156,
+          "title": "Support of multiple running workspaces in async storage mode?",
+          "author": "nils-mosbach",
+          "assignees": [],
+          "labels": [
+            "kind/question",
+            "severity/P2",
+            "lifecycle/frozen",
+            "area/devworkspace-operator"
+          ],
+          "url": "https://github.com/eclipse-che/che/issues/21156",
+          "createdAt": "2022-02-11T09:45:59Z"
+        },
+        {
+          "number": 21291,
+          "title": "Periodically refresh git OAuth2-tokens for GitLab and Bitbucket (expiration 2h)",
+          "author": "nils-mosbach",
+          "assignees": [],
+          "labels": [
+            "severity/P1",
+            "help wanted",
+            "lifecycle/frozen",
+            "area/git/oauth-services"
+          ],
+          "url": "https://github.com/eclipse-che/che/issues/21291",
+          "createdAt": "2022-03-22T13:18:22Z"
+        },
+        {
+          "number": 21401,
+          "title": "How to contribute",
+          "author": "tsadigovAgmail",
+          "assignees": [],
+          "labels": [
+            "kind/epic",
+            "status/analyzing",
+            "kind/task",
+            "sprint/current",
+            "lifecycle/frozen"
+          ],
+          "url": "https://github.com/eclipse-che/che/issues/21401",
+          "createdAt": "2022-05-14T00:19:45Z"
+        },
+        {
+          "number": 21646,
+          "title": "Docs: Installation to On Prem Restricted Kubernetes Environment is Missing",
+          "author": "emreyokur",
+          "assignees": [],
+          "labels": [
+            "kind/question",
+            "help wanted",
+            "area/doc",
+            "lifecycle/frozen",
+            "area/install"
+          ],
+          "url": "https://github.com/eclipse-che/che/issues/21646",
+          "createdAt": "2022-08-21T11:01:12Z"
+        },
+        {
+          "number": 21883,
+          "title": "Are Eclipse Che's containers vulnerable to the many issues identified by Trivy",
+          "author": "bbsclient",
+          "assignees": [],
+          "labels": [
+            "kind/task",
+            "severity/P1",
+            "lifecycle/frozen",
+            "area/install"
+          ],
+          "url": "https://github.com/eclipse-che/che/issues/21883",
+          "createdAt": "2022-12-12T19:56:14Z"
+        },
+        {
+          "number": 21892,
+          "title": "how to enable sharing of running workspace",
+          "author": "davidxwwang",
+          "assignees": [],
+          "labels": [
+            "kind/question",
+            "severity/P2",
+            "lifecycle/frozen",
+            "area/ts-workspace-client"
+          ],
+          "url": "https://github.com/eclipse-che/che/issues/21892",
+          "createdAt": "2022-12-16T03:17:12Z"
+        },
+        {
+          "number": 22664,
+          "title": "secure:true is not securing endpoints with jwt proxy anymore",
+          "author": "guydog28",
+          "assignees": [],
+          "labels": [
+            "kind/bug",
+            "severity/P1",
+            "area/che-operator",
+            "lifecycle/frozen"
+          ],
+          "url": "https://github.com/eclipse-che/che/issues/22664",
+          "createdAt": "2023-11-08T18:56:31Z"
+        },
+        {
+          "number": 23050,
+          "title": "docs improvement: Managing workspaces $HOME directory persistence ",
+          "author": "deerskindoll",
+          "assignees": [
+            "deerskindoll"
+          ],
+          "labels": [
+            "kind/task",
+            "severity/P1",
+            "area/doc",
+            "lifecycle/frozen"
+          ],
+          "url": "https://github.com/eclipse-che/che/issues/23050",
+          "createdAt": "2024-07-22T10:58:07Z"
+        },
+        {
+          "number": 23162,
+          "title": "Disable download button on vscode",
+          "author": "huonguyenlt",
+          "assignees": [],
+          "labels": [
+            "kind/enhancement",
+            "severity/P2",
+            "area/editor/vscode"
+          ],
+          "url": "https://github.com/eclipse-che/che/issues/23162",
+          "createdAt": "2024-09-25T08:59:15Z"
+        },
+        {
+          "number": 23230,
+          "title": "kubernetes 1.30.5 support",
+          "author": "karatkep",
+          "assignees": [
+            "vinokurig"
+          ],
+          "labels": [
+            "status/info-needed",
+            "status/analyzing",
+            "severity/P1",
+            "area/dashboard",
+            "lifecycle/frozen",
+            "area/install",
+            "area/che-server"
+          ],
+          "url": "https://github.com/eclipse-che/che/issues/23230",
+          "createdAt": "2024-11-04T14:43:12Z"
+        },
+        {
+          "number": 23231,
+          "title": "Dev Workspace Controller Loop with Identical Endpoint Names on DevWorkspace",
+          "author": "eye0fra",
+          "assignees": [
+            "akurinnoy",
+            "dkwon17"
+          ],
+          "labels": [
+            "kind/bug",
+            "lifecycle/frozen",
+            "area/devworkspace-operator"
+          ],
+          "url": "https://github.com/eclipse-che/che/issues/23231",
+          "createdAt": "2024-11-04T15:20:35Z"
+        },
+        {
+          "number": 23630,
+          "title": "docs: clean up README by removing emojis and improving formatting",
+          "author": "2400030206",
+          "assignees": [
+            "dwan-ith"
+          ],
+          "labels": [
+            "status/analyzing",
+            "help wanted",
+            "area/doc",
+            "kind/release",
+            "severity/P3"
+          ],
+          "url": "https://github.com/eclipse-che/che/issues/23630",
+          "createdAt": "2025-10-26T10:27:18Z"
+        },
+        {
+          "number": 23753,
+          "title": "Can't create ingress/route for HTTP2 or other TLS termination",
+          "author": "batleforc",
+          "assignees": [],
+          "labels": [
+            "kind/enhancement",
+            "severity/P2",
+            "area/dashboard",
+            "lifecycle/stale",
+            "team/A"
+          ],
+          "url": "https://github.com/eclipse-che/che/issues/23753",
+          "createdAt": "2026-02-26T13:15:08Z"
+        },
+        {
+          "number": 23755,
+          "title": "DNS issues in Alpine",
+          "author": "engelkek",
+          "assignees": [],
+          "labels": [
+            "kind/bug",
+            "severity/P2",
+            "area/dashboard",
+            "lifecycle/stale",
+            "team/A"
+          ],
+          "url": "https://github.com/eclipse-che/che/issues/23755",
+          "createdAt": "2026-02-26T16:52:04Z"
+        },
+        {
+          "number": 23792,
+          "title": "Facing Chectl Timeout Issue",
+          "author": "maheshrajrp",
+          "assignees": [],
+          "labels": [
+            "kind/bug",
+            "severity/P1",
+            "area/chectl",
+            "team/B"
+          ],
+          "url": "https://github.com/eclipse-che/che/issues/23792",
+          "createdAt": "2026-04-02T11:45:23Z"
+        },
+        {
+          "number": 23837,
+          "title": "Enable sonatype security scanning in che-code",
+          "author": "ericwill",
+          "assignees": [
+            "sbouchet"
+          ],
+          "labels": [
+            "kind/task",
+            "severity/P2",
+            "area/editor/vscode",
+            "team/C"
+          ],
+          "url": "https://github.com/eclipse-che/che/issues/23837",
+          "createdAt": "2026-05-06T13:16:09Z"
+        },
+        {
+          "number": 23881,
+          "title": "Enable IBM self-hosted s390x GitHub Actions runners for che-dashboard",
+          "author": "swapnilsingh-ibm",
+          "assignees": [],
+          "labels": [
+            "kind/task",
+            "severity/P2",
+            "help wanted",
+            "area/dashboard",
+            "team/A"
+          ],
+          "url": "https://github.com/eclipse-che/che/issues/23881",
+          "createdAt": "2026-06-15T10:53:33Z"
+        },
+        {
+          "number": 23895,
+          "title": "Che deployment blocked on OpenShift for IBM Z(s390x) — quay.io/openshift/origin-oauth-proxy has no s390x manifest",
+          "author": "swapnilsingh-ibm",
+          "assignees": [
+            "tolusha"
+          ],
+          "labels": [
+            "kind/bug",
+            "severity/P2",
+            "area/che-operator",
+            "team/B"
+          ],
+          "url": "https://github.com/eclipse-che/che/issues/23895",
+          "createdAt": "2026-06-25T08:32:52Z"
+        },
+        {
+          "number": 23908,
+          "title": "[Che-Code] Ressource consumption",
+          "author": "batleforc",
+          "assignees": [],
+          "labels": [
+            "kind/enhancement",
+            "severity/P2",
+            "area/editor/vscode",
+            "team/C"
+          ],
+          "url": "https://github.com/eclipse-che/che/issues/23908",
+          "createdAt": "2026-07-08T15:25:18Z"
+        },
+        {
+          "number": 23909,
+          "title": "[che-code] When using clone path project are not added in the worktree",
+          "author": "batleforc",
+          "assignees": [
+            "batleforc"
+          ],
+          "labels": [
+            "kind/bug",
+            "severity/P2",
+            "area/editor/vscode",
+            "team/C"
+          ],
+          "url": "https://github.com/eclipse-che/che/issues/23909",
+          "createdAt": "2026-07-08T15:34:10Z"
+        },
+        {
+          "number": 23923,
+          "title": "No idle does not work ?",
+          "author": "batleforc",
+          "assignees": [
+            "vrubezhny"
+          ],
+          "labels": [
+            "kind/bug",
+            "area/machine-exec",
+            "team/C"
+          ],
+          "url": "https://github.com/eclipse-che/che/issues/23923",
+          "createdAt": "2026-08-03T17:23:42Z"
+        },
+        {
+          "number": 23932,
+          "title": "Does Eclipse Che support hosting the control plane under a URL path prefix?",
+          "author": "KrSahil",
+          "assignees": [],
+          "labels": [
+            "kind/question",
+            "area/che-operator",
+            "team/B"
+          ],
+          "url": "https://github.com/eclipse-che/che/issues/23932",
+          "createdAt": "2026-08-11T11:16:17Z"
+        },
+        {
+          "number": 23934,
+          "title": "[Dashboard] Pvc status / resize ?",
+          "author": "batleforc",
+          "assignees": [],
+          "labels": [
+            "kind/enhancement",
+            "status/need-triage"
+          ],
+          "url": "https://github.com/eclipse-che/che/issues/23934",
+          "createdAt": "2026-08-14T23:51:44Z"
+        },
+        {
+          "number": 23935,
+          "title": "[Dashboard] Ide Switch",
+          "author": "batleforc",
+          "assignees": [],
+          "labels": [
+            "kind/enhancement",
+            "severity/P2",
+            "area/dashboard",
+            "team/A"
+          ],
+          "url": "https://github.com/eclipse-che/che/issues/23935",
+          "createdAt": "2026-08-15T00:09:41Z"
+        },
+        {
+          "number": 23936,
+          "title": "[Devfile Parent] Keep devfile parent if upstream become unavailable",
+          "author": "batleforc",
+          "assignees": [],
+          "labels": [
+            "kind/bug",
+            "severity/P2",
+            "area/dashboard",
+            "team/A"
+          ],
+          "url": "https://github.com/eclipse-che/che/issues/23936",
+          "createdAt": "2026-08-18T08:27:09Z"
+        },
+        {
+          "number": 23938,
+          "title": "Empty workspace generates a .code-workspace with no folders, so the editor opens with nothing mounted",
+          "author": "achdmbp",
+          "assignees": [],
+          "labels": [
+            "status/need-triage"
+          ],
+          "url": "https://github.com/eclipse-che/che/issues/23938",
+          "createdAt": "2026-08-28T17:30:28Z"
+        },
+        {
+          "number": 1257,
+          "title": "[Security] Workflow minikube-operator-singlehost.yaml is using vulnerable action actions/checkout",
+          "author": "Freakston",
+          "assignees": [],
+          "labels": [],
+          "url": "https://github.com/eclipse-che/che-operator/issues/1257",
+          "createdAt": "2021-12-19T23:27:54Z"
+        },
+        {
+          "number": 1259,
+          "title": "[Security] Workflow pr-check.yml is using vulnerable action actions/checkout",
+          "author": "Freakston",
+          "assignees": [],
+          "labels": [],
+          "url": "https://github.com/eclipse-che/che-operator/issues/1259",
+          "createdAt": "2021-12-19T23:27:56Z"
+        },
+        {
+          "number": 1261,
+          "title": "[Security] Workflow minikube-operator-singlehost.yaml is using vulnerable action actions/checkout",
+          "author": "Freakston",
+          "assignees": [],
+          "labels": [],
+          "url": "https://github.com/eclipse-che/che-operator/issues/1261",
+          "createdAt": "2021-12-19T23:28:00Z"
+        },
+        {
+          "number": 1262,
+          "title": "[Security] Workflow minikube-stable-olm-update.yaml is using vulnerable action actions/checkout",
+          "author": "igibek",
+          "assignees": [],
+          "labels": [],
+          "url": "https://github.com/eclipse-che/che-operator/issues/1262",
+          "createdAt": "2021-12-19T23:28:01Z"
+        },
+        {
+          "number": 1985,
+          "title": "Support for Running Multiple CheCluster CRs in Different Namespaces in a Single Kubernetes Cluster ?",
+          "author": "PDCuong",
+          "assignees": [],
+          "labels": [],
+          "url": "https://github.com/eclipse-che/che-operator/issues/1985",
+          "createdAt": "2025-04-04T01:33:35Z"
+        },
+        {
+          "number": 2008,
+          "title": "CheCluster with disableTLS: true still attempts TLS validation on Port 443",
+          "author": "Aramorth",
+          "assignees": [],
+          "labels": [],
+          "url": "https://github.com/eclipse-che/che-operator/issues/2008",
+          "createdAt": "2025-06-25T05:36:12Z"
+        },
+        {
+          "number": 2009,
+          "title": "CheCluster with disableTLS: true still attempts TLS validation on Port 443",
+          "author": "Aramorth",
+          "assignees": [],
+          "labels": [],
+          "url": "https://github.com/eclipse-che/che-operator/issues/2009",
+          "createdAt": "2025-06-25T05:36:38Z"
+        },
+        {
+          "number": 1268,
+          "title": "Library panics when child devfile overrides parent with list attribute",
+          "author": "rm3l",
+          "assignees": [],
+          "labels": [
+            "kind/bug",
+            "help wanted",
+            "area/api",
+            "area/library",
+            "lifecycle/frozen"
+          ],
+          "url": "https://github.com/devfile/api/issues/1268",
+          "createdAt": "2023-09-27T09:01:15Z"
+        },
+        {
+          "number": 1684,
+          "title": "Bump devfile-web next.js dependency",
+          "author": "thepetk",
+          "assignees": [
+            "michael-valdron"
+          ],
+          "labels": [
+            "area/landing-page",
+            "area/registry-viewer",
+            "lifecycle/frozen"
+          ],
+          "url": "https://github.com/devfile/api/issues/1684",
+          "createdAt": "2025-02-03T13:06:50Z"
+        },
+        {
+          "number": 1747,
+          "title": "Add renovate to the rest of devfile org repos",
+          "author": "thepetk",
+          "assignees": [],
+          "labels": [
+            "area/api",
+            "kind/epic",
+            "area/registry",
+            "area/ci",
+            "area/library",
+            "area/integration-tests",
+            "area/landing-page",
+            "area/alizer",
+            "lifecycle/frozen"
+          ],
+          "url": "https://github.com/devfile/api/issues/1747",
+          "createdAt": "2025-08-01T13:05:40Z"
+        },
+        {
+          "number": 1751,
+          "title": "Ensure devfile-web dependencies are up-to-date",
+          "author": "thepetk",
+          "assignees": [],
+          "labels": [
+            "area/ci",
+            "area/landing-page",
+            "lifecycle/frozen",
+            "kind/task"
+          ],
+          "url": "https://github.com/devfile/api/issues/1751",
+          "createdAt": "2025-09-07T11:28:57Z"
+        },
+        {
+          "number": 1768,
+          "title": "Guided Devfile install mission in KubeStellar Console",
+          "author": "clubanderson",
+          "assignees": [],
+          "labels": [
+            "lifecycle/stale"
+          ],
+          "url": "https://github.com/devfile/api/issues/1768",
+          "createdAt": "2026-03-18T15:46:25Z"
+        },
+        {
+          "number": 1769,
+          "title": "Devfile AI-driven Maintainance Tasks Automation Initiatives",
+          "author": "thepetk",
+          "assignees": [
+            "thepetk",
+            "michael-valdron"
+          ],
+          "labels": [
+            "area/api",
+            "kind/epic",
+            "area/registry",
+            "area/ci",
+            "area/library",
+            "area/registry-viewer",
+            "area/alizer"
+          ],
+          "url": "https://github.com/devfile/api/issues/1769",
+          "createdAt": "2026-04-07T12:36:00Z"
+        },
+        {
+          "number": 1771,
+          "title": "Your project is on the ACMM Leaderboard — see your AI-readiness score",
+          "author": "clubanderson",
+          "assignees": [],
+          "labels": [
+            "lifecycle/stale"
+          ],
+          "url": "https://github.com/devfile/api/issues/1771",
+          "createdAt": "2026-04-23T06:23:57Z"
+        },
+        {
+          "number": 796,
+          "title": "Do not trigger validating webhook for pod execs unrelated to devworkspaces",
+          "author": "cristian-radu",
+          "assignees": [],
+          "labels": [],
+          "url": "https://github.com/devfile/devworkspace-operator/issues/796",
+          "createdAt": "2022-03-17T09:35:33Z"
+        },
+        {
+          "number": 810,
+          "title": "garbage collect stray instances",
+          "author": "davidkarlsen",
+          "assignees": [],
+          "labels": [],
+          "url": "https://github.com/devfile/devworkspace-operator/issues/810",
+          "createdAt": "2022-04-06T15:55:14Z"
+        },
+        {
+          "number": 935,
+          "title": "Adding contributing.md for DWO",
+          "author": "kernelpanic77",
+          "assignees": [
+            "kernelpanic77"
+          ],
+          "labels": [],
+          "url": "https://github.com/devfile/devworkspace-operator/issues/935",
+          "createdAt": "2022-09-22T11:50:52Z"
+        },
+        {
+          "number": 971,
+          "title": "kustomize 4.5.7 does not replace namespaces in subjects of rolebinding and clusterrolebinding",
+          "author": "vishaltak",
+          "assignees": [],
+          "labels": [],
+          "url": "https://github.com/devfile/devworkspace-operator/issues/971",
+          "createdAt": "2022-11-04T09:32:40Z"
+        },
+        {
+          "number": 1068,
+          "title": "Parametrize IngressClass name",
+          "author": "gbonnefille",
+          "assignees": [],
+          "labels": [],
+          "url": "https://github.com/devfile/devworkspace-operator/issues/1068",
+          "createdAt": "2023-03-16T16:54:46Z"
+        },
+        {
+          "number": 1118,
+          "title": "Need helm charts to support the eclipse-che helm charts",
+          "author": "brandonp42",
+          "assignees": [],
+          "labels": [],
+          "url": "https://github.com/devfile/devworkspace-operator/issues/1118",
+          "createdAt": "2023-06-04T17:45:52Z"
+        },
+        {
+          "number": 1157,
+          "title": "Webhook Server Certificate",
+          "author": "bdwyertech",
+          "assignees": [],
+          "labels": [
+            "bug"
+          ],
+          "url": "https://github.com/devfile/devworkspace-operator/issues/1157",
+          "createdAt": "2023-08-03T18:27:46Z"
+        },
+        {
+          "number": 1237,
+          "title": "Webhook Certificate not generated during OLM installation",
+          "author": "stringang",
+          "assignees": [],
+          "labels": [
+            "bug"
+          ],
+          "url": "https://github.com/devfile/devworkspace-operator/issues/1237",
+          "createdAt": "2024-03-02T07:46:10Z"
+        },
+        {
+          "number": 1410,
+          "title": "RFE: Ability to have a nested clonePath under projects",
+          "author": "isuftin",
+          "assignees": [],
+          "labels": [],
+          "url": "https://github.com/devfile/devworkspace-operator/issues/1410",
+          "createdAt": "2025-04-10T15:01:27Z"
+        },
+        {
+          "number": 1548,
+          "title": "Implement mounting PVC into SubPath",
+          "author": "maheshrajrp",
+          "assignees": [],
+          "labels": [],
+          "url": "https://github.com/devfile/devworkspace-operator/issues/1548",
+          "createdAt": "2025-12-15T13:50:01Z"
+        },
+        {
+          "number": 1623,
+          "title": "Support for hostNetwork and dnsPolicy in webhookserver pods",
+          "author": "shadan227",
+          "assignees": [],
+          "labels": [
+            "help wanted"
+          ],
+          "url": "https://github.com/devfile/devworkspace-operator/issues/1623",
+          "createdAt": "2026-05-12T14:10:25Z"
+        },
+        {
+          "number": 1668,
+          "title": "Add cert-manager CA injection annotation to DevWorkspace validating webhook",
+          "author": "simxr",
+          "assignees": [],
+          "labels": [],
+          "url": "https://github.com/devfile/devworkspace-operator/issues/1668",
+          "createdAt": "2026-07-01T09:30:18Z"
+        },
+        {
+          "number": 252,
+          "title": "Consolidate release workflows into a single workflow",
+          "author": "snecklifter",
+          "assignees": [],
+          "labels": [],
+          "url": "https://github.com/che-incubator/kubernetes-image-puller/issues/252",
+          "createdAt": "2026-07-20T08:50:48Z"
+        },
+        {
+          "number": 253,
+          "title": "Add signing and provenance to published Helm chart",
+          "author": "snecklifter",
+          "assignees": [],
+          "labels": [],
+          "url": "https://github.com/che-incubator/kubernetes-image-puller/issues/253",
+          "createdAt": "2026-07-20T08:50:52Z"
+        },
+        {
+          "number": 255,
+          "title": "Enable vulnerability reporting",
+          "author": "snecklifter",
+          "assignees": [],
+          "labels": [],
+          "url": "https://github.com/che-incubator/kubernetes-image-puller/issues/255",
+          "createdAt": "2026-07-21T12:01:46Z"
+        }
+      ]
+    },
+    "repository": {
+      "stars": 8539,
+      "forks": 2362,
+      "watchers": 550
+    }
+  },
+  "topActiveUsers": [
+    {
+      "username": "openshift-ci",
+      "prs": 0,
+      "issues": 0,
+      "comments": 135,
+      "total": 135
+    },
+    {
+      "username": "batleforc",
+      "prs": 0,
+      "issues": 4,
+      "comments": 3,
+      "total": 11
+    },
+    {
+      "username": "codecov-commenter",
+      "prs": 0,
+      "issues": 0,
+      "comments": 9,
+      "total": 9
+    },
+    {
+      "username": "btjd",
+      "prs": 2,
+      "issues": 0,
+      "comments": 1,
+      "total": 7
+    },
+    {
+      "username": "bianicu",
+      "prs": 2,
+      "issues": 0,
+      "comments": 0,
+      "total": 6
+    }
+  ]
+}
