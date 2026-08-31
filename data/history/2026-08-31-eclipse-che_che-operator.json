@@ -1,0 +1,103 @@
+{
+  "timestamp": "2026-08-31T02:11:52.106Z",
+  "date": "2026-08-31",
+  "repoLabel": "eclipse-che/che-operator",
+  "metrics": {
+    "discussions": {
+      "totalUpvotes": 0,
+      "totalComments": 0
+    },
+    "pullRequests": {
+      "open": 0,
+      "total": 74,
+      "merged": 54,
+      "mergeRate": "73.0",
+      "openPRs": []
+    },
+    "issues": {
+      "open": 7,
+      "closed": 8,
+      "total": 15,
+      "closeRate": "53.3",
+      "openIssues": [
+        {
+          "number": 1257,
+          "title": "[Security] Workflow minikube-operator-singlehost.yaml is using vulnerable action actions/checkout",
+          "author": "Freakston",
+          "assignees": [],
+          "labels": [],
+          "url": "https://github.com/eclipse-che/che-operator/issues/1257",
+          "createdAt": "2021-12-19T23:27:54Z"
+        },
+        {
+          "number": 1259,
+          "title": "[Security] Workflow pr-check.yml is using vulnerable action actions/checkout",
+          "author": "Freakston",
+          "assignees": [],
+          "labels": [],
+          "url": "https://github.com/eclipse-che/che-operator/issues/1259",
+          "createdAt": "2021-12-19T23:27:56Z"
+        },
+        {
+          "number": 1261,
+          "title": "[Security] Workflow minikube-operator-singlehost.yaml is using vulnerable action actions/checkout",
+          "author": "Freakston",
+          "assignees": [],
+          "labels": [],
+          "url": "https://github.com/eclipse-che/che-operator/issues/1261",
+          "createdAt": "2021-12-19T23:28:00Z"
+        },
+        {
+          "number": 1262,
+          "title": "[Security] Workflow minikube-stable-olm-update.yaml is using vulnerable action actions/checkout",
+          "author": "igibek",
+          "assignees": [],
+          "labels": [],
+          "url": "https://github.com/eclipse-che/che-operator/issues/1262",
+          "createdAt": "2021-12-19T23:28:01Z"
+        },
+        {
+          "number": 1985,
+          "title": "Support for Running Multiple CheCluster CRs in Different Namespaces in a Single Kubernetes Cluster ?",
+          "author": "PDCuong",
+          "assignees": [],
+          "labels": [],
+          "url": "https://github.com/eclipse-che/che-operator/issues/1985",
+          "createdAt": "2025-04-04T01:33:35Z"
+        },
+        {
+          "number": 2008,
+          "title": "CheCluster with disableTLS: true still attempts TLS validation on Port 443",
+          "author": "Aramorth",
+          "assignees": [],
+          "labels": [],
+          "url": "https://github.com/eclipse-che/che-operator/issues/2008",
+          "createdAt": "2025-06-25T05:36:12Z"
+        },
+        {
+          "number": 2009,
+          "title": "CheCluster with disableTLS: true still attempts TLS validation on Port 443",
+          "author": "Aramorth",
+          "assignees": [],
+          "labels": [],
+          "url": "https://github.com/eclipse-che/che-operator/issues/2009",
+          "createdAt": "2025-06-25T05:36:38Z"
+        }
+      ]
+    },
+    "repository": {
+      "stars": 71,
+      "forks": 102,
+      "watchers": 23
+    }
+  },
+  "topActiveUsers": [
+    {
+      "username": "openshift-ci",
+      "prs": 0,
+      "issues": 0,
+      "comments": 23,
+      "total": 23
+    }
+  ]
+}
