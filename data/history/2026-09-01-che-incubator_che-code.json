@@ -1,0 +1,89 @@
+{
+  "timestamp": "2026-09-01T02:31:14.427Z",
+  "date": "2026-09-01",
+  "repoLabel": "che-incubator/che-code",
+  "metrics": {
+    "discussions": {
+      "totalUpvotes": 0,
+      "totalComments": 0
+    },
+    "pullRequests": {
+      "open": 6,
+      "total": 90,
+      "merged": 65,
+      "mergeRate": "72.2",
+      "openPRs": [
+        {
+          "number": 798,
+          "title": "fix: default empty workspace to open the projects root folder",
+          "author": "achdmbp",
+          "url": "https://github.com/che-incubator/che-code/pull/798",
+          "createdAt": "2026-08-28T17:41:11Z"
+        },
+        {
+          "number": 752,
+          "title": "feat: add clone path and related test",
+          "author": "batleforc",
+          "url": "https://github.com/che-incubator/che-code/pull/752",
+          "createdAt": "2026-07-08T18:24:44Z"
+        },
+        {
+          "number": 725,
+          "title": "Added ppc64le support",
+          "author": "prabhuk25",
+          "url": "https://github.com/che-incubator/che-code/pull/725",
+          "createdAt": "2026-06-18T15:55:36Z"
+        },
+        {
+          "number": 626,
+          "title": "Rebase off of VS Code v1.108.X to support GitHub Copilot in Eclipse Che",
+          "author": "cgruver",
+          "url": "https://github.com/che-incubator/che-code/pull/626",
+          "createdAt": "2026-01-09T19:19:59Z"
+        },
+        {
+          "number": 336,
+          "title": "[WIP] build CLI from sources",
+          "author": "vitaliy-guliy",
+          "url": "https://github.com/che-incubator/che-code/pull/336",
+          "createdAt": "2024-03-05T12:31:45Z"
+        },
+        {
+          "number": 327,
+          "title": "[wip] add ssh support",
+          "author": "vitaliy-guliy",
+          "url": "https://github.com/che-incubator/che-code/pull/327",
+          "createdAt": "2024-02-08T14:54:15Z"
+        }
+      ]
+    },
+    "issues": {
+      "open": 0,
+      "closed": 0,
+      "total": 0,
+      "closeRate": 0,
+      "openIssues": []
+    },
+    "repository": {
+      "stars": 35,
+      "forks": 50,
+      "watchers": 7
+    }
+  },
+  "topActiveUsers": [
+    {
+      "username": "achdmbp",
+      "prs": 1,
+      "issues": 0,
+      "comments": 0,
+      "total": 3
+    },
+    {
+      "username": "olkornii",
+      "prs": 0,
+      "issues": 0,
+      "comments": 1,
+      "total": 1
+    }
+  ]
+}
