@@ -1,0 +1,91 @@
+{
+  "timestamp": "2026-09-17T02:18:09.708Z",
+  "date": "2026-09-17",
+  "repoLabel": "che-incubator/kubernetes-image-puller",
+  "metrics": {
+    "discussions": {
+      "totalUpvotes": 0,
+      "totalComments": 0
+    },
+    "pullRequests": {
+      "open": 1,
+      "total": 74,
+      "merged": 68,
+      "mergeRate": "91.9",
+      "openPRs": [
+        {
+          "number": 275,
+          "title": "fix: push Helm chart to separate OCI repository",
+          "author": "snecklifter",
+          "url": "https://github.com/che-incubator/kubernetes-image-puller/pull/275",
+          "createdAt": "2026-09-09T15:51:51Z"
+        }
+      ]
+    },
+    "issues": {
+      "open": 4,
+      "closed": 20,
+      "total": 24,
+      "closeRate": "83.3",
+      "openIssues": [
+        {
+          "number": 252,
+          "title": "Consolidate release workflows into a single workflow",
+          "author": "snecklifter",
+          "assignees": [],
+          "labels": [],
+          "url": "https://github.com/che-incubator/kubernetes-image-puller/issues/252",
+          "createdAt": "2026-07-20T08:50:48Z"
+        },
+        {
+          "number": 253,
+          "title": "Add signing and provenance to published Helm chart",
+          "author": "snecklifter",
+          "assignees": [],
+          "labels": [],
+          "url": "https://github.com/che-incubator/kubernetes-image-puller/issues/253",
+          "createdAt": "2026-07-20T08:50:52Z"
+        },
+        {
+          "number": 255,
+          "title": "Enable vulnerability reporting",
+          "author": "snecklifter",
+          "assignees": [],
+          "labels": [],
+          "url": "https://github.com/che-incubator/kubernetes-image-puller/issues/255",
+          "createdAt": "2026-07-21T12:01:46Z"
+        },
+        {
+          "number": 271,
+          "title": "Helm installation broken",
+          "author": "christianhuth",
+          "assignees": [],
+          "labels": [],
+          "url": "https://github.com/che-incubator/kubernetes-image-puller/issues/271",
+          "createdAt": "2026-08-31T07:07:26Z"
+        }
+      ]
+    },
+    "repository": {
+      "stars": 291,
+      "forks": 43,
+      "watchers": 9
+    }
+  },
+  "topActiveUsers": [
+    {
+      "username": "snecklifter",
+      "prs": 1,
+      "issues": 0,
+      "comments": 0,
+      "total": 3
+    },
+    {
+      "username": "christianhuth",
+      "prs": 0,
+      "issues": 1,
+      "comments": 0,
+      "total": 2
+    }
+  ]
+}
