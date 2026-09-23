@@ -1,0 +1,68 @@
+{
+  "timestamp": "2026-09-23T02:19:53.405Z",
+  "date": "2026-09-23",
+  "repoLabel": "eclipse-che/che-dashboard",
+  "metrics": {
+    "discussions": {
+      "totalUpvotes": 0,
+      "totalComments": 0
+    },
+    "pullRequests": {
+      "open": 1,
+      "total": 77,
+      "merged": 62,
+      "mergeRate": "80.5",
+      "openPRs": [
+        {
+          "number": 1676,
+          "title": "feat(dashboard): support alternative dashboard redirect",
+          "author": "deshrajvermay9517-png",
+          "url": "https://github.com/eclipse-che/che-dashboard/pull/1676",
+          "createdAt": "2026-09-17T04:13:20Z"
+        }
+      ]
+    },
+    "issues": {
+      "open": 0,
+      "closed": 0,
+      "total": 0,
+      "closeRate": 0,
+      "openIssues": []
+    },
+    "repository": {
+      "stars": 19,
+      "forks": 67,
+      "watchers": 20
+    }
+  },
+  "topActiveUsers": [
+    {
+      "username": "openshift-ci",
+      "prs": 0,
+      "issues": 0,
+      "comments": 42,
+      "total": 42
+    },
+    {
+      "username": "bianicu",
+      "prs": 1,
+      "issues": 0,
+      "comments": 2,
+      "total": 5
+    },
+    {
+      "username": "deshrajvermay9517-png",
+      "prs": 1,
+      "issues": 0,
+      "comments": 0,
+      "total": 3
+    },
+    {
+      "username": "batleforc",
+      "prs": 0,
+      "issues": 0,
+      "comments": 2,
+      "total": 2
+    }
+  ]
+}
