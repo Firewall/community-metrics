@@ -1,0 +1,47 @@
+{
+  "timestamp": "2026-09-30T02:53:58.093Z",
+  "date": "2026-09-30",
+  "repoLabel": "redhat-developer/devspaces-multicluster-redirector",
+  "metrics": {
+    "discussions": {
+      "totalUpvotes": 0,
+      "totalComments": 0
+    },
+    "pullRequests": {
+      "open": 1,
+      "total": 1,
+      "merged": 0,
+      "mergeRate": "0.0",
+      "openPRs": [
+        {
+          "number": 16,
+          "title": "chore: bump quarkus 3.39.5, netty 4.2.18.Final, jackson 2.22.3",
+          "author": "btjd",
+          "url": "https://github.com/redhat-developer/devspaces-multicluster-redirector/pull/16",
+          "createdAt": "2026-09-29T19:07:08Z"
+        }
+      ]
+    },
+    "issues": {
+      "open": 0,
+      "closed": 1,
+      "total": 1,
+      "closeRate": "100.0",
+      "openIssues": []
+    },
+    "repository": {
+      "stars": 3,
+      "forks": 2,
+      "watchers": 0
+    }
+  },
+  "topActiveUsers": [
+    {
+      "username": "btjd",
+      "prs": 1,
+      "issues": 0,
+      "comments": 0,
+      "total": 3
+    }
+  ]
+}
