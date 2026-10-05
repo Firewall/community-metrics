@@ -1,0 +1,52 @@
+{
+  "timestamp": "2026-10-05T02:53:41.653Z",
+  "date": "2026-10-05",
+  "repoLabel": "podman-desktop/podman-desktop-catalog",
+  "metrics": {
+    "discussions": {
+      "totalUpvotes": 0,
+      "totalComments": 0
+    },
+    "pullRequests": {
+      "open": 1,
+      "total": 4,
+      "merged": 2,
+      "mergeRate": "50.0",
+      "openPRs": [
+        {
+          "number": 1413,
+          "title": "feat: publish v0.1.0 of Docker over TCP extension",
+          "author": "gasparovicm",
+          "url": "https://github.com/podman-desktop/podman-desktop-catalog/pull/1413",
+          "createdAt": "2026-10-04T17:05:15Z"
+        }
+      ]
+    },
+    "issues": {
+      "open": 0,
+      "closed": 0,
+      "total": 0,
+      "closeRate": 0,
+      "openIssues": []
+    },
+    "social": {
+      "blueskyFollowers": 196,
+      "linkedinFollowers": 1266,
+      "mastodonFollowers": 103
+    },
+    "repository": {
+      "stars": 22,
+      "forks": 19,
+      "watchers": 16
+    }
+  },
+  "topActiveUsers": [
+    {
+      "username": "gasparovicm",
+      "prs": 1,
+      "issues": 0,
+      "comments": 0,
+      "total": 3
+    }
+  ]
+}
