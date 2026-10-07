@@ -1,0 +1,68 @@
+{
+  "timestamp": "2026-10-07T03:12:29.190Z",
+  "date": "2026-10-07",
+  "repoLabel": "che-incubator/che-code",
+  "metrics": {
+    "discussions": {
+      "totalUpvotes": 0,
+      "totalComments": 0
+    },
+    "pullRequests": {
+      "open": 3,
+      "total": 92,
+      "merged": 67,
+      "mergeRate": "72.8",
+      "openPRs": [
+        {
+          "number": 817,
+          "title": "feat: skip adding devfile projects when workspace.skipProjectSync is true",
+          "author": "aradhanay621",
+          "url": "https://github.com/che-incubator/che-code/pull/817",
+          "createdAt": "2026-09-30T12:39:12Z"
+        },
+        {
+          "number": 725,
+          "title": "Added ppc64le support",
+          "author": "prabhuk25",
+          "url": "https://github.com/che-incubator/che-code/pull/725",
+          "createdAt": "2026-06-18T15:55:36Z"
+        },
+        {
+          "number": 626,
+          "title": "Rebase off of VS Code v1.108.X to support GitHub Copilot in Eclipse Che",
+          "author": "cgruver",
+          "url": "https://github.com/che-incubator/che-code/pull/626",
+          "createdAt": "2026-01-09T19:19:59Z"
+        }
+      ]
+    },
+    "issues": {
+      "open": 0,
+      "closed": 0,
+      "total": 0,
+      "closeRate": 0,
+      "openIssues": []
+    },
+    "repository": {
+      "stars": 35,
+      "forks": 51,
+      "watchers": 7
+    }
+  },
+  "topActiveUsers": [
+    {
+      "username": "aradhanay621",
+      "prs": 1,
+      "issues": 0,
+      "comments": 0,
+      "total": 3
+    },
+    {
+      "username": "batleforc",
+      "prs": 1,
+      "issues": 0,
+      "comments": 0,
+      "total": 3
+    }
+  ]
+}
