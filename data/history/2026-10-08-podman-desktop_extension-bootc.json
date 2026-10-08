@@ -1,0 +1,81 @@
+{
+  "timestamp": "2026-10-08T03:26:52.464Z",
+  "date": "2026-10-08",
+  "repoLabel": "podman-desktop/extension-bootc",
+  "metrics": {
+    "discussions": {
+      "totalUpvotes": 0,
+      "totalComments": 0
+    },
+    "pullRequests": {
+      "open": 0,
+      "total": 20,
+      "merged": 6,
+      "mergeRate": "30.0",
+      "openPRs": []
+    },
+    "issues": {
+      "open": 4,
+      "closed": 21,
+      "total": 25,
+      "closeRate": "84.0",
+      "openIssues": [
+        {
+          "number": 465,
+          "title": "Relative path in outputs field",
+          "author": "p5",
+          "assignees": [],
+          "labels": [],
+          "url": "https://github.com/podman-desktop/extension-bootc/issues/465",
+          "createdAt": "2024-05-08T17:48:31Z"
+        },
+        {
+          "number": 1876,
+          "title": "Can't select the bootc image builder version",
+          "author": "lucamaf",
+          "assignees": [],
+          "labels": [],
+          "url": "https://github.com/podman-desktop/extension-bootc/issues/1876",
+          "createdAt": "2025-08-20T09:32:45Z"
+        },
+        {
+          "number": 1881,
+          "title": "Can't access vm port from host",
+          "author": "macthev",
+          "assignees": [],
+          "labels": [],
+          "url": "https://github.com/podman-desktop/extension-bootc/issues/1881",
+          "createdAt": "2025-08-24T08:04:06Z"
+        },
+        {
+          "number": 2810,
+          "title": "Claude Code guard for destructive commands never blocks: $CLAUDE_TOOL_INPUT is not set, and exit 1 doesn't block",
+          "author": "faizjamal0111-svg",
+          "assignees": [],
+          "labels": [],
+          "url": "https://github.com/podman-desktop/extension-bootc/issues/2810",
+          "createdAt": "2026-10-07T07:07:29Z"
+        }
+      ]
+    },
+    "social": {
+      "blueskyFollowers": 198,
+      "linkedinFollowers": 1269,
+      "mastodonFollowers": 104
+    },
+    "repository": {
+      "stars": 474,
+      "forks": 33,
+      "watchers": 16
+    }
+  },
+  "topActiveUsers": [
+    {
+      "username": "faizjamal0111-svg",
+      "prs": 0,
+      "issues": 1,
+      "comments": 0,
+      "total": 2
+    }
+  ]
+}
