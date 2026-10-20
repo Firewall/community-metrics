@@ -1,0 +1,75 @@
+{
+  "timestamp": "2026-10-20T02:32:38.486Z",
+  "date": "2026-10-20",
+  "repoLabel": "eclipse-che/che-dashboard",
+  "metrics": {
+    "discussions": {
+      "totalUpvotes": 0,
+      "totalComments": 0
+    },
+    "pullRequests": {
+      "open": 3,
+      "total": 79,
+      "merged": 62,
+      "mergeRate": "78.5",
+      "openPRs": [
+        {
+          "number": 1697,
+          "title": "fix(deps): upgrade handlebars to 4.7.10",
+          "author": "bianicu",
+          "url": "https://github.com/eclipse-che/che-dashboard/pull/1697",
+          "createdAt": "2026-10-16T14:50:48Z"
+        },
+        {
+          "number": 1694,
+          "title": "feat: add a Storage tab to Workspace Details to show ",
+          "author": "batleforc",
+          "url": "https://github.com/eclipse-che/che-dashboard/pull/1694",
+          "createdAt": "2026-10-13T16:38:02Z"
+        },
+        {
+          "number": 1676,
+          "title": "feat(dashboard): support alternative dashboard redirect",
+          "author": "deshrajvermay9517-png",
+          "url": "https://github.com/eclipse-che/che-dashboard/pull/1676",
+          "createdAt": "2026-09-17T04:13:20Z"
+        }
+      ]
+    },
+    "issues": {
+      "open": 0,
+      "closed": 0,
+      "total": 0,
+      "closeRate": 0,
+      "openIssues": []
+    },
+    "repository": {
+      "stars": 19,
+      "forks": 68,
+      "watchers": 20
+    }
+  },
+  "topActiveUsers": [
+    {
+      "username": "openshift-ci",
+      "prs": 0,
+      "issues": 0,
+      "comments": 41,
+      "total": 41
+    },
+    {
+      "username": "batleforc",
+      "prs": 1,
+      "issues": 0,
+      "comments": 2,
+      "total": 5
+    },
+    {
+      "username": "bianicu",
+      "prs": 1,
+      "issues": 0,
+      "comments": 0,
+      "total": 3
+    }
+  ]
+}
