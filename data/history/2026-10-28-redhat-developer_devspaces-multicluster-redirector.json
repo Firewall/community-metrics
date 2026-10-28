@@ -1,0 +1,56 @@
+{
+  "timestamp": "2026-10-28T02:58:11.001Z",
+  "date": "2026-10-28",
+  "repoLabel": "redhat-developer/devspaces-multicluster-redirector",
+  "metrics": {
+    "discussions": {
+      "totalUpvotes": 0,
+      "totalComments": 0
+    },
+    "pullRequests": {
+      "open": 0,
+      "total": 1,
+      "merged": 1,
+      "mergeRate": "100.0",
+      "openPRs": []
+    },
+    "issues": {
+      "open": 1,
+      "closed": 1,
+      "total": 2,
+      "closeRate": "50.0",
+      "openIssues": [
+        {
+          "number": 18,
+          "title": "Failed to get groups for user",
+          "author": "ts-davorinkocbek",
+          "assignees": [],
+          "labels": [],
+          "url": "https://github.com/redhat-developer/devspaces-multicluster-redirector/issues/18",
+          "createdAt": "2026-10-23T13:53:50Z"
+        }
+      ]
+    },
+    "repository": {
+      "stars": 4,
+      "forks": 3,
+      "watchers": 0
+    }
+  },
+  "topActiveUsers": [
+    {
+      "username": "btjd",
+      "prs": 1,
+      "issues": 0,
+      "comments": 0,
+      "total": 3
+    },
+    {
+      "username": "ts-davorinkocbek",
+      "prs": 0,
+      "issues": 1,
+      "comments": 0,
+      "total": 2
+    }
+  ]
+}
