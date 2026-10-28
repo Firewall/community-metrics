@@ -1,0 +1,68 @@
+{
+  "timestamp": "2026-10-28T02:58:10.991Z",
+  "date": "2026-10-28",
+  "repoLabel": "eclipse-che/che-dashboard",
+  "metrics": {
+    "discussions": {
+      "totalUpvotes": 0,
+      "totalComments": 0
+    },
+    "pullRequests": {
+      "open": 2,
+      "total": 79,
+      "merged": 63,
+      "mergeRate": "79.7",
+      "openPRs": [
+        {
+          "number": 1694,
+          "title": "feat: add a Storage tab to Workspace Details to show ",
+          "author": "batleforc",
+          "url": "https://github.com/eclipse-che/che-dashboard/pull/1694",
+          "createdAt": "2026-10-13T16:38:02Z"
+        },
+        {
+          "number": 1676,
+          "title": "feat(dashboard): support alternative dashboard redirect",
+          "author": "deshrajvermay9517-png",
+          "url": "https://github.com/eclipse-che/che-dashboard/pull/1676",
+          "createdAt": "2026-09-17T04:13:20Z"
+        }
+      ]
+    },
+    "issues": {
+      "open": 0,
+      "closed": 0,
+      "total": 0,
+      "closeRate": 0,
+      "openIssues": []
+    },
+    "repository": {
+      "stars": 19,
+      "forks": 68,
+      "watchers": 20
+    }
+  },
+  "topActiveUsers": [
+    {
+      "username": "openshift-ci",
+      "prs": 0,
+      "issues": 0,
+      "comments": 48,
+      "total": 48
+    },
+    {
+      "username": "batleforc",
+      "prs": 1,
+      "issues": 0,
+      "comments": 2,
+      "total": 5
+    },
+    {
+      "username": "bianicu",
+      "prs": 1,
+      "issues": 0,
+      "comments": 0,
+      "total": 3
+    }
+  ]
+}
