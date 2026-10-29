@@ -1,0 +1,67 @@
+{
+  "timestamp": "2026-10-29T03:23:45.107Z",
+  "date": "2026-10-29",
+  "repoLabel": "devfile/alizer",
+  "metrics": {
+    "discussions": {
+      "totalUpvotes": 0,
+      "totalComments": 0
+    },
+    "pullRequests": {
+      "open": 0,
+      "total": 148,
+      "merged": 66,
+      "mergeRate": "44.6",
+      "openPRs": []
+    },
+    "issues": {
+      "open": 0,
+      "closed": 0,
+      "total": 0,
+      "closeRate": 0,
+      "openIssues": []
+    },
+    "repository": {
+      "stars": 10,
+      "forks": 15,
+      "watchers": 7
+    }
+  },
+  "topActiveUsers": [
+    {
+      "username": "openshift-ci",
+      "prs": 0,
+      "issues": 0,
+      "comments": 13,
+      "total": 13
+    },
+    {
+      "username": "qodo-code-review",
+      "prs": 0,
+      "issues": 0,
+      "comments": 4,
+      "total": 4
+    },
+    {
+      "username": "thepetk",
+      "prs": 1,
+      "issues": 0,
+      "comments": 1,
+      "total": 4
+    },
+    {
+      "username": "renovate",
+      "prs": 1,
+      "issues": 0,
+      "comments": 0,
+      "total": 3
+    },
+    {
+      "username": "ysinghc",
+      "prs": 1,
+      "issues": 0,
+      "comments": 0,
+      "total": 3
+    }
+  ]
+}
