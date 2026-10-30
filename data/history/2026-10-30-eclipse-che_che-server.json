@@ -1,0 +1,68 @@
+{
+  "timestamp": "2026-10-30T03:24:58.847Z",
+  "date": "2026-10-30",
+  "repoLabel": "eclipse-che/che-server",
+  "metrics": {
+    "discussions": {
+      "totalUpvotes": 0,
+      "totalComments": 0
+    },
+    "pullRequests": {
+      "open": 2,
+      "total": 49,
+      "merged": 37,
+      "mergeRate": "75.5",
+      "openPRs": [
+        {
+          "number": 1093,
+          "title": "fix(factory): read repository devfiles from an internal Git server",
+          "author": "preetma-redhat",
+          "url": "https://github.com/eclipse-che/che-server/pull/1093",
+          "createdAt": "2026-10-29T10:55:55Z"
+        },
+        {
+          "number": 1067,
+          "title": "Authenticate SBOM uploads with PIA",
+          "author": "lukpueh",
+          "url": "https://github.com/eclipse-che/che-server/pull/1067",
+          "createdAt": "2026-09-17T12:41:36Z"
+        }
+      ]
+    },
+    "issues": {
+      "open": 0,
+      "closed": 0,
+      "total": 0,
+      "closeRate": 0,
+      "openIssues": []
+    },
+    "repository": {
+      "stars": 143,
+      "forks": 85,
+      "watchers": 14
+    }
+  },
+  "topActiveUsers": [
+    {
+      "username": "openshift-ci",
+      "prs": 0,
+      "issues": 0,
+      "comments": 23,
+      "total": 23
+    },
+    {
+      "username": "preetma-redhat",
+      "prs": 1,
+      "issues": 0,
+      "comments": 0,
+      "total": 3
+    },
+    {
+      "username": "ash-thakur-rh",
+      "prs": 1,
+      "issues": 0,
+      "comments": 0,
+      "total": 3
+    }
+  ]
+}
