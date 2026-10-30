@@ -1,0 +1,66 @@
+{
+  "timestamp": "2026-10-30T03:23:22.066Z",
+  "date": "2026-10-30",
+  "repoLabel": "podman-desktop/extension-apple-container",
+  "metrics": {
+    "discussions": {
+      "totalUpvotes": 0,
+      "totalComments": 0
+    },
+    "pullRequests": {
+      "open": 2,
+      "total": 3,
+      "merged": 0,
+      "mergeRate": "0.0",
+      "openPRs": [
+        {
+          "number": 584,
+          "title": "feat: describe the Apple provider on the Resources page",
+          "author": "NopeCharon",
+          "url": "https://github.com/podman-desktop/extension-apple-container/pull/584",
+          "createdAt": "2026-10-29T09:15:02Z"
+        },
+        {
+          "number": 583,
+          "title": "chore(eslint): switch from parserOptions.project to projectService",
+          "author": "NopeCharon",
+          "url": "https://github.com/podman-desktop/extension-apple-container/pull/583",
+          "createdAt": "2026-10-29T09:14:49Z"
+        }
+      ]
+    },
+    "issues": {
+      "open": 0,
+      "closed": 2,
+      "total": 2,
+      "closeRate": "100.0",
+      "openIssues": []
+    },
+    "social": {
+      "blueskyFollowers": 201,
+      "linkedinFollowers": 1287,
+      "mastodonFollowers": 102
+    },
+    "repository": {
+      "stars": 67,
+      "forks": 9,
+      "watchers": 3
+    }
+  },
+  "topActiveUsers": [
+    {
+      "username": "codecov-commenter",
+      "prs": 0,
+      "issues": 0,
+      "comments": 16,
+      "total": 16
+    },
+    {
+      "username": "NopeCharon",
+      "prs": 2,
+      "issues": 0,
+      "comments": 0,
+      "total": 6
+    }
+  ]
+}

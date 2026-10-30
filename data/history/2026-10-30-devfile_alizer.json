@@ -1,0 +1,75 @@
+{
+  "timestamp": "2026-10-30T03:24:58.853Z",
+  "date": "2026-10-30",
+  "repoLabel": "devfile/alizer",
+  "metrics": {
+    "discussions": {
+      "totalUpvotes": 0,
+      "totalComments": 0
+    },
+    "pullRequests": {
+      "open": 1,
+      "total": 149,
+      "merged": 66,
+      "mergeRate": "44.3",
+      "openPRs": [
+        {
+          "number": 442,
+          "title": "Update github actions (major)",
+          "author": "renovate",
+          "url": "https://github.com/devfile/alizer/pull/442",
+          "createdAt": "2026-10-29T23:58:44Z"
+        }
+      ]
+    },
+    "issues": {
+      "open": 0,
+      "closed": 0,
+      "total": 0,
+      "closeRate": 0,
+      "openIssues": []
+    },
+    "repository": {
+      "stars": 10,
+      "forks": 15,
+      "watchers": 7
+    }
+  },
+  "topActiveUsers": [
+    {
+      "username": "openshift-ci",
+      "prs": 0,
+      "issues": 0,
+      "comments": 14,
+      "total": 14
+    },
+    {
+      "username": "renovate",
+      "prs": 2,
+      "issues": 0,
+      "comments": 0,
+      "total": 6
+    },
+    {
+      "username": "qodo-code-review",
+      "prs": 0,
+      "issues": 0,
+      "comments": 4,
+      "total": 4
+    },
+    {
+      "username": "thepetk",
+      "prs": 1,
+      "issues": 0,
+      "comments": 1,
+      "total": 4
+    },
+    {
+      "username": "ysinghc",
+      "prs": 1,
+      "issues": 0,
+      "comments": 0,
+      "total": 3
+    }
+  ]
+}
