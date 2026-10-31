@@ -1,0 +1,76 @@
+{
+  "timestamp": "2026-10-31T03:07:54.028Z",
+  "date": "2026-10-31",
+  "repoLabel": "podman-desktop/extension-apple-container",
+  "metrics": {
+    "discussions": {
+      "totalUpvotes": 0,
+      "totalComments": 0
+    },
+    "pullRequests": {
+      "open": 2,
+      "total": 4,
+      "merged": 1,
+      "mergeRate": "25.0",
+      "openPRs": [
+        {
+          "number": 588,
+          "title": "fix: restart socktainer when it exits and handle spawn errors",
+          "author": "NopeCharon",
+          "url": "https://github.com/podman-desktop/extension-apple-container/pull/588",
+          "createdAt": "2026-10-30T09:10:55Z"
+        },
+        {
+          "number": 584,
+          "title": "feat: describe the Apple provider on the Resources page",
+          "author": "NopeCharon",
+          "url": "https://github.com/podman-desktop/extension-apple-container/pull/584",
+          "createdAt": "2026-10-29T09:15:02Z"
+        }
+      ]
+    },
+    "issues": {
+      "open": 1,
+      "closed": 2,
+      "total": 3,
+      "closeRate": "66.7",
+      "openIssues": [
+        {
+          "number": 587,
+          "title": "socktainer crash or spawn failure is not handled: dead connection stays registered and socktainer is never restarted",
+          "author": "NopeCharon",
+          "assignees": [],
+          "labels": [],
+          "url": "https://github.com/podman-desktop/extension-apple-container/issues/587",
+          "createdAt": "2026-10-30T09:10:29Z"
+        }
+      ]
+    },
+    "social": {
+      "blueskyFollowers": 201,
+      "linkedinFollowers": 1285,
+      "mastodonFollowers": 102
+    },
+    "repository": {
+      "stars": 68,
+      "forks": 9,
+      "watchers": 3
+    }
+  },
+  "topActiveUsers": [
+    {
+      "username": "codecov-commenter",
+      "prs": 0,
+      "issues": 0,
+      "comments": 16,
+      "total": 16
+    },
+    {
+      "username": "NopeCharon",
+      "prs": 3,
+      "issues": 1,
+      "comments": 0,
+      "total": 11
+    }
+  ]
+}
