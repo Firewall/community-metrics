@@ -1,0 +1,82 @@
+{
+  "timestamp": "2026-11-08T03:12:23.245Z",
+  "date": "2026-11-08",
+  "repoLabel": "eclipse-che/che-dashboard",
+  "metrics": {
+    "discussions": {
+      "totalUpvotes": 0,
+      "totalComments": 0
+    },
+    "pullRequests": {
+      "open": 3,
+      "total": 81,
+      "merged": 64,
+      "mergeRate": "79.0",
+      "openPRs": [
+        {
+          "number": 1708,
+          "title": "fix(factory): preserve plus signs in saved factory params",
+          "author": "snecklifter",
+          "url": "https://github.com/eclipse-che/che-dashboard/pull/1708",
+          "createdAt": "2026-11-03T13:23:16Z"
+        },
+        {
+          "number": 1707,
+          "title": "fix(samples): extract factory params from sample URL query strings",
+          "author": "snecklifter",
+          "url": "https://github.com/eclipse-che/che-dashboard/pull/1707",
+          "createdAt": "2026-11-02T16:05:45Z"
+        },
+        {
+          "number": 1676,
+          "title": "feat(dashboard): support alternative dashboard redirect",
+          "author": "deshrajvermay9517-png",
+          "url": "https://github.com/eclipse-che/che-dashboard/pull/1676",
+          "createdAt": "2026-09-17T04:13:20Z"
+        }
+      ]
+    },
+    "issues": {
+      "open": 0,
+      "closed": 0,
+      "total": 0,
+      "closeRate": 0,
+      "openIssues": []
+    },
+    "repository": {
+      "stars": 19,
+      "forks": 68,
+      "watchers": 20
+    }
+  },
+  "topActiveUsers": [
+    {
+      "username": "openshift-ci",
+      "prs": 0,
+      "issues": 0,
+      "comments": 62,
+      "total": 62
+    },
+    {
+      "username": "snecklifter",
+      "prs": 2,
+      "issues": 0,
+      "comments": 0,
+      "total": 6
+    },
+    {
+      "username": "batleforc",
+      "prs": 1,
+      "issues": 0,
+      "comments": 3,
+      "total": 6
+    },
+    {
+      "username": "bianicu",
+      "prs": 1,
+      "issues": 0,
+      "comments": 0,
+      "total": 3
+    }
+  ]
+}
