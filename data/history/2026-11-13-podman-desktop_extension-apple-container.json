@@ -1,0 +1,82 @@
+{
+  "timestamp": "2026-11-13T03:59:11.088Z",
+  "date": "2026-11-13",
+  "repoLabel": "podman-desktop/extension-apple-container",
+  "metrics": {
+    "discussions": {
+      "totalUpvotes": 0,
+      "totalComments": 0
+    },
+    "pullRequests": {
+      "open": 2,
+      "total": 6,
+      "merged": 3,
+      "mergeRate": "50.0",
+      "openPRs": [
+        {
+          "number": 611,
+          "title": "docs: add supported versions, Docker CLI, troubleshooting and development guides",
+          "author": "NopeCharon",
+          "url": "https://github.com/podman-desktop/extension-apple-container/pull/611",
+          "createdAt": "2026-11-12T18:58:24Z"
+        },
+        {
+          "number": 609,
+          "title": "feat: start and stop the Apple container system from the Resources page",
+          "author": "NopeCharon",
+          "url": "https://github.com/podman-desktop/extension-apple-container/pull/609",
+          "createdAt": "2026-11-11T13:57:44Z"
+        }
+      ]
+    },
+    "issues": {
+      "open": 1,
+      "closed": 3,
+      "total": 4,
+      "closeRate": "75.0",
+      "openIssues": [
+        {
+          "number": 610,
+          "title": "docs: README has no troubleshooting, Docker CLI or development guide",
+          "author": "NopeCharon",
+          "assignees": [],
+          "labels": [],
+          "url": "https://github.com/podman-desktop/extension-apple-container/issues/610",
+          "createdAt": "2026-11-12T18:56:21Z"
+        }
+      ]
+    },
+    "social": {
+      "blueskyFollowers": 202,
+      "mastodonFollowers": 103
+    },
+    "repository": {
+      "stars": 68,
+      "forks": 9,
+      "watchers": 3
+    }
+  },
+  "topActiveUsers": [
+    {
+      "username": "NopeCharon",
+      "prs": 5,
+      "issues": 2,
+      "comments": 0,
+      "total": 19
+    },
+    {
+      "username": "codecov-commenter",
+      "prs": 0,
+      "issues": 0,
+      "comments": 10,
+      "total": 10
+    },
+    {
+      "username": "podman-desktop-triager",
+      "prs": 0,
+      "issues": 0,
+      "comments": 1,
+      "total": 1
+    }
+  ]
+}
