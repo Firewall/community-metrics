@@ -1,0 +1,47 @@
+{
+  "timestamp": "2026-11-14T03:59:02.029Z",
+  "date": "2026-11-14",
+  "repoLabel": "redhat-developer/devspaces-remote-ssh",
+  "metrics": {
+    "discussions": {
+      "totalUpvotes": 0,
+      "totalComments": 0
+    },
+    "pullRequests": {
+      "open": 1,
+      "total": 3,
+      "merged": 2,
+      "mergeRate": "66.7",
+      "openPRs": [
+        {
+          "number": 21,
+          "title": "Derive the API server from the Dev Spaces route when the OAuth hostname is customized",
+          "author": "jyotsanaarora",
+          "url": "https://github.com/redhat-developer/devspaces-remote-ssh/pull/21",
+          "createdAt": "2026-11-13T08:40:15Z"
+        }
+      ]
+    },
+    "issues": {
+      "open": 0,
+      "closed": 0,
+      "total": 0,
+      "closeRate": 0,
+      "openIssues": []
+    },
+    "repository": {
+      "stars": 7,
+      "forks": 5,
+      "watchers": 0
+    }
+  },
+  "topActiveUsers": [
+    {
+      "username": "jyotsanaarora",
+      "prs": 1,
+      "issues": 0,
+      "comments": 0,
+      "total": 3
+    }
+  ]
+}
