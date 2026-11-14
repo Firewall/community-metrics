@@ -1,0 +1,65 @@
+{
+  "timestamp": "2026-11-14T03:57:21.193Z",
+  "date": "2026-11-14",
+  "repoLabel": "podman-desktop/extension-apple-container",
+  "metrics": {
+    "discussions": {
+      "totalUpvotes": 0,
+      "totalComments": 0
+    },
+    "pullRequests": {
+      "open": 1,
+      "total": 6,
+      "merged": 4,
+      "mergeRate": "66.7",
+      "openPRs": [
+        {
+          "number": 609,
+          "title": "feat: start and stop the Apple container system from the Resources page",
+          "author": "NopeCharon",
+          "url": "https://github.com/podman-desktop/extension-apple-container/pull/609",
+          "createdAt": "2026-11-11T13:57:44Z"
+        }
+      ]
+    },
+    "issues": {
+      "open": 0,
+      "closed": 4,
+      "total": 4,
+      "closeRate": "100.0",
+      "openIssues": []
+    },
+    "social": {
+      "blueskyFollowers": 202,
+      "mastodonFollowers": 103
+    },
+    "repository": {
+      "stars": 68,
+      "forks": 9,
+      "watchers": 3
+    }
+  },
+  "topActiveUsers": [
+    {
+      "username": "NopeCharon",
+      "prs": 5,
+      "issues": 2,
+      "comments": 1,
+      "total": 20
+    },
+    {
+      "username": "codecov-commenter",
+      "prs": 0,
+      "issues": 0,
+      "comments": 10,
+      "total": 10
+    },
+    {
+      "username": "podman-desktop-triager",
+      "prs": 0,
+      "issues": 0,
+      "comments": 1,
+      "total": 1
+    }
+  ]
+}
