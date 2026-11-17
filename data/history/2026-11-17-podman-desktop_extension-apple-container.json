@@ -1,0 +1,89 @@
+{
+  "timestamp": "2026-11-17T05:37:39.688Z",
+  "date": "2026-11-17",
+  "repoLabel": "podman-desktop/extension-apple-container",
+  "metrics": {
+    "discussions": {
+      "totalUpvotes": 0,
+      "totalComments": 0
+    },
+    "pullRequests": {
+      "open": 3,
+      "total": 9,
+      "merged": 5,
+      "mergeRate": "55.6",
+      "openPRs": [
+        {
+          "number": 618,
+          "title": "feat: show the installed Apple container version on the provider",
+          "author": "NopeCharon",
+          "url": "https://github.com/podman-desktop/extension-apple-container/pull/618",
+          "createdAt": "2026-11-16T01:57:48Z"
+        },
+        {
+          "number": 615,
+          "title": "fix: set the Apple provider status once per status check",
+          "author": "NopeCharon",
+          "url": "https://github.com/podman-desktop/extension-apple-container/pull/615",
+          "createdAt": "2026-11-15T11:39:28Z"
+        },
+        {
+          "number": 609,
+          "title": "feat: start and stop the Apple container system from the Resources page",
+          "author": "NopeCharon",
+          "url": "https://github.com/podman-desktop/extension-apple-container/pull/609",
+          "createdAt": "2026-11-11T13:57:44Z"
+        }
+      ]
+    },
+    "issues": {
+      "open": 1,
+      "closed": 4,
+      "total": 5,
+      "closeRate": "80.0",
+      "openIssues": [
+        {
+          "number": 617,
+          "title": "feat: show the installed Apple container version on the Dashboard and Resources page",
+          "author": "NopeCharon",
+          "assignees": [],
+          "labels": [],
+          "url": "https://github.com/podman-desktop/extension-apple-container/issues/617",
+          "createdAt": "2026-11-16T01:57:18Z"
+        }
+      ]
+    },
+    "social": {
+      "blueskyFollowers": 202,
+      "mastodonFollowers": 103
+    },
+    "repository": {
+      "stars": 68,
+      "forks": 9,
+      "watchers": 3
+    }
+  },
+  "topActiveUsers": [
+    {
+      "username": "NopeCharon",
+      "prs": 8,
+      "issues": 3,
+      "comments": 2,
+      "total": 32
+    },
+    {
+      "username": "codecov-commenter",
+      "prs": 0,
+      "issues": 0,
+      "comments": 14,
+      "total": 14
+    },
+    {
+      "username": "podman-desktop-triager",
+      "prs": 0,
+      "issues": 0,
+      "comments": 1,
+      "total": 1
+    }
+  ]
+}
