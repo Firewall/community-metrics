@@ -1,0 +1,113 @@
+{
+  "timestamp": "2026-11-23T04:36:27.207Z",
+  "date": "2026-11-23",
+  "repoLabel": "podman-desktop/extension-podman-quadlet",
+  "metrics": {
+    "discussions": {
+      "totalUpvotes": 0,
+      "totalComments": 0
+    },
+    "pullRequests": {
+      "open": 2,
+      "total": 8,
+      "merged": 4,
+      "mergeRate": "50.0",
+      "openPRs": [
+        {
+          "number": 1961,
+          "title": "fix(backend): share pending podman worker creation between concurrent calls",
+          "author": "NopeCharon",
+          "url": "https://github.com/podman-desktop/extension-podman-quadlet/pull/1961",
+          "createdAt": "2026-11-18T18:56:45Z"
+        },
+        {
+          "number": 1960,
+          "title": "feat: offer to create a missing file associated with a quadlet",
+          "author": "NopeCharon",
+          "url": "https://github.com/podman-desktop/extension-podman-quadlet/pull/1960",
+          "createdAt": "2026-11-18T18:56:24Z"
+        }
+      ]
+    },
+    "issues": {
+      "open": 4,
+      "closed": 17,
+      "total": 21,
+      "closeRate": "81.0",
+      "openIssues": [
+        {
+          "number": 759,
+          "title": "bug: QuadletUnitParser may fail silently on [Volume] units and break UI",
+          "author": "joshbrooks",
+          "assignees": [
+            "axel7083"
+          ],
+          "labels": [],
+          "url": "https://github.com/podman-desktop/extension-podman-quadlet/issues/759",
+          "createdAt": "2025-07-18T10:06:49Z"
+        },
+        {
+          "number": 1208,
+          "title": "feat: Syntax highlighting for environment files",
+          "author": "cYDN48",
+          "assignees": [],
+          "labels": [],
+          "url": "https://github.com/podman-desktop/extension-podman-quadlet/issues/1208",
+          "createdAt": "2026-02-02T19:11:51Z"
+        },
+        {
+          "number": 1663,
+          "title": "Remote connection: \"not yet implemented\" error from podman quadlet list is swallowed, extension shows empty \"no quadlet found\" state instead",
+          "author": "Frank-JustStuff-Blog",
+          "assignees": [],
+          "labels": [],
+          "url": "https://github.com/podman-desktop/extension-podman-quadlet/issues/1663",
+          "createdAt": "2026-07-23T20:08:25Z"
+        },
+        {
+          "number": 1865,
+          "title": "[Suggestion] Allow copying logs from inside quadlet extension",
+          "author": "gitty323",
+          "assignees": [
+            "simonrey1"
+          ],
+          "labels": [],
+          "url": "https://github.com/podman-desktop/extension-podman-quadlet/issues/1865",
+          "createdAt": "2026-10-09T01:12:45Z"
+        }
+      ]
+    },
+    "social": {
+      "blueskyFollowers": 203,
+      "mastodonFollowers": 104
+    },
+    "repository": {
+      "stars": 12,
+      "forks": 16,
+      "watchers": 9
+    }
+  },
+  "topActiveUsers": [
+    {
+      "username": "NopeCharon",
+      "prs": 2,
+      "issues": 0,
+      "comments": 0,
+      "total": 6
+    },
+    {
+      "username": "codeuh",
+      "prs": 1,
+      "issues": 0,
+      "comments": 1,
+      "total": 4
+    },
+    {
+      "username": "macaron-bot",
+      "prs": 0,
+      "issues": 0,
+      "comments": 3,
+      "total": 3
+    }
+  ]
+}
