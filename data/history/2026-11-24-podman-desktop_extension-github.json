@@ -1,0 +1,60 @@
+{
+  "timestamp": "2026-11-24T07:29:56.611Z",
+  "date": "2026-11-24",
+  "repoLabel": "podman-desktop/extension-github",
+  "metrics": {
+    "discussions": {
+      "totalUpvotes": 0,
+      "totalComments": 0
+    },
+    "pullRequests": {
+      "open": 0,
+      "total": 1,
+      "merged": 1,
+      "mergeRate": "100.0",
+      "openPRs": []
+    },
+    "issues": {
+      "open": 1,
+      "closed": 1,
+      "total": 2,
+      "closeRate": "50.0",
+      "openIssues": [
+        {
+          "number": 177,
+          "title": "GitHub Account Authentication extension",
+          "author": "apidevlab",
+          "assignees": [],
+          "labels": [],
+          "url": "https://github.com/podman-desktop/extension-github/issues/177",
+          "createdAt": "2026-04-27T21:41:11Z"
+        }
+      ]
+    },
+    "social": {
+      "blueskyFollowers": 203,
+      "mastodonFollowers": 104
+    },
+    "repository": {
+      "stars": 15,
+      "forks": 8,
+      "watchers": 1
+    }
+  },
+  "topActiveUsers": [
+    {
+      "username": "rrabelloo",
+      "prs": 1,
+      "issues": 1,
+      "comments": 0,
+      "total": 5
+    },
+    {
+      "username": "podman-desktop-triager",
+      "prs": 0,
+      "issues": 0,
+      "comments": 1,
+      "total": 1
+    }
+  ]
+}
