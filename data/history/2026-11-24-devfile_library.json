@@ -1,0 +1,53 @@
+{
+  "timestamp": "2026-11-24T07:31:33.918Z",
+  "date": "2026-11-24",
+  "repoLabel": "devfile/library",
+  "metrics": {
+    "discussions": {
+      "totalUpvotes": 0,
+      "totalComments": 0
+    },
+    "pullRequests": {
+      "open": 0,
+      "total": 195,
+      "merged": 181,
+      "mergeRate": "92.8",
+      "openPRs": []
+    },
+    "issues": {
+      "open": 0,
+      "closed": 0,
+      "total": 0,
+      "closeRate": 0,
+      "openIssues": []
+    },
+    "repository": {
+      "stars": 26,
+      "forks": 37,
+      "watchers": 6
+    }
+  },
+  "topActiveUsers": [
+    {
+      "username": "renovate",
+      "prs": 2,
+      "issues": 0,
+      "comments": 0,
+      "total": 6
+    },
+    {
+      "username": "openshift-ci",
+      "prs": 0,
+      "issues": 0,
+      "comments": 4,
+      "total": 4
+    },
+    {
+      "username": "ysinghc",
+      "prs": 1,
+      "issues": 0,
+      "comments": 1,
+      "total": 4
+    }
+  ]
+}
