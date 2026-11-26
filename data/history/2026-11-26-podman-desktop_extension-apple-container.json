@@ -1,0 +1,98 @@
+{
+  "timestamp": "2026-11-26T05:51:58.490Z",
+  "date": "2026-11-26",
+  "repoLabel": "podman-desktop/extension-apple-container",
+  "metrics": {
+    "discussions": {
+      "totalUpvotes": 0,
+      "totalComments": 0
+    },
+    "pullRequests": {
+      "open": 3,
+      "total": 10,
+      "merged": 6,
+      "mergeRate": "60.0",
+      "openPRs": [
+        {
+          "number": 631,
+          "title": "feat(download): verify the checksums of the downloaded socktainer archives",
+          "author": "NopeCharon",
+          "url": "https://github.com/podman-desktop/extension-apple-container/pull/631",
+          "createdAt": "2026-11-19T22:50:00Z"
+        },
+        {
+          "number": 618,
+          "title": "feat: show the installed Apple container version on the provider",
+          "author": "NopeCharon",
+          "url": "https://github.com/podman-desktop/extension-apple-container/pull/618",
+          "createdAt": "2026-11-16T01:57:48Z"
+        },
+        {
+          "number": 609,
+          "title": "feat: start and stop the Apple container system from the Resources page",
+          "author": "NopeCharon",
+          "url": "https://github.com/podman-desktop/extension-apple-container/pull/609",
+          "createdAt": "2026-11-11T13:57:44Z"
+        }
+      ]
+    },
+    "issues": {
+      "open": 2,
+      "closed": 4,
+      "total": 6,
+      "closeRate": "66.7",
+      "openIssues": [
+        {
+          "number": 617,
+          "title": "feat: show the installed Apple container version on the Dashboard and Resources page",
+          "author": "NopeCharon",
+          "assignees": [],
+          "labels": [],
+          "url": "https://github.com/podman-desktop/extension-apple-container/issues/617",
+          "createdAt": "2026-11-16T01:57:18Z"
+        },
+        {
+          "number": 630,
+          "title": "feat(download): verify the checksums of the downloaded socktainer archives",
+          "author": "NopeCharon",
+          "assignees": [],
+          "labels": [],
+          "url": "https://github.com/podman-desktop/extension-apple-container/issues/630",
+          "createdAt": "2026-11-19T22:49:25Z"
+        }
+      ]
+    },
+    "social": {
+      "blueskyFollowers": 204,
+      "mastodonFollowers": 104
+    },
+    "repository": {
+      "stars": 68,
+      "forks": 10,
+      "watchers": 3
+    }
+  },
+  "topActiveUsers": [
+    {
+      "username": "NopeCharon",
+      "prs": 9,
+      "issues": 4,
+      "comments": 5,
+      "total": 40
+    },
+    {
+      "username": "codecov-commenter",
+      "prs": 0,
+      "issues": 0,
+      "comments": 14,
+      "total": 14
+    },
+    {
+      "username": "podman-desktop-triager",
+      "prs": 0,
+      "issues": 0,
+      "comments": 1,
+      "total": 1
+    }
+  ]
+}
