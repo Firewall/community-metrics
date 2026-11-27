@@ -1,0 +1,65 @@
+{
+  "timestamp": "2026-11-27T05:45:30.192Z",
+  "date": "2026-11-27",
+  "repoLabel": "podman-desktop/podman-desktop-catalog",
+  "metrics": {
+    "discussions": {
+      "totalUpvotes": 0,
+      "totalComments": 0
+    },
+    "pullRequests": {
+      "open": 2,
+      "total": 5,
+      "merged": 2,
+      "mergeRate": "40.0",
+      "openPRs": [
+        {
+          "number": 1518,
+          "title": "feat(mayfly): add Mayfly 0.1.0",
+          "author": "JGalego",
+          "url": "https://github.com/podman-desktop/podman-desktop-catalog/pull/1518",
+          "createdAt": "2026-11-27T02:49:03Z"
+        },
+        {
+          "number": 1413,
+          "title": "feat: publish v0.1.0 of Docker over TCP extension",
+          "author": "gasparovicm",
+          "url": "https://github.com/podman-desktop/podman-desktop-catalog/pull/1413",
+          "createdAt": "2026-10-04T17:05:15Z"
+        }
+      ]
+    },
+    "issues": {
+      "open": 0,
+      "closed": 0,
+      "total": 0,
+      "closeRate": 0,
+      "openIssues": []
+    },
+    "social": {
+      "blueskyFollowers": 205,
+      "mastodonFollowers": 105
+    },
+    "repository": {
+      "stars": 22,
+      "forks": 23,
+      "watchers": 16
+    }
+  },
+  "topActiveUsers": [
+    {
+      "username": "macaron-bot",
+      "prs": 0,
+      "issues": 0,
+      "comments": 7,
+      "total": 7
+    },
+    {
+      "username": "JGalego",
+      "prs": 1,
+      "issues": 0,
+      "comments": 0,
+      "total": 3
+    }
+  ]
+}
