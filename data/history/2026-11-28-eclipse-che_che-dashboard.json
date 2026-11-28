@@ -1,0 +1,103 @@
+{
+  "timestamp": "2026-11-28T05:26:59.205Z",
+  "date": "2026-11-28",
+  "repoLabel": "eclipse-che/che-dashboard",
+  "metrics": {
+    "discussions": {
+      "totalUpvotes": 0,
+      "totalComments": 0
+    },
+    "pullRequests": {
+      "open": 5,
+      "total": 83,
+      "merged": 64,
+      "mergeRate": "77.1",
+      "openPRs": [
+        {
+          "number": 1728,
+          "title": "fix(deps): upgrade parse5 to 8.1.1 to fix uncaught exception DoS (CRW…",
+          "author": "bianicu",
+          "url": "https://github.com/eclipse-che/che-dashboard/pull/1728",
+          "createdAt": "2026-11-27T15:20:17Z"
+        },
+        {
+          "number": 1727,
+          "title": "fix: honor CHE_HIDE_EDITORS_BY_ID in Change Editor modal",
+          "author": "anasalli",
+          "url": "https://github.com/eclipse-che/che-dashboard/pull/1727",
+          "createdAt": "2026-11-26T08:12:43Z"
+        },
+        {
+          "number": 1708,
+          "title": "fix(factory): preserve plus signs in saved factory params",
+          "author": "snecklifter",
+          "url": "https://github.com/eclipse-che/che-dashboard/pull/1708",
+          "createdAt": "2026-11-03T13:23:16Z"
+        },
+        {
+          "number": 1707,
+          "title": "fix(samples): extract factory params from sample URL query strings",
+          "author": "snecklifter",
+          "url": "https://github.com/eclipse-che/che-dashboard/pull/1707",
+          "createdAt": "2026-11-02T16:05:45Z"
+        },
+        {
+          "number": 1676,
+          "title": "feat(dashboard): support alternative dashboard redirect",
+          "author": "deshrajvermay9517-png",
+          "url": "https://github.com/eclipse-che/che-dashboard/pull/1676",
+          "createdAt": "2026-09-17T04:13:20Z"
+        }
+      ]
+    },
+    "issues": {
+      "open": 0,
+      "closed": 0,
+      "total": 0,
+      "closeRate": 0,
+      "openIssues": []
+    },
+    "repository": {
+      "stars": 19,
+      "forks": 70,
+      "watchers": 20
+    }
+  },
+  "topActiveUsers": [
+    {
+      "username": "openshift-ci",
+      "prs": 0,
+      "issues": 0,
+      "comments": 43,
+      "total": 43
+    },
+    {
+      "username": "snecklifter",
+      "prs": 2,
+      "issues": 0,
+      "comments": 0,
+      "total": 6
+    },
+    {
+      "username": "bianicu",
+      "prs": 1,
+      "issues": 0,
+      "comments": 0,
+      "total": 3
+    },
+    {
+      "username": "anasalli",
+      "prs": 1,
+      "issues": 0,
+      "comments": 0,
+      "total": 3
+    },
+    {
+      "username": "deepsm007",
+      "prs": 0,
+      "issues": 0,
+      "comments": 1,
+      "total": 1
+    }
+  ]
+}
